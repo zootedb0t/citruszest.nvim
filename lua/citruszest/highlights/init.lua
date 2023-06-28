@@ -67,7 +67,7 @@ M.theme = function(C)
 		Number = { fg = C.magenta }, --   a number constant: 234, 0xff
 		Float = { fg = C.cyan }, --    a floating point constant: 2.3e10
 		Boolean = { fg = C.orange }, --  a boolean constant: TRUE, false
-		Identifier = { fg = C.bright_yellow }, -- (preferred) any variable name
+		Identifier = { fg = C.magenta }, -- (preferred) any variable name
 		Function = { fg = C.orange }, -- function name (also: methods for classes)
 		Statement = { fg = C.bright_green }, -- (preferred) any statement
 		Conditional = { fg = C.bright_orange }, --  if, then, else, endif, switch, etc.
@@ -199,7 +199,192 @@ M.theme = function(C)
 		}, -- virtual text of the inlay hints
 		LspInfoBorder = { link = "FloatBorder" }, -- LspInfo border
 
+		-- Semantic Tokens
+		["@lsp.type.boolean"] = { link = "@boolean" },
+		["@lsp.type.builtinType"] = { link = "@type.builtin" },
+		["@lsp.type.comment"] = { link = "@comment" },
+		["@lsp.type.enum"] = { link = "@type" },
+		["@lsp.type.enumMember"] = { link = "@constant" },
+		["@lsp.type.escapeSequence"] = { link = "@string.escape" },
+		["@lsp.type.formatSpecifier"] = { link = "@punctuation.special" },
+		["@lsp.type.interface"] = { fg = C.bright_magenta },
+		["@lsp.type.keyword"] = { link = "@keyword" },
+		["@lsp.type.namespace"] = { link = "@namespace" },
+		["@lsp.type.number"] = { link = "@number" },
+		["@lsp.type.operator"] = { link = "@operator" },
+		["@lsp.type.parameter"] = { link = "@parameter" },
+		["@lsp.type.property"] = { link = "@property" },
+		["@lsp.type.selfKeyword"] = { link = "@variable.builtin" },
+		["@lsp.type.typeAlias"] = { link = "@type.definition" },
+		["@lsp.type.unresolvedReference"] = { link = "@error" },
+		["@lsp.type.variable"] = {}, -- use treesitter styles for regular variables
+		["@lsp.typemod.class.defaultLibrary"] = { link = "@type.builtin" },
+		["@lsp.typemod.enum.defaultLibrary"] = { link = "@type.builtin" },
+		["@lsp.typemod.enumMember.defaultLibrary"] = { link = "@constant.builtin" },
+		["@lsp.typemod.function.defaultLibrary"] = { link = "@function.builtin" },
+		["@lsp.typemod.keyword.async"] = { link = "@keyword.coroutine" },
+		["@lsp.typemod.macro.defaultLibrary"] = { link = "@function.builtin" },
+		["@lsp.typemod.method.defaultLibrary"] = { link = "@function.builtin" },
+		["@lsp.typemod.operator.injected"] = { link = "@operator" },
+		["@lsp.typemod.string.injected"] = { link = "@string" },
+		["@lsp.typemod.type.defaultLibrary"] = { link = "@type.builtin" },
+		["@lsp.typemod.variable.defaultLibrary"] = { link = "@variable.builtin" },
+		["@lsp.typemod.variable.injected"] = { link = "@variable" },
+
 		--TODO Tressitter highlights
+		["@comment"] = { link = "Comment" },
+		["@error"] = { link = "Error" },
+		["@preproc"] = { link = "PreProc" }, -- various preprocessor directives & shebangs
+		["@define"] = { link = "Define" }, -- preprocessor definition directives
+		["@operator"] = { link = "Operator" }, -- For any operator: +, but also -> and * in C.
+
+		-- Punctuation
+		["@punctuation.delimiter"] = { fg = C.magenta }, -- For delimiters ie: .
+		["@punctuation.bracket"] = { fg = C.magenta }, -- For brackets and parenthesis.
+		["@punctuation.special"] = { fg = C.cyan }, -- For special punctutation that does not fall in the categories before.
+
+		-- Literals
+		["@string"] = { link = "String" }, -- For strings.
+		["@string.regex"] = { fg = C.bright_orange }, -- For regexes.
+		["@string.escape"] = { fg = C.bright_yellow }, -- For escape characters within a string.
+		["@string.special"] = { fg = C.cyan }, -- other special strings (e.g. dates)
+
+		["@character"] = { link = "Character" }, -- character literals
+		["@character.special"] = { link = "SpecialChar" }, -- special characters (e.g. wildcards)
+
+		["@boolean"] = { link = "Boolean" }, -- For booleans.
+		["@number"] = { link = "Number" }, -- For all numbers
+		["@float"] = { link = "Float" }, -- For floats.
+
+		-- Functions
+		["@function"] = { link = "Function" }, -- For function (calls and definitions).
+		["@function.builtin"] = { fg = C.yellow }, -- For builtin functions: table.insert in Lua.
+		["@function.call"] = { link = "Function" }, -- function calls
+		["@function.macro"] = { fg = C.magenta }, -- For macro defined functions (calls and definitions): each macro_rules in RusC.
+		["@method"] = { link = "Function" }, -- For method calls and definitions.
+
+		["@method.call"] = { link = "Function" }, -- method calls
+
+		["@constructor"] = { fg = C.bright_green }, -- For constructor calls and definitions: = { } in Lua, and Java constructors.
+		["@parameter"] = { fg = C.bright_orange }, -- For parameters of a function.
+
+		-- Keywords
+		["@keyword"] = { link = "Keyword" }, -- For keywords that don't fall in previous categories.
+		["@keyword.function"] = { fg = C.magenta }, -- For keywords used to define a function.
+		["@keyword.operator"] = { fg = C.magenta }, -- For new keyword operator
+		["@keyword.return"] = { fg = C.magenta },
+		-- JS & derivative
+		["@keyword.export"] = { fg = C.bright_magenta },
+
+		["@conditional"] = { link = "Conditional" }, -- For keywords related to conditionnals.
+		["@repeat"] = { link = "Repeat" }, -- For keywords related to loops.
+		-- @debug            ; keywords related to debugging
+		["@label"] = { link = "Label" }, -- For labels: label: in C and :label: in Lua.
+		["@include"] = { link = "Include" }, -- For includes: #include in C, use or extern crate in Rust, or require in Lua.
+		["@exception"] = { fg = C.bright_yellow }, -- For exception related keywords.
+
+		-- Types
+
+		["@type"] = { link = "Type" }, -- For types.
+		["@type.builtin"] = { fg = C.yellow }, -- For builtin types.
+		["@type.definition"] = { link = "@type" }, -- type definitions (e.g. `typedef` in C)
+		["@type.qualifier"] = { link = "@type" }, -- type qualifiers (e.g. `const`)
+
+		["@storageclass"] = { link = "StorageClass" }, -- visibility/life-time/etc. modifiers (e.g. `static`)
+		["@attribute"] = { link = "Constant" }, -- attribute annotations (e.g. Python decorators)
+		["@field"] = { fg = C.cyan }, -- For fields.
+		["@property"] = { fg = C.bright_green }, -- Same as TSField.
+
+		-- Identifiers
+
+		["@variable"] = { fg = C.bright_white }, -- Any variable name that does not have another highlight.
+		["@variable.builtin"] = { fg = C.red }, -- Variable names that are defined by the languages, like this or self.
+
+		["@constant"] = { link = "Constant" }, -- For constants
+		["@constant.builtin"] = { fg = C.bright_orange }, -- For constant that are built in the language: nil in Lua.
+		["@constant.macro"] = { link = "Macro" }, -- For constants that are defined by macros: NULL in C.
+
+		["@namespace"] = { fg = C.magenta, italic = true }, -- For identifiers referring to modules and namespaces.
+		["@symbol"] = { fg = C.yellow },
+
+		-- Text
+
+		["@text"] = { fg = C.text }, -- For strings considerated text in a markup language.
+		["@text.strong"] = { fg = C.bright_red, bold = true }, -- bold
+		["@text.emphasis"] = { fg = C.bright_orange, italic = true }, -- italic
+		["@text.underline"] = { link = "Underline" }, -- underlined text
+		["@text.strike"] = { fg = C.text, strikethrough = true }, -- strikethrough text
+		["@text.title"] = { fg = C.cyan, bold = true }, -- titles like: # Example
+		["@text.literal"] = { fg = C.magenta }, -- used for inline code in markdown and for doc in python (""")
+		["@text.uri"] = { fg = C.bright_orange, italic = true, underline = true }, -- urls, links and emails
+		["@text.math"] = { fg = C.cyan }, -- math environments (e.g. `$ ... $` in LaTeX)
+		["@text.environment"] = { fg = C.orange }, -- text environments of markup languages
+		["@text.environment.name"] = { fg = C.cyan }, -- text indicating the type of an environment
+		["@text.reference"] = { fg = C.magenta, bold = true }, -- references
+
+		["@text.todo"] = { fg = C.foreground, bg = C.yellow }, -- todo notes
+		["@text.todo.checked"] = { fg = C.green }, -- todo notes
+		["@text.todo.unchecked"] = { fg = C.bright_black }, -- todo notes
+		["@text.note"] = { fg = C.foreground, bg = C.cyan },
+		["@text.warning"] = { fg = C.foreground, bg = C.yellow },
+		["@text.danger"] = { fg = C.foreground, bg = C.red },
+
+		["@text.diff.add"] = { link = "diffAdded" }, -- added text (for diff files)
+		["@text.diff.delete"] = { link = "diffRemoved" }, -- deleted text (for diff files)
+
+		-- Tags
+		["@tag"] = { fg = C.bright_yellow }, -- Tags like html tag names.
+		["@tag.attribute"] = { fg = C.bright_orange, italic = true }, -- Tags like html tag names.
+		["@tag.delimiter"] = { fg = C.bright_cyan }, -- Tag delimiter like < > /
+
+		-- Language specific:
+
+		-- markdown
+		["@text.title.2.markdown"] = { link = "rainbow2" },
+		["@text.title.1.markdown"] = { link = "rainbow1" },
+		["@text.title.3.markdown"] = { link = "rainbow3" },
+		["@text.title.4.markdown"] = { link = "rainbow4" },
+		["@text.title.5.markdown"] = { link = "rainbow5" },
+		["@text.title.6.markdown"] = { link = "rainbow6" },
+
+		-- css
+		["@property.css"] = { fg = C.magenta },
+		["@property.id.css"] = { fg = C.cyan },
+		["@property.class.css"] = { fg = C.yellow },
+		["@type.css"] = { fg = C.cyan },
+		["@type.tag.css"] = { fg = C.bright_orange },
+		["@string.plain.css"] = { fg = C.yellow },
+		["@number.css"] = { fg = C.bright_magenta },
+
+		-- toml
+		["@property.toml"] = { fg = C.cyan }, -- Differentiates between string and properties
+
+		-- json
+		["@label.json"] = { fg = C.cyan }, -- For labels: label: in C and :label: in Lua.
+
+		-- lua
+		["@constructor.lua"] = { fg = C.bright_red }, -- For constructor calls and definitions: = { } in Lua, and Java constructors.
+
+		-- typescript
+		["@constructor.typescript"] = { fg = C.magenta },
+
+		-- TSX (Typescript React)
+		["@constructor.tsx"] = { fg = C.magenta },
+		["@tag.attribute.tsx"] = { fg = C.bright_yellow, italic = true },
+
+		-- cpp
+		["@property.cpp"] = { fg = C.bright_orange },
+
+		-- yaml
+		["@field.yaml"] = { fg = C.cyan }, -- For fields.
+
+		-- Ruby
+		["@symbol.ruby"] = { fg = C.bright_yellow },
+
+		-- PHP
+		["@type.qualifier.php"] = { link = "Keyword" }, -- type qualifiers (e.g. `const`)
+		["@method.php"] = { link = "Function" },
+		["@method.call.php"] = { link = "Function" },
 	}
 end
 
