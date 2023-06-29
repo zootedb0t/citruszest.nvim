@@ -13,7 +13,7 @@ M.theme = function(C)
 		EndOfBuffer = { fg = C.background }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
 		ErrorMsg = { fg = C.red }, -- error messages on the command line
 		VertSplit = { fg = C.bright_black }, -- the column separating vertically split windows
-		Folded = { fg = C.orange, bg = C.background }, -- line used for closed folds
+		Folded = { fg = C.orange, bg = C.background }, -- line used for closed folds FoldColumn = { fg = C.orange, bg = C.background }, -- 'foldcolumn' SignColumn = { fg = C.foreground, bg = C.background }, -- column where |signs| are displayed
 		FoldColumn = { fg = C.orange, bg = C.background }, -- 'foldcolumn'
 		SignColumn = { fg = C.foreground, bg = C.background }, -- column where |signs| are displayed
 		SignColumnSB = { fg = C.foreground, bg = C.background }, -- column where |signs| are displayed
@@ -40,7 +40,7 @@ M.theme = function(C)
 		Search = { fg = C.magenta, bg = C.background }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
 		IncSearch = { fg = C.bright_cyan, bg = C.background }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
 		CurSearch = { fg = C.bright_black, bg = C.bright_orange }, -- 'cursearch' highlighting: highlights the current search you're on differently
-		SpecialKey = { fg = C.bright_cyan }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' textspace. |hl-Whitespace|
+		SpecialKey = { fg = C.orange }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' textspace. |hl-Whitespace|
 		SpellBad = { sp = C.red, undercurl = true }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
 		SpellCap = { sp = C.yellow, undercurl = true }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
 		SpellLocal = { sp = C.cyan, undercurl = true }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
@@ -61,7 +61,7 @@ M.theme = function(C)
 		Comment = { fg = C.bright_black }, -- just comments
 		SpecialComment = { link = "Special" }, -- special things inside a comment
 		Constant = { fg = C.orange }, -- (preferred) any constant
-		String = { fg = C.bright_cyan }, -- a string constant: "this is a string"
+		String = { fg = C.cyan }, -- a string constant: "this is a string"
 		Character = { fg = C.bright_red }, --  a character constant: 'c', '\n'
 		Number = { fg = C.magenta }, --   a number constant: 234, 0xff
 		Float = { fg = C.cyan }, --    a floating point constant: 2.3e10
@@ -297,7 +297,7 @@ M.theme = function(C)
 		-- Identifiers
 
 		["@variable"] = { fg = C.bright_white }, -- Any variable name that does not have another highlight.
-		["@variable.builtin"] = { fg = C.red }, -- Variable names that are defined by the languages, like this or self.
+		["@variable.builtin"] = { fg = C.yellow }, -- Variable names that are defined by the languages, like this or self.
 
 		["@constant"] = { link = "Constant" }, -- For constants
 		["@constant.builtin"] = { fg = C.bright_orange }, -- For constant that are built in the language: nil in Lua.
