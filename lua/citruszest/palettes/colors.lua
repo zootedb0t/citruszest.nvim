@@ -8,7 +8,7 @@ local colors = {
 
 	black = "#282828", -- black
 	red = "#D71A1A", -- red
-	green = "#00FF00", -- green
+	green = "#00FF99",
 	yellow = "#F0D50C", -- yellow
 	orange = "#FF8000", -- Primary Orange
 	magenta = "#CF73E6", -- magenta
@@ -18,7 +18,7 @@ local colors = {
 	bright_black = "#666666", -- bright black
 	bright_red = "#FF0000", -- bright red
 	bright_green = "#66FF66", -- bright green
-	bright_yellow = "#FFEE00", -- bright yellow
+	bright_yellow = "#FFFF00", -- bright yellow
 	bright_orange = "#FFA500", -- bright yellow
 	bright_magenta = "#B77EE0", -- bright magenta
 	bright_cyan = "#A9C1DE", -- bright cyan

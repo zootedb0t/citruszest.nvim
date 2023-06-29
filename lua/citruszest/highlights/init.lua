@@ -9,7 +9,7 @@ M.theme = function(C)
 		CursorIM = { fg = C.cursor, bg = C.text }, -- like Cursor, but used when in IME mode |CursorIM|
 		CursorColumn = { bg = C.bright_black }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
 		CursorLine = { bg = C.bright_black }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if forecrust (ctermfg OR guifg) is not set.
-		Directory = { fg = C.yellow }, -- directory names (and other special names in listings)
+		Directory = { fg = C.bright_yellow }, -- directory names (and other special names in listings)
 		EndOfBuffer = { fg = C.background }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
 		ErrorMsg = { fg = C.red }, -- error messages on the command line
 		VertSplit = { fg = C.bright_black }, -- the column separating vertically split windows
@@ -52,7 +52,7 @@ M.theme = function(C)
 		TabLineFill = {}, -- tab pages line, where there are no labels
 		TabLineSel = { fg = C.cyan, bg = C.background }, -- tab pages line, active tab page label
 		Title = { fg = C.cyan, bold = true }, -- titles for output from ":set all", ":autocmd" etc.
-		Visual = { bg = C.bright_black, bold = true }, -- Visual mode selection
+		Visual = { bg = C.black, bold = true }, -- Visual mode selection
 		VisualNOS = { bg = C.bright_black, bold = true }, -- Visual mode selection when vim is "Not Owning the Selection".
 		WarningMsg = { fg = C.bright_red }, -- warning messages
 		Whitespace = { fg = C.white }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
@@ -62,7 +62,7 @@ M.theme = function(C)
 		Comment = { fg = C.bright_black }, -- just comments
 		SpecialComment = { link = "Special" }, -- special things inside a comment
 		Constant = { fg = C.orange }, -- (preferred) any constant
-		String = { fg = C.bright_green }, -- a string constant: "this is a string"
+		String = { fg = C.bright_cyan }, -- a string constant: "this is a string"
 		Character = { fg = C.bright_red }, --  a character constant: 'c', '\n'
 		Number = { fg = C.magenta }, --   a number constant: 234, 0xff
 		Float = { fg = C.cyan }, --    a floating point constant: 2.3e10
@@ -74,7 +74,7 @@ M.theme = function(C)
 		Repeat = { fg = C.bright_magenta }, --   for, do, while, etc.
 		Label = { fg = C.bright_green }, --    case, default, etc.
 		Operator = { fg = C.bright_red }, -- "sizeof", "+", "*", etc.
-		Keyword = { fg = C.bright_orange }, --  any other keyword
+		Keyword = { fg = C.orange }, --  any other keyword
 		Array = { fg = C.magenta },
 		-- Exception     = { }, --  try, catch, throw
 
@@ -119,7 +119,7 @@ M.theme = function(C)
 		-- diff
 		diffAdded = { fg = C.green },
 		diffRemoved = { fg = C.red },
-		diffChanged = { fg = C.magenta },
+		diffChanged = { fg = C.bright_yellow },
 		diffOldFile = { fg = C.yellow },
 		diffNewFile = { fg = C.orange },
 		diffFile = { fg = C.cyan },
@@ -231,7 +231,7 @@ M.theme = function(C)
 		["@lsp.typemod.variable.defaultLibrary"] = { link = "@variable.builtin" },
 		["@lsp.typemod.variable.injected"] = { link = "@variable" },
 
-		--TODO Tressitter highlights
+		-- Tressitter highlights
 		["@comment"] = { link = "Comment" },
 		["@error"] = { link = "Error" },
 		["@preproc"] = { link = "PreProc" }, -- various preprocessor directives & shebangs
@@ -241,7 +241,7 @@ M.theme = function(C)
 		-- Punctuation
 		["@punctuation.delimiter"] = { fg = C.magenta }, -- For delimiters ie: .
 		["@punctuation.bracket"] = { fg = C.magenta }, -- For brackets and parenthesis.
-		["@punctuation.special"] = { fg = C.cyan }, -- For special punctutation that does not fall in the categories before.
+		["@punctuation.special"] = { fg = C.magenta }, -- For special punctutation that does not fall in the categories before.
 
 		-- Literals
 		["@string"] = { link = "String" }, -- For strings.
@@ -265,8 +265,8 @@ M.theme = function(C)
 
 		["@method.call"] = { link = "Function" }, -- method calls
 
-		["@constructor"] = { fg = C.bright_green }, -- For constructor calls and definitions: = { } in Lua, and Java constructors.
-		["@parameter"] = { fg = C.bright_orange }, -- For parameters of a function.
+		["@constructor"] = { fg = C.bright_yellow }, -- For constructor calls and definitions: = { } in Lua, and Java constructors.
+		["@parameter"] = { fg = C.bright_yellow }, -- For parameters of a function.
 
 		-- Keywords
 		["@keyword"] = { link = "Keyword" }, -- For keywords that don't fall in previous categories.
@@ -292,8 +292,8 @@ M.theme = function(C)
 
 		["@storageclass"] = { link = "StorageClass" }, -- visibility/life-time/etc. modifiers (e.g. `static`)
 		["@attribute"] = { link = "Constant" }, -- attribute annotations (e.g. Python decorators)
-		["@field"] = { fg = C.cyan }, -- For fields.
-		["@property"] = { fg = C.bright_green }, -- Same as TSField.
+		["@field"] = { fg = C.green }, -- For fields.
+		["@property"] = { fg = C.green }, -- Same as TSField.
 
 		-- Identifiers
 

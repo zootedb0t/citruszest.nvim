@@ -1,6 +1,11 @@
 local M = {}
 
 local pallet = require("citruszest.palettes.colors")
+
+if vim.g.citruszestTransparent then
+	pallet.background = "NONE"
+end
+
 local editor_highlight = require("citruszest.highlights").theme(pallet)
 
 M.set_highlight = function()
