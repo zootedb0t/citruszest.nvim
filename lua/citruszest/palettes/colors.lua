@@ -12,9 +12,10 @@ local colors = {
 	yellow = "#F0D50C", -- yellow
 	orange = "#FF8000", -- Primary Orange
 	magenta = "#CF73E6", -- magenta
-	cyan = "#008080", -- cyan
+	cyan = "#89B4FA", -- cyan
 	white = "#F9F9F9", -- white
 
+  mid_black = "#333333",
 	bright_black = "#666666", -- bright black
 	bright_red = "#FF0000", -- bright red
 	bright_green = "#66FF66", -- bright green

@@ -15,20 +15,19 @@ M.theme = function(C)
 		VertSplit = { fg = C.bright_black }, -- the column separating vertically split windows
 		Folded = { fg = C.orange, bg = C.background }, -- line used for closed folds
 		FoldColumn = { fg = C.orange, bg = C.background }, -- 'foldcolumn'
-		SignColumn = { fg = C.background, bg = C.background }, -- column where |signs| are displayed
-		SignColumnSB = { bg = C.background, fg = C.background }, -- column where |signs| are displayed
-		Substitute = { bg = C.background, fg = C.orange }, -- |:substitute| replacement text highlighting
+		SignColumn = { fg = C.foreground, bg = C.background }, -- column where |signs| are displayed
+		SignColumnSB = { fg = C.foreground, bg = C.background }, -- column where |signs| are displayed
+		Substitute = { fg = C.orange, bg = C.background }, -- |:substitute| replacement text highlighting
 		LineNr = { fg = C.bright_magenta }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
 		CursorLineNr = { fg = C.foreground }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line. highlights the number in numberline.
 		MatchParen = { fg = C.yellow, bg = C.background }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
 		ModeMsg = { fg = C.text }, -- 'showmode' message (e.g., "-- INSERT -- ")
-		-- MsgArea = { fg = C.text }, -- Area for messages and cmdline, don't set this highlight because of https://github.com/neovim/neovim/issues/17832
 		MsgSeparator = {}, -- Separator for scrolled messages, `msgsep` flag of 'display'
 		MoreMsg = { fg = C.cyan }, -- |more-prompt|
 		NonText = { fg = C.bright_magenta }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
 		Normal = { fg = C.foreground, bg = C.background }, -- normal text
 		NormalNC = { fg = C.foreground, bg = C.background }, -- normal text in non-current windows
-		NormalSB = { fg = C.text }, -- normal text in non-current windows
+		NormalSB = { fg = C.foreground }, -- normal text in non-current windows
 		NormalFloat = { bg = C.background }, -- Normal text in floating windows.
 		FloatBorder = { fg = C.orange },
 		FloatTitle = { fg = C.yellow }, -- Title of floating windows
@@ -41,7 +40,7 @@ M.theme = function(C)
 		Search = { fg = C.magenta, bg = C.background }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
 		IncSearch = { fg = C.bright_cyan, bg = C.background }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
 		CurSearch = { fg = C.bright_black, bg = C.bright_orange }, -- 'cursearch' highlighting: highlights the current search you're on differently
-		SpecialKey = { fg = C.text }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' textspace. |hl-Whitespace|
+		SpecialKey = { fg = C.bright_cyan }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' textspace. |hl-Whitespace|
 		SpellBad = { sp = C.red, undercurl = true }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
 		SpellCap = { sp = C.yellow, undercurl = true }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
 		SpellLocal = { sp = C.cyan, undercurl = true }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
@@ -52,7 +51,7 @@ M.theme = function(C)
 		TabLineFill = {}, -- tab pages line, where there are no labels
 		TabLineSel = { fg = C.cyan, bg = C.background }, -- tab pages line, active tab page label
 		Title = { fg = C.cyan, bold = true }, -- titles for output from ":set all", ":autocmd" etc.
-		Visual = { bg = C.black, bold = true }, -- Visual mode selection
+		Visual = { bg = C.mid_black, bold = true }, -- Visual mode selection
 		VisualNOS = { bg = C.bright_black, bold = true }, -- Visual mode selection when vim is "Not Owning the Selection".
 		WarningMsg = { fg = C.bright_red }, -- warning messages
 		Whitespace = { fg = C.white }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
@@ -125,9 +124,9 @@ M.theme = function(C)
 		diffFile = { fg = C.cyan },
 		diffLine = { fg = C.bright_cyan },
 		diffIndexLine = { fg = C.bright_black },
-		DiffAdd = { bg = C.green }, -- diff mode: Added line |diff.txt|
-		DiffChange = { bg = C.yellow }, -- diff mode: Changed line |diff.txt|
-		DiffDelete = { bg = C.red }, -- diff mode: Deleted line |diff.txt|
+		DiffAdd = { fg = C.green, bg = C.none, reverse = true }, -- diff mode: Added line |diff.txt|
+		DiffChange = { fg = C.yellow, bg = C.none, reverse = true }, -- diff mode: Changed line |diff.txt|
+		DiffDelete = { fg = C.red, bg = C.none, reverse = true }, -- diff mode: Deleted line |diff.txt|
 		DiffText = { bg = C.bright_black }, -- diff mode: Changed text within a changed line |diff.txt|
 
 		-- NeoVim
@@ -385,6 +384,53 @@ M.theme = function(C)
 		["@type.qualifier.php"] = { link = "Keyword" }, -- type qualifiers (e.g. `const`)
 		["@method.php"] = { link = "Function" },
 		["@method.call.php"] = { link = "Function" },
+
+		-- Cmp
+		CmpItemAbbr = { fg = C.bright_cyan },
+		CmpItemAbbrDeprecated = { fg = C.black, strikethrough = true },
+		CmpItemKind = { fg = C.cyan },
+		CmpItemMenu = { fg = C.text },
+		CmpItemAbbrMatch = { fg = C.orange, bold = true },
+		CmpItemAbbrMatchFuzzy = { fg = C.orange, bold = true },
+
+		-- kind support
+		CmpItemKindSnippet = { fg = C.magenta },
+		CmpItemKindKeyword = { fg = C.orange },
+		CmpItemKindText = { fg = C.bright_magenta },
+		CmpItemKindMethod = { fg = C.cyan },
+		CmpItemKindConstructor = { fg = C.cyan },
+		CmpItemKindFunction = { fg = C.bright_yellow },
+		CmpItemKindFolder = { fg = C.cyan },
+		CmpItemKindModule = { fg = C.bright_orange },
+		CmpItemKindConstant = { fg = C.bright_cyan },
+		CmpItemKindField = { fg = C.green },
+		CmpItemKindProperty = { fg = C.green },
+		CmpItemKindEnum = { fg = C.green },
+		CmpItemKindUnit = { fg = C.green },
+		CmpItemKindClass = { fg = C.yellow },
+		CmpItemKindVariable = { fg = C.magenta },
+		CmpItemKindFile = { fg = C.cyan },
+		CmpItemKindInterface = { fg = C.yellow },
+		CmpItemKindColor = { fg = C.red },
+		CmpItemKindReference = { fg = C.red },
+		CmpItemKindEnumMember = { fg = C.red },
+		CmpItemKindStruct = { fg = C.cyan },
+		CmpItemKindValue = { fg = C.bright_magenta },
+		CmpItemKindEvent = { fg = C.cyan },
+		CmpItemKindOperator = { fg = C.cyan },
+		CmpItemKindTypeParameter = { fg = C.cyan },
+		CmpItemKindCopilot = { fg = C.bright_magenta },
+
+		-- Gitsigns
+		SignAdd = { fg = C.green, bg = C.none },
+		SignChange = { fg = C.yellow, bg = C.none },
+		SignDelete = { fg = C.red, bg = C.none },
+		GitSignsAdd = { fg = C.green, bg = C.none },
+		GitSignsChange = { fg = C.yellow, bg = C.none },
+		GitSignsDelete = { fg = C.red, bg = C.none },
+		GitSignsAddInline = { fg = C.green, bg = C.none },
+		GitSignsChangeInline = { fg = C.orange, bg = C.none },
+		GitSignsDeleteInline = { fg = C.red, bg = C.none },
 	}
 end
 
