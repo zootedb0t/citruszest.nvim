@@ -19,7 +19,7 @@ use { "zootedb0t/citruszest.nvim", as = "citruszest" }
 [vim-plug](https://github.com/junegunn/vim-plug)
 
 ```viml
-Plug 'bluz71/vim-moonfly-colors', { 'as': 'moonfly' }
+Plug 'zootedb0t/citruszest.nvim', { 'as': 'citruszest' }
 ```
 
 # 👀 Usage
@@ -39,5 +39,6 @@ colorscheme citruszest
 ```
 
 # 🙏 Acknowledgments
+
 - [SpaceCamp](https://github.com/jaredgorski/SpaceCamp) - For inspiring me write my own colorscheme.
 - [FluoroMachine.nvim](https://github.com/maxmx03/FluoroMachine.nvim) - For the beautiful colorscheme.
