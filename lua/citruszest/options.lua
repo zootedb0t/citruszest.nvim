@@ -1,7 +1,7 @@
 local M = {}
 
 M.options = {
-	transparent = false,
+  transparent = false,
 }
 
 return M

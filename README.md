@@ -7,7 +7,18 @@
 [lazy.nvim](https://github.com/folke/lazy.nvim)
 
 ```lua
-{ "zootedb0t/citruszest.nvim", name = "citruszest", lazy = true, priority = 1000 },
+{
+   "zootedb0t/citruszest.nvim",
+   name = "citruszest",
+   lazy = false,
+   priority = 1000,
+   config = function()
+      local cz = require("citruszest")
+      cz.setup({
+      transparent = true, -- Enable/Disable transparency
+    })
+end
+},
 ```
 
 [packer.nvim](https://github.com/wbthomason/packer.nvim)
