@@ -3,6 +3,7 @@
 `citruszest.nvim` features a combination of bright and juicy colors reminiscent of various citrus fruits. The primary colors include vibrant oranges, zesty yellows, and refreshing greens. These colors are carefully selected to provide a visually stimulating and attention-grabbing experience while coding.
 
 # 🤞 Showcase
+
 ![Screenshot_2023-06-30-10-37-59_1920x1080](https://github.com/zootedb0t/citruszest.nvim/assets/62596687/a4ec80a0-7321-4b04-80fa-f5867b32880c)
 
 ![Screenshot_2023-06-30-10-43-55_1920x1080](https://github.com/zootedb0t/citruszest.nvim/assets/62596687/095b5c2e-8f67-41b1-841f-9e222e9f39bf)
@@ -13,16 +14,12 @@
 
 ```lua
 {
-   "zootedb0t/citruszest.nvim",
-   name = "citruszest",
-   lazy = false,
-   priority = 1000,
-   config = function()
-      local cz = require("citruszest")
-      cz.setup({
-      transparent = true, -- Enable/Disable transparency
-    })
-end
+  "zootedb0t/citruszest.nvim",
+  lazy = true,
+  priority = 1000,
+  opts = {
+    transparent = true, -- Enable/Disable transparency
+  },
 },
 ```
 
