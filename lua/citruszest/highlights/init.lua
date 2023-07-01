@@ -20,7 +20,7 @@ M.theme = function(C)
     Substitute = { fg = C.orange, bg = C.background }, -- |:substitute| replacement text highlighting
     LineNr = { fg = C.bright_magenta }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
     CursorLineNr = { fg = C.foreground }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line. highlights the number in numberline.
-    MatchParen = { fg = C.yellow, bg = C.background }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
+    MatchParen = { fg = C.yellow, bg = C.background, bold = true }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
     ModeMsg = { fg = C.text }, -- 'showmode' message (e.g., "-- INSERT -- ")
     MsgSeparator = {}, -- Separator for scrolled messages, `msgsep` flag of 'display'
     MoreMsg = { fg = C.cyan }, -- |more-prompt|
@@ -447,6 +447,44 @@ M.theme = function(C)
     TSRainbowGreen = { fg = C.bright_green },
     TSRainbowViolet = { fg = C.magenta },
     TSRainbowCyan = { fg = C.bright_cyan },
+
+    -- Telescope
+    TelescopePromptPrefix = { fg = C.bright_orange, bg = C.background },
+    TelescopeSelectionCaret = { fg = C.orange, bg = C.background, bold = true },
+    TelescopePromptNormal = { bg = C.background },
+    TelescopeResultsNormal = { bg = C.background },
+    TelescopePreviewNormal = { bg = C.background },
+    TelescopePromptBorder = { fg = C.cyan, bg = C.background },
+    TelescopeResultsBorder = { fg = C.cyan, bg = C.background },
+    TelescopePreviewBorder = { fg = C.cyan, bg = C.background },
+    TelescopePromptTitle = { fg = C.mid_black, bg = C.yellow, bold = true },
+    TelescopeResultsTitle = { fg = C.mid_black, bg = C.yellow, bold = true },
+    TelescopePreviewTitle = { fg = C.mid_black, bg = C.yellow, bold = true },
+
+    -- NvimTree
+    NvimTreeFolderName = { fg = C.bright_yellow },
+    NvimTreeFolderIcon = { fg = C.bright_orange },
+    NvimTreeNormal = { fg = C.white, bg = C.background },
+    NvimTreeOpenedFolderName = { fg = C.bright_green, bold = true },
+    NvimTreeEmptyFolderName = { fg = C.cyan },
+    NvimTreeIndentMarker = { fg = C.bright_black },
+    NvimTreeWinSeparator = { fg = C.foreground, bg = C.background },
+    NvimTreeRootFolder = { fg = C.bright_yellow, bold = true },
+    NvimTreeSymlink = { fg = C.magenta },
+    NvimTreeStatuslineNc = { fg = C.bright_orange, bg = C.background },
+    NvimTreeGitDirty = { fg = C.yellow },
+    NvimTreeGitNew = { fg = C.cyan },
+    NvimTreeGitDeleted = { fg = C.red },
+    NvimTreeSpecialFile = { fg = C.magenta },
+    NvimTreeImageFile = { fg = C.text },
+    NvimTreeOpenedFile = { fg = C.yellow },
+
+    -- Alpha
+    AlphaShortcut = { fg = C.green },
+    AlphaHeader = { fg = C.orange },
+    AlphaHeaderLabel = { fg = C.cyan },
+    AlphaButtons = { fg = C.yellow },
+    AlphaFooter = { fg = C.green, italic = true },
   }
 end
 
