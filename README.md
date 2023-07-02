@@ -4,9 +4,11 @@
 
 # 🤞 Showcase
 
-![Screenshot_2023-06-30-10-37-59_1920x1080](https://github.com/zootedb0t/citruszest.nvim/assets/62596687/a4ec80a0-7321-4b04-80fa-f5867b32880c)
+![Screenshot_2023-07-02-03-23-01_1920x1080](https://github.com/zootedb0t/citruszest.nvim/assets/62596687/ad44cfa5-a49c-4ff0-9d0f-e1c5bd236ee5)
 
-![Screenshot_2023-06-30-10-43-55_1920x1080](https://github.com/zootedb0t/citruszest.nvim/assets/62596687/095b5c2e-8f67-41b1-841f-9e222e9f39bf)
+
+![Screenshot_2023-07-02-03-21-52_1920x1080](https://github.com/zootedb0t/citruszest.nvim/assets/62596687/062f285e-1034-4ddb-87d7-7e91b1c58eaf)
+
 
 # 👏 Installation
 
