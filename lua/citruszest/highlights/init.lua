@@ -8,7 +8,7 @@ M.theme = function(C)
     lCursor = { fg = C.cursor, bg = C.text }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
     CursorIM = { fg = C.cursor, bg = C.text }, -- like Cursor, but used when in IME mode |CursorIM|
     CursorColumn = { bg = C.bright_black }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
-    CursorLine = { bg = C.bright_black }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if forecrust (ctermfg OR guifg) is not set.
+    CursorLine = { bg = C.cursor }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if forecrust (ctermfg OR guifg) is not set.
     Directory = { fg = C.bright_yellow }, -- directory names (and other special names in listings)
     EndOfBuffer = { fg = C.background }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
     ErrorMsg = { fg = C.red }, -- error messages on the command line
@@ -45,8 +45,8 @@ M.theme = function(C)
     SpellCap = { sp = C.yellow, undercurl = true }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
     SpellLocal = { sp = C.cyan, undercurl = true }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
     SpellRare = { sp = C.green, undercurl = true }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
-    StatusLine = { fg = C.text, bg = C.background }, -- status line of current window
-    StatusLineNC = { fg = C.foreground, bg = C.background }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
+    StatusLine = { fg = C.foreground, bg = C.mid_black }, -- status line of current window
+    StatusLineNC = { fg = C.foreground, bg = C.cursor }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
     TabLine = { bg = C.bright_cyan, fg = C.bright_black }, -- tab pages line, not active tab page label
     TabLineFill = {}, -- tab pages line, where there are no labels
     TabLineSel = { fg = C.cyan, bg = C.background }, -- tab pages line, active tab page label
@@ -90,7 +90,7 @@ M.theme = function(C)
     StorageClass = { fg = C.yellow }, -- static, register, volatile, etc.
     Structure = { fg = C.yellow }, --  struct, union, enum, etc.
     Special = { fg = C.bright_orange }, -- (preferred) any special symbol
-    Type = { fg = C.yellow }, -- (preferred) int, long, char, etc.
+    Type = { fg = C.bright_yellow }, -- (preferred) int, long, char, etc.
     Typedef = { link = "Type" }, --  A typedef
     SpecialChar = { link = "Special" }, -- special character in a constant
     Tag = { link = "Special" }, -- you can use CTRL-] on this
@@ -102,7 +102,7 @@ M.theme = function(C)
     Italic = { italic = true },
 
     Error = { fg = C.red }, -- (preferred) any erroneous construct
-    Todo = { bg = C.yellow }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+    Todo = { fg = C.black, bg = C.yellow }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
     qfLineNr = { fg = C.yellow },
     qfFileName = { fg = C.cyan },
     htmlH1 = { fg = C.magenta, bold = true },
@@ -161,9 +161,9 @@ M.theme = function(C)
     -- These groups are for the native LSP client. Some other LSP clients may
     -- use these groups, or use their own. Consult your LSP client's
     -- documentation.
-    LspReferenceText = { bg = C.black }, -- used for highlighting "text" references
-    LspReferenceRead = { bg = C.black }, -- used for highlighting "read" references
-    LspReferenceWrite = { bg = C.black }, -- used for highlighting "write" references
+    LspReferenceText = { bg = C.mdid_black }, -- used for highlighting "text" references
+    LspReferenceRead = { bg = C.mid_black }, -- used for highlighting "read" references
+    LspReferenceWrite = { bg = C.mid_black }, -- used for highlighting "write" references
     -- highlight diagnostics in numberline
 
     DiagnosticError = { bg = C.none, fg = C.red, bold = true }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
@@ -197,7 +197,6 @@ M.theme = function(C)
     LspInlayHint = {
       -- fg of `Comment`
       fg = C.bright_cyan,
-      -- bg of `CursorLine`
       bg = C.background,
     }, -- virtual text of the inlay hints
     LspInfoBorder = { link = "FloatBorder" }, -- LspInfo border
@@ -325,9 +324,9 @@ M.theme = function(C)
     ["@text.environment.name"] = { fg = C.cyan }, -- text indicating the type of an environment
     ["@text.reference"] = { fg = C.magenta, bold = true }, -- references
 
-    ["@text.todo"] = { fg = C.foreground, bg = C.yellow }, -- todo notes
+    ["@text.todo"] = { fg = C.black, bg = C.yellow }, -- todo notes
     ["@text.todo.checked"] = { fg = C.green }, -- todo notes
-    ["@text.todo.unchecked"] = { fg = C.bright_black }, -- todo notes
+    ["@text.todo.unchecked"] = { fg = C.black, bg = C.yellow }, -- todo notes
     ["@text.note"] = { fg = C.foreground, bg = C.cyan },
     ["@text.warning"] = { fg = C.foreground, bg = C.yellow },
     ["@text.danger"] = { fg = C.foreground, bg = C.red },
@@ -351,13 +350,13 @@ M.theme = function(C)
     ["@text.title.6.markdown"] = { link = "rainbow6" },
 
     -- css
-    ["@property.css"] = { fg = C.magenta },
+    ["@property.css"] = { fg = C.bright_orange },
     ["@property.id.css"] = { fg = C.cyan },
     ["@property.class.css"] = { fg = C.yellow },
     ["@type.css"] = { fg = C.cyan },
     ["@type.tag.css"] = { fg = C.bright_orange },
     ["@string.plain.css"] = { fg = C.yellow },
-    ["@number.css"] = { fg = C.bright_magenta },
+    ["@number.css"] = { fg = C.bright_orange },
 
     -- toml
     ["@property.toml"] = { fg = C.cyan }, -- Differentiates between string and properties
@@ -369,17 +368,17 @@ M.theme = function(C)
     ["@constructor.lua"] = { fg = C.bright_red }, -- For constructor calls and definitions: = { } in Lua, and Java constructors.
 
     -- typescript
-    ["@constructor.typescript"] = { fg = C.magenta },
+    ["@constructor.typescript"] = { fg = C.bright_green },
 
     -- TSX (Typescript React)
-    ["@constructor.tsx"] = { fg = C.magenta },
+    ["@constructor.tsx"] = { fg = C.bright_green },
     ["@tag.attribute.tsx"] = { fg = C.bright_yellow, italic = true },
 
     -- cpp
     ["@property.cpp"] = { fg = C.bright_orange },
 
     -- yaml
-    ["@field.yaml"] = { fg = C.cyan }, -- For fields.
+    ["@field.yaml"] = { fg = C.bright_green }, -- For fields.
 
     -- Ruby
     ["@symbol.ruby"] = { fg = C.bright_yellow },
@@ -426,7 +425,7 @@ M.theme = function(C)
     CmpItemKindCopilot = { fg = C.bright_magenta },
 
     -- Gitsigns
-    SignAdd = { fg = C.green, bg = C.none },
+    SignAdd = { fg = C.bright_green, bg = C.none },
     SignChange = { fg = C.yellow, bg = C.none },
     SignDelete = { fg = C.red, bg = C.none },
     GitSignsAdd = { fg = C.green, bg = C.none },
@@ -438,10 +437,10 @@ M.theme = function(C)
 
     -- Fidget
     FidgetTask = {
-      fg = C.bright_red,
+      fg = C.red,
       bg = C.mid_black,
     },
-    FidgetTitle = { fg = C.bright_red },
+    FidgetTitle = { fg = C.red },
 
     -- Tsrainbow2
     TSRainbowRed = { fg = C.red },

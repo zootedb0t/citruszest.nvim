@@ -3,7 +3,7 @@ local colors = {
   background = "#121212",
   foreground = "#D0D0D0",
   text = "#0D0D0D",
-  cursor = "#D0D0D0",
+  cursor = "#404040",
   none = "NONE",
 
   black = "#282828", -- black
