@@ -8,21 +8,21 @@ local colors = {
 
   black = "#282828", -- black
   red = "#D71A1A", -- red
-  green = "#00FF99",
+  green = "#00cc7a",
   yellow = "#F0D50C", -- yellow
-  orange = "#FF8000", -- Primary Orange
-  magenta = "#CF73E6", -- magenta
-  cyan = "#89B4FA", -- cyan
+  orange = "#FF6600",
+  magenta = "#cc00ff",
+  cyan = "#33ffff", -- cyan
   white = "#F9F9F9", -- white
 
   mid_black = "#333333",
-  bright_black = "#666666", -- bright black
-  bright_red = "#FF0000", -- bright red
-  bright_green = "#66FF66", -- bright green
+  bright_black = "#888888", -- bright black
+  bright_red = "#ff1a75",
+  bright_green = "#1affa3", -- bright green
   bright_yellow = "#FFFF00", -- bright yellow
-  bright_orange = "#FFA500", -- bright yellow
-  bright_magenta = "#B77EE0", -- bright magenta
-  bright_cyan = "#A9C1DE", -- bright cyan
+  bright_orange = "#ffaf1a", -- bright yellow
+  bright_magenta = "#BA22DD", -- bright magenta
+  bright_cyan = "#1affff", -- bright cyan
   bright_white = "#EEEEEE", -- bright white
 }
 

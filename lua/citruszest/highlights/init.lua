@@ -18,8 +18,8 @@ M.theme = function(C)
     SignColumn = { fg = C.foreground, bg = C.background }, -- column where |signs| are displayed
     SignColumnSB = { fg = C.foreground, bg = C.background }, -- column where |signs| are displayed
     Substitute = { fg = C.orange, bg = C.background }, -- |:substitute| replacement text highlighting
-    LineNr = { fg = C.bright_magenta }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
-    CursorLineNr = { fg = C.foreground }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line. highlights the number in numberline.
+    LineNr = { fg = C.bright_black }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+    CursorLineNr = { fg = C.yellow }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line. highlights the number in numberline.
     MatchParen = { fg = C.yellow, bg = C.background, bold = true }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
     ModeMsg = { fg = C.text }, -- 'showmode' message (e.g., "-- INSERT -- ")
     MsgSeparator = {}, -- Separator for scrolled messages, `msgsep` flag of 'display'
@@ -60,20 +60,24 @@ M.theme = function(C)
 
     Comment = { fg = C.bright_black }, -- just comments
     SpecialComment = { link = "Special" }, -- special things inside a comment
-    Constant = { fg = C.orange }, -- (preferred) any constant
+    -- Constant = { fg = C.orange }, -- (preferred) any constant
+    Constant = { fg = C.cyan }, -- (preferred) any constant
     String = { fg = C.cyan }, -- a string constant: "this is a string"
     Character = { fg = C.bright_red }, --  a character constant: 'c', '\n'
     Number = { fg = C.magenta }, --   a number constant: 234, 0xff
     Float = { fg = C.cyan }, --    a floating point constant: 2.3e10
     Boolean = { fg = C.orange }, --  a boolean constant: TRUE, false
     Identifier = { fg = C.magenta }, -- (preferred) any variable name
-    Function = { fg = C.orange }, -- function name (also: methods for classes)
+    Function = { fg = C.bright_red }, -- function name (also: methods for classes)
     Statement = { fg = C.bright_green }, -- (preferred) any statement
+    -- Conditional = { fg = C.bright_orange }, --  if, then, else, endif, switch, etc.
     Conditional = { fg = C.bright_orange }, --  if, then, else, endif, switch, etc.
-    Repeat = { fg = C.bright_magenta }, --   for, do, while, etc.
+    -- Repeat = { fg = C.bright_magenta }, --   for, do, while, etc.
+    Repeat = { fg = C.bright_yellow }, --   for, do, while, etc.
     Label = { fg = C.bright_green }, --    case, default, etc.
     Operator = { fg = C.bright_red }, -- "sizeof", "+", "*", etc.
-    Keyword = { fg = C.orange }, --  any other keyword
+    -- Keyword = { fg = C.orange }, --  any other keyword
+    Keyword = { fg = C.bright_yellow }, --  any other keyword
     Array = { fg = C.magenta },
     -- Exception     = { }, --  try, catch, throw
 
@@ -238,9 +242,9 @@ M.theme = function(C)
     ["@operator"] = { link = "Operator" }, -- For any operator: +, but also -> and * in C.
 
     -- Punctuation
-    ["@punctuation.delimiter"] = { fg = C.magenta }, -- For delimiters ie: .
-    ["@punctuation.bracket"] = { fg = C.magenta }, -- For brackets and parenthesis.
-    ["@punctuation.special"] = { fg = C.magenta }, -- For special punctutation that does not fall in the categories before.
+    ["@punctuation.delimiter"] = { fg = C.bright_orange }, -- For delimiters ie: .
+    ["@punctuation.bracket"] = { fg = C.bright_orange }, -- For brackets and parenthesis.
+    ["@punctuation.special"] = { fg = C.bright_orange }, -- For special punctutation that does not fall in the categories before.
 
     -- Literals
     ["@string"] = { link = "String" }, -- For strings.
@@ -257,7 +261,8 @@ M.theme = function(C)
 
     -- Functions
     ["@function"] = { link = "Function" }, -- For function (calls and definitions).
-    ["@function.builtin"] = { fg = C.orange }, -- For builtin functions: table.insert in Lua.
+    -- ["@function.builtin"] = { fg = C.orange }, -- For builtin functions: table.insert in Lua.
+    ["@function.builtin"] = { fg = C.bright_red }, -- For builtin functions: table.insert in Lua.
     ["@function.call"] = { link = "Function" }, -- function calls
     ["@function.macro"] = { fg = C.magenta }, -- For macro defined functions (calls and definitions): each macro_rules in RusC.
     ["@method"] = { link = "Function" }, -- For method calls and definitions.
@@ -269,9 +274,9 @@ M.theme = function(C)
 
     -- Keywords
     ["@keyword"] = { link = "Keyword" }, -- For keywords that don't fall in previous categories.
-    ["@keyword.function"] = { fg = C.magenta }, -- For keywords used to define a function.
-    ["@keyword.operator"] = { fg = C.magenta }, -- For new keyword operator
-    ["@keyword.return"] = { fg = C.magenta },
+    ["@keyword.function"] = { fg = C.bright_red }, -- For keywords used to define a function.
+    ["@keyword.operator"] = { fg = C.bright_green }, -- For new keyword operator
+    ["@keyword.return"] = { fg = C.bright_red },
     -- JS & derivative
     ["@keyword.export"] = { fg = C.bright_magenta },
 
@@ -291,19 +296,18 @@ M.theme = function(C)
 
     ["@storageclass"] = { link = "StorageClass" }, -- visibility/life-time/etc. modifiers (e.g. `static`)
     ["@attribute"] = { link = "Constant" }, -- attribute annotations (e.g. Python decorators)
-    ["@field"] = { fg = C.green }, -- For fields.
-    ["@property"] = { fg = C.green }, -- Same as TSField.
+    ["@field"] = { fg = C.bright_green }, -- For fields.
+    ["@property"] = { fg = C.bright_green }, -- Same as TSField.
 
     -- Identifiers
-
     ["@variable"] = { fg = C.bright_white }, -- Any variable name that does not have another highlight.
-    ["@variable.builtin"] = { fg = C.yellow }, -- Variable names that are defined by the languages, like this or self.
+    ["@variable.builtin"] = { fg = C.bright_yellow }, -- Variable names that are defined by the languages, like this or self.
 
     ["@constant"] = { link = "Constant" }, -- For constants
     ["@constant.builtin"] = { fg = C.bright_orange }, -- For constant that are built in the language: nil in Lua.
     ["@constant.macro"] = { link = "Macro" }, -- For constants that are defined by macros: NULL in C.
 
-    ["@namespace"] = { fg = C.magenta, italic = true }, -- For identifiers referring to modules and namespaces.
+    ["@namespace"] = { fg = C.bright_yellow, italic = true }, -- For identifiers referring to modules and namespaces.
     ["@symbol"] = { fg = C.yellow },
 
     -- Text
@@ -359,7 +363,7 @@ M.theme = function(C)
     ["@property.toml"] = { fg = C.cyan }, -- Differentiates between string and properties
 
     -- json
-    ["@label.json"] = { fg = C.cyan }, -- For labels: label: in C and :label: in Lua.
+    ["@label.json"] = { fg = C.green }, -- For labels: label: in C and :label: in Lua.
 
     -- lua
     ["@constructor.lua"] = { fg = C.bright_red }, -- For constructor calls and definitions: = { } in Lua, and Java constructors.
@@ -386,12 +390,12 @@ M.theme = function(C)
     ["@method.call.php"] = { link = "Function" },
 
     -- Cmp
-    CmpItemAbbr = { fg = C.bright_cyan },
+    CmpItemAbbr = { fg = C.bright_black },
     CmpItemAbbrDeprecated = { fg = C.black, strikethrough = true },
     CmpItemKind = { fg = C.cyan },
     CmpItemMenu = { fg = C.text },
-    CmpItemAbbrMatch = { fg = C.orange, bold = true },
-    CmpItemAbbrMatchFuzzy = { fg = C.orange, bold = true },
+    CmpItemAbbrMatch = { fg = C.bright_green, bold = true },
+    CmpItemAbbrMatchFuzzy = { fg = C.bright_green, bold = true },
 
     -- kind support
     CmpItemKindSnippet = { fg = C.magenta },
@@ -434,10 +438,10 @@ M.theme = function(C)
 
     -- Fidget
     FidgetTask = {
-      fg = C.bright_orange,
-      bg = C.none,
+      fg = C.bright_red,
+      bg = C.mid_black,
     },
-    FidgetTitle = { fg = C.bright_orange },
+    FidgetTitle = { fg = C.bright_red },
 
     -- Tsrainbow2
     TSRainbowRed = { fg = C.red },
@@ -450,13 +454,13 @@ M.theme = function(C)
 
     -- Telescope
     TelescopePromptPrefix = { fg = C.bright_orange, bg = C.background },
-    TelescopeSelectionCaret = { fg = C.orange, bg = C.background, bold = true },
+    TelescopeSelectionCaret = { fg = C.orange, bg = C.mid_black, bold = true },
     TelescopePromptNormal = { bg = C.background },
     TelescopeResultsNormal = { bg = C.background },
     TelescopePreviewNormal = { bg = C.background },
-    TelescopePromptBorder = { fg = C.cyan, bg = C.background },
-    TelescopeResultsBorder = { fg = C.cyan, bg = C.background },
-    TelescopePreviewBorder = { fg = C.cyan, bg = C.background },
+    TelescopePromptBorder = { fg = C.bright_cyan, bg = C.background },
+    TelescopeResultsBorder = { fg = C.bright_cyan, bg = C.background },
+    TelescopePreviewBorder = { fg = C.bright_cyan, bg = C.background },
     TelescopePromptTitle = { fg = C.mid_black, bg = C.yellow, bold = true },
     TelescopeResultsTitle = { fg = C.mid_black, bg = C.yellow, bold = true },
     TelescopePreviewTitle = { fg = C.mid_black, bg = C.yellow, bold = true },
@@ -485,6 +489,14 @@ M.theme = function(C)
     AlphaHeaderLabel = { fg = C.cyan },
     AlphaButtons = { fg = C.yellow },
     AlphaFooter = { fg = C.green, italic = true },
+
+    -- Whichkey
+    WhichKey = { link = "NormalFloat" },
+    WhichKeyBorder = { link = "FloatBorder" },
+    WhichKeyGroup = { fg = C.bright_cyan },
+    WhichKeySeperator = { fg = C.bright_red },
+    WhichKeyDesc = { fg = C.yellow },
+    WhichKeyValue = { fg = C.green },
   }
 end
 
