@@ -45,13 +45,13 @@ M.theme = function(C)
     SpellCap = { sp = C.yellow, undercurl = true }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
     SpellLocal = { sp = C.cyan, undercurl = true }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
     SpellRare = { sp = C.green, undercurl = true }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
-    StatusLine = { fg = C.foreground, bg = C.mid_black }, -- status line of current window
+    StatusLine = { fg = C.foreground, bg = C.black }, -- status line of current window
     StatusLineNC = { fg = C.foreground, bg = C.cursor }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
     TabLine = { bg = C.bright_cyan, fg = C.bright_black }, -- tab pages line, not active tab page label
     TabLineFill = {}, -- tab pages line, where there are no labels
     TabLineSel = { fg = C.cyan, bg = C.background }, -- tab pages line, active tab page label
     Title = { fg = C.cyan, bold = true }, -- titles for output from ":set all", ":autocmd" etc.
-    Visual = { bg = C.mid_black, bold = true }, -- Visual mode selection
+    Visual = { bg = C.black, bold = true }, -- Visual mode selection
     VisualNOS = { bg = C.bright_black, bold = true }, -- Visual mode selection when vim is "Not Owning the Selection".
     WarningMsg = { fg = C.bright_red }, -- warning messages
     Whitespace = { fg = C.white }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
@@ -161,9 +161,9 @@ M.theme = function(C)
     -- These groups are for the native LSP client. Some other LSP clients may
     -- use these groups, or use their own. Consult your LSP client's
     -- documentation.
-    LspReferenceText = { bg = C.mdid_black }, -- used for highlighting "text" references
-    LspReferenceRead = { bg = C.mid_black }, -- used for highlighting "read" references
-    LspReferenceWrite = { bg = C.mid_black }, -- used for highlighting "write" references
+    LspReferenceText = { bg = C.black }, -- used for highlighting "text" references
+    LspReferenceRead = { bg = C.black }, -- used for highlighting "read" references
+    LspReferenceWrite = { bg = C.black }, -- used for highlighting "write" references
     -- highlight diagnostics in numberline
 
     DiagnosticError = { bg = C.none, fg = C.red, bold = true }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
@@ -310,7 +310,6 @@ M.theme = function(C)
     ["@symbol"] = { fg = C.yellow },
 
     -- Text
-
     ["@text"] = { fg = C.text }, -- For strings considerated text in a markup language.
     ["@text.strong"] = { fg = C.bright_red, bold = true }, -- bold
     ["@text.emphasis"] = { fg = C.bright_orange, italic = true }, -- italic
@@ -438,7 +437,7 @@ M.theme = function(C)
     -- Fidget
     FidgetTask = {
       fg = C.red,
-      bg = C.mid_black,
+      bg = C.black,
     },
     FidgetTitle = { fg = C.red },
 
@@ -453,16 +452,16 @@ M.theme = function(C)
 
     -- Telescope
     TelescopePromptPrefix = { fg = C.bright_orange, bg = C.background },
-    TelescopeSelectionCaret = { fg = C.orange, bg = C.mid_black, bold = true },
+    TelescopeSelectionCaret = { fg = C.orange, bg = C.black, bold = true },
     TelescopePromptNormal = { bg = C.background },
     TelescopeResultsNormal = { bg = C.background },
     TelescopePreviewNormal = { bg = C.background },
     TelescopePromptBorder = { fg = C.bright_cyan, bg = C.background },
     TelescopeResultsBorder = { fg = C.bright_cyan, bg = C.background },
     TelescopePreviewBorder = { fg = C.bright_cyan, bg = C.background },
-    TelescopePromptTitle = { fg = C.mid_black, bg = C.yellow, bold = true },
-    TelescopeResultsTitle = { fg = C.mid_black, bg = C.yellow, bold = true },
-    TelescopePreviewTitle = { fg = C.mid_black, bg = C.yellow, bold = true },
+    TelescopePromptTitle = { fg = C.black, bg = C.yellow, bold = true },
+    TelescopeResultsTitle = { fg = C.black, bg = C.yellow, bold = true },
+    TelescopePreviewTitle = { fg = C.black, bg = C.yellow, bold = true },
 
     -- NvimTree
     NvimTreeFolderName = { fg = C.bright_yellow },

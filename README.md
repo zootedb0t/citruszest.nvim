@@ -15,7 +15,6 @@
 ```lua
 {
   "zootedb0t/citruszest.nvim",
-  lazy = true,
   priority = 1000,
   opts = {
     transparent = true, -- Enable/Disable transparency
@@ -26,13 +25,20 @@
 [packer.nvim](https://github.com/wbthomason/packer.nvim)
 
 ```lua
-use { "zootedb0t/citruszest.nvim", as = "citruszest" }
+use { "zootedb0t/citruszest.nvim",
+    config = function()
+    local cz = require("citruszest")
+    cz.setup({
+      transparent = true, -- Enable/Disable transparency
+    })
+    end
+}
 ```
 
 [vim-plug](https://github.com/junegunn/vim-plug)
 
 ```viml
-Plug 'zootedb0t/citruszest.nvim', { 'as': 'citruszest' }
+Plug 'zootedb0t/citruszest.nvim' }
 ```
 
 # 👀 Usage
@@ -50,6 +56,17 @@ In `init.vim`
 ```viml
 colorscheme citruszest
 ```
+
+# 📌 Supported Plugins
+
+- [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
+- [Telescope](https://github.com/nvim-telescope/telescope.nvim)
+- [Nvimtree](https://github.com/nvim-tree/nvim-tree.lua)
+- [nvim-ts-rainbow2](https://gitlab.com/HiPhish/nvim-ts-rainbow2)
+- [fidget.nvim](https://github.com/j-hui/fidget.nvim)
+- [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
+- [alpha.nvim](https://github.com/goolord/alpha-nvim)
+- [whichkey.nvim](https://github.com/folke/which-key.nvim)
 
 # 🙏 Acknowledgments
 
