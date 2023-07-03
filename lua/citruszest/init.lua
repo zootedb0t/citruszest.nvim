@@ -2,10 +2,17 @@ local M = {}
 
 local pallet = require("citruszest.palettes.colors")
 local config = require("citruszest.options").options
+local highlight_groups = {}
 
 function M.setup(opts)
   opts = opts or {}
   config = vim.tbl_deep_extend("force", config, opts)
+
+  if config.transparent then
+    pallet.background = "NONE"
+  end
+
+  highlight_groups = vim.tbl_deep_extend("force", require("citruszest.highlights").theme(pallet), config.highlight)
 end
 
 M.set_highlight = function()
@@ -18,14 +25,8 @@ M.set_highlight = function()
 
   M.setup()
 
-  if config.transparent then
-    pallet.background = "NONE"
-  end
-
-  local editor_highlight = require("citruszest.highlights").theme(pallet)
-
   -- Set highlight
-  for group, colors in pairs(editor_highlight) do
+  for group, colors in pairs(highlight_groups) do
     vim.api.nvim_set_hl(0, group, colors)
   end
 end

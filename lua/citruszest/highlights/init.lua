@@ -1,7 +1,7 @@
 local M = {}
 
 M.theme = function(C)
-  return {
+  local highlight = {
     ColorColumn = { bg = C.none }, -- used for the columns set with 'colorcolumn'
     Conceal = { fg = C.cyan }, -- placeholder characters substituted for concealed text (see 'conceallevel')
     Cursor = { fg = C.cursor, bg = C.text }, -- character under the cursor
@@ -60,7 +60,6 @@ M.theme = function(C)
 
     Comment = { fg = C.bright_black }, -- just comments
     SpecialComment = { link = "Special" }, -- special things inside a comment
-    -- Constant = { fg = C.orange }, -- (preferred) any constant
     Constant = { fg = C.cyan }, -- (preferred) any constant
     String = { fg = C.cyan }, -- a string constant: "this is a string"
     Character = { fg = C.bright_red }, --  a character constant: 'c', '\n'
@@ -70,13 +69,10 @@ M.theme = function(C)
     Identifier = { fg = C.magenta }, -- (preferred) any variable name
     Function = { fg = C.bright_red }, -- function name (also: methods for classes)
     Statement = { fg = C.bright_green }, -- (preferred) any statement
-    -- Conditional = { fg = C.bright_orange }, --  if, then, else, endif, switch, etc.
     Conditional = { fg = C.bright_orange }, --  if, then, else, endif, switch, etc.
-    -- Repeat = { fg = C.bright_magenta }, --   for, do, while, etc.
     Repeat = { fg = C.bright_yellow }, --   for, do, while, etc.
     Label = { fg = C.bright_green }, --    case, default, etc.
     Operator = { fg = C.bright_red }, -- "sizeof", "+", "*", etc.
-    -- Keyword = { fg = C.orange }, --  any other keyword
     Keyword = { fg = C.bright_yellow }, --  any other keyword
     Array = { fg = C.magenta },
     -- Exception     = { }, --  try, catch, throw
@@ -496,6 +492,7 @@ M.theme = function(C)
     WhichKeyDesc = { fg = C.yellow },
     WhichKeyValue = { fg = C.green },
   }
+  return highlight
 end
 
 return M

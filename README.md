@@ -18,6 +18,11 @@
   priority = 1000,
   opts = {
     transparent = true, -- Enable/Disable transparency
+    -- If you want to wish you override any highlight-group style. Add them inside `highlight` table.
+    -- If you wish to override `Constant` highlight. You can do this inside `highlight` table.
+    highlight = {
+            Constant = { fg = "#FFFFFF", bold = true}
+        },
   },
 },
 ```
