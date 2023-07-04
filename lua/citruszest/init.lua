@@ -12,7 +12,7 @@ function M.setup(opts)
     pallet.background = "NONE"
   end
 
-  highlight_groups = vim.tbl_deep_extend("force", require("citruszest.highlights").theme(pallet), config.highlight)
+  highlight_groups = vim.tbl_deep_extend("force", require("citruszest.highlights").theme(pallet), config.style)
 end
 
 M.set_highlight = function()

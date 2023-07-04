@@ -1,7 +1,7 @@
 local M = {}
 
 M.theme = function(C)
-  local highlight = {
+  local style = {
     ColorColumn = { bg = C.none }, -- used for the columns set with 'colorcolumn'
     Conceal = { fg = C.cyan }, -- placeholder characters substituted for concealed text (see 'conceallevel')
     Cursor = { fg = C.cursor, bg = C.text }, -- character under the cursor
@@ -32,7 +32,7 @@ M.theme = function(C)
     FloatBorder = { fg = C.orange },
     FloatTitle = { fg = C.yellow }, -- Title of floating windows
     Pmenu = { fg = C.bright_white, bg = C.background }, -- Popup menu: normal item.
-    PmenuSel = { fg = C.white, bg = C.bright_black, bold = true }, -- Popup menu: selected item.
+    PmenuSel = { fg = C.white, bg = C.black, bold = true }, -- Popup menu: selected item.
     PmenuSbar = { bg = C.bright_orange }, -- Popup menu: scrollbar.
     PmenuThumb = { bg = C.bright_orange }, -- Popup menu: Thumb of the scrollbar.
     Question = { fg = C.cyan }, -- |hit-enter| prompt and yes/no questions
@@ -314,6 +314,7 @@ M.theme = function(C)
     ["@text.title"] = { fg = C.cyan, bold = true }, -- titles like: # Example
     ["@text.literal"] = { fg = C.magenta }, -- used for inline code in markdown and for doc in python (""")
     ["@text.uri"] = { fg = C.bright_orange, italic = true, underline = true }, -- urls, links and emails
+    ["@text.html"] = { fg = C.bright_orange, italic = true, underline = true }, -- urls, links and emails
     ["@text.math"] = { fg = C.cyan }, -- math environments (e.g. `$ ... $` in LaTeX)
     ["@text.environment"] = { fg = C.orange }, -- text environments of markup languages
     ["@text.environment.name"] = { fg = C.cyan }, -- text indicating the type of an environment
@@ -384,7 +385,7 @@ M.theme = function(C)
     ["@method.call.php"] = { link = "Function" },
 
     -- Cmp
-    CmpItemAbbr = { fg = C.bright_black },
+    CmpItemAbbr = { fg = C.bright_white },
     CmpItemAbbrDeprecated = { fg = C.black, strikethrough = true },
     CmpItemKind = { fg = C.cyan },
     CmpItemMenu = { fg = C.text },
@@ -437,14 +438,14 @@ M.theme = function(C)
     },
     FidgetTitle = { fg = C.red },
 
-    -- Tsrainbow2
-    TSRainbowRed = { fg = C.red },
-    TSRainbowYellow = { fg = C.yellow },
-    TSRainbowBlue = { fg = C.cyan },
-    TSRainbowOrange = { fg = C.orange },
-    TSRainbowGreen = { fg = C.bright_green },
-    TSRainbowViolet = { fg = C.magenta },
-    TSRainbowCyan = { fg = C.bright_cyan },
+    -- Rainbow Delimiter
+    RainbowDelimiterRed = { fg = C.red },
+    RainbowDelimiterYellow = { fg = C.yellow },
+    RainbowDelimiterBlue = { fg = C.cyan },
+    RainbowDelimiterOrange = { fg = C.orange },
+    RainbowDelimiterGreen = { fg = C.green },
+    RainbowDelimiterViolet = { fg = C.bright_magenta },
+    RainbowDelimiterCyan = { fg = C.bright_white },
 
     -- Telescope
     TelescopePromptPrefix = { fg = C.bright_orange, bg = C.background },
@@ -492,7 +493,7 @@ M.theme = function(C)
     WhichKeyDesc = { fg = C.yellow },
     WhichKeyValue = { fg = C.green },
   }
-  return highlight
+  return style
 end
 
 return M

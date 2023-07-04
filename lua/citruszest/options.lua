@@ -2,7 +2,7 @@ local M = {}
 
 M.options = {
   transparent = false,
-  highlight = {}
+  style = {}
 }
 
 return M

@@ -6,7 +6,7 @@ local colors = {
   cursor = "#404040",
   none = "NONE",
 
-  black = "#333333", -- black
+  black = "#4d4d4d", -- black
   red = "#D71A1A", -- red
   green = "#00CC7A",
   yellow = "#F0D50C", -- yellow
