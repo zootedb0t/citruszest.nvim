@@ -1,7 +1,7 @@
 local M = {}
 
+local config = require("citruszest.options")
 local pallet = require("citruszest.palettes.colors")
-local config = require("citruszest.options").options
 local highlight_groups = {}
 
 function M.setup(opts)

@@ -1,8 +1,6 @@
-local M = {}
-
-M.options = {
+local options = {
   transparent = false,
   style = {}
 }
 
-return M
+return options

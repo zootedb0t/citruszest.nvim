@@ -1,14 +1,14 @@
 local M = {}
 
 M.theme = function(C)
-  local style = {
+  return {
     ColorColumn = { bg = C.none }, -- used for the columns set with 'colorcolumn'
     Conceal = { fg = C.cyan }, -- placeholder characters substituted for concealed text (see 'conceallevel')
     Cursor = { fg = C.cursor, bg = C.white }, -- character under the cursor
     lCursor = { fg = C.cursor, bg = C.white }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
     CursorIM = { fg = C.cursor, bg = C.white }, -- like Cursor, but used when in IME mode |CursorIM|
     CursorColumn = { bg = C.bright_black }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
-    CursorLine = { bg = C.visual }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if forecrust (ctermfg OR guifg) is not set.
+    CursorLine = { bg = C.cursor }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if forecrust (ctermfg OR guifg) is not set.
     Directory = { fg = C.bright_yellow }, -- directory names (and other special names in listings)
     EndOfBuffer = { fg = C.background }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
     ErrorMsg = { fg = C.red }, -- error messages on the command line
@@ -86,7 +86,7 @@ M.theme = function(C)
     StorageClass = { fg = C.yellow }, -- static, register, volatile, etc.
     Structure = { fg = C.yellow }, --  struct, union, enum, etc.
     Special = { fg = C.bright_orange }, -- (preferred) any special symbol
-    Type = { fg = C.bright_yellow }, -- (preferred) int, long, char, etc.
+    Type = { fg = C.bright_yellow, italic = true }, -- (preferred) int, long, char, etc.
     Typedef = { link = "Type" }, --  A typedef
     SpecialChar = { link = "Special" }, -- special character in a constant
     Tag = { link = "Special" }, -- you can use CTRL-] on this
@@ -493,7 +493,6 @@ M.theme = function(C)
     WhichKeyDesc = { fg = C.yellow },
     WhichKeyValue = { fg = C.green },
   }
-  return style
 end
 
 return M
