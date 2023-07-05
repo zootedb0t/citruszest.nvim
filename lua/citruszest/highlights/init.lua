@@ -4,11 +4,11 @@ M.theme = function(C)
   local style = {
     ColorColumn = { bg = C.none }, -- used for the columns set with 'colorcolumn'
     Conceal = { fg = C.cyan }, -- placeholder characters substituted for concealed text (see 'conceallevel')
-    Cursor = { fg = C.cursor, bg = C.text }, -- character under the cursor
-    lCursor = { fg = C.cursor, bg = C.text }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
-    CursorIM = { fg = C.cursor, bg = C.text }, -- like Cursor, but used when in IME mode |CursorIM|
+    Cursor = { fg = C.cursor, bg = C.white }, -- character under the cursor
+    lCursor = { fg = C.cursor, bg = C.white }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
+    CursorIM = { fg = C.cursor, bg = C.white }, -- like Cursor, but used when in IME mode |CursorIM|
     CursorColumn = { bg = C.bright_black }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
-    CursorLine = { bg = C.cursor }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if forecrust (ctermfg OR guifg) is not set.
+    CursorLine = { bg = C.visual }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if forecrust (ctermfg OR guifg) is not set.
     Directory = { fg = C.bright_yellow }, -- directory names (and other special names in listings)
     EndOfBuffer = { fg = C.background }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
     ErrorMsg = { fg = C.red }, -- error messages on the command line
@@ -21,7 +21,7 @@ M.theme = function(C)
     LineNr = { fg = C.bright_black }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
     CursorLineNr = { fg = C.yellow }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line. highlights the number in numberline.
     MatchParen = { fg = C.yellow, bg = C.background, bold = true }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
-    ModeMsg = { fg = C.text }, -- 'showmode' message (e.g., "-- INSERT -- ")
+    ModeMsg = { fg = C.white }, -- 'showmode' message (e.g., "-- INSERT -- ")
     MsgSeparator = {}, -- Separator for scrolled messages, `msgsep` flag of 'display'
     MoreMsg = { fg = C.cyan }, -- |more-prompt|
     NonText = { fg = C.bright_magenta }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
@@ -32,14 +32,14 @@ M.theme = function(C)
     FloatBorder = { fg = C.orange },
     FloatTitle = { fg = C.yellow }, -- Title of floating windows
     Pmenu = { fg = C.bright_white, bg = C.background }, -- Popup menu: normal item.
-    PmenuSel = { fg = C.white, bg = C.black, bold = true }, -- Popup menu: selected item.
+    PmenuSel = { fg = C.visual, bg = C.bright_black, bold = true }, -- Popup menu: selected item.
     PmenuSbar = { bg = C.bright_orange }, -- Popup menu: scrollbar.
     PmenuThumb = { bg = C.bright_orange }, -- Popup menu: Thumb of the scrollbar.
     Question = { fg = C.cyan }, -- |hit-enter| prompt and yes/no questions
     QuickFixLine = { bg = C.bright_black, bold = true }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
     Search = { fg = C.magenta, bg = C.background }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
     IncSearch = { fg = C.bright_cyan, bg = C.background }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
-    CurSearch = { fg = C.bright_black, bg = C.bright_orange }, -- 'cursearch' highlighting: highlights the current search you're on differently
+    CurSearch = { fg = C.black, bg = C.bright_orange }, -- 'cursearch' highlighting: highlights the current search you're on differently
     SpecialKey = { fg = C.orange }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' textspace. |hl-Whitespace|
     SpellBad = { sp = C.red, undercurl = true }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
     SpellCap = { sp = C.yellow, undercurl = true }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
@@ -51,7 +51,7 @@ M.theme = function(C)
     TabLineFill = {}, -- tab pages line, where there are no labels
     TabLineSel = { fg = C.cyan, bg = C.background }, -- tab pages line, active tab page label
     Title = { fg = C.cyan, bold = true }, -- titles for output from ":set all", ":autocmd" etc.
-    Visual = { bg = C.black, bold = true }, -- Visual mode selection
+    Visual = { bg = C.visual, bold = true }, -- Visual mode selection
     VisualNOS = { bg = C.bright_black, bold = true }, -- Visual mode selection when vim is "Not Owning the Selection".
     WarningMsg = { fg = C.bright_red }, -- warning messages
     Whitespace = { fg = C.white }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
@@ -103,7 +103,7 @@ M.theme = function(C)
     qfFileName = { fg = C.cyan },
     htmlH1 = { fg = C.magenta, bold = true },
     htmlH2 = { fg = C.cyan, bold = true },
-    mkdCodeDelimiter = { bg = C.background, fg = C.text },
+    mkdCodeDelimiter = { bg = C.background, fg = C.white },
     mkdCodeStart = { fg = C.bright_cyan, bold = true },
     mkdCodeEnd = { fg = C.cyan, bold = true },
 
@@ -112,7 +112,7 @@ M.theme = function(C)
     debugBreakpoint = { bg = C.background, fg = C.foreground }, -- used for breakpoint colors in terminal-debug
 
     -- illuminate
-    illuminatedWord = { bg = C.text },
+    illuminatedWord = { bg = C.black },
     illuminatedCurWord = { bg = C.bright_black },
 
     -- diff
@@ -141,7 +141,7 @@ M.theme = function(C)
     GlyphPalette3 = { fg = C.yellow },
     GlyphPalette4 = { fg = C.cyan },
     GlyphPalette6 = { fg = C.magenta },
-    GlyphPalette7 = { fg = C.text },
+    GlyphPalette7 = { fg = C.white },
     GlyphPalette9 = { fg = C.red },
 
     -- rainbow
@@ -157,9 +157,9 @@ M.theme = function(C)
     -- These groups are for the native LSP client. Some other LSP clients may
     -- use these groups, or use their own. Consult your LSP client's
     -- documentation.
-    LspReferenceText = { bg = C.black }, -- used for highlighting "text" references
-    LspReferenceRead = { bg = C.black }, -- used for highlighting "read" references
-    LspReferenceWrite = { bg = C.black }, -- used for highlighting "write" references
+    LspReferenceText = { bg = C.visual }, -- used for highlighting "text" references
+    LspReferenceRead = { bg = C.visual }, -- used for highlighting "read" references
+    LspReferenceWrite = { bg = C.visual }, -- used for highlighting "write" references
     -- highlight diagnostics in numberline
 
     DiagnosticError = { bg = C.none, fg = C.red, bold = true }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
@@ -306,11 +306,11 @@ M.theme = function(C)
     ["@symbol"] = { fg = C.yellow },
 
     -- Text
-    ["@text"] = { fg = C.text }, -- For strings considerated text in a markup language.
+    ["@text"] = { fg = C.bright_white }, -- For strings considerated text in a markup language.
     ["@text.strong"] = { fg = C.bright_red, bold = true }, -- bold
     ["@text.emphasis"] = { fg = C.bright_orange, italic = true }, -- italic
     ["@text.underline"] = { link = "Underline" }, -- underlined text
-    ["@text.strike"] = { fg = C.text, strikethrough = true }, -- strikethrough text
+    ["@text.strike"] = { fg = C.white, strikethrough = true }, -- strikethrough text
     ["@text.title"] = { fg = C.cyan, bold = true }, -- titles like: # Example
     ["@text.literal"] = { fg = C.magenta }, -- used for inline code in markdown and for doc in python (""")
     ["@text.uri"] = { fg = C.bright_orange, italic = true, underline = true }, -- urls, links and emails
@@ -388,7 +388,7 @@ M.theme = function(C)
     CmpItemAbbr = { fg = C.bright_white },
     CmpItemAbbrDeprecated = { fg = C.black, strikethrough = true },
     CmpItemKind = { fg = C.cyan },
-    CmpItemMenu = { fg = C.text },
+    CmpItemMenu = { fg = C.white },
     CmpItemAbbrMatch = { fg = C.bright_green, bold = true },
     CmpItemAbbrMatchFuzzy = { fg = C.bright_green, bold = true },
 
@@ -433,7 +433,7 @@ M.theme = function(C)
 
     -- Fidget
     FidgetTask = {
-      fg = C.red,
+      fg = C.cyan,
       bg = C.black,
     },
     FidgetTitle = { fg = C.red },
@@ -449,7 +449,7 @@ M.theme = function(C)
 
     -- Telescope
     TelescopePromptPrefix = { fg = C.bright_orange, bg = C.background },
-    TelescopeSelectionCaret = { fg = C.orange, bg = C.black, bold = true },
+    TelescopeSelectionCaret = { fg = C.orange, bg = C.visual, bold = true },
     TelescopePromptNormal = { bg = C.background },
     TelescopeResultsNormal = { bg = C.background },
     TelescopePreviewNormal = { bg = C.background },
@@ -475,7 +475,7 @@ M.theme = function(C)
     NvimTreeGitNew = { fg = C.cyan },
     NvimTreeGitDeleted = { fg = C.red },
     NvimTreeSpecialFile = { fg = C.magenta },
-    NvimTreeImageFile = { fg = C.text },
+    NvimTreeImageFile = { fg = C.bright_black },
     NvimTreeOpenedFile = { fg = C.yellow },
 
     -- Alpha
