@@ -6,23 +6,23 @@ local colors = {
   cursor = "#666666",
   none = "NONE",
 
-  black = "#121212", -- black
-  red = "#D71A1A", -- red
+  black = "#121212",
+  red = "#D71A1A",
   green = "#00CC7A",
-  yellow = "#F0D50C", -- yellow
+  yellow = "#F0D50C",
   orange = "#FF6600",
   magenta = "#CC00FF",
-  cyan = "#33FFFF", -- cyan
+  cyan = "#33FFFF",
   white = "#BFBFBF",
 
-  bright_black = "#808080", -- bright_black
-  bright_red = "#FF1A75", -- bright_red
-  bright_green = "#1AFFA3", -- bright green
-  bright_yellow = "#FFFF00", -- bright yellow
-  bright_orange = "#FFB200", -- bright orange
-  bright_magenta = "#BA22DD", -- bright magenta
-  bright_cyan = "#1AFFFF", -- bright cyan
-  bright_white = "#F9F9F9", -- bright white
+  bright_black = "#808080",
+  bright_red = "#FF1A75",
+  bright_green = "#1AFFA3",
+  bright_yellow = "#FFFF00",
+  bright_orange = "#FFB200",
+  bright_magenta = "#BA22DD",
+  bright_cyan = "#1AFFFF",
+  bright_white = "#F9F9F9",
 }
 
 return colors

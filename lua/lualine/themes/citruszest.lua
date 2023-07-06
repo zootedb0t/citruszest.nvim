@@ -1,11 +1,11 @@
 local colors = {
-  black = "#121212", -- black
-  red = "#D71A1A", -- red
+  black = "#121212",
+  red = "#D71A1A",
   green = "#00CC7A",
-  yellow = "#F0D50C", -- yellow
+  yellow = "#F0D50C",
   orange = "#FF6600",
   magenta = "#CC00FF",
-  cyan = "#33FFFF", -- cyan
+  cyan = "#33FFFF",
   white = "#BFBFBF",
 }
 
