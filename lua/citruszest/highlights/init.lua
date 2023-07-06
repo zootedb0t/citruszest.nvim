@@ -24,7 +24,7 @@ M.theme = function(C)
     ModeMsg = { fg = C.white }, -- 'showmode' message (e.g., "-- INSERT -- ")
     MsgSeparator = {}, -- Separator for scrolled messages, `msgsep` flag of 'display'
     MoreMsg = { fg = C.cyan }, -- |more-prompt|
-    NonText = { fg = C.bright_magenta }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
+    NonText = { fg = C.bright_purple }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
     Normal = { fg = C.foreground, bg = C.background }, -- normal text
     NormalNC = { fg = C.foreground, bg = C.background }, -- normal text in non-current windows
     NormalSB = { fg = C.foreground }, -- normal text in non-current windows
@@ -37,7 +37,7 @@ M.theme = function(C)
     PmenuThumb = { bg = C.bright_orange }, -- Popup menu: Thumb of the scrollbar.
     Question = { fg = C.cyan }, -- |hit-enter| prompt and yes/no questions
     QuickFixLine = { bg = C.bright_black, bold = true }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
-    Search = { fg = C.magenta, bg = C.background }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
+    Search = { fg = C.purple, bg = C.background }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
     IncSearch = { fg = C.bright_cyan, bg = C.background }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
     CurSearch = { fg = C.black, bg = C.bright_orange }, -- 'cursearch' highlighting: highlights the current search you're on differently
     SpecialKey = { fg = C.orange }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' textspace. |hl-Whitespace|
@@ -63,10 +63,10 @@ M.theme = function(C)
     Constant = { fg = C.cyan }, -- (preferred) any constant
     String = { fg = C.cyan }, -- a string constant: "this is a string"
     Character = { fg = C.bright_red }, --  a character constant: 'c', '\n'
-    Number = { fg = C.magenta }, --   a number constant: 234, 0xff
+    Number = { fg = C.purple }, --   a number constant: 234, 0xff
     Float = { fg = C.cyan }, --    a floating point constant: 2.3e10
     Boolean = { fg = C.orange }, --  a boolean constant: TRUE, false
-    Identifier = { fg = C.magenta }, -- (preferred) any variable name
+    Identifier = { fg = C.purple }, -- (preferred) any variable name
     Function = { fg = C.bright_red }, -- function name (also: methods for classes)
     Statement = { fg = C.bright_green }, -- (preferred) any statement
     Conditional = { fg = C.bright_orange }, --  if, then, else, endif, switch, etc.
@@ -74,10 +74,10 @@ M.theme = function(C)
     Label = { fg = C.bright_green }, --    case, default, etc.
     Operator = { fg = C.bright_red }, -- "sizeof", "+", "*", etc.
     Keyword = { fg = C.bright_yellow }, --  any other keyword
-    Array = { fg = C.magenta },
+    Array = { fg = C.purple },
     -- Exception     = { }, --  try, catch, throw
 
-    PreProc = { fg = C.magenta }, -- (preferred) generic Preprocessor
+    PreProc = { fg = C.purple }, -- (preferred) generic Preprocessor
     Include = { fg = C.bright_yellow }, --  preprocessor #include
     Define = { link = "PreProc" }, -- preprocessor #define
     Macro = { fg = C.orange }, -- same as Define
@@ -101,7 +101,7 @@ M.theme = function(C)
     Todo = { fg = C.black, bg = C.yellow }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
     qfLineNr = { fg = C.yellow },
     qfFileName = { fg = C.cyan },
-    htmlH1 = { fg = C.magenta, bold = true },
+    htmlH1 = { fg = C.purple, bold = true },
     htmlH2 = { fg = C.cyan, bold = true },
     mkdCodeDelimiter = { bg = C.background, fg = C.white },
     mkdCodeStart = { fg = C.bright_cyan, bold = true },
@@ -140,13 +140,13 @@ M.theme = function(C)
     GlyphPalette2 = { fg = C.cyan },
     GlyphPalette3 = { fg = C.yellow },
     GlyphPalette4 = { fg = C.cyan },
-    GlyphPalette6 = { fg = C.magenta },
+    GlyphPalette6 = { fg = C.purple },
     GlyphPalette7 = { fg = C.white },
     GlyphPalette9 = { fg = C.red },
 
     -- rainbow
     rainbow1 = { fg = C.red },
-    rainbow2 = { fg = C.magenta },
+    rainbow2 = { fg = C.purple },
     rainbow3 = { fg = C.yellow },
     rainbow4 = { fg = C.green },
     rainbow5 = { fg = C.bright_orange },
@@ -164,30 +164,30 @@ M.theme = function(C)
 
     DiagnosticError = { bg = C.none, fg = C.red, bold = true }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
     DiagnosticWarn = { bg = C.none, fg = C.bright_yellow }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
-    DiagnosticInfo = { bg = C.none, fg = C.magenta }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
+    DiagnosticInfo = { bg = C.none, fg = C.purple }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
     DiagnosticHint = { bg = C.none, fg = C.bright_cyan }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
 
     DiagnosticFloatingError = { fg = C.red }, -- Used to color "Error" diagnostic messages in diagnostics float
     DiagnosticFloatingWarn = { fg = C.bright_yellow }, -- Used to color "Warn" diagnostic messages in diagnostics float
-    DiagnosticFloatingInfo = { fg = C.magenta }, -- Used to color "Info" diagnostic messages in diagnostics float
+    DiagnosticFloatingInfo = { fg = C.purple }, -- Used to color "Info" diagnostic messages in diagnostics float
     DiagnosticFloatingHint = { fg = C.bright_cyan }, -- Used to color "Hint" diagnostic messages in diagnostics float
 
     DiagnosticSignError = { fg = C.red }, -- Used for "Error" signs in sign column
     DiagnosticSignWarn = { fg = C.bright_yellow }, -- Used for "Warn" signs in sign column
-    DiagnosticSignInfo = { fg = C.magenta }, -- Used for "Info" signs in sign column
+    DiagnosticSignInfo = { fg = C.purple }, -- Used for "Info" signs in sign column
     DiagnosticSignHint = { fg = C.bright_cyan }, -- Used for "Hint" signs in sign column
 
     LspDiagnosticsError = { fg = C.red },
     LspDiagnosticsWarning = { fg = C.bright_yellow },
-    LspDiagnosticsInformation = { fg = C.magenta },
+    LspDiagnosticsInformation = { fg = C.purple },
     LspDiagnosticsHint = { fg = C.bright_cyan },
     LspDiagnosticsVirtualTextError = { fg = C.red, bg = C.background }, -- Used for "Error" diagnostic virtual text
     LspDiagnosticsVirtualTextWarning = { fg = C.bright_yellow, bg = C.background }, -- Used for "Warning" diagnostic virtual text
-    LspDiagnosticsVirtualTextInformation = { fg = C.magenta, bg = C.background }, -- Used for "Information" diagnostic virtual text
+    LspDiagnosticsVirtualTextInformation = { fg = C.purple, bg = C.background }, -- Used for "Information" diagnostic virtual text
     LspDiagnosticsVirtualTextHint = { fg = C.bright_cyan, bg = C.background }, -- Used for "Hint" diagnostic virtual text
     LspDiagnosticsUnderlineError = { fg = C.red, bg = C.background, underline = true }, -- Used to underline "Error" diagnostics
     LspDiagnosticsUnderlineWarning = { fg = C.bright_yellow, bg = C.background, underline = true }, -- Used to underline "Warning" diagnostics
-    LspDiagnosticsUnderlineInformation = { fg = C.magenta, bg = C.background, underline = true }, -- Used to underline "Information" diagnostics
+    LspDiagnosticsUnderlineInformation = { fg = C.purple, bg = C.background, underline = true }, -- Used to underline "Information" diagnostics
     LspDiagnosticsUnderlineHint = { fg = C.bright_cyan, bg = C.background, underline = true }, -- Used to underline "Hint" diagnostics
     LspCodeLens = { fg = C.bright_cyan }, -- virtual text of the codelens
     LspInlayHint = {
@@ -205,7 +205,7 @@ M.theme = function(C)
     ["@lsp.type.enumMember"] = { link = "@constant" },
     ["@lsp.type.escapeSequence"] = { link = "@string.escape" },
     ["@lsp.type.formatSpecifier"] = { link = "@punctuation.special" },
-    ["@lsp.type.interface"] = { fg = C.bright_magenta },
+    ["@lsp.type.interface"] = { fg = C.bright_purple },
     ["@lsp.type.keyword"] = { link = "@keyword" },
     ["@lsp.type.namespace"] = { link = "@namespace" },
     ["@lsp.type.number"] = { link = "@number" },
@@ -259,7 +259,7 @@ M.theme = function(C)
     -- ["@function.builtin"] = { fg = C.orange }, -- For builtin functions: table.insert in Lua.
     ["@function.builtin"] = { fg = C.bright_red }, -- For builtin functions: table.insert in Lua.
     ["@function.call"] = { link = "Function" }, -- function calls
-    ["@function.macro"] = { fg = C.magenta }, -- For macro defined functions (calls and definitions): each macro_rules in RusC.
+    ["@function.macro"] = { fg = C.purple }, -- For macro defined functions (calls and definitions): each macro_rules in RusC.
     ["@method"] = { link = "Function" }, -- For method calls and definitions.
 
     ["@method.call"] = { link = "Function" }, -- method calls
@@ -273,7 +273,7 @@ M.theme = function(C)
     ["@keyword.operator"] = { fg = C.bright_green }, -- For new keyword operator
     ["@keyword.return"] = { fg = C.bright_red },
     -- JS & derivative
-    ["@keyword.export"] = { fg = C.bright_magenta },
+    ["@keyword.export"] = { fg = C.bright_purple },
 
     ["@conditional"] = { link = "Conditional" }, -- For keywords related to conditionnals.
     ["@repeat"] = { link = "Repeat" }, -- For keywords related to loops.
@@ -312,13 +312,13 @@ M.theme = function(C)
     ["@text.underline"] = { link = "Underline" }, -- underlined text
     ["@text.strike"] = { fg = C.white, strikethrough = true }, -- strikethrough text
     ["@text.title"] = { fg = C.cyan, bold = true }, -- titles like: # Example
-    ["@text.literal"] = { fg = C.magenta }, -- used for inline code in markdown and for doc in python (""")
+    ["@text.literal"] = { fg = C.purple }, -- used for inline code in markdown and for doc in python (""")
     ["@text.uri"] = { fg = C.bright_orange, italic = true, underline = true }, -- urls, links and emails
     ["@text.html"] = { fg = C.bright_orange, italic = true, underline = true }, -- urls, links and emails
     ["@text.math"] = { fg = C.cyan }, -- math environments (e.g. `$ ... $` in LaTeX)
     ["@text.environment"] = { fg = C.orange }, -- text environments of markup languages
     ["@text.environment.name"] = { fg = C.cyan }, -- text indicating the type of an environment
-    ["@text.reference"] = { fg = C.magenta, bold = true }, -- references
+    ["@text.reference"] = { fg = C.purple, bold = true }, -- references
 
     ["@text.todo"] = { fg = C.black, bg = C.yellow }, -- todo notes
     ["@text.todo.checked"] = { fg = C.green }, -- todo notes
@@ -393,9 +393,9 @@ M.theme = function(C)
     CmpItemAbbrMatchFuzzy = { fg = C.bright_green, bold = true },
 
     -- kind support
-    CmpItemKindSnippet = { fg = C.magenta },
+    CmpItemKindSnippet = { fg = C.purple },
     CmpItemKindKeyword = { fg = C.orange },
-    CmpItemKindText = { fg = C.bright_magenta },
+    CmpItemKindText = { fg = C.bright_purple },
     CmpItemKindMethod = { fg = C.cyan },
     CmpItemKindConstructor = { fg = C.cyan },
     CmpItemKindFunction = { fg = C.bright_yellow },
@@ -407,18 +407,18 @@ M.theme = function(C)
     CmpItemKindEnum = { fg = C.green },
     CmpItemKindUnit = { fg = C.green },
     CmpItemKindClass = { fg = C.yellow },
-    CmpItemKindVariable = { fg = C.magenta },
+    CmpItemKindVariable = { fg = C.purple },
     CmpItemKindFile = { fg = C.cyan },
     CmpItemKindInterface = { fg = C.yellow },
     CmpItemKindColor = { fg = C.red },
     CmpItemKindReference = { fg = C.red },
     CmpItemKindEnumMember = { fg = C.red },
     CmpItemKindStruct = { fg = C.cyan },
-    CmpItemKindValue = { fg = C.bright_magenta },
+    CmpItemKindValue = { fg = C.bright_purple },
     CmpItemKindEvent = { fg = C.cyan },
     CmpItemKindOperator = { fg = C.cyan },
     CmpItemKindTypeParameter = { fg = C.cyan },
-    CmpItemKindCopilot = { fg = C.bright_magenta },
+    CmpItemKindCopilot = { fg = C.bright_purple },
 
     -- Gitsigns
     SignAdd = { fg = C.bright_green, bg = C.none },
@@ -444,7 +444,7 @@ M.theme = function(C)
     RainbowDelimiterBlue = { fg = C.cyan },
     RainbowDelimiterOrange = { fg = C.orange },
     RainbowDelimiterGreen = { fg = C.green },
-    RainbowDelimiterViolet = { fg = C.bright_magenta },
+    RainbowDelimiterViolet = { fg = C.bright_purple },
     RainbowDelimiterCyan = { fg = C.bright_white },
 
     -- Telescope
@@ -469,12 +469,12 @@ M.theme = function(C)
     NvimTreeIndentMarker = { fg = C.bright_black },
     NvimTreeWinSeparator = { fg = C.foreground, bg = C.background },
     NvimTreeRootFolder = { fg = C.bright_yellow, bold = true },
-    NvimTreeSymlink = { fg = C.magenta },
+    NvimTreeSymlink = { fg = C.purple },
     NvimTreeStatuslineNc = { fg = C.bright_orange, bg = C.background },
     NvimTreeGitDirty = { fg = C.yellow },
     NvimTreeGitNew = { fg = C.cyan },
     NvimTreeGitDeleted = { fg = C.red },
-    NvimTreeSpecialFile = { fg = C.magenta },
+    NvimTreeSpecialFile = { fg = C.purple },
     NvimTreeImageFile = { fg = C.bright_black },
     NvimTreeOpenedFile = { fg = C.yellow },
 

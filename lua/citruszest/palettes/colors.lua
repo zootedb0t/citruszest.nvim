@@ -7,11 +7,11 @@ local colors = {
   none = "NONE",
 
   black = "#121212",
-  red = "#D71A1A",
+  red = "#FF5454",
   green = "#00CC7A",
   yellow = "#F0D50C",
   orange = "#FF6600",
-  magenta = "#CC00FF",
+  purple = "#8B4DFF",
   cyan = "#33FFFF",
   white = "#BFBFBF",
 
@@ -20,7 +20,7 @@ local colors = {
   bright_green = "#1AFFA3",
   bright_yellow = "#FFFF00",
   bright_orange = "#FFB200",
-  bright_magenta = "#BA22DD",
+  bright_purple = "#AE81FF",
   bright_cyan = "#1AFFFF",
   bright_white = "#F9F9F9",
 }
