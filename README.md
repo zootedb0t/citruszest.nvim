@@ -117,7 +117,7 @@ lualine.setup {
 | Black(Bright)     | `#808080` | ![bright_black](https://place-hold.it/32/808080?text=+)  |
 | Red(Bright)       | `#FF1A75` | ![bright_red](https://place-hold.it/32/FF1A75?text=+)    |
 | Green(Bright)     | `#1AFFA3` | ![bright_green](https://place-hold.it/32/1AFFA3?text=+)  |
-| Yellow(Bright)    | `#FFDD33` | ![bright_yellow](https://place-hold.it/32/FFFF00?text=+) |
+| Yellow(Bright)    | `#FFFF00` | ![bright_yellow](https://place-hold.it/32/FFFF00?text=+) |
 | Orange(Bright)    | `#FFA033` | ![bright_orange](https://place-hold.it/32/FFC233?text=+) |
 | Blue(Bright)      | `#4DD5FF` | ![bright_purple](https://place-hold.it/32/4DD5FF?text=+) |
 | Cyan(Bright)      | `#33FFFF` | ![bright_cyan](https://place-hold.it/32/33FFFF?text=+)   |
