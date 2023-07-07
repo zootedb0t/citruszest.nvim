@@ -290,7 +290,7 @@ M.theme = function(C)
 
     ["@storageclass"] = { link = "StorageClass" }, -- visibility/life-time/etc. modifiers (e.g. `static`)
     ["@attribute"] = { link = "Constant" }, -- attribute annotations (e.g. Python decorators)
-    ["@field"] = { fg = C.orange }, -- For fields.
+    ["@field"] = { fg = C.bright_green }, -- For fields.
     ["@property"] = { fg = C.bright_green }, -- Same as TSField.
 
     -- Identifiers
