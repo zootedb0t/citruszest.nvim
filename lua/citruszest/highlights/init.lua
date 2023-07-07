@@ -24,7 +24,7 @@ M.theme = function(C)
     ModeMsg = { fg = C.white }, -- 'showmode' message (e.g., "-- INSERT -- ")
     MsgSeparator = {}, -- Separator for scrolled messages, `msgsep` flag of 'display'
     MoreMsg = { fg = C.cyan }, -- |more-prompt|
-    NonText = { fg = C.bright_purple }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
+    NonText = { fg = C.bright_cyan }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
     Normal = { fg = C.foreground, bg = C.background }, -- normal text
     NormalNC = { fg = C.foreground, bg = C.background }, -- normal text in non-current windows
     NormalSB = { fg = C.foreground }, -- normal text in non-current windows
@@ -37,7 +37,7 @@ M.theme = function(C)
     PmenuThumb = { bg = C.bright_orange }, -- Popup menu: Thumb of the scrollbar.
     Question = { fg = C.cyan }, -- |hit-enter| prompt and yes/no questions
     QuickFixLine = { bg = C.bright_black, bold = true }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
-    Search = { fg = C.purple, bg = C.background }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
+    Search = { fg = C.blue, bg = C.background }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
     IncSearch = { fg = C.bright_cyan, bg = C.background }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
     CurSearch = { fg = C.black, bg = C.bright_orange }, -- 'cursearch' highlighting: highlights the current search you're on differently
     SpecialKey = { fg = C.orange }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' textspace. |hl-Whitespace|
@@ -60,33 +60,33 @@ M.theme = function(C)
 
     Comment = { fg = C.bright_black }, -- just comments
     SpecialComment = { link = "Special" }, -- special things inside a comment
-    Constant = { fg = C.cyan }, -- (preferred) any constant
-    String = { fg = C.cyan }, -- a string constant: "this is a string"
+    Constant = { fg = C.bright_red }, -- (preferred) any constant
+    String = { fg = C.bright_cyan }, -- a string constant: "this is a string"
     Character = { fg = C.bright_red }, --  a character constant: 'c', '\n'
-    Number = { fg = C.purple }, --   a number constant: 234, 0xff
+    Number = { fg = C.bright_cyan }, --   a number constant: 234, 0xff
     Float = { fg = C.cyan }, --    a floating point constant: 2.3e10
     Boolean = { fg = C.orange }, --  a boolean constant: TRUE, false
-    Identifier = { fg = C.purple }, -- (preferred) any variable name
-    Function = { fg = C.bright_red }, -- function name (also: methods for classes)
-    Statement = { fg = C.bright_green }, -- (preferred) any statement
-    Conditional = { fg = C.bright_orange }, --  if, then, else, endif, switch, etc.
+    Identifier = { fg = C.bright_yellow }, -- (preferred) any variable name
+    Function = { fg = C.green }, -- function name (also: methods for classes)
+    Statement = { fg = C.blue }, -- (preferred) any statement
+    Conditional = { fg = C.orange }, --  if, then, else, endif, switch, etc.
     Repeat = { fg = C.bright_yellow }, --   for, do, while, etc.
     Label = { fg = C.bright_green }, --    case, default, etc.
     Operator = { fg = C.bright_red }, -- "sizeof", "+", "*", etc.
     Keyword = { fg = C.bright_yellow }, --  any other keyword
-    Array = { fg = C.purple },
+    Array = { fg = C.blue },
     -- Exception     = { }, --  try, catch, throw
 
-    PreProc = { fg = C.purple }, -- (preferred) generic Preprocessor
+    PreProc = { fg = C.bright_green }, -- (preferred) generic Preprocessor
     Include = { fg = C.bright_yellow }, --  preprocessor #include
     Define = { link = "PreProc" }, -- preprocessor #define
-    Macro = { fg = C.orange }, -- same as Define
+    Macro = { fg = C.red }, -- same as Define
     PreCondit = { link = "PreProc" }, -- preprocessor #if, #else, #endif, etc.
 
     StorageClass = { fg = C.yellow }, -- static, register, volatile, etc.
-    Structure = { fg = C.yellow }, --  struct, union, enum, etc.
+    Structure = { fg = C.bright_cyan }, --  struct, union, enum, etc.
     Special = { fg = C.bright_orange }, -- (preferred) any special symbol
-    Type = { fg = C.bright_yellow, italic = true }, -- (preferred) int, long, char, etc.
+    Type = { fg = C.bright_cyan, italic = true }, -- (preferred) int, long, char, etc.
     Typedef = { link = "Type" }, --  A typedef
     SpecialChar = { link = "Special" }, -- special character in a constant
     Tag = { link = "Special" }, -- you can use CTRL-] on this
@@ -101,7 +101,7 @@ M.theme = function(C)
     Todo = { fg = C.black, bg = C.yellow }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
     qfLineNr = { fg = C.yellow },
     qfFileName = { fg = C.cyan },
-    htmlH1 = { fg = C.purple, bold = true },
+    htmlH1 = { fg = C.blue, bold = true },
     htmlH2 = { fg = C.cyan, bold = true },
     mkdCodeDelimiter = { bg = C.background, fg = C.white },
     mkdCodeStart = { fg = C.bright_cyan, bold = true },
@@ -131,7 +131,7 @@ M.theme = function(C)
 
     -- NeoVim
     healthError = { fg = C.red },
-    healthSuccess = { fg = C.orange },
+    healthSuccess = { fg = C.green },
     healthWarning = { fg = C.yellow },
     -- misc
 
@@ -140,16 +140,16 @@ M.theme = function(C)
     GlyphPalette2 = { fg = C.cyan },
     GlyphPalette3 = { fg = C.yellow },
     GlyphPalette4 = { fg = C.cyan },
-    GlyphPalette6 = { fg = C.purple },
+    GlyphPalette6 = { fg = C.blue },
     GlyphPalette7 = { fg = C.white },
     GlyphPalette9 = { fg = C.red },
 
     -- rainbow
     rainbow1 = { fg = C.red },
-    rainbow2 = { fg = C.purple },
+    rainbow2 = { fg = C.blue },
     rainbow3 = { fg = C.yellow },
     rainbow4 = { fg = C.green },
-    rainbow5 = { fg = C.bright_orange },
+    rainbow5 = { fg = C.orange },
     rainbow6 = { fg = C.bright_cyan },
 
     -- Native LSP
@@ -164,30 +164,30 @@ M.theme = function(C)
 
     DiagnosticError = { bg = C.none, fg = C.red, bold = true }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
     DiagnosticWarn = { bg = C.none, fg = C.bright_yellow }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
-    DiagnosticInfo = { bg = C.none, fg = C.purple }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
+    DiagnosticInfo = { bg = C.none, fg = C.blue }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
     DiagnosticHint = { bg = C.none, fg = C.bright_cyan }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
 
     DiagnosticFloatingError = { fg = C.red }, -- Used to color "Error" diagnostic messages in diagnostics float
     DiagnosticFloatingWarn = { fg = C.bright_yellow }, -- Used to color "Warn" diagnostic messages in diagnostics float
-    DiagnosticFloatingInfo = { fg = C.purple }, -- Used to color "Info" diagnostic messages in diagnostics float
+    DiagnosticFloatingInfo = { fg = C.blue }, -- Used to color "Info" diagnostic messages in diagnostics float
     DiagnosticFloatingHint = { fg = C.bright_cyan }, -- Used to color "Hint" diagnostic messages in diagnostics float
 
     DiagnosticSignError = { fg = C.red }, -- Used for "Error" signs in sign column
     DiagnosticSignWarn = { fg = C.bright_yellow }, -- Used for "Warn" signs in sign column
-    DiagnosticSignInfo = { fg = C.purple }, -- Used for "Info" signs in sign column
+    DiagnosticSignInfo = { fg = C.blue }, -- Used for "Info" signs in sign column
     DiagnosticSignHint = { fg = C.bright_cyan }, -- Used for "Hint" signs in sign column
 
     LspDiagnosticsError = { fg = C.red },
     LspDiagnosticsWarning = { fg = C.bright_yellow },
-    LspDiagnosticsInformation = { fg = C.purple },
+    LspDiagnosticsInformation = { fg = C.blue },
     LspDiagnosticsHint = { fg = C.bright_cyan },
     LspDiagnosticsVirtualTextError = { fg = C.red, bg = C.background }, -- Used for "Error" diagnostic virtual text
     LspDiagnosticsVirtualTextWarning = { fg = C.bright_yellow, bg = C.background }, -- Used for "Warning" diagnostic virtual text
-    LspDiagnosticsVirtualTextInformation = { fg = C.purple, bg = C.background }, -- Used for "Information" diagnostic virtual text
+    LspDiagnosticsVirtualTextInformation = { fg = C.blue, bg = C.background }, -- Used for "Information" diagnostic virtual text
     LspDiagnosticsVirtualTextHint = { fg = C.bright_cyan, bg = C.background }, -- Used for "Hint" diagnostic virtual text
     LspDiagnosticsUnderlineError = { fg = C.red, bg = C.background, underline = true }, -- Used to underline "Error" diagnostics
     LspDiagnosticsUnderlineWarning = { fg = C.bright_yellow, bg = C.background, underline = true }, -- Used to underline "Warning" diagnostics
-    LspDiagnosticsUnderlineInformation = { fg = C.purple, bg = C.background, underline = true }, -- Used to underline "Information" diagnostics
+    LspDiagnosticsUnderlineInformation = { fg = C.blue, bg = C.background, underline = true }, -- Used to underline "Information" diagnostics
     LspDiagnosticsUnderlineHint = { fg = C.bright_cyan, bg = C.background, underline = true }, -- Used to underline "Hint" diagnostics
     LspCodeLens = { fg = C.bright_cyan }, -- virtual text of the codelens
     LspInlayHint = {
@@ -205,7 +205,7 @@ M.theme = function(C)
     ["@lsp.type.enumMember"] = { link = "@constant" },
     ["@lsp.type.escapeSequence"] = { link = "@string.escape" },
     ["@lsp.type.formatSpecifier"] = { link = "@punctuation.special" },
-    ["@lsp.type.interface"] = { fg = C.bright_purple },
+    ["@lsp.type.interface"] = { fg = C.bright_blue },
     ["@lsp.type.keyword"] = { link = "@keyword" },
     ["@lsp.type.namespace"] = { link = "@namespace" },
     ["@lsp.type.number"] = { link = "@number" },
@@ -256,10 +256,9 @@ M.theme = function(C)
 
     -- Functions
     ["@function"] = { link = "Function" }, -- For function (calls and definitions).
-    -- ["@function.builtin"] = { fg = C.orange }, -- For builtin functions: table.insert in Lua.
-    ["@function.builtin"] = { fg = C.bright_red }, -- For builtin functions: table.insert in Lua.
+    ["@function.builtin"] = { fg = C.yellow }, -- For builtin functions: table.insert in Lua.
     ["@function.call"] = { link = "Function" }, -- function calls
-    ["@function.macro"] = { fg = C.purple }, -- For macro defined functions (calls and definitions): each macro_rules in RusC.
+    ["@function.macro"] = { fg = C.blue }, -- For macro defined functions (calls and definitions): each macro_rules in RusC.
     ["@method"] = { link = "Function" }, -- For method calls and definitions.
 
     ["@method.call"] = { link = "Function" }, -- method calls
@@ -269,11 +268,11 @@ M.theme = function(C)
 
     -- Keywords
     ["@keyword"] = { link = "Keyword" }, -- For keywords that don't fall in previous categories.
-    ["@keyword.function"] = { fg = C.bright_red }, -- For keywords used to define a function.
+    ["@keyword.function"] = { fg = C.orange }, -- For keywords used to define a function.
     ["@keyword.operator"] = { fg = C.bright_green }, -- For new keyword operator
-    ["@keyword.return"] = { fg = C.bright_red },
+    ["@keyword.return"] = { fg = C.bright_green },
     -- JS & derivative
-    ["@keyword.export"] = { fg = C.bright_purple },
+    ["@keyword.export"] = { fg = C.bright_cyan },
 
     ["@conditional"] = { link = "Conditional" }, -- For keywords related to conditionnals.
     ["@repeat"] = { link = "Repeat" }, -- For keywords related to loops.
@@ -291,15 +290,15 @@ M.theme = function(C)
 
     ["@storageclass"] = { link = "StorageClass" }, -- visibility/life-time/etc. modifiers (e.g. `static`)
     ["@attribute"] = { link = "Constant" }, -- attribute annotations (e.g. Python decorators)
-    ["@field"] = { fg = C.bright_green }, -- For fields.
-    ["@property"] = { fg = C.bright_green }, -- Same as TSField.
+    ["@field"] = { fg = C.orange }, -- For fields.
+    ["@property"] = { fg = C.blue }, -- Same as TSField.
 
     -- Identifiers
     ["@variable"] = { fg = C.bright_white }, -- Any variable name that does not have another highlight.
     ["@variable.builtin"] = { fg = C.bright_yellow }, -- Variable names that are defined by the languages, like this or self.
 
     ["@constant"] = { link = "Constant" }, -- For constants
-    ["@constant.builtin"] = { fg = C.bright_orange }, -- For constant that are built in the language: nil in Lua.
+    ["@constant.builtin"] = { fg = C.bright_red }, -- For constant that are built in the language: nil in Lua.
     ["@constant.macro"] = { link = "Macro" }, -- For constants that are defined by macros: NULL in C.
 
     ["@namespace"] = { fg = C.bright_yellow, italic = true }, -- For identifiers referring to modules and namespaces.
@@ -311,14 +310,14 @@ M.theme = function(C)
     ["@text.emphasis"] = { fg = C.bright_orange, italic = true }, -- italic
     ["@text.underline"] = { link = "Underline" }, -- underlined text
     ["@text.strike"] = { fg = C.white, strikethrough = true }, -- strikethrough text
-    ["@text.title"] = { fg = C.cyan, bold = true }, -- titles like: # Example
-    ["@text.literal"] = { fg = C.purple }, -- used for inline code in markdown and for doc in python (""")
-    ["@text.uri"] = { fg = C.bright_orange, italic = true, underline = true }, -- urls, links and emails
-    ["@text.html"] = { fg = C.bright_orange, italic = true, underline = true }, -- urls, links and emails
+    ["@text.title"] = { fg = C.white, bold = true }, -- titles like: # Example
+    ["@text.literal"] = { fg = C.blue }, -- used for inline code in markdown and for doc in python (""")
+    ["@text.uri"] = { fg = C.bright_green, italic = true, underline = true }, -- urls, links and emails
+    ["@text.html"] = { fg = C.bright_white, italic = true, underline = true }, -- urls, links and emails
     ["@text.math"] = { fg = C.cyan }, -- math environments (e.g. `$ ... $` in LaTeX)
     ["@text.environment"] = { fg = C.orange }, -- text environments of markup languages
     ["@text.environment.name"] = { fg = C.cyan }, -- text indicating the type of an environment
-    ["@text.reference"] = { fg = C.purple, bold = true }, -- references
+    ["@text.reference"] = { fg = C.blue, bold = true }, -- references
 
     ["@text.todo"] = { fg = C.black, bg = C.yellow }, -- todo notes
     ["@text.todo.checked"] = { fg = C.green }, -- todo notes
@@ -331,9 +330,9 @@ M.theme = function(C)
     ["@text.diff.delete"] = { link = "diffRemoved" }, -- deleted text (for diff files)
 
     -- Tags
-    ["@tag"] = { fg = C.bright_yellow }, -- Tags like html tag names.
-    ["@tag.attribute"] = { fg = C.bright_orange, italic = true }, -- Tags like html tag names.
-    ["@tag.delimiter"] = { fg = C.bright_cyan }, -- Tag delimiter like < > /
+    ["@tag"] = { fg = C.bright_red }, -- Tags like html tag names.
+    ["@tag.attribute"] = { fg = C.bright_yellow, italic = true }, -- Tags like html tag names.
+    ["@tag.delimiter"] = { fg = C.red }, -- Tag delimiter like < > /
 
     -- Language specific:
 
@@ -346,13 +345,13 @@ M.theme = function(C)
     ["@text.title.6.markdown"] = { link = "rainbow6" },
 
     -- css
-    ["@property.css"] = { fg = C.bright_orange },
+    ["@property.css"] = { fg = C.bright_green },
     ["@property.id.css"] = { fg = C.cyan },
     ["@property.class.css"] = { fg = C.yellow },
-    ["@type.css"] = { fg = C.cyan },
+    ["@type.css"] = { fg = C.bright_red },
     ["@type.tag.css"] = { fg = C.bright_orange },
     ["@string.plain.css"] = { fg = C.yellow },
-    ["@number.css"] = { fg = C.bright_orange },
+    ["@number.css"] = { fg = C.yellow },
 
     -- toml
     ["@property.toml"] = { fg = C.cyan }, -- Differentiates between string and properties
@@ -393,9 +392,9 @@ M.theme = function(C)
     CmpItemAbbrMatchFuzzy = { fg = C.bright_green, bold = true },
 
     -- kind support
-    CmpItemKindSnippet = { fg = C.purple },
+    CmpItemKindSnippet = { fg = C.blue },
     CmpItemKindKeyword = { fg = C.orange },
-    CmpItemKindText = { fg = C.bright_purple },
+    CmpItemKindText = { fg = C.blue },
     CmpItemKindMethod = { fg = C.cyan },
     CmpItemKindConstructor = { fg = C.cyan },
     CmpItemKindFunction = { fg = C.bright_yellow },
@@ -407,18 +406,18 @@ M.theme = function(C)
     CmpItemKindEnum = { fg = C.green },
     CmpItemKindUnit = { fg = C.green },
     CmpItemKindClass = { fg = C.yellow },
-    CmpItemKindVariable = { fg = C.purple },
+    CmpItemKindVariable = { fg = C.blue },
     CmpItemKindFile = { fg = C.cyan },
     CmpItemKindInterface = { fg = C.yellow },
     CmpItemKindColor = { fg = C.red },
     CmpItemKindReference = { fg = C.red },
     CmpItemKindEnumMember = { fg = C.red },
     CmpItemKindStruct = { fg = C.cyan },
-    CmpItemKindValue = { fg = C.bright_purple },
+    CmpItemKindValue = { fg = C.blue },
     CmpItemKindEvent = { fg = C.cyan },
     CmpItemKindOperator = { fg = C.cyan },
     CmpItemKindTypeParameter = { fg = C.cyan },
-    CmpItemKindCopilot = { fg = C.bright_purple },
+    CmpItemKindCopilot = { fg = C.bright_orange },
 
     -- Gitsigns
     SignAdd = { fg = C.bright_green, bg = C.none },
@@ -440,12 +439,12 @@ M.theme = function(C)
 
     -- Rainbow Delimiter
     RainbowDelimiterRed = { fg = C.red },
-    RainbowDelimiterYellow = { fg = C.yellow },
-    RainbowDelimiterBlue = { fg = C.cyan },
-    RainbowDelimiterOrange = { fg = C.orange },
-    RainbowDelimiterGreen = { fg = C.green },
-    RainbowDelimiterViolet = { fg = C.bright_purple },
-    RainbowDelimiterCyan = { fg = C.bright_white },
+    RainbowDelimiterYellow = { fg = C.bright_yellow },
+    RainbowDelimiterBlue = { fg = C.blue },
+    RainbowDelimiterOrange = { fg = C.bright_orange },
+    RainbowDelimiterGreen = { fg = C.bright_green },
+    RainbowDelimiterViolet = { fg = C.bright_red },
+    RainbowDelimiterCyan = { fg = C.bright_cyan },
 
     -- Telescope
     TelescopePromptPrefix = { fg = C.bright_orange, bg = C.background },
@@ -469,12 +468,12 @@ M.theme = function(C)
     NvimTreeIndentMarker = { fg = C.bright_black },
     NvimTreeWinSeparator = { fg = C.foreground, bg = C.background },
     NvimTreeRootFolder = { fg = C.bright_yellow, bold = true },
-    NvimTreeSymlink = { fg = C.purple },
+    NvimTreeSymlink = { fg = C.blue },
     NvimTreeStatuslineNc = { fg = C.bright_orange, bg = C.background },
     NvimTreeGitDirty = { fg = C.yellow },
     NvimTreeGitNew = { fg = C.cyan },
     NvimTreeGitDeleted = { fg = C.red },
-    NvimTreeSpecialFile = { fg = C.purple },
+    NvimTreeSpecialFile = { fg = C.blue },
     NvimTreeImageFile = { fg = C.bright_black },
     NvimTreeOpenedFile = { fg = C.yellow },
 

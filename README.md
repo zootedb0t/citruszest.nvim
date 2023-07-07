@@ -101,27 +101,27 @@ lualine.setup {
 
 ## :art: Colors
 
-| Color          | Value     | Background                                               |
-| -------------- | --------- | -------------------------------------------------------- |
-| Background     | `#121212` | ![background](https://place-hold.it/32/121212?text=+)    |
-| Foreground     | `#BFBFBF` | ![foreground](https://place-hold.it/32/BFBFBF?text=+)    |
-| Visual         | `#404040` | ![cursor](https://place-hold.it/32/404040?text=+)        |
-| Cursor         | `#666666` | ![cursor](https://place-hold.it/32/666666?text=+)        |
-| Red            | `#FF5454` | ![red](https://place-hold.it/32/FF5454?text=+)           |
-| Green          | `#00CC7A` | ![green](https://place-hold.it/32/00CC7A?text=+)         |
-| Yellow         | `#F0D50C` | ![Yellow](https://place-hold.it/32/F0D50C?text=+)        |
-| Orange         | `#FF6600` | ![Orange](https://place-hold.it/32/FF6600?text=+)        |
-| Purple         | `#8B4DFF` | ![purple](https://place-hold.it/32/8B4DFF?text=+)        |
-| Cyan           | `#33FFFF` | ![Cyan](https://place-hold.it/32/33FFFF?text=+)          |
-| White          | `#BFBFBF` | ![white](https://place-hold.it/32/BFBFBF?text=+)         |
-| Black(Bright)  | `#808080` | ![bright_black](https://place-hold.it/32/808080?text=+)  |
-| Red(Bright)    | `#FF1A75` | ![bright_red](https://place-hold.it/32/FF1A75?text=+)    |
-| Green(Bright)  | `#1AFFA3` | ![bright_green](https://place-hold.it/32/1AFFA3?text=+)  |
-| Yellow(Bright) | `#FFFF00` | ![bright_yellow](https://place-hold.it/32/FFFF00?text=+) |
-| Orange(Bright) | `#FFB200` | ![bright_orange](https://place-hold.it/32/FFB200?text=+) |
-| Purple(Bright) | `#AE81FF` | ![bright_purple](https://place-hold.it/32/AE81FF?text=+) |
-| Cyan(Bright)   | `#1AFFFF` | ![bright_cyan](https://place-hold.it/32/1AFFFF?text=+)   |
-| White(Bright)  | `#F9F9F9` | ![bright_cyan](https://place-hold.it/32/F9F9F9?text=+)   |
+| Color             | Value     | Background                                               |
+| ----------------- | --------- | -------------------------------------------------------- |
+| Background        | `#121212` | ![background](https://place-hold.it/32/121212?text=+)    |
+| Foreground        | `#BFBFBF` | ![foreground](https://place-hold.it/32/BFBFBF?text=+)    |
+| Visual            | `#404040` | ![cursor](https://place-hold.it/32/404040?text=+)        |
+| Cursor            | `#666666` | ![cursor](https://place-hold.it/32/666666?text=+)        |
+| Red               | `#FF5454` | ![red](https://place-hold.it/32/FF5454?text=+)           |
+| Green             | `#00CC7A` | ![green](https://place-hold.it/32/00CC7A?text=+)         |
+| Yellow            | `#FFD400` | ![Yellow](https://place-hold.it/32/F0D50C?text=+)        |
+| Orange            | `#FB8500` | ![Orange](https://place-hold.it/32/FB8500?text=+)        |
+| Blue              | `#00C2FF` | ![purple](https://place-hold.it/32/00C2FF?text=+)        |
+| Cyan              | `#00FFFF` | ![Cyan](https://place-hold.it/32/1AFFFF?text=+)          |
+| White             | `#BFBFBF` | ![white](https://place-hold.it/32/BFBFBF?text=+)         |
+| Black(Bright)     | `#808080` | ![bright_black](https://place-hold.it/32/808080?text=+)  |
+| Red(Bright)       | `#FF1A75` | ![bright_red](https://place-hold.it/32/FF1A75?text=+)    |
+| Green(Bright)     | `#1AFFA3` | ![bright_green](https://place-hold.it/32/1AFFA3?text=+)  |
+| Yellow(Bright)    | `#FFDD33` | ![bright_yellow](https://place-hold.it/32/FFFF00?text=+) |
+| Orange(Bright)    | `#FFA033` | ![bright_orange](https://place-hold.it/32/FFC233?text=+) |
+| Blue(Bright)      | `#4DD5FF` | ![bright_purple](https://place-hold.it/32/4DD5FF?text=+) |
+| Cyan(Bright)      | `#33FFFF` | ![bright_cyan](https://place-hold.it/32/33FFFF?text=+)   |
+| White(Bright)     | `#F9F9F9` | ![bright_cyan](https://place-hold.it/32/F9F9F9?text=+)   |
 
 ## :pray: Acknowledgments
 
