@@ -61,7 +61,7 @@ M.theme = function(C)
     Comment = { fg = C.bright_black }, -- just comments
     SpecialComment = { link = "Special" }, -- special things inside a comment
     Constant = { fg = C.bright_red }, -- (preferred) any constant
-    String = { fg = C.cyan }, -- a string constant: "this is a string"
+    String = { fg = C.bright_green }, -- a string constant: "this is a string"
     Character = { fg = C.bright_red }, --  a character constant: 'c', '\n'
     Number = { fg = C.bright_cyan }, --   a number constant: 234, 0xff
     Float = { fg = C.cyan }, --    a floating point constant: 2.3e10
@@ -69,10 +69,10 @@ M.theme = function(C)
     Identifier = { fg = C.bright_white }, -- (preferred) any variable name
     Function = { fg = C.bright_green }, -- function name (also: methods for classes)
     Statement = { fg = C.blue }, -- (preferred) any statement
-    Conditional = { fg = C.bright_orange }, --  if, then, else, endif, switch, etc.
+    Conditional = { fg = C.orange }, --  if, then, else, endif, switch, etc.
     Repeat = { fg = C.bright_yellow }, --   for, do, while, etc.
     Label = { fg = C.bright_green }, --    case, default, etc.
-    Operator = { fg = C.bright_red }, -- "sizeof", "+", "*", etc.
+    Operator = { fg = C.bright_green }, -- "sizeof", "+", "*", etc.
     Keyword = { fg = C.bright_yellow }, --  any other keyword
     Array = { fg = C.blue },
     Exception = { fg = C.blue }, --  try, catch, throw
@@ -80,13 +80,13 @@ M.theme = function(C)
     PreProc = { fg = C.bright_green }, -- (preferred) generic Preprocessor
     Include = { fg = C.bright_yellow }, --  preprocessor #include
     Define = { link = "PreProc" }, -- preprocessor #define
-    Macro = { fg = C.red }, -- same as Define
+    Macro = { fg = C.bright_yellow }, -- same as Define
     PreCondit = { link = "PreProc" }, -- preprocessor #if, #else, #endif, etc.
 
     StorageClass = { fg = C.yellow }, -- static, register, volatile, etc.
     Structure = { link = "Keyword" }, --  struct, union, enum, etc.
     Special = { fg = C.bright_orange }, -- (preferred) any special symbol
-    Type = { fg = C.bright_cyan, italic = true }, -- (preferred) int, long, char, etc.
+    Type = { fg = C.blue, italic = true }, -- (preferred) int, long, char, etc.
     Typedef = { link = "Type" }, --  A typedef
     SpecialChar = { link = "Special" }, -- special character in a constant
     Tag = { link = "Special" }, -- you can use CTRL-] on this
@@ -256,7 +256,7 @@ M.theme = function(C)
 
     -- Functions
     ["@function"] = { link = "Function" }, -- For function (calls and definitions).
-    ["@function.builtin"] = { fg = C.bright_yellow }, -- For builtin functions: table.insert in Lua.
+    ["@function.builtin"] = { fg = C.bright_green }, -- For builtin functions: table.insert in Lua.
     ["@function.call"] = { link = "Function" }, -- function calls
     ["@function.macro"] = { fg = C.blue }, -- For macro defined functions (calls and definitions): each macro_rules in RusC.
     ["@method"] = { link = "Function" }, -- For method calls and definitions.
@@ -270,7 +270,7 @@ M.theme = function(C)
     ["@keyword"] = { link = "Keyword" }, -- For keywords that don't fall in previous categories.
     ["@keyword.function"] = { fg = C.bright_red }, -- For keywords used to define a function.
     ["@keyword.operator"] = { link = "Operator" }, -- For new keyword operator
-    ["@keyword.return"] = { fg = C.bright_green },
+    ["@keyword.return"] = { fg = C.bright_yellow },
     -- JS & derivative
     ["@keyword.export"] = { fg = C.bright_cyan },
 
@@ -284,14 +284,14 @@ M.theme = function(C)
     -- Types
 
     ["@type"] = { link = "Type" }, -- For types.
-    ["@type.builtin"] = { fg = C.bright_blue }, -- For builtin types.
+    ["@type.builtin"] = { fg = C.orange }, -- For builtin types.
     ["@type.definition"] = { link = "@type" }, -- type definitions (e.g. `typedef` in C)
     ["@type.qualifier"] = { link = "Constant" }, -- type qualifiers (e.g. `const`)
 
     ["@storageclass"] = { link = "StorageClass" }, -- visibility/life-time/etc. modifiers (e.g. `static`)
     ["@attribute"] = { link = "Constant" }, -- attribute annotations (e.g. Python decorators)
-    ["@field"] = { fg = C.bright_green }, -- For fields.
-    ["@property"] = { fg = C.bright_green }, -- Same as TSField.
+    ["@field"] = { fg = C.cyan }, -- For fields.
+    ["@property"] = { fg = C.bright_cyan }, -- Same as TSField.
 
     -- Identifiers
     ["@variable"] = { link = "Identifier" }, -- Any variable name that does not have another highlight.
@@ -322,9 +322,9 @@ M.theme = function(C)
     ["@text.todo"] = { fg = C.black, bg = C.yellow }, -- todo notes
     ["@text.todo.checked"] = { fg = C.green }, -- todo notes
     ["@text.todo.unchecked"] = { fg = C.black, bg = C.yellow }, -- todo notes
-    ["@text.note"] = { fg = C.foreground, bg = C.cyan },
-    ["@text.warning"] = { fg = C.foreground, bg = C.yellow },
-    ["@text.danger"] = { fg = C.foreground, bg = C.red },
+    ["@text.note"] = { fg = C.black, bg = C.cyan },
+    ["@text.warning"] = { fg = C.black, bg = C.yellow },
+    ["@text.danger"] = { fg = C.black, bg = C.red },
 
     ["@text.diff.add"] = { link = "diffAdded" }, -- added text (for diff files)
     ["@text.diff.delete"] = { link = "diffRemoved" }, -- deleted text (for diff files)
