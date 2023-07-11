@@ -72,7 +72,7 @@ M.theme = function(C)
     Conditional = { fg = C.orange }, --  if, then, else, endif, switch, etc.
     Repeat = { fg = C.bright_yellow }, --   for, do, while, etc.
     Label = { fg = C.bright_green }, --    case, default, etc.
-    Operator = { fg = C.bright_green }, -- "sizeof", "+", "*", etc.
+    Operator = { fg = C.bright_orange }, -- "sizeof", "+", "*", etc.
     Keyword = { fg = C.bright_yellow }, --  any other keyword
     Array = { fg = C.blue },
     Exception = { fg = C.blue }, --  try, catch, throw
@@ -80,13 +80,13 @@ M.theme = function(C)
     PreProc = { fg = C.bright_green }, -- (preferred) generic Preprocessor
     Include = { fg = C.bright_yellow }, --  preprocessor #include
     Define = { link = "PreProc" }, -- preprocessor #define
-    Macro = { fg = C.bright_yellow }, -- same as Define
+    Macro = { fg = C.yellow }, -- same as Define
     PreCondit = { link = "PreProc" }, -- preprocessor #if, #else, #endif, etc.
 
-    StorageClass = { fg = C.yellow }, -- static, register, volatile, etc.
+    StorageClass = { fg = C.bright_yellow }, -- static, register, volatile, etc.
     Structure = { link = "Keyword" }, --  struct, union, enum, etc.
     Special = { fg = C.bright_orange }, -- (preferred) any special symbol
-    Type = { fg = C.blue, italic = true }, -- (preferred) int, long, char, etc.
+    Type = { fg = C.bright_blue, italic = true }, -- (preferred) int, long, char, etc.
     Typedef = { link = "Type" }, --  A typedef
     SpecialChar = { link = "Special" }, -- special character in a constant
     Tag = { link = "Special" }, -- you can use CTRL-] on this
@@ -284,7 +284,7 @@ M.theme = function(C)
     -- Types
 
     ["@type"] = { link = "Type" }, -- For types.
-    ["@type.builtin"] = { fg = C.orange }, -- For builtin types.
+    ["@type.builtin"] = { link = "@type" }, -- For builtin types.
     ["@type.definition"] = { link = "@type" }, -- type definitions (e.g. `typedef` in C)
     ["@type.qualifier"] = { link = "Constant" }, -- type qualifiers (e.g. `const`)
 
@@ -312,7 +312,7 @@ M.theme = function(C)
     ["@text.strike"] = { fg = C.white, strikethrough = true }, -- strikethrough text
     ["@text.title"] = { fg = C.white, bold = true }, -- titles like: # Example
     ["@text.literal"] = { fg = C.blue }, -- used for inline code in markdown and for doc in python (""")
-    ["@text.uri"] = { fg = C.bright_green, italic = true, underline = true }, -- urls, links and emails
+    ["@text.uri"] = { fg = C.green, italic = true, underline = true }, -- urls, links and emails
     ["@text.html"] = { fg = C.bright_white, italic = true, underline = true }, -- urls, links and emails
     ["@text.math"] = { fg = C.cyan }, -- math environments (e.g. `$ ... $` in LaTeX)
     ["@text.environment"] = { fg = C.orange }, -- text environments of markup languages
@@ -357,7 +357,7 @@ M.theme = function(C)
     ["@property.toml"] = { fg = C.cyan }, -- Differentiates between string and properties
 
     -- json
-    ["@label.json"] = { fg = C.green }, -- For labels: label: in C and :label: in Lua.
+    ["@label.json"] = { fg = C.bright_yellow }, -- For labels: label: in C and :label: in Lua.
 
     -- lua
     ["@constructor.lua"] = { fg = C.bright_red }, -- For constructor calls and definitions: = { } in Lua, and Java constructors.

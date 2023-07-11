@@ -100,6 +100,11 @@ lualine.setup {
 - [alpha.nvim](https://github.com/goolord/alpha-nvim)
 - [whichkey.nvim](https://github.com/folke/which-key.nvim)
 
+## :fireworks: Integration
+
+- `Kitty` users copy [this](extra/kitty-theme.conf) into their `kitty.conf`.
+- `Xresources` is available [here](extra/xresources).
+
 ## :art: Colors
 
 | Color          | Value     | Background                                               |
