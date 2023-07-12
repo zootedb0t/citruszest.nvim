@@ -61,7 +61,7 @@ M.theme = function(C)
     Comment = { fg = C.bright_black }, -- just comments
     SpecialComment = { link = "Special" }, -- special things inside a comment
     Constant = { fg = C.bright_red }, -- (preferred) any constant
-    String = { fg = C.bright_green }, -- a string constant: "this is a string"
+    String = { fg = C.bright_orange }, -- a string constant: "this is a string"
     Character = { fg = C.bright_red }, --  a character constant: 'c', '\n'
     Number = { fg = C.bright_cyan }, --   a number constant: 234, 0xff
     Float = { fg = C.cyan }, --    a floating point constant: 2.3e10
@@ -72,7 +72,7 @@ M.theme = function(C)
     Conditional = { fg = C.orange }, --  if, then, else, endif, switch, etc.
     Repeat = { fg = C.bright_yellow }, --   for, do, while, etc.
     Label = { fg = C.bright_green }, --    case, default, etc.
-    Operator = { fg = C.bright_orange }, -- "sizeof", "+", "*", etc.
+    Operator = { fg = C.bright_cyan }, -- "sizeof", "+", "*", etc.
     Keyword = { fg = C.bright_yellow }, --  any other keyword
     Array = { fg = C.blue },
     Exception = { fg = C.blue }, --  try, catch, throw
@@ -86,7 +86,7 @@ M.theme = function(C)
     StorageClass = { fg = C.bright_yellow }, -- static, register, volatile, etc.
     Structure = { link = "Keyword" }, --  struct, union, enum, etc.
     Special = { fg = C.bright_orange }, -- (preferred) any special symbol
-    Type = { fg = C.bright_blue, italic = true }, -- (preferred) int, long, char, etc.
+    Type = { fg = C.blue, italic = true }, -- (preferred) int, long, char, etc.
     Typedef = { link = "Type" }, --  A typedef
     SpecialChar = { link = "Special" }, -- special character in a constant
     Tag = { link = "Special" }, -- you can use CTRL-] on this
@@ -256,7 +256,7 @@ M.theme = function(C)
 
     -- Functions
     ["@function"] = { link = "Function" }, -- For function (calls and definitions).
-    ["@function.builtin"] = { fg = C.bright_green }, -- For builtin functions: table.insert in Lua.
+    ["@function.builtin"] = { fg = C.bright_yellow }, -- For builtin functions: table.insert in Lua.
     ["@function.call"] = { link = "Function" }, -- function calls
     ["@function.macro"] = { fg = C.blue }, -- For macro defined functions (calls and definitions): each macro_rules in RusC.
     ["@method"] = { link = "Function" }, -- For method calls and definitions.
@@ -270,7 +270,7 @@ M.theme = function(C)
     ["@keyword"] = { link = "Keyword" }, -- For keywords that don't fall in previous categories.
     ["@keyword.function"] = { fg = C.bright_red }, -- For keywords used to define a function.
     ["@keyword.operator"] = { link = "Operator" }, -- For new keyword operator
-    ["@keyword.return"] = { fg = C.bright_yellow },
+    ["@keyword.return"] = { fg = C.bright_red },
     -- JS & derivative
     ["@keyword.export"] = { fg = C.bright_cyan },
 
@@ -290,7 +290,7 @@ M.theme = function(C)
 
     ["@storageclass"] = { link = "StorageClass" }, -- visibility/life-time/etc. modifiers (e.g. `static`)
     ["@attribute"] = { link = "Constant" }, -- attribute annotations (e.g. Python decorators)
-    ["@field"] = { fg = C.cyan }, -- For fields.
+    ["@field"] = { fg = C.bright_cyan }, -- For fields.
     ["@property"] = { fg = C.bright_cyan }, -- Same as TSField.
 
     -- Identifiers
@@ -357,7 +357,7 @@ M.theme = function(C)
     ["@property.toml"] = { fg = C.cyan }, -- Differentiates between string and properties
 
     -- json
-    ["@label.json"] = { fg = C.bright_yellow }, -- For labels: label: in C and :label: in Lua.
+    ["@label.json"] = { fg = C.bright_green }, -- For labels: label: in C and :label: in Lua.
 
     -- lua
     ["@constructor.lua"] = { fg = C.bright_red }, -- For constructor calls and definitions: = { } in Lua, and Java constructors.
@@ -382,6 +382,9 @@ M.theme = function(C)
     ["@type.qualifier.php"] = { link = "Keyword" }, -- type qualifiers (e.g. `const`)
     ["@method.php"] = { link = "Function" },
     ["@method.call.php"] = { link = "Function" },
+
+    -- Pyhton
+    ["@string.documentation.python"] = { fg = C.blue },
 
     -- Cmp
     CmpItemAbbr = { fg = C.bright_white },
