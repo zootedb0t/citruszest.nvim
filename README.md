@@ -1,8 +1,8 @@
 <h1 align="center">
 citruszest.nvim
 
-<a href="https://www.gnu.org/licenses/gpl-3.0.en.html" rel="nofollow"><img alt="LICENSE" src="https://img.shields.io/badge/License-GPL-blue.svg" style="max-width: 100%;"></a>
-<a href="https://www.lua.org/"><img alt="Lua" src="https://img.shields.io/badge/Made With-Lua-blue.svg" style="max-width:100%"></a>
+<a href="https://opensource.org/license/mit/" rel="nofollow"><img alt="LICENSE" src="https://img.shields.io/badge/License-MIT-blue.svg" style="max-width: 100%;"></a>
+<a href="https://www.lua.org/"><img alt="Lua" src="https://img.shields.io/badge/Made_With-Lua-blue.svg?logo=lua" style="max-width:100%"></a>
 [![Luacheck](https://github.com/zootedb0t/citruszest.nvim/actions/workflows/luacheck.yml/badge.svg)](https://github.com/zootedb0t/citruszest.nvim/actions/workflows/luacheck.yml)
 
 </h1>
