@@ -1,0 +1,26 @@
+ # -*- conf -*-
+
+[cursor]
+color=121212 BFBFBF
+
+[colors]
+background=121212
+foreground=BFBFBF
+regular0=121212
+regular1=FF5454
+regular2=00CC7A
+regular3=FFD400
+regular4=FF7B00
+regular5=00C2FF
+regular6=00E0D4
+regular7=BFBFBF
+bright0=808080
+bright1=FF1A75
+bright2=1AFFA3
+bright3=FFFF00
+bright4=FF9633
+bright5=33CFFF
+bright6=00FFF2
+bright7=F9F9F9
+
+# vim: ft=dosini

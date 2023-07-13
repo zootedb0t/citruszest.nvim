@@ -60,7 +60,7 @@ In `init.vim`
 colorscheme citruszest
 ```
 
-## Configration
+## :hammer: Configration
 
 To know `highlight` group of word under cursor. Use `Inspect` command.
 
