@@ -1,4 +1,4 @@
--- Citruszest
+-- Citruszest color palette
 local colors = {
   background = "#121212",
   foreground = "#BFBFBF",

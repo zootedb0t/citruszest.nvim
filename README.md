@@ -102,8 +102,9 @@ lualine.setup {
 
 ## :fireworks: Integration
 
-- `Kitty` users copy [this](extra/kitty-theme.conf) into their `kitty.conf`.
+- [Kitty](https://github.com/kovidgoyal/kitty) users copy [this](extra/kitty-theme.conf) into their `kitty.conf`.
 - `Xresources` is available [here](extra/xresources).
+- [Foot](https://codeberg.org/dnkl/foot) terminal users can use [this](extra/foot-terminal).
 
 ## :art: Colors
 
