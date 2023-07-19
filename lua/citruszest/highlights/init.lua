@@ -191,8 +191,7 @@ M.theme = function(C)
     LspDiagnosticsUnderlineHint = { fg = C.bright_cyan, bg = C.background, underline = true }, -- Used to underline "Hint" diagnostics
     LspCodeLens = { fg = C.bright_cyan }, -- virtual text of the codelens
     LspInlayHint = {
-      -- fg of `Comment`
-      fg = C.bright_black,
+      fg = C.white,
       bg = C.background,
     }, -- virtual text of the inlay hints
     LspInfoBorder = { link = "FloatBorder" }, -- LspInfo border
@@ -458,9 +457,9 @@ M.theme = function(C)
     TelescopePromptBorder = { fg = C.bright_cyan, bg = C.background },
     TelescopeResultsBorder = { fg = C.bright_cyan, bg = C.background },
     TelescopePreviewBorder = { fg = C.bright_cyan, bg = C.background },
-    TelescopePromptTitle = { fg = C.black, bg = C.yellow, bold = true },
-    TelescopeResultsTitle = { fg = C.black, bg = C.yellow, bold = true },
-    TelescopePreviewTitle = { fg = C.black, bg = C.yellow, bold = true },
+    TelescopePromptTitle = { fg = C.black, bg = C.yellow },
+    TelescopeResultsTitle = { fg = C.black, bg = C.yellow },
+    TelescopePreviewTitle = { fg = C.black, bg = C.yellow },
 
     -- NvimTree
     NvimTreeFolderName = { fg = C.bright_yellow },
