@@ -192,7 +192,7 @@ M.theme = function(C)
     LspCodeLens = { fg = C.bright_cyan }, -- virtual text of the codelens
     LspInlayHint = {
       -- fg of `Comment`
-      fg = C.bright_cyan,
+      fg = C.bright_black,
       bg = C.background,
     }, -- virtual text of the inlay hints
     LspInfoBorder = { link = "FloatBorder" }, -- LspInfo border
