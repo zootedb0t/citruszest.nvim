@@ -64,7 +64,7 @@ M.theme = function(C)
     String = { fg = C.bright_orange }, -- a string constant: "this is a string"
     Character = { fg = C.bright_red }, --  a character constant: 'c', '\n'
     Number = { fg = C.bright_cyan }, --   a number constant: 234, 0xff
-    Float = { fg = C.cyan }, --    a floating point constant: 2.3e10
+    Float = { link = "Number" }, --    a floating point constant: 2.3e10
     Boolean = { fg = C.orange }, --  a boolean constant: TRUE, false
     Identifier = { fg = C.bright_white }, -- (preferred) any variable name
     Function = { fg = C.bright_green }, -- function name (also: methods for classes)
@@ -236,15 +236,15 @@ M.theme = function(C)
     ["@operator"] = { link = "Operator" }, -- For any operator: +, but also -> and * in C.
 
     -- Punctuation
-    ["@punctuation.delimiter"] = { fg = C.bright_orange }, -- For delimiters ie: .
+    ["@punctuation.delimiter"] = { link = "Delimiter" }, -- For delimiters ie: .
     ["@punctuation.bracket"] = { fg = C.bright_orange }, -- For brackets and parenthesis.
-    ["@punctuation.special"] = { fg = C.bright_orange }, -- For special punctutation that does not fall in the categories before.
+    ["@punctuation.special"] = { link = "Special" }, -- For special punctutation that does not fall in the categories before.
 
     -- Literals
     ["@string"] = { link = "String" }, -- For strings.
     ["@string.regex"] = { fg = C.bright_orange }, -- For regexes.
     ["@string.escape"] = { fg = C.bright_yellow }, -- For escape characters within a string.
-    ["@string.special"] = { fg = C.cyan }, -- other special strings (e.g. dates)
+    ["@string.special"] = { link = "Special" }, -- other special strings (e.g. dates)
 
     ["@character"] = { link = "Character" }, -- character literals
     ["@character.special"] = { link = "SpecialChar" }, -- special characters (e.g. wildcards)
