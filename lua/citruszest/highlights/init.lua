@@ -32,7 +32,7 @@ M.theme = function(C)
     FloatBorder = { fg = C.orange },
     FloatTitle = { fg = C.yellow }, -- Title of floating windows
     Pmenu = { fg = C.bright_white, bg = C.background }, -- Popup menu: normal item.
-    PmenuSel = { fg = C.black, bg = C.bright_black, bold = true }, -- Popup menu: selected item.
+    PmenuSel = { bg = C.bright_black, bold = true }, -- Popup menu: selected item.
     PmenuSbar = { bg = C.bright_orange }, -- Popup menu: scrollbar.
     PmenuThumb = { bg = C.bright_orange }, -- Popup menu: Thumb of the scrollbar.
     Question = { fg = C.cyan }, -- |hit-enter| prompt and yes/no questions
@@ -493,6 +493,12 @@ M.theme = function(C)
     WhichKeySeparator = { fg = C.bright_red },
     WhichKeyDesc = { fg = C.yellow },
     WhichKeyValue = { fg = C.green },
+
+    -- Flash
+    FlashBackdrop = { fg = C.foreground },
+    FlashLabel = { fg = C.yellow, bg = C.background, bold = true },
+    FlashMatch = { fg = C.green, bg = C.background },
+    FlashCurrent = { fg = C.orange, bg = C.background },
   }
 end
 
