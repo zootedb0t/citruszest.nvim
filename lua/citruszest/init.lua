@@ -5,14 +5,13 @@ local pallet = require("citruszest.palettes.colors")
 local highlight_groups = {}
 
 function M.setup(opts)
-  opts = opts or {}
-  config = vim.tbl_deep_extend("force", config, opts)
+  config:extend(opts)
 
-  if config.transparent then
+  if config.extended.transparent then
     pallet.background = "NONE"
   end
 
-  highlight_groups = vim.tbl_deep_extend("force", require("citruszest.highlights").theme(pallet), config.style)
+  highlight_groups = vim.tbl_deep_extend("force", require("citruszest.highlights").theme(pallet), config.extended.style)
 end
 
 M.set_highlight = function()
