@@ -2,6 +2,7 @@ local config = {}
 
 config.options = {
   transparent = false,
+  italic = true,
   style = {},
 }
 

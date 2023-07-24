@@ -7,11 +7,17 @@ local highlight_groups = {}
 function M.setup(opts)
   config:extend(opts)
 
-  if config.extended.transparent then
+  local user_config = config.extended
+
+  if user_config.transparent then
     pallet.background = "NONE"
   end
 
-  highlight_groups = vim.tbl_deep_extend("force", require("citruszest.highlights").theme(pallet), config.extended.style)
+  highlight_groups = vim.tbl_deep_extend(
+    "force",
+    require("citruszest.highlights").theme(pallet, config.extended.italic),
+    user_config.style
+  )
 end
 
 M.set_highlight = function()

@@ -1,6 +1,6 @@
 local M = {}
 
-M.theme = function(C)
+M.theme = function(C, bool)
   return {
     ColorColumn = { bg = C.none }, -- used for the columns set with 'colorcolumn'
     Conceal = { fg = C.cyan }, -- placeholder characters substituted for concealed text (see 'conceallevel')
@@ -66,7 +66,7 @@ M.theme = function(C)
     Number = { fg = C.bright_cyan }, --   a number constant: 234, 0xff
     Float = { link = "Number" }, --    a floating point constant: 2.3e10
     Boolean = { fg = C.orange }, --  a boolean constant: TRUE, false
-    Identifier = { fg = C.bright_white }, -- (preferred) any variable name
+    Identifier = { fg = C.bright_white, italic = bool }, -- (preferred) any variable name
     Function = { fg = C.bright_green }, -- function name (also: methods for classes)
     Statement = { fg = C.blue }, -- (preferred) any statement
     Conditional = { fg = C.orange }, --  if, then, else, endif, switch, etc.
@@ -86,7 +86,7 @@ M.theme = function(C)
     StorageClass = { fg = C.bright_yellow }, -- static, register, volatile, etc.
     Structure = { link = "Keyword" }, --  struct, union, enum, etc.
     Special = { fg = C.bright_orange }, -- (preferred) any special symbol
-    Type = { fg = C.blue, italic = true }, -- (preferred) int, long, char, etc.
+    Type = { fg = C.blue }, -- (preferred) int, long, char, etc.
     Typedef = { link = "Type" }, --  A typedef
     SpecialChar = { link = "Special" }, -- special character in a constant
     Tag = { link = "Special" }, -- you can use CTRL-] on this
@@ -263,7 +263,7 @@ M.theme = function(C)
     ["@method.call"] = { link = "Function" }, -- method calls
 
     ["@constructor"] = { fg = C.bright_yellow }, -- For constructor calls and definitions: = { } in Lua, and Java constructors.
-    ["@parameter"] = { fg = C.bright_yellow }, -- For parameters of a function.
+    ["@parameter"] = { fg = C.bright_yellow, italic = bool }, -- For parameters of a function.
 
     -- Keywords
     ["@keyword"] = { link = "Keyword" }, -- For keywords that don't fall in previous categories.
@@ -283,7 +283,7 @@ M.theme = function(C)
     -- Types
 
     ["@type"] = { link = "Type" }, -- For types.
-    ["@type.builtin"] = { link = "@type" }, -- For builtin types.
+    ["@type.builtin"] = { link = "@type", italic = bool }, -- For builtin types.
     ["@type.definition"] = { link = "@type" }, -- type definitions (e.g. `typedef` in C)
     ["@type.qualifier"] = { link = "Constant" }, -- type qualifiers (e.g. `const`)
 
@@ -300,19 +300,19 @@ M.theme = function(C)
     ["@constant.builtin"] = { fg = C.bright_red }, -- For constant that are built in the language: nil in Lua.
     ["@constant.macro"] = { link = "Macro" }, -- For constants that are defined by macros: NULL in C.
 
-    ["@namespace"] = { fg = C.bright_yellow, italic = true }, -- For identifiers referring to modules and namespaces.
+    ["@namespace"] = { fg = C.bright_yellow, italic = bool }, -- For identifiers referring to modules and namespaces.
     ["@symbol"] = { fg = C.yellow },
 
     -- Text
     ["@text"] = { fg = C.bright_white }, -- For strings considerated text in a markup language.
     ["@text.strong"] = { fg = C.bright_red, bold = true }, -- bold
-    ["@text.emphasis"] = { fg = C.bright_orange, italic = true }, -- italic
+    ["@text.emphasis"] = { fg = C.bright_orange, italic = bool }, -- italic
     ["@text.underline"] = { link = "Underline" }, -- underlined text
     ["@text.strike"] = { fg = C.white, strikethrough = true }, -- strikethrough text
     ["@text.title"] = { fg = C.white, bold = true }, -- titles like: # Example
     ["@text.literal"] = { fg = C.blue }, -- used for inline code in markdown and for doc in python (""")
-    ["@text.uri"] = { fg = C.green, italic = true, underline = true }, -- urls, links and emails
-    ["@text.html"] = { fg = C.bright_white, italic = true, underline = true }, -- urls, links and emails
+    ["@text.uri"] = { fg = C.green, italic = bool }, -- urls, links and emails
+    ["@text.html"] = { fg = C.bright_white, underline = true }, -- urls, links and emails
     ["@text.math"] = { fg = C.cyan }, -- math environments (e.g. `$ ... $` in LaTeX)
     ["@text.environment"] = { fg = C.orange }, -- text environments of markup languages
     ["@text.environment.name"] = { fg = C.cyan }, -- text indicating the type of an environment
@@ -330,7 +330,7 @@ M.theme = function(C)
 
     -- Tags
     ["@tag"] = { fg = C.bright_blue }, -- Tags like html tag names.
-    ["@tag.attribute"] = { fg = C.bright_yellow, italic = true }, -- Tags like html tag names.
+    ["@tag.attribute"] = { fg = C.bright_yellow, italic = bool }, -- Tags like html tag names.
     ["@tag.delimiter"] = { fg = C.red }, -- Tag delimiter like < > /
 
     -- Language specific:
@@ -366,7 +366,7 @@ M.theme = function(C)
 
     -- TSX (Typescript React)
     ["@constructor.tsx"] = { fg = C.bright_green },
-    ["@tag.attribute.tsx"] = { fg = C.bright_yellow, italic = true },
+    ["@tag.attribute.tsx"] = { fg = C.bright_yellow, italic = bool },
 
     -- cpp
     ["@property.cpp"] = { fg = C.bright_orange },
@@ -484,7 +484,7 @@ M.theme = function(C)
     AlphaHeader = { fg = C.orange },
     AlphaHeaderLabel = { fg = C.cyan },
     AlphaButtons = { fg = C.yellow },
-    AlphaFooter = { fg = C.green, italic = true },
+    AlphaFooter = { fg = C.green  },
 
     -- Whichkey
     WhichKey = { link = "NormalFloat" },

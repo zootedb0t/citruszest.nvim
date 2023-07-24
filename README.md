@@ -24,6 +24,11 @@ citruszest.nvim
 
 ## :wrench: Installation
 
+#### Requirement
+
+- Neovim >= 0.9.1
+- Treesitter (optional)
+
 [lazy.nvim](https://github.com/folke/lazy.nvim)
 
 ```lua
@@ -69,7 +74,8 @@ To know `highlight` group of word under cursor. Use `Inspect` command.
 ```lua
     -- For using default config leave this empty.
     require("citruszest").setup({
-        transparent = true, -- Enable/Disable transparency
+        transparent = false, -- Enable/Disable transparency
+        italic = true,
         -- Override default style in this table
         -- E.g If you want to override `Constant` highlight style
         style = {
@@ -101,6 +107,7 @@ lualine.setup {
 - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
 - [alpha.nvim](https://github.com/goolord/alpha-nvim)
 - [whichkey.nvim](https://github.com/folke/which-key.nvim)
+- [flash.nvim](https://github.com/folke/flash.nvim)
 
 ## :fireworks: Integration
 
