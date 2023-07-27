@@ -32,7 +32,7 @@ M.theme = function(C, bool)
     FloatBorder = { fg = C.orange },
     FloatTitle = { fg = C.yellow }, -- Title of floating windows
     Pmenu = { fg = C.bright_white, bg = C.background }, -- Popup menu: normal item.
-    PmenuSel = { bg = C.bright_black, bold = true }, -- Popup menu: selected item.
+    PmenuSel = { fg = C.orange, bg = C.cursor, bold = true }, -- Popup menu: selected item.
     PmenuSbar = { bg = C.bright_orange }, -- Popup menu: scrollbar.
     PmenuThumb = { bg = C.bright_orange }, -- Popup menu: Thumb of the scrollbar.
     Question = { fg = C.cyan }, -- |hit-enter| prompt and yes/no questions
@@ -464,7 +464,7 @@ M.theme = function(C, bool)
     -- NvimTree
     NvimTreeFolderName = { fg = C.bright_yellow },
     NvimTreeFolderIcon = { fg = C.bright_orange },
-    NvimTreeNormal = { fg = C.white, bg = C.background },
+    NvimTreeNormal = { fg = C.bright_white, bg = C.background },
     NvimTreeOpenedFolderName = { fg = C.bright_green, bold = true },
     NvimTreeEmptyFolderName = { fg = C.cyan },
     NvimTreeIndentMarker = { fg = C.bright_black },
