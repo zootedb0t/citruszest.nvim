@@ -61,7 +61,7 @@ M.theme = function(C, bool)
     Comment = { fg = C.bright_black }, -- just comments
     SpecialComment = { link = "Special" }, -- special things inside a comment
     Constant = { fg = C.cyan }, -- (preferred) any constant
-    String = { fg = C.orange }, -- a string constant: "this is a string"
+    String = { fg = C.bright_orange }, -- a string constant: "this is a string"
     Character = { fg = C.bright_red }, --  a character constant: 'c', '\n'
     Number = { fg = C.bright_cyan }, --   a number constant: 234, 0xff
     Float = { link = "Number" }, --    a floating point constant: 2.3e10
