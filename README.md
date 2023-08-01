@@ -114,6 +114,7 @@ lualine.setup {
 - [Kitty](https://github.com/kovidgoyal/kitty) users copy [this](extra/kitty-theme.conf) into their `kitty.conf`.
 - `Xresources` is available [here](extra/xresources).
 - [Foot](https://codeberg.org/dnkl/foot) terminal users can use [this](extra/foot-terminal).
+- [iterm2](https://iterm2.com/) user can use [this](extra/citruszest.itermcolors).
 
 ## :art: Colors
 
