@@ -297,7 +297,7 @@ M.theme = function(C, bool)
     ["@variable.builtin"] = { fg = C.bright_yellow }, -- Variable names that are defined by the languages, like this or self.
 
     ["@constant"] = { link = "Constant" }, -- For constants
-    ["@constant.builtin"] = { fg = C.bright_red }, -- For constant that are built in the language: nil in Lua.
+    ["@constant.builtin"] = { fg = C.red }, -- For constant that are built in the language: nil in Lua.
     ["@constant.macro"] = { link = "Macro" }, -- For constants that are defined by macros: NULL in C.
 
     ["@namespace"] = { fg = C.bright_yellow, italic = bool }, -- For identifiers referring to modules and namespaces.
