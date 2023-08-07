@@ -26,8 +26,8 @@ citruszest.nvim
 
 #### Requirement
 
+- <b>Treesitter</b> (Recommended)
 - Neovim >= 0.9.1
-- Treesitter (optional)
 
 [lazy.nvim](https://github.com/folke/lazy.nvim)
 
@@ -74,9 +74,12 @@ To know `highlight` group of word under cursor. Use `Inspect` command.
 ```lua
     -- For using default config leave this empty.
     require("citruszest").setup({
-        transparent = false, -- Enable/Disable transparency
-        italic = true,
-        -- Override default style in this table
+        option = {
+            transparent = false, -- Enable/Disable transparency
+            italic = true,
+            bold = true,
+        },
+        -- Override default highlight style in this table
         -- E.g If you want to override `Constant` highlight style
         style = {
         -- This will change Constant foreground color and make it bold.

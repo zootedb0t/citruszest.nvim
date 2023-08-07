@@ -1,6 +1,6 @@
 local M = {}
 
-M.theme = function(C, bool)
+M.theme = function(C, O)
   return {
     ColorColumn = { bg = C.none }, -- used for the columns set with 'colorcolumn'
     Conceal = { fg = C.cyan }, -- placeholder characters substituted for concealed text (see 'conceallevel')
@@ -20,7 +20,7 @@ M.theme = function(C, bool)
     Substitute = { fg = C.orange, bg = C.background }, -- |:substitute| replacement text highlighting
     LineNr = { fg = C.bright_black }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
     CursorLineNr = { fg = C.yellow }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line. highlights the number in numberline.
-    MatchParen = { fg = C.yellow, bg = C.background, bold = true }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
+    MatchParen = { fg = C.yellow, bg = C.background, bold = O.bold }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
     ModeMsg = { fg = C.white }, -- 'showmode' message (e.g., "-- INSERT -- ")
     MsgSeparator = {}, -- Separator for scrolled messages, `msgsep` flag of 'display'
     MoreMsg = { fg = C.cyan }, -- |more-prompt|
@@ -32,11 +32,11 @@ M.theme = function(C, bool)
     FloatBorder = { fg = C.orange },
     FloatTitle = { fg = C.yellow }, -- Title of floating windows
     Pmenu = { fg = C.bright_white, bg = C.background }, -- Popup menu: normal item.
-    PmenuSel = { fg = C.orange, bg = C.cursor, bold = true }, -- Popup menu: selected item.
+    PmenuSel = { fg = C.orange, bg = C.cursor, bold = O.bold }, -- Popup menu: selected item.
     PmenuSbar = { bg = C.bright_orange }, -- Popup menu: scrollbar.
     PmenuThumb = { bg = C.bright_orange }, -- Popup menu: Thumb of the scrollbar.
     Question = { fg = C.cyan }, -- |hit-enter| prompt and yes/no questions
-    QuickFixLine = { bg = C.bright_black, bold = true }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
+    QuickFixLine = { bg = C.bright_black, bold = O.bold }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
     Search = { fg = C.blue, bg = C.background }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
     IncSearch = { fg = C.black, bg = C.orange }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
     CurSearch = { fg = C.black, bg = C.bright_orange }, -- 'cursearch' highlighting: highlights the current search you're on differently
@@ -50,9 +50,9 @@ M.theme = function(C, bool)
     TabLine = { fg = C.white, bg = C.visual }, -- tab pages line, not active tab page label
     TabLineFill = {}, -- tab pages line, where there are no labels
     TabLineSel = { fg = C.green, bg = C.visual }, -- tab pages line, active tab page label
-    Title = { fg = C.cyan, bold = true }, -- titles for output from ":set all", ":autocmd" etc.
-    Visual = { bg = C.visual, bold = true }, -- Visual mode selection
-    VisualNOS = { bg = C.bright_black, bold = true }, -- Visual mode selection when vim is "Not Owning the Selection".
+    Title = { fg = C.cyan, bold = O.bold }, -- titles for output from ":set all", ":autocmd" etc.
+    Visual = { bg = C.visual, bold = O.bold }, -- Visual mode selection
+    VisualNOS = { bg = C.bright_black, bold = O.bold }, -- Visual mode selection when vim is "Not Owning the Selection".
     WarningMsg = { fg = C.bright_red }, -- warning messages
     Whitespace = { fg = C.white }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
     WildMenu = { fg = C.foreground, bg = C.background }, -- current match in 'wildmenu' completion
@@ -66,7 +66,7 @@ M.theme = function(C, bool)
     Number = { fg = C.bright_cyan }, --   a number constant: 234, 0xff
     Float = { link = "Number" }, --    a floating point constant: 2.3e10
     Boolean = { fg = C.orange }, --  a boolean constant: TRUE, false
-    Identifier = { fg = C.bright_white, italic = bool }, -- (preferred) any variable name
+    Identifier = { fg = C.bright_white, italic = O.italic, bold = O.bold }, -- (preferred) any variable name
     Function = { fg = C.bright_green }, -- function name (also: methods for classes)
     Statement = { fg = C.blue }, -- (preferred) any statement
     Conditional = { fg = C.orange }, --  if, then, else, endif, switch, etc.
@@ -101,11 +101,11 @@ M.theme = function(C, bool)
     Todo = { fg = C.black, bg = C.yellow }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
     qfLineNr = { fg = C.yellow },
     qfFileName = { fg = C.cyan },
-    htmlH1 = { fg = C.blue, bold = true },
-    htmlH2 = { fg = C.cyan, bold = true },
+    htmlH1 = { fg = C.blue, bold = O.bold },
+    htmlH2 = { fg = C.cyan, bold = O.bold },
     mkdCodeDelimiter = { bg = C.background, fg = C.white },
-    mkdCodeStart = { fg = C.bright_cyan, bold = true },
-    mkdCodeEnd = { fg = C.cyan, bold = true },
+    mkdCodeStart = { fg = C.bright_cyan, bold = O.bold },
+    mkdCodeEnd = { fg = C.cyan, bold = O.bold },
 
     -- debugging
     debugPC = { bg = C.background }, -- used for highlighting the current line in terminal-debug
@@ -162,7 +162,7 @@ M.theme = function(C, bool)
     LspReferenceWrite = { bg = C.visual }, -- used for highlighting "write" references
     -- highlight diagnostics in numberline
 
-    DiagnosticError = { bg = C.none, fg = C.red, bold = true }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
+    DiagnosticError = { bg = C.none, fg = C.red, bold = O.bold }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
     DiagnosticWarn = { bg = C.none, fg = C.bright_yellow }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
     DiagnosticInfo = { bg = C.none, fg = C.blue }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
     DiagnosticHint = { bg = C.none, fg = C.bright_cyan }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
@@ -263,7 +263,7 @@ M.theme = function(C, bool)
     ["@method.call"] = { link = "Function" }, -- method calls
 
     ["@constructor"] = { fg = C.bright_yellow }, -- For constructor calls and definitions: = { } in Lua, and Java constructors.
-    ["@parameter"] = { fg = C.bright_yellow, italic = bool }, -- For parameters of a function.
+    ["@parameter"] = { fg = C.bright_yellow, italic = O.italic }, -- For parameters of a function.
 
     -- Keywords
     ["@keyword"] = { link = "Keyword" }, -- For keywords that don't fall in previous categories.
@@ -283,7 +283,7 @@ M.theme = function(C, bool)
     -- Types
 
     ["@type"] = { link = "Type" }, -- For types.
-    ["@type.builtin"] = { link = "@type", italic = bool }, -- For builtin types.
+    ["@type.builtin"] = { link = "@type", italic = O.italic }, -- For builtin types.
     ["@type.definition"] = { link = "@type" }, -- type definitions (e.g. `typedef` in C)
     ["@type.qualifier"] = { link = "Constant" }, -- type qualifiers (e.g. `const`)
 
@@ -300,23 +300,23 @@ M.theme = function(C, bool)
     ["@constant.builtin"] = { fg = C.red }, -- For constant that are built in the language: nil in Lua.
     ["@constant.macro"] = { link = "Macro" }, -- For constants that are defined by macros: NULL in C.
 
-    ["@namespace"] = { fg = C.bright_yellow, italic = bool }, -- For identifiers referring to modules and namespaces.
+    ["@namespace"] = { fg = C.bright_yellow, italic = O.italic }, -- For identifiers referring to modules and namespaces.
     ["@symbol"] = { fg = C.yellow },
 
     -- Text
     ["@text"] = { fg = C.bright_white }, -- For strings considerated text in a markup language.
     ["@text.strong"] = { fg = C.bright_red, bold = true }, -- bold
-    ["@text.emphasis"] = { fg = C.bright_orange, italic = bool }, -- italic
+    ["@text.emphasis"] = { fg = C.bright_orange, italic = O.italic }, -- italic
     ["@text.underline"] = { link = "Underline" }, -- underlined text
     ["@text.strike"] = { fg = C.white, strikethrough = true }, -- strikethrough text
-    ["@text.title"] = { fg = C.white, bold = true }, -- titles like: # Example
+    ["@text.title"] = { fg = C.white, bold = O.bold }, -- titles like: # Example
     ["@text.literal"] = { fg = C.blue }, -- used for inline code in markdown and for doc in python (""")
-    ["@text.uri"] = { fg = C.green, italic = bool }, -- urls, links and emails
+    ["@text.uri"] = { fg = C.green, italic = O.italic }, -- urls, links and emails
     ["@text.html"] = { fg = C.bright_white, underline = true }, -- urls, links and emails
     ["@text.math"] = { fg = C.cyan }, -- math environments (e.g. `$ ... $` in LaTeX)
     ["@text.environment"] = { fg = C.orange }, -- text environments of markup languages
     ["@text.environment.name"] = { fg = C.cyan }, -- text indicating the type of an environment
-    ["@text.reference"] = { fg = C.blue, bold = true }, -- references
+    ["@text.reference"] = { fg = C.blue, bold = O.bold }, -- references
 
     ["@text.todo"] = { fg = C.black, bg = C.yellow }, -- todo notes
     ["@text.todo.checked"] = { fg = C.green }, -- todo notes
@@ -330,7 +330,7 @@ M.theme = function(C, bool)
 
     -- Tags
     ["@tag"] = { fg = C.bright_blue }, -- Tags like html tag names.
-    ["@tag.attribute"] = { fg = C.bright_yellow, italic = bool }, -- Tags like html tag names.
+    ["@tag.attribute"] = { fg = C.bright_yellow, italic = O.italic }, -- Tags like html tag names.
     ["@tag.delimiter"] = { fg = C.red }, -- Tag delimiter like < > /
 
     -- Language specific:
@@ -366,7 +366,7 @@ M.theme = function(C, bool)
 
     -- TSX (Typescript React)
     ["@constructor.tsx"] = { fg = C.bright_green },
-    ["@tag.attribute.tsx"] = { fg = C.bright_yellow, italic = bool },
+    ["@tag.attribute.tsx"] = { fg = C.bright_yellow, italic = O.italic },
 
     -- cpp
     ["@property.cpp"] = { fg = C.bright_orange },
@@ -390,8 +390,8 @@ M.theme = function(C, bool)
     CmpItemAbbrDeprecated = { fg = C.black, strikethrough = true },
     CmpItemKind = { fg = C.cyan },
     CmpItemMenu = { fg = C.white },
-    CmpItemAbbrMatch = { fg = C.bright_green, bold = true },
-    CmpItemAbbrMatchFuzzy = { fg = C.bright_green, bold = true },
+    CmpItemAbbrMatch = { fg = C.bright_green, bold = O.bold },
+    CmpItemAbbrMatchFuzzy = { fg = C.bright_green, bold = O.bold },
 
     -- kind support
     CmpItemKindSnippet = { fg = C.blue },
@@ -450,7 +450,7 @@ M.theme = function(C, bool)
 
     -- Telescope
     TelescopePromptPrefix = { fg = C.bright_orange, bg = C.background },
-    TelescopeSelectionCaret = { fg = C.orange, bg = C.visual, bold = true },
+    TelescopeSelectionCaret = { fg = C.orange, bg = C.visual, bold = O.bold },
     TelescopePromptNormal = { bg = C.background },
     TelescopeResultsNormal = { bg = C.background },
     TelescopePreviewNormal = { bg = C.background },
@@ -465,11 +465,11 @@ M.theme = function(C, bool)
     NvimTreeFolderName = { fg = C.bright_yellow },
     NvimTreeFolderIcon = { fg = C.bright_orange },
     NvimTreeNormal = { fg = C.bright_white, bg = C.background },
-    NvimTreeOpenedFolderName = { fg = C.bright_green, bold = true },
+    NvimTreeOpenedFolderName = { fg = C.bright_green, bold = O.bold },
     NvimTreeEmptyFolderName = { fg = C.cyan },
     NvimTreeIndentMarker = { fg = C.bright_black },
     NvimTreeWinSeparator = { fg = C.foreground, bg = C.background },
-    NvimTreeRootFolder = { fg = C.bright_yellow, bold = true },
+    NvimTreeRootFolder = { fg = C.bright_yellow, bold = O.bold },
     NvimTreeSymlink = { fg = C.blue },
     NvimTreeStatuslineNc = { fg = C.bright_orange, bg = C.background },
     NvimTreeGitDirty = { fg = C.yellow },
@@ -496,7 +496,7 @@ M.theme = function(C, bool)
 
     -- Flash
     FlashBackdrop = { fg = C.foreground },
-    FlashLabel = { fg = C.yellow, bg = C.background, bold = true },
+    FlashLabel = { fg = C.yellow, bg = C.background, bold = O.bold },
     FlashMatch = { fg = C.green, bg = C.background },
     FlashCurrent = { fg = C.orange, bg = C.background },
   }

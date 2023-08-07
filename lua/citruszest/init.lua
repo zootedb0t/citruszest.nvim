@@ -19,14 +19,14 @@ M.set_highlight = function()
   vim.o.termguicolors = true
 
   local user_config = config.extended
-  if user_config.transparent then
+  if user_config.option.transparent then
     pallet.background = "NONE"
   end
 
   -- Override default highlight with user config
   local highlight_groups = vim.tbl_deep_extend(
     "force",
-    require("citruszest.highlights").theme(pallet, config.extended.italic),
+    require("citruszest.highlights").theme(pallet, config.extended.option),
     user_config.style
   )
 

@@ -1,8 +1,11 @@
 local config = {}
 
 config.default = {
-  transparent = false,
-  italic = true,
+  option = {
+    transparent = false,
+    italic = true,
+    bold = true,
+  },
   style = {},
 }
 
