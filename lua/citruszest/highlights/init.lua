@@ -499,6 +499,12 @@ M.theme = function(C, O)
     FlashLabel = { fg = C.yellow, bg = C.background, bold = O.bold },
     FlashMatch = { fg = C.green, bg = C.background },
     FlashCurrent = { fg = C.orange, bg = C.background },
+
+    -- Lazy
+    LazyH1 = { fg = C.yellow, bg = C.visual, bold = O.bold },
+    LazyButton = { fg = C.foreground, bg = C.visual, bold = O.bold },
+    LazyButtonActive = { fg = C.orange, bg = C.cursor, bold = O.bold },
+    LazySpecial = { fg = C.bright_cyan, bg = C.background },
   }
 end
 

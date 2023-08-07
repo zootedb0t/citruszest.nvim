@@ -111,6 +111,7 @@ lualine.setup {
 - [alpha.nvim](https://github.com/goolord/alpha-nvim)
 - [whichkey.nvim](https://github.com/folke/which-key.nvim)
 - [flash.nvim](https://github.com/folke/flash.nvim)
+- [lazy.nvim](https://github.com/folke/lazy.nvim)
 
 ## :fireworks: Integration
 
