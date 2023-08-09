@@ -37,7 +37,7 @@ M.theme = function(C, O)
     PmenuThumb = { bg = C.bright_orange }, -- Popup menu: Thumb of the scrollbar.
     Question = { fg = C.cyan }, -- |hit-enter| prompt and yes/no questions
     QuickFixLine = { bg = C.bright_black, bold = O.bold }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
-    Search = { fg = C.blue, bg = C.background }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
+    Search = { fg = C.bright_white, bg = C.background }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
     IncSearch = { fg = C.black, bg = C.orange }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
     CurSearch = { fg = C.black, bg = C.bright_orange }, -- 'cursearch' highlighting: highlights the current search you're on differently
     SpecialKey = { fg = C.orange }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' textspace. |hl-Whitespace|
@@ -387,7 +387,7 @@ M.theme = function(C, O)
 
     -- Cmp
     CmpItemAbbr = { fg = C.bright_white },
-    CmpItemAbbrDeprecated = { fg = C.black, strikethrough = true },
+    CmpItemAbbrDeprecated = { fg = C.visual, strikethrough = true },
     CmpItemKind = { fg = C.cyan },
     CmpItemMenu = { fg = C.white },
     CmpItemAbbrMatch = { fg = C.bright_green, bold = O.bold },
