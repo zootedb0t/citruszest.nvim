@@ -148,6 +148,7 @@ lualine.setup {
 
 - [SpaceCamp](https://github.com/jaredgorski/SpaceCamp) - For inspiring me write my own colorscheme.
 - [FluoroMachine.nvim](https://github.com/maxmx03/FluoroMachine.nvim) - For the beautiful colorscheme.
+- [catppuccin](https://github.com/catppuccin/nvim) - For describing highlight groups.
 
 <div align="center">
     <h4>

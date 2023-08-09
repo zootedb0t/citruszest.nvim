@@ -503,7 +503,7 @@ M.theme = function(C, O)
     -- Lazy
     LazyH1 = { fg = C.yellow, bg = C.visual, bold = O.bold },
     LazyButton = { fg = C.foreground, bg = C.visual, bold = O.bold },
-    LazyButtonActive = { fg = C.orange, bg = C.cursor, bold = O.bold },
+    LazyButtonActive = { fg = C.yellow, bg = C.cursor, bold = O.bold },
     LazySpecial = { fg = C.bright_cyan, bg = C.background },
   }
 end
