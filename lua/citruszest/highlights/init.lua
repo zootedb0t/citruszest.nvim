@@ -1,5 +1,8 @@
 local M = {}
 
+---@param C table
+---@param O table
+---@return table
 M.theme = function(C, O)
   return {
     ColorColumn = { bg = C.none }, -- used for the columns set with 'colorcolumn'
@@ -227,6 +230,8 @@ M.theme = function(C, O)
     ["@lsp.typemod.type.defaultLibrary"] = { link = "@type.builtin" },
     ["@lsp.typemod.variable.defaultLibrary"] = { link = "@variable.builtin" },
     ["@lsp.typemod.variable.injected"] = { link = "@variable" },
+    ["@lsp.mod.documentation.lua"] = { link = "Comment" },
+    ["@lsp.typemod.keyword.documentation.lua"] = { link = "Comment" },
 
     -- Tressitter highlights
     ["@comment"] = { link = "Comment" },
@@ -504,7 +509,7 @@ M.theme = function(C, O)
     LazyH1 = { fg = C.yellow, bg = C.visual, bold = O.bold },
     LazyButton = { fg = C.foreground, bg = C.visual, bold = O.bold },
     LazyButtonActive = { fg = C.yellow, bg = C.cursor, bold = O.bold },
-    LazySpecial = { fg = C.bright_cyan, bg = C.background },
+    LazySpecial = { fg = C.blue, bg = C.background },
   }
 end
 

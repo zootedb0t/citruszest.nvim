@@ -3,6 +3,7 @@ local M = {}
 local config = require("citruszest.options")
 local pallet = require("citruszest.palettes.colors")
 
+---@param opts table?
 M.setup = function(opts)
   -- Load user config
   config:extend(opts)
