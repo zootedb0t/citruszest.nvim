@@ -32,7 +32,7 @@ M.theme = function(C, O)
     NormalNC = { fg = C.foreground, bg = C.background }, -- normal text in non-current windows
     NormalSB = { fg = C.foreground }, -- normal text in non-current windows
     NormalFloat = { bg = C.background }, -- Normal text in floating windows.
-    FloatBorder = { fg = C.orange },
+    FloatBorder = { fg = C.bright_orange },
     FloatTitle = { fg = C.yellow }, -- Title of floating windows
     Pmenu = { fg = C.bright_white, bg = C.background }, -- Popup menu: normal item.
     PmenuSel = { fg = C.orange, bg = C.cursor, bold = O.bold }, -- Popup menu: selected item.
