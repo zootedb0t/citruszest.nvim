@@ -23,7 +23,7 @@ M.theme = function(C, O)
     Substitute = { fg = C.orange, bg = C.background }, -- |:substitute| replacement text highlighting
     LineNr = { fg = C.bright_black }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
     CursorLineNr = { fg = C.yellow }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line. highlights the number in numberline.
-    MatchParen = { fg = C.yellow, bg = C.background, bold = O.bold }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
+    MatchParen = { fg = C.bright_red, bg = C.background, bold = O.bold }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
     ModeMsg = { fg = C.white }, -- 'showmode' message (e.g., "-- INSERT -- ")
     MsgSeparator = {}, -- Separator for scrolled messages, `msgsep` flag of 'display'
     MoreMsg = { fg = C.cyan }, -- |more-prompt|
@@ -321,7 +321,7 @@ M.theme = function(C, O)
     ["@text.math"] = { fg = C.cyan }, -- math environments (e.g. `$ ... $` in LaTeX)
     ["@text.environment"] = { fg = C.orange }, -- text environments of markup languages
     ["@text.environment.name"] = { fg = C.cyan }, -- text indicating the type of an environment
-    ["@text.reference"] = { fg = C.blue, bold = O.bold }, -- references
+    ["@text.reference"] = { fg = C.cyan, bold = O.bold }, -- references
 
     ["@text.todo"] = { fg = C.black, bg = C.yellow }, -- todo notes
     ["@text.todo.checked"] = { fg = C.green }, -- todo notes
@@ -341,8 +341,8 @@ M.theme = function(C, O)
     -- Language specific:
 
     -- markdown
-    ["@text.title.2.markdown"] = { link = "rainbow2" },
     ["@text.title.1.markdown"] = { link = "rainbow1" },
+    ["@text.title.2.markdown"] = { link = "rainbow2" },
     ["@text.title.3.markdown"] = { link = "rainbow3" },
     ["@text.title.4.markdown"] = { link = "rainbow4" },
     ["@text.title.5.markdown"] = { link = "rainbow5" },
