@@ -23,7 +23,7 @@ M.theme = function(C, O)
     Substitute = { fg = C.orange, bg = C.background }, -- |:substitute| replacement text highlighting
     LineNr = { fg = C.bright_black }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
     CursorLineNr = { fg = C.yellow }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line. highlights the number in numberline.
-    MatchParen = { fg = C.bright_red, bg = C.background, bold = O.bold }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
+    MatchParen = { fg = C.bright_blue, bg = C.background, bold = O.bold }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
     ModeMsg = { fg = C.white }, -- 'showmode' message (e.g., "-- INSERT -- ")
     MsgSeparator = {}, -- Separator for scrolled messages, `msgsep` flag of 'display'
     MoreMsg = { fg = C.cyan }, -- |more-prompt|
@@ -392,7 +392,7 @@ M.theme = function(C, O)
 
     -- Cmp
     CmpItemAbbr = { fg = C.bright_white },
-    CmpItemAbbrDeprecated = { fg = C.visual, strikethrough = true },
+    CmpItemAbbrDeprecated = { fg = C.foreground, strikethrough = true },
     CmpItemKind = { fg = C.cyan },
     CmpItemMenu = { fg = C.white },
     CmpItemAbbrMatch = { fg = C.bright_green, bold = O.bold },
