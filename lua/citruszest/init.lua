@@ -16,8 +16,9 @@ M.set_highlight = function()
     vim.cmd("syntax reset")
   end
 
-  vim.o.background = "dark"
+  vim.o.background = 'dark'
   vim.o.termguicolors = true
+  vim.g.colors_name = 'citruszest'
 
   local user_config = config.extended
   if user_config.option.transparent then
