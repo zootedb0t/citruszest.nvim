@@ -275,8 +275,10 @@ M.theme = function(C, O)
     ["@keyword.function"] = { fg = C.bright_red }, -- For keywords used to define a function.
     ["@keyword.operator"] = { link = "Operator" }, -- For new keyword operator
     ["@keyword.return"] = { fg = C.bright_red },
+
     -- JS & derivative
     ["@keyword.export"] = { fg = C.bright_cyan },
+    ["@lsp.typemod.function.defaultLibrary.javascript"] = { fg = C.bright_green },
 
     ["@conditional"] = { link = "Conditional" }, -- For keywords related to conditionnals.
     ["@repeat"] = { link = "Repeat" }, -- For keywords related to loops.
