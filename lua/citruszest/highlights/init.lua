@@ -483,7 +483,7 @@ M.theme = function(C, O)
     NvimTreeGitNew = { fg = C.cyan },
     NvimTreeGitDeleted = { fg = C.red },
     NvimTreeSpecialFile = { fg = C.blue },
-    NvimTreeImageFile = { fg = C.bright_black },
+    NvimTreeImageFile = { fg = C.bright_cyan },
     NvimTreeOpenedFile = { fg = C.yellow },
 
     -- Alpha
