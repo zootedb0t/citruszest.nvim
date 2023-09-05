@@ -469,7 +469,7 @@ M.theme = function(C, O)
     TelescopePreviewTitle = { fg = C.black, bg = C.yellow },
 
     -- NvimTree
-    NvimTreeFolderName = { fg = C.bright_yellow },
+    NvimTreeFolderName = { fg = C.bright_orange },
     NvimTreeFolderIcon = { fg = C.bright_orange },
     NvimTreeNormal = { fg = C.bright_white, bg = C.background },
     NvimTreeOpenedFolderName = { fg = C.bright_green, bold = O.bold },
@@ -485,6 +485,7 @@ M.theme = function(C, O)
     NvimTreeSpecialFile = { fg = C.blue },
     NvimTreeImageFile = { fg = C.bright_cyan },
     NvimTreeOpenedFile = { fg = C.yellow },
+    NvimTreeOpenedFolderIcon = { fg = C.green },
 
     -- Alpha
     AlphaShortcut = { fg = C.green },
@@ -508,9 +509,9 @@ M.theme = function(C, O)
     FlashCurrent = { fg = C.orange, bg = C.background },
 
     -- Lazy
-    LazyH1 = { fg = C.yellow, bg = C.visual, bold = O.bold },
+    LazyH1 = { fg = C.bright_green, bg = C.visual, bold = O.bold },
     LazyButton = { fg = C.foreground, bg = C.visual, bold = O.bold },
-    LazyButtonActive = { fg = C.yellow, bg = C.cursor, bold = O.bold },
+    LazyButtonActive = { fg = C.bright_green, bg = C.cursor, bold = O.bold },
     LazySpecial = { fg = C.blue, bg = C.background },
 
     -- Navic
