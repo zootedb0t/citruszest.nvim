@@ -178,7 +178,7 @@ M.theme = function(C, O)
     DiagnosticSignError = { fg = C.red }, -- Used for "Error" signs in sign column
     DiagnosticSignWarn = { fg = C.bright_yellow }, -- Used for "Warn" signs in sign column
     DiagnosticSignInfo = { fg = C.blue }, -- Used for "Info" signs in sign column
-    DiagnosticSignHint = { fg = C.bright_cyan }, -- Used for "Hint" signs in sign column
+    DiagnosticSignHint = { fg = C.bright_blue }, -- Used for "Hint" signs in sign column
 
     LspDiagnosticsError = { fg = C.red },
     LspDiagnosticsWarning = { fg = C.bright_yellow },
@@ -485,14 +485,14 @@ M.theme = function(C, O)
     NvimTreeSpecialFile = { fg = C.blue },
     NvimTreeImageFile = { fg = C.bright_cyan },
     NvimTreeOpenedFile = { fg = C.yellow },
-    NvimTreeOpenedFolderIcon = { fg = C.green },
+    NvimTreeOpenedFolderIcon = { fg = C.bright_green },
 
     -- Alpha
-    AlphaShortcut = { fg = C.green },
+    AlphaShortcut = { fg = C.bright_yellow },
     AlphaHeader = { fg = C.orange },
     AlphaHeaderLabel = { fg = C.cyan },
-    AlphaButtons = { fg = C.yellow },
-    AlphaFooter = { fg = C.green },
+    AlphaButtons = { fg = C.blue },
+    AlphaFooter = { fg = C.bright_red },
 
     -- Whichkey
     WhichKey = { link = "NormalFloat" },
