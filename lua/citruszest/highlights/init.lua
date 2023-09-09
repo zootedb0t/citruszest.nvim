@@ -66,7 +66,7 @@ M.theme = function(C, O)
     Constant = { fg = C.cyan }, -- (preferred) any constant
     String = { fg = C.bright_orange }, -- a string constant: "this is a string"
     Character = { fg = C.bright_red }, --  a character constant: 'c', '\n'
-    Number = { fg = C.bright_orange }, --   a number constant: 234, 0xff
+    Number = { fg = C.bright_cyan }, --   a number constant: 234, 0xff
     Float = { link = "Number" }, --    a floating point constant: 2.3e10
     Boolean = { fg = C.orange }, --  a boolean constant: TRUE, false
     Identifier = { fg = C.bright_white, italic = O.italic, bold = O.bold }, -- (preferred) any variable name
@@ -288,7 +288,6 @@ M.theme = function(C, O)
     ["@exception"] = { fg = C.bright_yellow }, -- For exception related keywords.
 
     -- Types
-
     ["@type"] = { link = "Type" }, -- For types.
     ["@type.builtin"] = { link = "@type", italic = O.italic }, -- For builtin types.
     ["@type.definition"] = { link = "@type" }, -- type definitions (e.g. `typedef` in C)
@@ -391,6 +390,9 @@ M.theme = function(C, O)
 
     -- Pyhton
     ["@string.documentation.python"] = { fg = C.blue },
+
+    -- Haskell
+    ["@operator.haskell"] = { fg = C.bright_yellow },
 
     -- Cmp
     CmpItemAbbr = { fg = C.bright_white },
