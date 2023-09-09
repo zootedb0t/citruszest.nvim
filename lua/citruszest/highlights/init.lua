@@ -66,7 +66,7 @@ M.theme = function(C, O)
     Constant = { fg = C.cyan }, -- (preferred) any constant
     String = { fg = C.bright_orange }, -- a string constant: "this is a string"
     Character = { fg = C.bright_red }, --  a character constant: 'c', '\n'
-    Number = { fg = C.bright_cyan }, --   a number constant: 234, 0xff
+    Number = { fg = C.bright_orange }, --   a number constant: 234, 0xff
     Float = { link = "Number" }, --    a floating point constant: 2.3e10
     Boolean = { fg = C.orange }, --  a boolean constant: TRUE, false
     Identifier = { fg = C.bright_white, italic = O.italic, bold = O.bold }, -- (preferred) any variable name
@@ -479,13 +479,15 @@ M.theme = function(C, O)
     NvimTreeRootFolder = { fg = C.bright_yellow, bold = O.bold },
     NvimTreeSymlink = { fg = C.blue },
     NvimTreeStatuslineNc = { fg = C.bright_orange, bg = C.background },
-    NvimTreeGitDirty = { fg = C.yellow },
+    NvimTreeGitDirty = { fg = C.red },
     NvimTreeGitNew = { fg = C.cyan },
     NvimTreeGitDeleted = { fg = C.red },
-    NvimTreeSpecialFile = { fg = C.blue },
+    NvimTreeSpecialFile = { fg = C.bright_red },
     NvimTreeImageFile = { fg = C.bright_cyan },
-    NvimTreeOpenedFile = { fg = C.yellow },
+    NvimTreeOpenedFile = { fg = C.bright_orange },
     NvimTreeOpenedFolderIcon = { fg = C.bright_green },
+    NvimTreeFolderArrowOpen = { fg = C.bright_green },
+    NvimTreeFolderArrowClosed = { fg = C.orange },
 
     -- Alpha
     AlphaShortcut = { fg = C.bright_yellow },
