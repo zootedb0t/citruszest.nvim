@@ -73,7 +73,7 @@ M.theme = function(C, O)
     Function = { fg = C.bright_green }, -- function name (also: methods for classes)
     Statement = { fg = C.blue }, -- (preferred) any statement
     Conditional = { fg = C.orange }, --  if, then, else, endif, switch, etc.
-    Repeat = { fg = C.bright_yellow }, --   for, do, while, etc.
+    Repeat = { fg = C.orange }, --   for, do, while, etc.
     Label = { fg = C.bright_green }, --    case, default, etc.
     Operator = { fg = C.bright_cyan }, -- "sizeof", "+", "*", etc.
     Keyword = { fg = C.bright_yellow }, --  any other keyword
