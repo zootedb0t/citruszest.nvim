@@ -63,7 +63,7 @@ M.theme = function(C, O)
 
     Comment = { fg = C.bright_black }, -- just comments
     SpecialComment = { link = "Special" }, -- special things inside a comment
-    Constant = { fg = C.cyan }, -- (preferred) any constant
+    Constant = { fg = C.bright_orange }, -- (preferred) any constant
     String = { fg = C.bright_orange }, -- a string constant: "this is a string"
     Character = { fg = C.bright_red }, --  a character constant: 'c', '\n'
     Number = { fg = C.bright_cyan }, --   a number constant: 234, 0xff
@@ -83,7 +83,7 @@ M.theme = function(C, O)
     PreProc = { fg = C.bright_green }, -- (preferred) generic Preprocessor
     Include = { fg = C.bright_yellow }, --  preprocessor #include
     Define = { link = "PreProc" }, -- preprocessor #define
-    Macro = { fg = C.yellow }, -- same as Define
+    Macro = { fg = C.bright_cyan }, -- same as Define
     PreCondit = { link = "PreProc" }, -- preprocessor #if, #else, #endif, etc.
 
     StorageClass = { fg = C.bright_yellow }, -- static, register, volatile, etc.
@@ -260,7 +260,7 @@ M.theme = function(C, O)
 
     -- Functions
     ["@function"] = { link = "Function" }, -- For function (calls and definitions).
-    ["@function.builtin"] = { fg = C.bright_yellow }, -- For builtin functions: table.insert in Lua.
+    ["@function.builtin"] = { fg = C.bright_green }, -- For builtin functions: table.insert in Lua.
     ["@function.call"] = { link = "Function" }, -- function calls
     ["@function.macro"] = { fg = C.blue }, -- For macro defined functions (calls and definitions): each macro_rules in RusC.
     ["@method"] = { link = "Function" }, -- For method calls and definitions.
