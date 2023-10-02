@@ -39,7 +39,6 @@ M.theme = function(C, O)
     PmenuSbar = { bg = C.bright_orange }, -- Popup menu: scrollbar.
     PmenuThumb = { bg = C.bright_orange }, -- Popup menu: Thumb of the scrollbar.
     Question = { fg = C.cyan }, -- |hit-enter| prompt and yes/no questions
-    QuickFixLine = { bg = C.bright_black, bold = O.bold }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
     Search = { fg = C.bright_white, bg = C.background }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
     IncSearch = { fg = C.black, bg = C.orange }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
     CurSearch = { fg = C.black, bg = C.bright_orange }, -- 'cursearch' highlighting: highlights the current search you're on differently
@@ -102,8 +101,6 @@ M.theme = function(C, O)
 
     Error = { fg = C.red }, -- (preferred) any erroneous construct
     Todo = { fg = C.black, bg = C.yellow }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
-    qfLineNr = { fg = C.yellow },
-    qfFileName = { fg = C.cyan },
     htmlH1 = { fg = C.blue, bold = O.bold },
     htmlH2 = { fg = C.cyan, bold = O.bold },
     mkdCodeDelimiter = { bg = C.background, fg = C.white },
@@ -393,6 +390,11 @@ M.theme = function(C, O)
 
     -- Haskell
     ["@operator.haskell"] = { fg = C.bright_yellow },
+
+    -- Qucikfix
+    QuickFixLine = { bg = C.cursor, bold = O.bold }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
+    qfFileName = { fg = C.bright_orange },
+    qfLineNr = { fg = C.yellow },
 
     -- Cmp
     CmpItemAbbr = { fg = C.bright_white },
