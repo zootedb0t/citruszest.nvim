@@ -16,7 +16,7 @@ citruszest.nvim
 
 ## :fire: Showcase
 
-![Screenshot_2023-07-02-03-23-01_1920x1080](https://github.com/zootedb0t/citruszest.nvim/assets/62596687/ad44cfa5-a49c-4ff0-9d0f-e1c5bd236ee5)
+![Screenshot_2023-10-02-09-46-20_1920x1080](https://github.com/zootedb0t/citruszest.nvim/assets/62596687/180645e9-0613-4e3c-af1e-856ac22c353b)
 
 ![Screenshot_2023-07-17-08-48-14_1920x1080](https://github.com/zootedb0t/citruszest.nvim/assets/62596687/eabbb100-d7ab-4f8c-b4e1-39eb5244b805)
 
