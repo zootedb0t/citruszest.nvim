@@ -21,8 +21,8 @@ M.theme = function(C, O)
     SignColumn = { fg = C.foreground, bg = C.background }, -- column where |signs| are displayed
     SignColumnSB = { fg = C.foreground, bg = C.background }, -- column where |signs| are displayed
     Substitute = { fg = C.orange, bg = C.background }, -- |:substitute| replacement text highlighting
-    LineNr = { fg = C.white }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
-    CursorLineNr = { fg = C.yellow }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line. highlights the number in numberline.
+    LineNr = { fg = C.bright_black }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+    CursorLineNr = { fg = C.bright_yellow }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line. highlights the number in numberline.
     MatchParen = { fg = C.bright_blue, bg = C.background, bold = O.bold }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
     ModeMsg = { fg = C.white }, -- 'showmode' message (e.g., "-- INSERT -- ")
     MsgSeparator = {}, -- Separator for scrolled messages, `msgsep` flag of 'display'
@@ -345,6 +345,7 @@ M.theme = function(C, O)
     ["@text.title.4.markdown"] = { link = "rainbow4" },
     ["@text.title.5.markdown"] = { link = "rainbow5" },
     ["@text.title.6.markdown"] = { link = "rainbow6" },
+    ["@spell.markdown"] = { fg = C.bright_white },
 
     -- css
     ["@property.css"] = { fg = C.bright_green },
@@ -487,7 +488,7 @@ M.theme = function(C, O)
     NvimTreeGitNew = { fg = C.cyan },
     NvimTreeGitDeleted = { fg = C.red },
     NvimTreeSpecialFile = { fg = C.bright_red },
-    NvimTreeImageFile = { fg = C.bright_cyan },
+    NvimTreeImageFile = { fg = C.bright_yellow },
     NvimTreeOpenedFile = { fg = C.bright_orange },
     NvimTreeOpenedFolderIcon = { fg = C.bright_green },
     NvimTreeFolderArrowOpen = { fg = C.bright_green },
