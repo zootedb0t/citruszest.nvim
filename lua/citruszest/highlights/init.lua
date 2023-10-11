@@ -519,7 +519,7 @@ M.theme = function(C, O)
     LazyH1 = { fg = C.bright_green, bg = C.visual, bold = O.bold },
     LazyButton = { fg = C.foreground, bg = C.visual, bold = O.bold },
     LazyButtonActive = { fg = C.bright_green, bg = C.cursor, bold = O.bold },
-    LazySpecial = { fg = C.blue, bg = C.background },
+    LazySpecial = { fg = C.blue },
 
     -- Navic
     NavicIconsFile = { fg = C.blue, bg = C.background },

@@ -124,7 +124,7 @@ lualine.setup {
 
 | Color          | Value     | Background                                               |
 | -------------- | --------- | -------------------------------------------------------- |
-| Background     | `#121212` | ![background](https://place-hold.it/32/121212?text=+)    |
+| Background     | `#232323` | ![background](https://place-hold.it/32/232323?text=+)    |
 | Foreground     | `#BFBFBF` | ![foreground](https://place-hold.it/32/BFBFBF?text=+)    |
 | Visual         | `#404040` | ![cursor](https://place-hold.it/32/404040?text=+)        |
 | Cursor         | `#666666` | ![cursor](https://place-hold.it/32/666666?text=+)        |
