@@ -1,11 +1,11 @@
 local colors = {
   black = "#232323",
-  red = "#D71A1A",
+  red = "#FF5454",
   green = "#00CC7A",
-  yellow = "#F0D50C",
-  orange = "#FF6600",
-  magenta = "#CC00FF",
-  cyan = "#33FFFF",
+  yellow = "#FFD700",
+  orange = "#FF8C00",
+  blue = "#00BFFF",
+  cyan = "#09fff2",
   white = "#BFBFBF",
 }
 
@@ -28,7 +28,7 @@ return {
     b = { bg = colors.cyan, fg = colors.black },
   },
   command = {
-    a = { bg = colors.magenta, fg = colors.black },
+    a = { bg = colors.blue, fg = colors.black },
     b = { bg = colors.orange, fg = colors.black },
   },
 }

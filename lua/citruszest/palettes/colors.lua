@@ -20,8 +20,8 @@ local colors = {
   bright_green = "#1AFFA3",
   bright_yellow = "#FFFF00",
   bright_orange = "#FF9633",
-  bright_blue = "#33CFFF",
-  bright_cyan = "#00FFF2",
+  bright_blue = "#28C9FF",
+  bright_cyan = "#09FFF2",
   bright_white = "#F9F9F9",
 }
 

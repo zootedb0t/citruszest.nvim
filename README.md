@@ -140,8 +140,8 @@ lualine.setup {
 | Green(Bright)  | `#1AFFA3` | ![bright_green](https://place-hold.it/32/1AFFA3?text=+)  |
 | Yellow(Bright) | `#FFFF00` | ![bright_yellow](https://place-hold.it/32/FFFF00?text=+) |
 | Orange(Bright) | `#FF9633` | ![bright_orange](https://place-hold.it/32/FF9633?text=+) |
-| Blue(Bright)   | `#33CFFF` | ![bright_purple](https://place-hold.it/32/33CFFF?text=+) |
-| Cyan(Bright)   | `#00FFF2` | ![bright_cyan](https://place-hold.it/32/00FFF2?text=+)   |
+| Blue(Bright)   | `#28C9FF` | ![bright_purple](https://place-hold.it/32/33CFFF?text=+) |
+| Cyan(Bright)   | `#09FFF2` | ![bright_cyan](https://place-hold.it/32/00FFF2?text=+)   |
 | White(Bright)  | `#F9F9F9` | ![bright_cyan](https://place-hold.it/32/F9F9F9?text=+)   |
 
 ## :pray: Acknowledgments

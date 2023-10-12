@@ -312,10 +312,10 @@ M.theme = function(C, O)
     ["@text.emphasis"] = { fg = C.bright_orange, italic = O.italic }, -- italic
     ["@text.underline"] = { link = "Underline" }, -- underlined text
     ["@text.strike"] = { fg = C.white, strikethrough = true }, -- strikethrough text
-    ["@text.title"] = { fg = C.white, bold = O.bold }, -- titles like: # Example
+    ["@text.title"] = { fg = C.bright_cyan, bold = O.bold }, -- titles like: # Example
     ["@text.literal"] = { fg = C.blue }, -- used for inline code in markdown and for doc in python (""")
     ["@text.uri"] = { fg = C.green, italic = O.italic }, -- urls, links and emails
-    ["@text.html"] = { fg = C.bright_white, underline = true }, -- urls, links and emails
+    ["@text.html"] = { fg = C.bright_white, underline = false }, -- urls, links and emails
     ["@text.math"] = { fg = C.cyan }, -- math environments (e.g. `$ ... $` in LaTeX)
     ["@text.environment"] = { fg = C.orange }, -- text environments of markup languages
     ["@text.environment.name"] = { fg = C.cyan }, -- text indicating the type of an environment
@@ -376,7 +376,7 @@ M.theme = function(C, O)
     ["@property.cpp"] = { fg = C.bright_orange },
 
     -- yaml
-    ["@field.yaml"] = { fg = C.bright_green }, -- For fields.
+    ["@field.yaml"] = { fg = C.bright_blue }, -- For fields.
 
     -- Ruby
     ["@symbol.ruby"] = { fg = C.bright_yellow },
