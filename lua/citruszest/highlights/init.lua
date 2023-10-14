@@ -501,6 +501,25 @@ M.theme = function(C, O)
     AlphaButtons = { fg = C.blue },
     AlphaFooter = { fg = C.bright_red },
 
+    -- Dashboard
+    DashboardHeader = { fg = C.orange },
+    DashboardFooter = { fg = C.bright_yellow },
+
+    -- Dashboard Hyper Theme
+    DashboardProjectTitle = { fg = C.bright_green },
+    DashboardProjectTitleIcon = { fg = C.bright_green },
+    DashboardProjectIcon = { fg = C.blue },
+    DashboardMruTitle = { fg = C.bright_cyan },
+    DashboardMruIcon = { fg = C.bright_cyan },
+    DashboardFiles = { fg = C.white },
+    DashboardShortCutIcon = { fg = C.yellow },
+
+    --  Dashboard Doom Theme
+    DashboardDesc = { fg = C.bright_blue },
+    DashboardKey = { fg = C.bright_green },
+    DashboardIcon = { fg = C.bright_blue },
+    DashboardShortCut = { fg = C.bright_yellow },
+
     -- Whichkey
     WhichKey = { link = "NormalFloat" },
     WhichKeyBorder = { link = "FloatBorder" },
