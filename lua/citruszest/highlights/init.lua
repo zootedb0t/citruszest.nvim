@@ -39,9 +39,9 @@ M.theme = function(C, O)
     PmenuSbar = { bg = C.bright_orange }, -- Popup menu: scrollbar.
     PmenuThumb = { bg = C.bright_orange }, -- Popup menu: Thumb of the scrollbar.
     Question = { fg = C.cyan }, -- |hit-enter| prompt and yes/no questions
-    Search = { fg = C.bright_white, bg = C.background }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
-    IncSearch = { fg = C.black, bg = C.orange }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
-    CurSearch = { fg = C.black, bg = C.bright_orange }, -- 'cursearch' highlighting: highlights the current search you're on differently
+    Search = { fg = C.black, bg = C.blue }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
+    IncSearch = { fg = C.black, bg = C.blue }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
+    CurSearch = { fg = C.black, bg = C.blue }, -- 'cursearch' highlighting: highlights the current search you're on differently
     SpecialKey = { fg = C.orange }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' textspace. |hl-Whitespace|
     SpellBad = { sp = C.red, undercurl = true }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
     SpellCap = { sp = C.yellow, undercurl = true }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
@@ -230,12 +230,13 @@ M.theme = function(C, O)
     ["@lsp.mod.documentation.lua"] = { link = "Comment" },
     ["@lsp.typemod.keyword.documentation.lua"] = { link = "Comment" },
 
-    -- Tressitter highlights
+    -- Treesitter highlights
     ["@comment"] = { link = "Comment" },
     ["@error"] = { link = "Error" },
     ["@preproc"] = { link = "PreProc" }, -- various preprocessor directives & shebangs
     ["@define"] = { link = "Define" }, -- preprocessor definition directives
     ["@operator"] = { link = "Operator" }, -- For any operator: +, but also -> and * in C.
+    ["TreesitterContextLineNumber"] = { fg = C.blue, bg = C.cursor },
 
     -- Punctuation
     ["@punctuation.delimiter"] = { link = "Delimiter" }, -- For delimiters ie: .
@@ -503,7 +504,7 @@ M.theme = function(C, O)
 
     -- Dashboard
     DashboardHeader = { fg = C.orange },
-    DashboardFooter = { fg = C.bright_yellow },
+    DashboardFooter = { fg = C.bright_red },
 
     -- Dashboard Hyper Theme
     DashboardProjectTitle = { fg = C.bright_green },
