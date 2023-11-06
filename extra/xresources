@@ -1,8 +1,8 @@
-*.background: #232323
+*.background: #121212
 *.foreground: #BFBFBF
 
-*.color0: #121212
-*.color8: #808080
+*.color0: #232323
+*.color8: #767C77
 
 *.color1: #FF5454
 *.color9: #FF1A75
@@ -13,8 +13,8 @@
 *.color3: #FFD700
 *.color11: #FFFF00
 
-*.color4: #FF8C00
-*.color12: #FF9633
+*.color4: #FF7431
+*.color12: #FFAA54
 
 *.color5: #00BFFF
 *.color13: #28C9FF

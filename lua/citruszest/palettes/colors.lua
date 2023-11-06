@@ -1,6 +1,6 @@
 -- Citruszest color palette
 local colors = {
-  background = "#232323",
+  background = "#121212",
   foreground = "#BFBFBF",
   visual = "#404040",
   cursor = "#383838",
@@ -10,19 +10,24 @@ local colors = {
   red = "#FF5454",
   green = "#00CC7A",
   yellow = "#FFD700",
-  orange = "#FF8C00",
+  orange = "#FF7431",
   blue = "#00BFFF",
-  cyan = "#48D1CC",
+  turquoise_medium = "#48D1CC",
   white = "#BFBFBF",
 
-  bright_black = "#808080",
+  bright_black = "#767C77",
   bright_red = "#FF1A75",
   bright_green = "#1AFFA3",
   bright_yellow = "#FFFF00",
-  bright_orange = "#FF9633",
+  bright_orange = "#FFAA54",
   bright_blue = "#28C9FF",
-  bright_cyan = "#09FFF2",
+  turquoise_blue = "#09FFF2",
   bright_white = "#F9F9F9",
+
+  -- Extra
+  baby_blue = "#9ADCFF",
+  lemon_yellow = "#FFF2B3",
+  aurora = "#B2F3AC",
 }
 
 return colors

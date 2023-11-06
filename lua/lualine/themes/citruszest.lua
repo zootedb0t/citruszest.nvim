@@ -3,9 +3,9 @@ local colors = {
   red = "#FF5454",
   green = "#00CC7A",
   yellow = "#FFD700",
-  orange = "#FF8C00",
+  orange = "#FF7431",
   blue = "#00BFFF",
-  cyan = "#09fff2",
+  cyan = "#48D1CC",
   white = "#BFBFBF",
 }
 
