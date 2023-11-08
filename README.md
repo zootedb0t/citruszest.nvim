@@ -16,11 +16,11 @@ citruszest.nvim
 
 ## :fire: Showcase
 
-![Screenshot_2023-10-02-09-46-20_1920x1080](https://github.com/zootedb0t/citruszest.nvim/assets/62596687/180645e9-0613-4e3c-af1e-856ac22c353b)
+![Screenshot_2023-11-08-09-16-31_1920x1080](https://github.com/zootedb0t/citruszest.nvim/assets/62596687/1f5df150-0809-44a5-b8dc-0229d5dd0802)
 
-![Screenshot_2023-07-17-08-48-14_1920x1080](https://github.com/zootedb0t/citruszest.nvim/assets/62596687/eabbb100-d7ab-4f8c-b4e1-39eb5244b805)
+![Screenshot_2023-11-08-09-14-48_1920x1080](https://github.com/zootedb0t/citruszest.nvim/assets/62596687/0ca018ef-2837-43e0-8b33-a8fd2e9d6e0c)
 
-![Screenshot_2023-07-02-03-21-52_1920x1080](https://github.com/zootedb0t/citruszest.nvim/assets/62596687/062f285e-1034-4ddb-87d7-7e91b1c58eaf)
+![Screenshot_2023-11-08-09-11-41_1920x1080](https://github.com/zootedb0t/citruszest.nvim/assets/62596687/f8b07699-7d33-4aea-b029-627271400edf)
 
 ## :wrench: Installation
 
