@@ -484,7 +484,7 @@ M.theme = function(C, O)
     NvimTreeFolderIcon = { fg = C.bright_orange },
     NvimTreeNormal = { fg = C.bright_white, bg = C.background },
     NvimTreeOpenedFolderName = { fg = C.aurora, bold = O.bold },
-    NvimTreeEmptyFolderName = { fg = C.turquoise_medium },
+    NvimTreeEmptyFolderName = { fg = C.bright_black },
     NvimTreeIndentMarker = { fg = C.bright_black },
     NvimTreeWinSeparator = { fg = C.foreground, bg = C.background },
     NvimTreeRootFolder = { fg = C.bright_yellow, bold = O.bold },
@@ -539,6 +539,7 @@ M.theme = function(C, O)
     FlashLabel = { fg = C.yellow, bg = C.background, bold = O.bold },
     FlashMatch = { fg = C.green, bg = C.background },
     FlashCurrent = { fg = C.orange, bg = C.background },
+    FlashPrompt = { link = "NormalFloat" },
 
     -- Lazy
     LazyH1 = { fg = C.bright_green, bg = C.visual, bold = O.bold },
