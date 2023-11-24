@@ -292,14 +292,10 @@ M.theme = function(C, O)
 
     ["@storageclass"] = { link = "StorageClass" }, -- visibility/life-time/etc. modifiers (e.g. `static`)
     ["@attribute"] = { link = "Constant" }, -- attribute annotations (e.g. Python decorators)
-    ["@field"] = { fg = C.turquoise_medium }, -- For fields.
+    ["@field"] = { fg = C.turquoise_blue }, -- For fields.
     ["@property"] = { fg = C.turquoise_blue }, -- Same as TSField.
-    -- ["@field"] = { fg = C.baby_blue }, -- For fields.
-    -- ["@property"] = { fg = C.baby_blue }, -- Same as TSField.
 
     -- Identifiers
-    -- ["@variable"] = { link = "Identifier" }, -- Any variable name that does not have another highlight.
-    -- ["@variable.builtin"] = { fg = C.bright_yellow }, -- Variable names that are defined by the languages, like this or self.
     ["@variable"] = { fg = C.lemon_yellow }, -- Any variable name that does not have another highlight.
     ["@variable.builtin"] = { link = "Identifier" }, -- Variable names that are defined by the languages, like this or self.
 
