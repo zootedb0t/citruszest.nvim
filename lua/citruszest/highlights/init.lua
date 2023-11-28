@@ -32,7 +32,7 @@ M.theme = function(C, O)
     NormalNC = { fg = C.foreground, bg = C.background }, -- normal text in non-current windows
     NormalSB = { fg = C.foreground }, -- normal text in non-current windows
     NormalFloat = { bg = C.background }, -- Normal text in floating windows.
-    FloatBorder = { fg = C.bright_orange },
+    FloatBorder = { fg = C.lemon_yellow },
     FloatTitle = { fg = C.yellow }, -- Title of floating windows
     Pmenu = { fg = C.bright_white, bg = C.background }, -- Popup menu: normal item.
     PmenuSel = { fg = C.orange, bg = C.cursor, bold = O.bold }, -- Popup menu: selected item.
@@ -410,7 +410,7 @@ M.theme = function(C, O)
     -- kind colors
     CmpItemKindSnippet = { fg = C.turquoise_blue },
     CmpItemKindKeyword = { fg = C.orange },
-    CmpItemKindText = { fg = C.blue },
+    CmpItemKindText = { fg = C.lemon_yellow },
     CmpItemKindMethod = { fg = C.turquoise_medium },
     CmpItemKindConstructor = { fg = C.turquoise_medium },
     CmpItemKindFunction = { fg = C.bright_yellow },
