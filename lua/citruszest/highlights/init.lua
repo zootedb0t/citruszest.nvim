@@ -144,7 +144,7 @@ M.theme = function(C, O)
     GlyphPalette9 = { fg = C.red },
 
     -- rainbow
-    rainbow1 = { fg = C.red },
+    rainbow1 = { fg = C.bright_red },
     rainbow2 = { fg = C.blue },
     rainbow3 = { fg = C.lemon_yellow },
     rainbow4 = { fg = C.aurora },
@@ -312,8 +312,8 @@ M.theme = function(C, O)
     ["@text.emphasis"] = { fg = C.bright_orange, italic = O.italic }, -- italic
     ["@text.underline"] = { link = "Underline" }, -- underlined text
     ["@text.strike"] = { fg = C.white, strikethrough = true }, -- strikethrough text
-    ["@text.title"] = { fg = C.turquoise_blue, bold = O.bold }, -- titles like: # Example
-    ["@text.literal"] = { fg = C.bright_green }, -- used for inline code in markdown and for doc in python (""")
+    ["@text.title"] = { fg = C.orange }, -- titles like: # Example
+    ["@text.literal"] = { fg = C.bright_orange }, -- used for inline code in markdown and for doc in python (""")
     ["@text.uri"] = { fg = C.aurora, italic = O.italic }, -- urls, links and emails
     ["@text.html"] = { fg = C.bright_white, underline = false }, -- urls, links and emails
     ["@text.math"] = { fg = C.turquoise_medium }, -- math environments (e.g. `$ ... $` in LaTeX)
@@ -345,7 +345,6 @@ M.theme = function(C, O)
     ["@text.title.4.markdown"] = { link = "rainbow4" },
     ["@text.title.5.markdown"] = { link = "rainbow5" },
     ["@text.title.6.markdown"] = { link = "rainbow6" },
-    ["@spell.markdown"] = { fg = C.bright_white },
 
     -- css
     ["@property.css"] = { fg = C.bright_orange },
