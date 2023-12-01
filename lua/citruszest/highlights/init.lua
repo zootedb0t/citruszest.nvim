@@ -64,7 +64,7 @@ M.theme = function(C, O)
     SpecialComment = { link = "Special" }, -- special things inside a comment
     Constant = { fg = C.orange }, -- (preferred) any constant
     String = { fg = C.aurora }, -- a string constant: "this is a string"
-    Character = { fg = C.bright_red }, --  a character constant: 'c', '\n'
+    Character = { fg = C.yellow }, --  a character constant: 'c', '\n'
     Number = { fg = C.bright_blue }, --   a number constant: 234, 0xff
     Float = { link = "Number" }, --    a floating point constant: 2.3e10
     Boolean = { fg = C.orange }, --  a boolean constant: TRUE, false
@@ -74,7 +74,7 @@ M.theme = function(C, O)
     Conditional = { fg = C.turquoise_blue }, --  if, then, else, endif, switch, etc.
     Repeat = { fg = C.bright_yellow }, --   for, do, while, etc.
     Label = { fg = C.bright_green }, --    case, default, etc.
-    Operator = { fg = C.bright_red }, -- "sizeof", "+", "*", etc.
+    Operator = { fg = C.orange }, -- "sizeof", "+", "*", etc.
     Keyword = { fg = C.blue }, --  any other keyword
     Array = { fg = C.blue },
     Exception = { fg = C.blue }, --  try, catch, throw
@@ -239,7 +239,7 @@ M.theme = function(C, O)
 
     -- Punctuation
     ["@punctuation.delimiter"] = { link = "Delimiter" }, -- For delimiters ie: .
-    ["@punctuation.bracket"] = { fg = C.orange }, -- For brackets and parenthesis.
+    ["@punctuation.bracket"] = { fg = C.bright_yellow }, -- For brackets and parenthesis.
     ["@punctuation.special"] = { link = "Special" }, -- For special punctutation that does not fall in the categories before.
 
     -- Literals
@@ -504,7 +504,7 @@ M.theme = function(C, O)
 
     -- Dashboard
     DashboardHeader = { fg = C.orange },
-    DashboardFooter = { fg = C.bright_red },
+    DashboardFooter = { fg = C.yellow },
 
     -- Dashboard Hyper Theme
     DashboardProjectTitle = { fg = C.bright_green },
