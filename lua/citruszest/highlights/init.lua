@@ -62,7 +62,7 @@ M.theme = function(C, O)
 
     Comment = { fg = C.bright_black }, -- just comments
     SpecialComment = { link = "Special" }, -- special things inside a comment
-    Constant = { fg = C.orange }, -- (preferred) any constant
+    Constant = { fg = C.turquoise_blue }, -- (preferred) any constant
     String = { fg = C.aurora }, -- a string constant: "this is a string"
     Character = { fg = C.yellow }, --  a character constant: 'c', '\n'
     Number = { fg = C.bright_blue }, --   a number constant: 234, 0xff
@@ -71,7 +71,7 @@ M.theme = function(C, O)
     Identifier = { fg = C.bright_orange, italic = O.italic }, -- (preferred) any variable name
     Function = { fg = C.bright_green }, -- function name (also: methods for classes)
     Statement = { fg = C.blue }, -- (preferred) any statement
-    Conditional = { fg = C.turquoise_blue }, --  if, then, else, endif, switch, etc.
+    Conditional = { fg = C.blue }, --  if, then, else, endif, switch, etc.
     Repeat = { fg = C.bright_yellow }, --   for, do, while, etc.
     Label = { fg = C.bright_green }, --    case, default, etc.
     Operator = { fg = C.orange }, -- "sizeof", "+", "*", etc.
