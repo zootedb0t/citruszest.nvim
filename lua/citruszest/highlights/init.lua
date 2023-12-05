@@ -59,6 +59,7 @@ M.theme = function(C, O)
     Whitespace = { fg = C.white }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
     WildMenu = { fg = C.foreground, bg = C.background }, -- current match in 'wildmenu' completion
     WinBar = { fg = C.bright_white },
+    WinBarNC = { bg = C.background }, --Window bar of not-current windows.
 
     Comment = { fg = C.bright_black }, -- just comments
     SpecialComment = { link = "Special" }, -- special things inside a comment
