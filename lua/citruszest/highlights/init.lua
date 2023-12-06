@@ -316,6 +316,7 @@ M.theme = function(C, O)
     ["@text.title"] = { fg = C.orange }, -- titles like: # Example
     ["@text.literal"] = { fg = C.bright_orange }, -- used for inline code in markdown and for doc in python (""")
     ["@text.uri"] = { fg = C.aurora, italic = O.italic }, -- urls, links and emails
+    ["@text.uri.comment"] = { fg = C.bright_black, italic = O.italic, undercurl = true }, -- urls, links and emails
     ["@text.html"] = { fg = C.bright_white, underline = false }, -- urls, links and emails
     ["@text.math"] = { fg = C.turquoise_medium }, -- math environments (e.g. `$ ... $` in LaTeX)
     ["@text.environment"] = { fg = C.orange }, -- text environments of markup languages
