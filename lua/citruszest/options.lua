@@ -4,7 +4,7 @@ config.default = {
   option = {
     transparent = false,
     italic = true,
-    bold = true,
+    bold = false,
   },
   style = {},
 }
