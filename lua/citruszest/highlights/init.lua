@@ -69,13 +69,13 @@ M.theme = function(C, O)
     Number = { fg = C.bright_blue }, --   a number constant: 234, 0xff
     Float = { link = "Number" }, --    a floating point constant: 2.3e10
     Boolean = { fg = C.orange }, --  a boolean constant: TRUE, false
-    Identifier = { fg = C.bright_orange, italic = O.italic }, -- (preferred) any variable name
+    Identifier = { fg = C.turquoise_blue, italic = O.italic }, -- (preferred) any variable name
     Function = { fg = C.bright_green }, -- function name (also: methods for classes)
     Statement = { fg = C.blue }, -- (preferred) any statement
-    Conditional = { fg = C.blue }, --  if, then, else, endif, switch, etc.
+    Conditional = { fg = C.bright_orange }, --  if, then, else, endif, switch, etc.
     Repeat = { fg = C.bright_yellow }, --   for, do, while, etc.
     Label = { fg = C.bright_green }, --    case, default, etc.
-    Operator = { fg = C.orange }, -- "sizeof", "+", "*", etc.
+    Operator = { fg = C.blue }, -- "sizeof", "+", "*", etc.
     Keyword = { fg = C.blue }, --  any other keyword
     Array = { fg = C.blue },
     Exception = { fg = C.blue }, --  try, catch, throw
@@ -83,13 +83,13 @@ M.theme = function(C, O)
     PreProc = { fg = C.bright_green }, -- (preferred) generic Preprocessor
     Include = { fg = C.blue }, --  preprocessor #include
     Define = { link = "PreProc" }, -- preprocessor #define
-    Macro = { fg = C.blue }, -- same as Define
+    Macro = { fg = C.bright_red }, -- same as Define
     PreCondit = { link = "PreProc" }, -- preprocessor #if, #else, #endif, etc.
 
     StorageClass = { fg = C.bright_yellow }, -- static, register, volatile, etc.
     Structure = { link = "Keyword" }, --  struct, union, enum, etc.
     Special = { fg = C.bright_orange }, -- (preferred) any special symbol
-    Type = { fg = C.blue }, -- (preferred) int, long, char, etc.
+    Type = { fg = C.bright_red }, -- (preferred) int, long, char, etc.
     Typedef = { link = "Type" }, --  A typedef
     SpecialChar = { link = "Special" }, -- special character in a constant
     Tag = { link = "Special" }, -- you can use CTRL-] on this
