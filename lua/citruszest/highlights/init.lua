@@ -6,7 +6,7 @@ local M = {}
 M.theme = function(C, O)
   return {
     ColorColumn = { bg = C.none }, -- used for the columns set with 'colorcolumn'
-    Conceal = { fg = C.turquoise_medium }, -- placeholder characters substituted for concealed text (see 'conceallevel')
+    Conceal = { fg = C.blue }, -- placeholder characters substituted for concealed text (see 'conceallevel')
     Cursor = { fg = C.cursor, bg = C.white }, -- character under the cursor
     lCursor = { fg = C.cursor, bg = C.white }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
     CursorIM = { fg = C.cursor, bg = C.white }, -- like Cursor, but used when in IME mode |CursorIM|
@@ -16,13 +16,14 @@ M.theme = function(C, O)
     EndOfBuffer = { fg = C.background }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
     ErrorMsg = { fg = C.red }, -- error messages on the command line
     VertSplit = { fg = C.white }, -- the column separating vertically split windows
+    WinSeparator = { fg = C.white },
     Folded = { fg = C.orange, bg = C.background }, -- line used for closed folds FoldColumn = { fg = C.orange, bg = C.background }, -- 'foldcolumn' SignColumn = { fg = C.foreground, bg = C.background }, -- column where |signs| are displayed
     FoldColumn = { fg = C.orange, bg = C.background }, -- 'foldcolumn'
     SignColumn = { fg = C.foreground, bg = C.background }, -- column where |signs| are displayed
     SignColumnSB = { fg = C.foreground, bg = C.background }, -- column where |signs| are displayed
     Substitute = { fg = C.orange, bg = C.background }, -- |:substitute| replacement text highlighting
     LineNr = { fg = C.bright_black }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
-    CursorLineNr = { fg = C.bright_yellow }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line. highlights the number in numberline.
+    CursorLineNr = { fg = C.bright_yellow, bold = O.bold }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line. highlights the number in numberline.
     MatchParen = { fg = C.bright_blue, bg = C.background, bold = O.bold }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
     ModeMsg = { fg = C.white }, -- 'showmode' message (e.g., "-- INSERT -- ")
     MsgSeparator = {}, -- Separator for scrolled messages, `msgsep` flag of 'display'
@@ -32,7 +33,7 @@ M.theme = function(C, O)
     NormalNC = { fg = C.foreground, bg = C.background }, -- normal text in non-current windows
     NormalSB = { fg = C.foreground }, -- normal text in non-current windows
     NormalFloat = { bg = C.background }, -- Normal text in floating windows.
-    FloatBorder = { fg = C.lemon_yellow },
+    FloatBorder = { fg = C.blue },
     FloatTitle = { fg = C.yellow }, -- Title of floating windows
     Pmenu = { fg = C.bright_white, bg = C.background }, -- Popup menu: normal item.
     PmenuSel = { fg = C.orange, bg = C.cursor, bold = O.bold }, -- Popup menu: selected item.
@@ -52,7 +53,8 @@ M.theme = function(C, O)
     TabLine = { fg = C.white, bg = C.visual }, -- tab pages line, not active tab page label
     TabLineFill = {}, -- tab pages line, where there are no labels
     TabLineSel = { fg = C.green, bg = C.visual }, -- tab pages line, active tab page label
-    Title = { fg = C.turquoise_medium, bold = O.bold }, -- titles for output from ":set all", ":autocmd" etc.
+    -- Title = { fg = C.turquoise_medium, bold = O.bold }, -- titles for output from ":set all", ":autocmd" etc.
+    Title = { fg = C.bright_green, bold = O.bold }, -- titles for output from ":set all", ":autocmd" etc.
     Visual = { bg = C.visual, bold = O.bold }, -- Visual mode selection
     VisualNOS = { bg = C.bright_black, bold = O.bold }, -- Visual mode selection when vim is "Not Owning the Selection".
     WarningMsg = { fg = C.bright_red }, -- warning messages
@@ -69,27 +71,27 @@ M.theme = function(C, O)
     Number = { fg = C.lemon_yellow }, --   a number constant: 234, 0xff
     Float = { link = "Number" }, --    a floating point constant: 2.3e10
     Boolean = { fg = C.orange }, --  a boolean constant: TRUE, false
-    Identifier = { fg = C.turquoise_blue, italic = O.italic }, -- (preferred) any variable name
+    Identifier = { fg = C.bright_red, italic = O.italic }, -- (preferred) any variable name
     Function = { fg = C.bright_green }, -- function name (also: methods for classes)
     Statement = { fg = C.blue }, -- (preferred) any statement
-    Conditional = { fg = C.bright_orange }, --  if, then, else, endif, switch, etc.
+    Conditional = { fg = C.turquoise_blue }, --  if, then, else, endif, switch, etc.
     Repeat = { fg = C.bright_yellow }, --   for, do, while, etc.
     Label = { fg = C.bright_green }, --    case, default, etc.
     Operator = { fg = C.blue }, -- "sizeof", "+", "*", etc.
-    Keyword = { fg = C.blue }, --  any other keyword
+    Keyword = { fg = C.bright_blue }, --  any other keyword
     Array = { fg = C.blue },
     Exception = { fg = C.blue }, --  try, catch, throw
 
     PreProc = { fg = C.bright_green }, -- (preferred) generic Preprocessor
     Include = { fg = C.blue }, --  preprocessor #include
     Define = { link = "PreProc" }, -- preprocessor #define
-    Macro = { fg = C.bright_red }, -- same as Define
+    Macro = { fg = C.blue }, -- same as Define
     PreCondit = { link = "PreProc" }, -- preprocessor #if, #else, #endif, etc.
 
     StorageClass = { fg = C.bright_yellow }, -- static, register, volatile, etc.
     Structure = { link = "Keyword" }, --  struct, union, enum, etc.
     Special = { fg = C.bright_orange }, -- (preferred) any special symbol
-    Type = { fg = C.bright_red }, -- (preferred) int, long, char, etc.
+    Type = { fg = C.bright_orange }, -- (preferred) int, long, char, etc.
     Typedef = { link = "Type" }, --  A typedef
     SpecialChar = { link = "Special" }, -- special character in a constant
     Tag = { link = "Special" }, -- you can use CTRL-] on this
@@ -270,9 +272,9 @@ M.theme = function(C, O)
 
     -- Keywords
     ["@keyword"] = { link = "Keyword" }, -- For keywords that don't fall in previous categories.
-    ["@keyword.function"] = { fg = C.red }, -- For keywords used to define a function.
+    ["@keyword.function"] = { fg = C.bright_red }, -- For keywords used to define a function.
     ["@keyword.operator"] = { link = "Operator" }, -- For new keyword operator
-    ["@keyword.return"] = { fg = C.bright_yellow },
+    ["@keyword.return"] = { fg = C.bright_orange },
 
     -- JS & derivative
     ["@keyword.export"] = { fg = C.turquoise_blue },
