@@ -268,11 +268,11 @@ M.theme = function(C, O)
     ["@method.call"] = { link = "Function" }, -- method calls
 
     ["@constructor"] = { fg = C.bright_yellow }, -- For constructor calls and definitions: = { } in Lua, and Java constructors.
-    ["@parameter"] = { fg = C.lemon_yellow, italic = O.italic }, -- For parameters of a function.
+    ["@parameter"] = { fg = C.bright_blue, italic = O.italic }, -- For parameters of a function.
 
     -- Keywords
     ["@keyword"] = { link = "Keyword" }, -- For keywords that don't fall in previous categories.
-    ["@keyword.function"] = { fg = C.bright_red }, -- For keywords used to define a function.
+    ["@keyword.function"] = { fg = C.red }, -- For keywords used to define a function.
     ["@keyword.operator"] = { link = "Operator" }, -- For new keyword operator
     ["@keyword.return"] = { fg = C.bright_orange },
 
@@ -457,7 +457,7 @@ M.theme = function(C, O)
     FidgetTitle = { fg = C.baby_blue },
 
     -- Rainbow Delimiter
-    RainbowDelimiterRed = { fg = C.red },
+    RainbowDelimiterRed = { fg = C.bright_red },
     RainbowDelimiterYellow = { fg = C.bright_yellow },
     RainbowDelimiterBlue = { fg = C.blue },
     RainbowDelimiterOrange = { fg = C.orange },
