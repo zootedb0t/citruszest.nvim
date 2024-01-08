@@ -24,10 +24,10 @@ citruszest.nvim
 
 ## :wrench: Installation
 
-### Requirement
-
-- ***Treesitter*** (Recommended)
-- Neovim >= 0.9.1
+> [!IMPORTANT]
+> ### Requirement
+> - ***Treesitter*** (Recommended)
+> - Neovim >= 0.9.1
 
 [lazy.nvim](https://github.com/folke/lazy.nvim)
 
