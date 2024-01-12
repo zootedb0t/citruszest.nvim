@@ -342,7 +342,7 @@ M.theme = function(C, O)
 
     -- Language specific:
 
-    -- markdown
+    -- Markdown
     ["@text.title.1.markdown"] = { link = "rainbow1" },
     ["@text.title.2.markdown"] = { link = "rainbow2" },
     ["@text.title.3.markdown"] = { link = "rainbow3" },
@@ -350,7 +350,7 @@ M.theme = function(C, O)
     ["@text.title.5.markdown"] = { link = "rainbow5" },
     ["@text.title.6.markdown"] = { link = "rainbow6" },
 
-    -- css
+    -- Css
     ["@property.css"] = { fg = C.bright_orange },
     ["@property.id.css"] = { fg = C.turquoise_medium },
     ["@property.class.css"] = { fg = C.yellow },
@@ -359,44 +359,44 @@ M.theme = function(C, O)
     ["@string.plain.css"] = { fg = C.yellow },
     ["@number.css"] = { fg = C.yellow },
 
-    -- toml
+    -- Toml
     ["@property.toml"] = { fg = C.turquoise_medium }, -- Differentiates between string and properties
 
-    -- json
+    -- Json
     ["@label.json"] = { fg = C.bright_green }, -- For labels: label: in C and :label: in Lua.
 
-    -- lua
+    -- Lua
     ["@constructor.lua"] = { fg = C.bright_red }, -- For constructor calls and definitions: = { } in Lua, and Java constructors.
     ["@lsp.typemod.function.defaultLibrary.lua"] = { fg = C.blue },
 
-    -- typescript
+    -- Typescript
     ["@constructor.typescript"] = { fg = C.bright_green },
 
     -- TSX (Typescript React)
     ["@constructor.tsx"] = { fg = C.bright_green },
     ["@tag.attribute.tsx"] = { fg = C.bright_yellow, italic = O.italic },
 
-    -- cpp
+    -- Cpp
     ["@property.cpp"] = { fg = C.bright_orange },
 
-    -- yaml
+    -- Yaml
     ["@field.yaml"] = { fg = C.bright_blue }, -- For fields.
 
     -- Ruby
     ["@symbol.ruby"] = { fg = C.bright_yellow },
 
-    -- PHP
+    -- Php
     ["@type.qualifier.php"] = { link = "Keyword" }, -- type qualifiers (e.g. `const`)
     ["@method.php"] = { link = "Function" },
     ["@method.call.php"] = { link = "Function" },
 
-    -- Pyhton
+    -- Python
     ["@string.documentation.python"] = { fg = C.baby_blue },
 
     -- Haskell
     ["@operator.haskell"] = { fg = C.bright_yellow },
 
-    -- Qucikfix
+    -- QuickFix
     QuickFixLine = { bg = C.cursor, bold = O.bold }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
     qfFileName = { fg = C.bright_orange },
     qfLineNr = { fg = C.yellow },
