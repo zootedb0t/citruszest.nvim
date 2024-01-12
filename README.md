@@ -119,6 +119,7 @@ lualine.setup {
 - `Xresources` is available [here](extra/xresources).
 - [Foot](https://codeberg.org/dnkl/foot) terminal users can use [this](extra/foot-terminal).
 - [iterm2](https://iterm2.com/) user can use [this](extra/citruszest.itermcolors).
+- [Alacritty](https://alacritty.org/) user can use [this](extra/citruszest_alacritty.toml).
 
 ## :art: Colors
 
