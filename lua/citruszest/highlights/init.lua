@@ -27,8 +27,8 @@ M.theme = function(C, O)
     MatchParen = { fg = C.bright_blue, bg = C.background, bold = O.bold }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
     ModeMsg = { fg = C.white }, -- 'showmode' message (e.g., "-- INSERT -- ")
     MsgSeparator = {}, -- Separator for scrolled messages, `msgsep` flag of 'display'
-    MoreMsg = { fg = C.turquoise_medium }, -- |more-prompt|
-    NonText = { fg = C.turquoise_blue }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
+    MoreMsg = { fg = C.cyan }, -- |more-prompt|
+    NonText = { fg = C.bright_cyan }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
     Normal = { fg = C.foreground, bg = C.background }, -- normal text
     NormalNC = { fg = C.foreground, bg = C.background }, -- normal text in non-current windows
     NormalSB = { fg = C.foreground }, -- normal text in non-current windows
@@ -39,21 +39,20 @@ M.theme = function(C, O)
     PmenuSel = { fg = C.orange, bg = C.cursor, bold = O.bold }, -- Popup menu: selected item.
     PmenuSbar = { bg = C.white }, -- Popup menu: scrollbar.
     PmenuThumb = { bg = C.orange }, -- Popup menu: Thumb of the scrollbar.
-    Question = { fg = C.turquoise_medium }, -- |hit-enter| prompt and yes/no questions
+    Question = { fg = C.cyan }, -- |hit-enter| prompt and yes/no questions
     Search = { fg = C.black, bg = C.aurora }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
     IncSearch = { fg = C.black, bg = C.baby_blue }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
     CurSearch = { fg = C.black, bg = C.baby_blue }, -- 'cursearch' highlighting: highlights the current search you're on differently
     SpecialKey = { fg = C.orange }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' textspace. |hl-Whitespace|
     SpellBad = { sp = C.red, undercurl = true }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
     SpellCap = { sp = C.yellow, undercurl = true }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
-    SpellLocal = { sp = C.turquoise_medium, undercurl = true }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
+    SpellLocal = { sp = C.cyan, undercurl = true }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
     SpellRare = { sp = C.green, undercurl = true }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
     StatusLine = { fg = C.foreground, bg = C.black }, -- status line of current window
     StatusLineNC = { fg = C.foreground, bg = C.cursor }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
     TabLine = { fg = C.white, bg = C.visual }, -- tab pages line, not active tab page label
     TabLineFill = {}, -- tab pages line, where there are no labels
     TabLineSel = { fg = C.green, bg = C.visual }, -- tab pages line, active tab page label
-    -- Title = { fg = C.turquoise_medium, bold = O.bold }, -- titles for output from ":set all", ":autocmd" etc.
     Title = { fg = C.bright_green, bold = O.bold }, -- titles for output from ":set all", ":autocmd" etc.
     Visual = { bg = C.visual, bold = O.bold }, -- Visual mode selection
     VisualNOS = { bg = C.bright_black, bold = O.bold }, -- Visual mode selection when vim is "Not Owning the Selection".
@@ -65,7 +64,7 @@ M.theme = function(C, O)
 
     Comment = { fg = C.bright_black }, -- just comments
     SpecialComment = { link = "Special" }, -- special things inside a comment
-    Constant = { fg = C.turquoise_blue }, -- (preferred) any constant
+    Constant = { fg = C.bright_cyan }, -- (preferred) any constant
     String = { fg = C.aurora }, -- a string constant: "this is a string"
     Character = { fg = C.yellow }, --  a character constant: 'c', '\n'
     Number = { fg = C.lemon_yellow }, --   a number constant: 234, 0xff
@@ -74,7 +73,7 @@ M.theme = function(C, O)
     Identifier = { fg = C.bright_red, italic = O.italic }, -- (preferred) any variable name
     Function = { fg = C.bright_green }, -- function name (also: methods for classes)
     Statement = { fg = C.blue }, -- (preferred) any statement
-    Conditional = { fg = C.turquoise_blue }, --  if, then, else, endif, switch, etc.
+    Conditional = { fg = C.bright_cyan }, --  if, then, else, endif, switch, etc.
     Repeat = { fg = C.bright_yellow }, --   for, do, while, etc.
     Label = { fg = C.bright_green }, --    case, default, etc.
     Operator = { fg = C.blue }, -- "sizeof", "+", "*", etc.
@@ -105,10 +104,10 @@ M.theme = function(C, O)
     Error = { fg = C.red }, -- (preferred) any erroneous construct
     Todo = { fg = C.black, bg = C.yellow }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
     htmlH1 = { fg = C.blue, bold = O.bold },
-    htmlH2 = { fg = C.turquoise_medium, bold = O.bold },
+    htmlH2 = { fg = C.cyan, bold = O.bold },
     mkdCodeDelimiter = { bg = C.background, fg = C.white },
-    mkdCodeStart = { fg = C.turquoise_blue, bold = O.bold },
-    mkdCodeEnd = { fg = C.turquoise_medium, bold = O.bold },
+    mkdCodeStart = { fg = C.bright_cyan, bold = O.bold },
+    mkdCodeEnd = { fg = C.cyan, bold = O.bold },
 
     -- debugging
     debugPC = { bg = C.background }, -- used for highlighting the current line in terminal-debug
@@ -124,8 +123,8 @@ M.theme = function(C, O)
     diffChanged = { fg = C.bright_yellow },
     diffOldFile = { fg = C.yellow },
     diffNewFile = { fg = C.orange },
-    diffFile = { fg = C.turquoise_medium },
-    diffLine = { fg = C.turquoise_blue },
+    diffFile = { fg = C.cyan },
+    diffLine = { fg = C.bright_cyan },
     diffIndexLine = { fg = C.bright_black },
     DiffAdd = { fg = C.green, bg = C.none, reverse = true }, -- diff mode: Added line |diff.txt|
     DiffChange = { fg = C.yellow, bg = C.none, reverse = true }, -- diff mode: Changed line |diff.txt|
@@ -139,9 +138,9 @@ M.theme = function(C, O)
 
     -- glyphs
     GlyphPalette1 = { fg = C.red },
-    GlyphPalette2 = { fg = C.turquoise_medium },
+    GlyphPalette2 = { fg = C.cyan },
     GlyphPalette3 = { fg = C.yellow },
-    GlyphPalette4 = { fg = C.turquoise_medium },
+    GlyphPalette4 = { fg = C.cyan },
     GlyphPalette6 = { fg = C.blue },
     GlyphPalette7 = { fg = C.white },
     GlyphPalette9 = { fg = C.red },
@@ -152,7 +151,7 @@ M.theme = function(C, O)
     rainbow3 = { fg = C.lemon_yellow },
     rainbow4 = { fg = C.aurora },
     rainbow5 = { fg = C.orange },
-    rainbow6 = { fg = C.turquoise_blue },
+    rainbow6 = { fg = C.bright_cyan },
 
     -- Native LSP
 
@@ -167,12 +166,12 @@ M.theme = function(C, O)
     DiagnosticError = { bg = C.none, fg = C.red, bold = O.bold }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
     DiagnosticWarn = { bg = C.none, fg = C.bright_yellow }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
     DiagnosticInfo = { bg = C.none, fg = C.blue }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
-    DiagnosticHint = { bg = C.none, fg = C.turquoise_blue }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
+    DiagnosticHint = { bg = C.none, fg = C.bright_cyan }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
 
     DiagnosticFloatingError = { fg = C.red }, -- Used to color "Error" diagnostic messages in diagnostics float
     DiagnosticFloatingWarn = { fg = C.bright_yellow }, -- Used to color "Warn" diagnostic messages in diagnostics float
     DiagnosticFloatingInfo = { fg = C.blue }, -- Used to color "Info" diagnostic messages in diagnostics float
-    DiagnosticFloatingHint = { fg = C.turquoise_blue }, -- Used to color "Hint" diagnostic messages in diagnostics float
+    DiagnosticFloatingHint = { fg = C.bright_cyan }, -- Used to color "Hint" diagnostic messages in diagnostics float
 
     DiagnosticSignError = { fg = C.red }, -- Used for "Error" signs in sign column
     DiagnosticSignWarn = { fg = C.bright_yellow }, -- Used for "Warn" signs in sign column
@@ -182,16 +181,16 @@ M.theme = function(C, O)
     LspDiagnosticsError = { fg = C.red },
     LspDiagnosticsWarning = { fg = C.bright_yellow },
     LspDiagnosticsInformation = { fg = C.blue },
-    LspDiagnosticsHint = { fg = C.turquoise_blue },
+    LspDiagnosticsHint = { fg = C.bright_cyan },
     LspDiagnosticsVirtualTextError = { fg = C.red, bg = C.background }, -- Used for "Error" diagnostic virtual text
     LspDiagnosticsVirtualTextWarning = { fg = C.bright_yellow, bg = C.background }, -- Used for "Warning" diagnostic virtual text
     LspDiagnosticsVirtualTextInformation = { fg = C.blue, bg = C.background }, -- Used for "Information" diagnostic virtual text
-    LspDiagnosticsVirtualTextHint = { fg = C.turquoise_blue, bg = C.background }, -- Used for "Hint" diagnostic virtual text
+    LspDiagnosticsVirtualTextHint = { fg = C.bright_cyan, bg = C.background }, -- Used for "Hint" diagnostic virtual text
     LspDiagnosticsUnderlineError = { fg = C.red, bg = C.background, underline = true }, -- Used to underline "Error" diagnostics
     LspDiagnosticsUnderlineWarning = { fg = C.bright_yellow, bg = C.background, underline = true }, -- Used to underline "Warning" diagnostics
     LspDiagnosticsUnderlineInformation = { fg = C.blue, bg = C.background, underline = true }, -- Used to underline "Information" diagnostics
-    LspDiagnosticsUnderlineHint = { fg = C.turquoise_blue, bg = C.background, underline = true }, -- Used to underline "Hint" diagnostics
-    LspCodeLens = { fg = C.turquoise_blue }, -- virtual text of the codelens
+    LspDiagnosticsUnderlineHint = { fg = C.bright_cyan, bg = C.background, underline = true }, -- Used to underline "Hint" diagnostics
+    LspCodeLens = { fg = C.bright_cyan }, -- virtual text of the codelens
     LspInlayHint = {
       fg = C.white,
       bg = C.background,
@@ -277,7 +276,7 @@ M.theme = function(C, O)
     ["@keyword.return"] = { fg = C.bright_orange },
 
     -- JS & derivative
-    ["@keyword.export"] = { fg = C.turquoise_blue },
+    ["@keyword.export"] = { fg = C.bright_cyan },
     ["@lsp.typemod.function.defaultLibrary.javascript"] = { fg = C.bright_green },
 
     ["@conditional"] = { link = "Conditional" }, -- For keywords related to conditionnals.
@@ -295,8 +294,8 @@ M.theme = function(C, O)
 
     ["@storageclass"] = { link = "StorageClass" }, -- visibility/life-time/etc. modifiers (e.g. `static`)
     ["@attribute"] = { link = "Constant" }, -- attribute annotations (e.g. Python decorators)
-    ["@field"] = { fg = C.turquoise_blue }, -- For fields.
-    ["@property"] = { fg = C.turquoise_blue }, -- Same as TSField.
+    ["@field"] = { fg = C.bright_cyan }, -- For fields.
+    ["@property"] = { fg = C.bright_cyan }, -- Same as TSField.
 
     -- Identifiers
     ["@variable"] = { fg = C.lemon_yellow }, -- Any variable name that does not have another highlight.
@@ -320,15 +319,15 @@ M.theme = function(C, O)
     ["@text.uri"] = { fg = C.aurora, italic = O.italic }, -- urls, links and emails
     ["@text.uri.comment"] = { fg = C.bright_black, italic = O.italic, undercurl = true }, -- urls, links and emails
     ["@text.html"] = { fg = C.bright_white, underline = false }, -- urls, links and emails
-    ["@text.math"] = { fg = C.turquoise_medium }, -- math environments (e.g. `$ ... $` in LaTeX)
+    ["@text.math"] = { fg = C.cyan }, -- math environments (e.g. `$ ... $` in LaTeX)
     ["@text.environment"] = { fg = C.orange }, -- text environments of markup languages
-    ["@text.environment.name"] = { fg = C.turquoise_medium }, -- text indicating the type of an environment
-    ["@text.reference"] = { fg = C.turquoise_medium, bold = O.bold }, -- references
+    ["@text.environment.name"] = { fg = C.cyan }, -- text indicating the type of an environment
+    ["@text.reference"] = { fg = C.cyan, bold = O.bold }, -- references
 
     ["@text.todo"] = { fg = C.black, bg = C.yellow }, -- todo notes
     ["@text.todo.checked"] = { fg = C.green }, -- todo notes
     ["@text.todo.unchecked"] = { fg = C.black, bg = C.yellow }, -- todo notes
-    ["@text.note"] = { fg = C.black, bg = C.turquoise_medium },
+    ["@text.note"] = { fg = C.black, bg = C.cyan },
     ["@text.warning"] = { fg = C.black, bg = C.yellow },
     ["@text.danger"] = { fg = C.black, bg = C.red },
 
@@ -352,7 +351,7 @@ M.theme = function(C, O)
 
     -- Css
     ["@property.css"] = { fg = C.bright_orange },
-    ["@property.id.css"] = { fg = C.turquoise_medium },
+    ["@property.id.css"] = { fg = C.cyan },
     ["@property.class.css"] = { fg = C.yellow },
     ["@type.css"] = { fg = C.blue },
     ["@type.tag.css"] = { fg = C.bright_orange },
@@ -360,7 +359,7 @@ M.theme = function(C, O)
     ["@number.css"] = { fg = C.yellow },
 
     -- Toml
-    ["@property.toml"] = { fg = C.turquoise_medium }, -- Differentiates between string and properties
+    ["@property.toml"] = { fg = C.cyan }, -- Differentiates between string and properties
 
     -- Json
     ["@label.json"] = { fg = C.bright_green }, -- For labels: label: in C and :label: in Lua.
@@ -404,38 +403,38 @@ M.theme = function(C, O)
     -- Cmp
     CmpItemAbbr = { fg = C.bright_white },
     CmpItemAbbrDeprecated = { fg = C.foreground, strikethrough = true },
-    CmpItemKind = { fg = C.turquoise_medium },
+    CmpItemKind = { fg = C.cyan },
     CmpItemMenu = { fg = C.white },
     CmpItemAbbrMatch = { fg = C.bright_green, bold = O.bold },
     CmpItemAbbrMatchFuzzy = { fg = C.bright_green, bold = O.bold },
     CmpSel = { fg = C.black, bg = C.baby_blue, bold = O.bold }, -- Visual mode selection
 
     -- kind colors
-    CmpItemKindSnippet = { fg = C.turquoise_blue },
+    CmpItemKindSnippet = { fg = C.bright_cyan },
     CmpItemKindKeyword = { fg = C.orange },
     CmpItemKindText = { fg = C.lemon_yellow },
-    CmpItemKindMethod = { fg = C.turquoise_medium },
-    CmpItemKindConstructor = { fg = C.turquoise_medium },
+    CmpItemKindMethod = { fg = C.cyan },
+    CmpItemKindConstructor = { fg = C.cyan },
     CmpItemKindFunction = { fg = C.bright_yellow },
-    CmpItemKindFolder = { fg = C.turquoise_medium },
+    CmpItemKindFolder = { fg = C.cyan },
     CmpItemKindModule = { fg = C.bright_orange },
-    CmpItemKindConstant = { fg = C.turquoise_blue },
+    CmpItemKindConstant = { fg = C.bright_cyan },
     CmpItemKindField = { fg = C.green },
     CmpItemKindProperty = { fg = C.green },
     CmpItemKindEnum = { fg = C.green },
     CmpItemKindUnit = { fg = C.green },
     CmpItemKindClass = { fg = C.yellow },
     CmpItemKindVariable = { fg = C.blue },
-    CmpItemKindFile = { fg = C.turquoise_medium },
+    CmpItemKindFile = { fg = C.cyan },
     CmpItemKindInterface = { fg = C.yellow },
     CmpItemKindColor = { fg = C.red },
     CmpItemKindReference = { fg = C.red },
     CmpItemKindEnumMember = { fg = C.red },
-    CmpItemKindStruct = { fg = C.turquoise_medium },
+    CmpItemKindStruct = { fg = C.cyan },
     CmpItemKindValue = { fg = C.blue },
-    CmpItemKindEvent = { fg = C.turquoise_medium },
-    CmpItemKindOperator = { fg = C.turquoise_medium },
-    CmpItemKindTypeParameter = { fg = C.turquoise_medium },
+    CmpItemKindEvent = { fg = C.cyan },
+    CmpItemKindOperator = { fg = C.cyan },
+    CmpItemKindTypeParameter = { fg = C.cyan },
     CmpItemKindCopilot = { fg = C.bright_orange },
 
     -- Gitsigns
@@ -463,7 +462,7 @@ M.theme = function(C, O)
     RainbowDelimiterOrange = { fg = C.orange },
     RainbowDelimiterGreen = { fg = C.bright_green },
     RainbowDelimiterViolet = { fg = C.bright_red },
-    RainbowDelimiterCyan = { fg = C.turquoise_blue },
+    RainbowDelimiterCyan = { fg = C.bright_cyan },
 
     -- Telescope
     TelescopePromptPrefix = { fg = C.bright_yellow, bg = C.background },
@@ -471,9 +470,9 @@ M.theme = function(C, O)
     TelescopePromptNormal = { bg = C.background },
     TelescopeResultsNormal = { bg = C.background },
     TelescopePreviewNormal = { bg = C.background },
-    TelescopePromptBorder = { fg = C.turquoise_blue, bg = C.background },
-    TelescopeResultsBorder = { fg = C.turquoise_blue, bg = C.background },
-    TelescopePreviewBorder = { fg = C.turquoise_blue, bg = C.background },
+    TelescopePromptBorder = { fg = C.bright_cyan, bg = C.background },
+    TelescopeResultsBorder = { fg = C.bright_cyan, bg = C.background },
+    TelescopePreviewBorder = { fg = C.bright_cyan, bg = C.background },
     TelescopePromptTitle = { fg = C.black, bg = C.bright_green },
     TelescopeResultsTitle = { fg = C.black, bg = C.bright_green },
     TelescopePreviewTitle = { fg = C.black, bg = C.bright_green },
@@ -490,7 +489,7 @@ M.theme = function(C, O)
     NvimTreeSymlink = { fg = C.blue },
     NvimTreeStatuslineNc = { fg = C.bright_orange, bg = C.background },
     NvimTreeGitDirty = { fg = C.red },
-    NvimTreeGitNew = { fg = C.turquoise_medium },
+    NvimTreeGitNew = { fg = C.cyan },
     NvimTreeGitDeleted = { fg = C.red },
     NvimTreeSpecialFile = { fg = C.lemon_yellow },
     NvimTreeImageFile = { fg = C.baby_blue },
@@ -502,7 +501,7 @@ M.theme = function(C, O)
     -- Alpha
     AlphaShortcut = { fg = C.bright_yellow },
     AlphaHeader = { fg = C.orange },
-    AlphaHeaderLabel = { fg = C.turquoise_medium },
+    AlphaHeaderLabel = { fg = C.cyan },
     AlphaButtons = { fg = C.blue },
     AlphaFooter = { fg = C.bright_red },
 
@@ -514,8 +513,8 @@ M.theme = function(C, O)
     DashboardProjectTitle = { fg = C.bright_green },
     DashboardProjectTitleIcon = { fg = C.bright_green },
     DashboardProjectIcon = { fg = C.blue },
-    DashboardMruTitle = { fg = C.turquoise_blue },
-    DashboardMruIcon = { fg = C.turquoise_blue },
+    DashboardMruTitle = { fg = C.bright_cyan },
+    DashboardMruIcon = { fg = C.bright_cyan },
     DashboardFiles = { fg = C.white },
     DashboardShortCutIcon = { fg = C.yellow },
 
@@ -528,7 +527,7 @@ M.theme = function(C, O)
     -- Whichkey
     WhichKey = { link = "NormalFloat" },
     WhichKeyBorder = { link = "FloatBorder" },
-    WhichKeyGroup = { fg = C.turquoise_blue },
+    WhichKeyGroup = { fg = C.bright_cyan },
     WhichKeySeparator = { fg = C.bright_red },
     WhichKeyDesc = { fg = C.yellow },
     WhichKeyValue = { fg = C.green },
@@ -560,18 +559,18 @@ M.theme = function(C, O)
     NavicIconsInterface = { fg = C.yellow, bg = C.background },
     NavicIconsFunction = { fg = C.blue, bg = C.background },
     NavicIconsVariable = { fg = C.orange, bg = C.background },
-    NavicIconsConstant = { fg = C.turquoise_medium, bg = C.background },
+    NavicIconsConstant = { fg = C.cyan, bg = C.background },
     NavicIconsString = { fg = C.orange, bg = C.background, italic = O.italic, bold = O.bold },
-    NavicIconsNumber = { fg = C.turquoise_medium, bg = C.background },
+    NavicIconsNumber = { fg = C.cyan, bg = C.background },
     NavicIconsBoolean = { fg = C.orange, bg = C.background },
-    NavicIconsArray = { fg = C.turquoise_medium, bg = C.background },
-    NavicIconsObject = { fg = C.turquoise_medium, bg = C.background },
+    NavicIconsArray = { fg = C.cyan, bg = C.background },
+    NavicIconsObject = { fg = C.cyan, bg = C.background },
     NavicIconsKey = { fg = C.yellow, bg = C.background, italic = O.italic, bold = O.bold },
     NavicIconsNull = { fg = C.orange, bg = C.background },
     NavicIconsEnumMember = { fg = C.blue, bg = C.background },
     NavicIconsStruct = { fg = C.blue, bg = C.background },
     NavicIconsEvent = { fg = C.blue, bg = C.background },
-    NavicIconsOperator = { fg = C.turquoise_medium, bg = C.background },
+    NavicIconsOperator = { fg = C.cyan, bg = C.background },
     NavicIconsTypeParameter = { fg = C.blue, bg = C.background },
     NavicText = { fg = C.bright_white, bg = C.background, italic = O.italic },
     NavicSeparator = { fg = C.blue, bg = C.background },

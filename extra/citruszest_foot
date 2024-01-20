@@ -5,14 +5,14 @@ color=121212 BFBFBF
 
 [colors]
 background=121212
-foreground=BFBFBF
-regular0=121212
+foreground=F9F9F9
+regular0=232323
 regular1=FF5454
 regular2=00CC7A
 regular3=FFD700
 regular4=FF7431
 regular5=00BFFF
-regular6=48D1CC
+regular6=00FFFF
 regular7=BFBFBF
 bright0=767C77
 bright1=FF1A75
@@ -20,7 +20,7 @@ bright2=1AFFA3
 bright3=FFFF00
 bright4=FFAA54
 bright5=28C9FF
-bright6=09FFF2
+bright6=33FFFF
 bright7=F9F9F9
 
 # vim: ft=dosini

@@ -12,7 +12,7 @@ local colors = {
   yellow = "#FFD700",
   orange = "#FF7431",
   blue = "#00BFFF",
-  turquoise_medium = "#48D1CC",
+  cyan = "#00FFFF",
   white = "#BFBFBF",
 
   bright_black = "#767C77",
@@ -21,7 +21,7 @@ local colors = {
   bright_yellow = "#FFFF00",
   bright_orange = "#FFAA54",
   bright_blue = "#28C9FF",
-  turquoise_blue = "#09FFF2",
+  bright_cyan = "#33ffff",
   bright_white = "#F9F9F9",
 
   -- Extra

@@ -1,20 +1,20 @@
 # Default colorss
 [colors.primary]
   background = '#121212'
-  foreground = '#BFBFBF'
+  foreground = '#F9F9F9'
 
 [colors.cursor]
-  text = '#BFBFBF'
-  cursor = '#121212'
+  text = '#F9F9F9'
+  cursor = '#BFBFBF'
 
 # Normal colorss
 [colors.normal]
-  black =   '#3c3836'
-  red =     '#ff5454'
-  green =   '#00cc7a'
-  yellow =  '#ffd700'
-  blue =    '#00bfff'
-  magenta = '#e637bf'
+  black =   '#232323'
+  red =     '#FF5454'
+  green =   '#00CC7A'
+  yellow =  '#FFD700'
+  blue =    '#00bFFF'
+  magenta = '#FF00FF'
   cyan =    '#48d1cc'
   white =   '#bfbfbf'
 
@@ -25,6 +25,6 @@
   green =   '#1affa3'
   yellow =  '#ffff00'
   blue =    '#28c9ff'
-  magenta = '#f865b0'
+  magenta = '#ff33ff'
   cyan =    '#09fff2'
   white =   '#f9f9f9'

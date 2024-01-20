@@ -1,7 +1,7 @@
 *.background: #121212
-*.foreground: #BFBFBF
+*.foreground: #F9F9F9
 
-*.color0: #232323
+*.color0: #121212
 *.color8: #767C77
 
 *.color1: #FF5454
@@ -19,8 +19,8 @@
 *.color5: #00BFFF
 *.color13: #28C9FF
 
-*.color6: #48D1CC
-*.color14: #09FFF2
+*.color6: #00FFFF
+*.color14: #33FFFF
 
 *.color7: #BFBFBF
 *.color15: #F9F9F9
