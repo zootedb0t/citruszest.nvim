@@ -26,8 +26,8 @@ citruszest.nvim
 
 > [!IMPORTANT]
 > ### Requirement
-> - ***Treesitter*** (Recommended)
-> - Neovim >= 0.9.1
+> - ***Treesitter*** > v0.9.2 (Recommended)
+> - Neovim >= v0.9.1
 
 [lazy.nvim](https://github.com/folke/lazy.nvim)
 
