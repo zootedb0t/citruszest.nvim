@@ -146,7 +146,7 @@ M.theme = function(C, O)
     GlyphPalette9 = { fg = C.red },
 
     -- rainbow
-    rainbow1 = { fg = C.bright_red },
+    rainbow1 = { fg = C.red },
     rainbow2 = { fg = C.blue },
     rainbow3 = { fg = C.lemon_yellow },
     rainbow4 = { fg = C.aurora },
@@ -231,13 +231,13 @@ M.theme = function(C, O)
     ["@lsp.mod.documentation.lua"] = { link = "Comment" },
     ["@lsp.typemod.keyword.documentation.lua"] = { link = "Comment" },
 
-    -- Treesitter highlights
+    -- Treesitter highlights TODO
     ["@comment"] = { link = "Comment" },
-    ["@comment.error"] = { fg = C.white, bg = C.bright_red },
-    ["@comment.warning"] = { fg = C.white, bg = C.yellow },
-    ["@comment.note"] = { fg = C.white, bg = C.blue },
+    ["@comment.documentation"] = { fg = C.white },
+    ["@comment.error"] = { fg = C.black, bg = C.bright_red },
+    ["@comment.warning"] = { fg = C.black, bg = C.yellow },
     ["@comment.todo"] = { fg = C.black, bg = C.bright_orange },
-    ["@operator"] = { link = "Operator" }, -- For any operator: +, but also -> and * in C.
+    ["@comment.note"] = { fg = C.black, bg = C.blue },
     ["TreesitterContextLineNumber"] = { fg = C.blue, bg = C.cursor },
 
     -- Punctuation
@@ -246,6 +246,8 @@ M.theme = function(C, O)
     ["@punctuation.special"] = { link = "Special" }, -- For special punctutation that does not fall in the categories before.
 
     ["@module"] = { fg = C.bright_yellow, italic = O.italic }, -- For identifiers referring to modules and namespaces.
+    ["@module.builtin"] = { fg = C.bright_blue, italic = O.italic },
+    ["@label"] = { fg = C.bright_orange },
 
     -- Literals
     ["@string"] = { link = "String" }, -- For strings.
@@ -253,6 +255,7 @@ M.theme = function(C, O)
     ["@string.escape"] = { fg = C.bright_red }, -- For escape characters within a string.
     ["@string.special"] = { link = "Special" }, -- other special strings (e.g. dates)
     ["@string.special.symbol"] = { fg = C.yellow },
+    ["@string.special.path"] = { fg = C.aurora },
     ["string.special.url"] = { fg = C.aurora, underline = true }, -- urls, links and emails
 
     ["@character"] = { link = "Character" }, -- character literals
@@ -269,11 +272,12 @@ M.theme = function(C, O)
     ["@function.macro"] = { fg = C.blue }, -- For macro defined functions (calls and definitions): each macro_rules in RusC.
     ["@function.method"] = { link = "Function" }, -- For method calls and definitions.
     ["@function.method.call"] = { link = "Function" }, -- method calls
-
     ["@constructor"] = { fg = C.bright_yellow }, -- For constructor calls and definitions: = { } in Lua, and Java constructors.
+    ["@operator"] = { link = "Operator" }, -- For any operator: +, but also -> and * in C.
 
     -- Keywords
     ["@keyword"] = { link = "Keyword" }, -- For keywords that don't fall in previous categories.
+    ["@keyword.coroutine"] = { fg = C.bright_red },
     ["@keyword.function"] = { fg = C.red }, -- For keywords used to define a function.
     ["@keyword.operator"] = { link = "Operator" }, -- For new keyword operator.
     ["@keyword.return"] = { fg = C.bright_orange },
@@ -282,6 +286,7 @@ M.theme = function(C, O)
     ["@keyword.repeat"] = { link = "Repeat" }, -- For keywords related to loop.
     ["@keyword.exception"] = { link = "Exception" }, -- For exception keywords.
     ["@keyword.conditional"] = { link = "Conditional" }, -- For keywords related to conditional,
+    ["@keyword.conditional.ternary"] = { fg = C.bright_yellow }, -- e.g. ? or :
     ["@keyword.directive"] = { link = "PreProc" }, -- Various preprocessor directive & shebangs.
     ["@keyword.directive.define"] = { link = "Define" }, -- Preprocessor definition directive.
     ["@keyword.debug"] = { link = "Debug" },
@@ -296,7 +301,6 @@ M.theme = function(C, O)
     ["@type.definition"] = { link = "@type" }, -- type definitions (e.g. `typedef` in C)
     ["@type.qualifier"] = { link = "Constant" }, -- type qualifiers (e.g. `const`)
 
-    -- ["@storageclass"] = { link = "StorageClass" }, -- visibility/life-time/etc. modifiers (e.g. `static`)
     ["@attribute"] = { link = "Constant" }, -- attribute annotations (e.g. Python decorators)
     ["@property"] = { fg = C.bright_cyan }, -- Same as TSField.
 
@@ -313,17 +317,20 @@ M.theme = function(C, O)
     -- Markup
     ["@markup"] = { fg = C.bright_white }, -- For strings considerated text in a markup language.
     ["@markup.strong"] = { fg = C.white, bold = true },
+    ["@markup.italic"] = { fg = C.white, italic = O.italic },
     ["@markup.strikethrough"] = { fg = C.white, strikethrough = true },
     ["@markup.underline"] = { link = "Underline" },
     ["@markup.heading"] = { fg = C.blue, bold = O.bold }, -- titles like: # Example.
     ["@markup.math"] = { fg = C.blue },
     ["@markup.environment"] = { fg = C.bright_orange }, -- Text indicating the type of an environment.
-    ["@markup.environment.name"] = { fg = C.blue },
     ["@markup.link"] = { link = "Tag" },
+    ["@markup.link.label"] = { fg = C.cyan, underline = true },
     ["@markup.link.url"] = { fg = C.bright_orange, underline = true },
     ["@markup.raw"] = { fg = C.lemon_yellow }, -- used for inline code in markdown and for doc in python.
+    ["@markup.raw.block"] = { fg = C.baby_blue }, -- used for inline code in markdown and for doc in python.
     ["@markup.list"] = { link = "Special" },
     ["@markup.list.checked"] = { fg = C.green },
+    ["@markup.list.unchecked"] = { fg = C.white },
 
     -- Diff
     ["@diff.plus"] = { link = "diffAdded" },
@@ -335,7 +342,7 @@ M.theme = function(C, O)
 
     -- Tags
     ["@tag"] = { fg = C.blue }, -- Tags like html tag names.
-    ["@tag.attribute"] = { fg = C.bright_yellow, italic = O.italic }, -- Tags like html tag names.
+    ["@tag.attribute"] = { fg = C.yellow, italic = O.italic }, -- Tags like html tag names.
     ["@tag.delimiter"] = { fg = C.red }, -- Tag delimiter like < > /
 
     -- Language specific:
