@@ -69,7 +69,7 @@ M.theme = function(C, O)
     Character = { fg = C.yellow }, --  a character constant: 'c', '\n'
     Number = { fg = C.lemon_yellow }, --   a number constant: 234, 0xff
     Float = { link = "Number" }, --    a floating point constant: 2.3e10
-    Boolean = { fg = C.orange }, --  a boolean constant: TRUE, false
+    Boolean = { fg = C.bright_orange }, --  a boolean constant: TRUE, false
     Identifier = { fg = C.bright_yellow, italic = O.italic }, -- (preferred) any variable name
     Function = { fg = C.bright_green }, -- function name (also: methods for classes)
     Statement = { fg = C.blue }, -- (preferred) any statement
@@ -198,40 +198,24 @@ M.theme = function(C, O)
     LspInfoBorder = { link = "FloatBorder" }, -- LspInfo border
 
     -- Semantic Tokens
-    ["@lsp.type.boolean"] = { link = "@boolean" },
-    ["@lsp.type.builtinType"] = { link = "@type.builtin" },
-    ["@lsp.type.comment"] = { link = "@comment" },
-    ["@lsp.type.enum"] = { link = "@type" },
-    ["@lsp.type.enumMember"] = { link = "@constant" },
-    ["@lsp.type.escapeSequence"] = { link = "@string.escape" },
-    ["@lsp.type.formatSpecifier"] = { link = "@punctuation.special" },
-    ["@lsp.type.interface"] = { fg = C.bright_blue },
-    ["@lsp.type.keyword"] = { link = "@keyword" },
-    ["@lsp.type.namespace"] = { link = "@namespace" },
-    ["@lsp.type.number"] = { link = "@number" },
-    ["@lsp.type.operator"] = { link = "@operator" },
-    ["@lsp.type.parameter"] = { link = "@parameter" },
+    ["@lsp.type.class"] = { link = "Structure" },
+    ["@lsp.type.decorator"] = { link = "Function" },
+    ["@lsp.type.enum"] = { link = "Type" },
+    ["@lsp.type.enumMember"] = { link = "Constant" },
+    ["@lsp.type.function"] = { link = "@function" },
+    ["@lsp.type.interface"] = { link = "Structure" },
+    ["@lsp.type.macro"] = { link = "@macro" },
+    ["@lsp.type.parameter"] = { link = "@variable.parameter" },
     ["@lsp.type.property"] = { link = "@property" },
-    ["@lsp.type.selfKeyword"] = { link = "@variable.builtin" },
-    ["@lsp.type.typeAlias"] = { link = "@type.definition" },
-    ["@lsp.type.unresolvedReference"] = { link = "@error" },
-    ["@lsp.type.variable"] = {}, -- use treesitter styles for regular variables
-    ["@lsp.typemod.class.defaultLibrary"] = { link = "@type.builtin" },
-    ["@lsp.typemod.enum.defaultLibrary"] = { link = "@type.builtin" },
-    ["@lsp.typemod.enumMember.defaultLibrary"] = { link = "@constant.builtin" },
-    ["@lsp.typemod.function.defaultLibrary"] = { link = "@function.builtin" },
-    ["@lsp.typemod.keyword.async"] = { link = "@keyword.coroutine" },
-    ["@lsp.typemod.macro.defaultLibrary"] = { link = "@function.builtin" },
-    ["@lsp.typemod.method.defaultLibrary"] = { link = "@function.builtin" },
-    ["@lsp.typemod.operator.injected"] = { link = "@operator" },
-    ["@lsp.typemod.string.injected"] = { link = "@string" },
-    ["@lsp.typemod.type.defaultLibrary"] = { link = "@type.builtin" },
-    ["@lsp.typemod.variable.defaultLibrary"] = { link = "@variable.builtin" },
-    ["@lsp.typemod.variable.injected"] = { link = "@variable" },
-    ["@lsp.mod.documentation.lua"] = { link = "Comment" },
-    ["@lsp.typemod.keyword.documentation.lua"] = { link = "Comment" },
+    ["@lsp.type.struct"] = { link = "Structure" },
+    ["@lsp.type.type"] = { link = "@type" },
+    ["@lsp.type.typeParameter"] = { link = "TypeDef" },
+    ["@lsp.type.variable"] = { link = "@variable" },
+    ["@event"] = { fg = C.white },
+    ["@modifier"] = { fg = C.white },
+    ["@regexp"] = { fg = C.bright_orange },
 
-    -- Treesitter highlights TODO
+    -- Treesitter highlights
     ["@comment"] = { link = "Comment" },
     ["@comment.documentation"] = { fg = C.white },
     ["@comment.error"] = { fg = C.black, bg = C.bright_red },
@@ -280,7 +264,7 @@ M.theme = function(C, O)
     ["@keyword.coroutine"] = { fg = C.bright_red },
     ["@keyword.function"] = { fg = C.red }, -- For keywords used to define a function.
     ["@keyword.operator"] = { link = "Operator" }, -- For new keyword operator.
-    ["@keyword.return"] = { fg = C.bright_orange },
+    ["@keyword.return"] = { fg = C.yellow },
     ["@keyword.import"] = { link = "Include" }, -- For includes.
     ["@keyword.storage"] = { link = "StorageClass" }, -- visibility/life-time/etc. modifiers (e.g. `static`).
     ["@keyword.repeat"] = { link = "Repeat" }, -- For keywords related to loop.
