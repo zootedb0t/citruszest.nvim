@@ -112,6 +112,7 @@ lualine.setup {
 - [whichkey.nvim](https://github.com/folke/which-key.nvim)
 - [flash.nvim](https://github.com/folke/flash.nvim)
 - [lazy.nvim](https://github.com/folke/lazy.nvim)
+- [dashboard-nvim](https://github.com/nvimdev/dashboard-nvim)
 
 ## :fireworks: Integration
 

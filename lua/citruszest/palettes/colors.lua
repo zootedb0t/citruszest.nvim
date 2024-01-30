@@ -28,6 +28,8 @@ local colors = {
   baby_blue = "#9ADCFF",
   lemon_yellow = "#FFF2B3",
   aurora = "#B2F3AC",
+  oxley = "#659B75",
+  violet = "#9c4be7",
 }
 
 return colors

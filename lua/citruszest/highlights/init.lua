@@ -15,17 +15,17 @@ M.theme = function(C, O)
     Directory = { fg = C.bright_yellow }, -- directory names (and other special names in listings)
     EndOfBuffer = { fg = C.background }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
     ErrorMsg = { fg = C.red }, -- error messages on the command line
-    VertSplit = { fg = C.white }, -- the column separating vertically split windows
-    WinSeparator = { fg = C.white },
-    Folded = { fg = C.orange, bg = C.background }, -- line used for closed folds FoldColumn = { fg = C.orange, bg = C.background }, -- 'foldcolumn' SignColumn = { fg = C.foreground, bg = C.background }, -- column where |signs| are displayed
+    vertsplit = { fg = C.baby_blue }, -- the column separating vertically split windows
+    winseparator = { fg = C.baby_blue },
+    Folded = { fg = C.orange, bg = C.background }, -- line used for closed folds
     FoldColumn = { fg = C.orange, bg = C.background }, -- 'foldcolumn'
     SignColumn = { fg = C.foreground, bg = C.background }, -- column where |signs| are displayed
     SignColumnSB = { fg = C.foreground, bg = C.background }, -- column where |signs| are displayed
     Substitute = { fg = C.orange, bg = C.background }, -- |:substitute| replacement text highlighting
     LineNr = { fg = C.bright_black }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
     CursorLineNr = { fg = C.bright_yellow, bold = O.bold }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line. highlights the number in numberline.
-    MatchParen = { fg = C.bright_blue, bg = C.background, bold = O.bold }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
-    ModeMsg = { fg = C.white }, -- 'showmode' message (e.g., "-- INSERT -- ")
+    MatchParen = { bold = O.bold }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
+    ModeMsg = { fg = C.white }, -- 'showmode' message (e.g., "-- INSERT --")
     MsgSeparator = {}, -- Separator for scrolled messages, `msgsep` flag of 'display'
     MoreMsg = { fg = C.cyan }, -- |more-prompt|
     NonText = { fg = C.bright_cyan }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
@@ -48,8 +48,8 @@ M.theme = function(C, O)
     SpellCap = { sp = C.yellow, undercurl = true }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
     SpellLocal = { sp = C.cyan, undercurl = true }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
     SpellRare = { sp = C.green, undercurl = true }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
-    StatusLine = { fg = C.foreground, bg = C.black }, -- status line of current window
-    StatusLineNC = { fg = C.foreground, bg = C.cursor }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
+    StatusLine = { bg = C.visual, fg = C.foreground }, -- status line of current window
+    StatusLineNC = { bg = C.background }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
     TabLine = { fg = C.white, bg = C.visual }, -- tab pages line, not active tab page label
     TabLineFill = {}, -- tab pages line, where there are no labels
     TabLineSel = { fg = C.green, bg = C.visual }, -- tab pages line, active tab page label
@@ -60,11 +60,10 @@ M.theme = function(C, O)
     Whitespace = { fg = C.white }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
     WildMenu = { fg = C.foreground, bg = C.background }, -- current match in 'wildmenu' completion
     WinBar = { fg = C.bright_white },
-    WinBarNC = { bg = C.background }, --Window bar of not-current windows.
-
-    Comment = { fg = C.bright_black }, -- just comments
+    WinBarNC = { fg = C.bright_black, bg = C.background }, --Window bar of not-current windows.
+    Comment = { fg = C.oxley }, -- just comments
     SpecialComment = { link = "Special" }, -- special things inside a comment
-    Constant = { fg = C.bright_cyan }, -- (preferred) any constant
+    Constant = { fg = C.orange }, -- (preferred) any constant
     String = { fg = C.aurora }, -- a string constant: "this is a string"
     Character = { fg = C.yellow }, --  a character constant: 'c', '\n'
     Number = { fg = C.lemon_yellow }, --   a number constant: 234, 0xff
@@ -76,7 +75,7 @@ M.theme = function(C, O)
     Conditional = { fg = C.bright_cyan }, --  if, then, else, endif, switch, etc.
     Repeat = { fg = C.bright_yellow }, --   for, do, while, etc.
     Label = { fg = C.bright_green }, --    case, default, etc.
-    Operator = { fg = C.blue }, -- "sizeof", "+", "*", etc.
+    Operator = { fg = C.bright_yellow }, -- "sizeof", "+", "*", etc.
     Keyword = { fg = C.bright_blue }, --  any other keyword
     Array = { fg = C.blue },
     Exception = { fg = C.blue }, --  try, catch, throw
@@ -87,7 +86,7 @@ M.theme = function(C, O)
     Macro = { fg = C.blue }, -- same as Define
     PreCondit = { link = "PreProc" }, -- preprocessor #if, #else, #endif, etc.
 
-    StorageClass = { fg = C.bright_yellow }, -- static, register, volatile, etc.
+    StorageClass = { fg = C.yellow }, -- static, register, volatile, etc.
     Structure = { link = "Keyword" }, --  struct, union, enum, etc.
     Special = { fg = C.bright_orange }, -- (preferred) any special symbol
     Type = { fg = C.bright_orange }, -- (preferred) int, long, char, etc.
@@ -161,7 +160,6 @@ M.theme = function(C, O)
     LspReferenceText = { bg = C.visual }, -- used for highlighting "text" references
     LspReferenceRead = { bg = C.visual }, -- used for highlighting "read" references
     LspReferenceWrite = { bg = C.visual }, -- used for highlighting "write" references
-    -- highlight diagnostics in numberline
 
     DiagnosticError = { bg = C.none, fg = C.red, bold = O.bold }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
     DiagnosticWarn = { bg = C.none, fg = C.bright_yellow }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
@@ -214,6 +212,7 @@ M.theme = function(C, O)
     ["@event"] = { fg = C.white },
     ["@modifier"] = { fg = C.white },
     ["@regexp"] = { fg = C.bright_orange },
+    ["@lsp.type.class.c"] = { link = "Type" },
 
     -- Treesitter highlights
     ["@comment"] = { link = "Comment" },
@@ -226,12 +225,13 @@ M.theme = function(C, O)
 
     -- Punctuation
     ["@punctuation.delimiter"] = { link = "Delimiter" }, -- For delimiters ie: .
-    ["@punctuation.bracket"] = { fg = C.bright_yellow }, -- For brackets and parenthesis.
+    ["@punctuation.bracket"] = { fg = C.orange }, -- For brackets and parenthesis.
     ["@punctuation.special"] = { link = "Special" }, -- For special punctutation that does not fall in the categories before.
 
     ["@module"] = { fg = C.bright_yellow, italic = O.italic }, -- For identifiers referring to modules and namespaces.
     ["@module.builtin"] = { fg = C.bright_blue, italic = O.italic },
     ["@label"] = { fg = C.bright_orange },
+    ["@macro"] = { link = "Macro" },
 
     -- Literals
     ["@string"] = { link = "String" }, -- For strings.
@@ -262,9 +262,9 @@ M.theme = function(C, O)
     -- Keywords
     ["@keyword"] = { link = "Keyword" }, -- For keywords that don't fall in previous categories.
     ["@keyword.coroutine"] = { fg = C.bright_red },
-    ["@keyword.function"] = { fg = C.red }, -- For keywords used to define a function.
+    ["@keyword.function"] = { fg = C.bright_red }, -- For keywords used to define a function.
     ["@keyword.operator"] = { link = "Operator" }, -- For new keyword operator.
-    ["@keyword.return"] = { fg = C.yellow },
+    ["@keyword.return"] = { fg = C.bright_yellow },
     ["@keyword.import"] = { link = "Include" }, -- For includes.
     ["@keyword.storage"] = { link = "StorageClass" }, -- visibility/life-time/etc. modifiers (e.g. `static`).
     ["@keyword.repeat"] = { link = "Repeat" }, -- For keywords related to loop.
@@ -289,7 +289,7 @@ M.theme = function(C, O)
     ["@property"] = { fg = C.bright_cyan }, -- Same as TSField.
 
     -- Identifiers
-    ["@variable"] = { fg = C.lemon_yellow }, -- Any variable name that does not have another highlight.
+    ["@variable"] = { fg = C.bright_white }, -- Any variable name that does not have another highlight.
     ["@variable.builtin"] = { link = "Identifier" }, -- Variable names that are defined by the languages, like this or self.
     ["@variable.parameter"] = { fg = C.bright_blue, italic = O.italic }, -- For parameters of a function.
     ["@variable.member"] = { fg = C.bright_cyan }, -- For fields
@@ -355,7 +355,7 @@ M.theme = function(C, O)
     ["@label.json"] = { fg = C.bright_green }, -- For labels: label: in C and :label: in Lua.
 
     -- Lua
-    ["@constructor.lua"] = { fg = C.bright_red }, -- For constructor calls and definitions: = { } in Lua, and Java constructors.
+    ["@constructor.lua"] = { fg = C.orange }, -- For constructor calls and definitions: = { } in Lua, and Java constructors.
     ["@lsp.typemod.function.defaultLibrary.lua"] = { fg = C.blue },
 
     -- Typescript
@@ -434,7 +434,7 @@ M.theme = function(C, O)
     GitSignsChange = { fg = C.yellow, bg = C.none },
     GitSignsDelete = { fg = C.red, bg = C.none },
     GitSignsAddInline = { fg = C.green, bg = C.none },
-    GitSignsChangeInline = { fg = C.orange, bg = C.none },
+    GitSignsChangeInline = { fg = C.yellow, bg = C.none },
     GitSignsDeleteInline = { fg = C.red, bg = C.none },
 
     -- Fidget
@@ -450,7 +450,7 @@ M.theme = function(C, O)
     RainbowDelimiterBlue = { fg = C.blue },
     RainbowDelimiterOrange = { fg = C.orange },
     RainbowDelimiterGreen = { fg = C.bright_green },
-    RainbowDelimiterViolet = { fg = C.bright_red },
+    RainbowDelimiterViolet = { fg = C.violet },
     RainbowDelimiterCyan = { fg = C.bright_cyan },
 
     -- Telescope
@@ -465,15 +465,16 @@ M.theme = function(C, O)
     TelescopePromptTitle = { fg = C.black, bg = C.bright_green },
     TelescopeResultsTitle = { fg = C.black, bg = C.bright_green },
     TelescopePreviewTitle = { fg = C.black, bg = C.bright_green },
+    TelescopeSelection = { bg = C.visual },
 
     -- NvimTree
     NvimTreeFolderName = { fg = C.bright_orange },
     NvimTreeFolderIcon = { fg = C.bright_orange },
-    NvimTreeNormal = { fg = C.bright_white, bg = C.background },
+    NvimTreeNormal = { fg = C.bright_white },
     NvimTreeOpenedFolderName = { fg = C.aurora, bold = O.bold },
     NvimTreeEmptyFolderName = { fg = C.bright_black },
-    NvimTreeIndentMarker = { fg = C.bright_black },
-    NvimTreeWinSeparator = { fg = C.foreground, bg = C.background },
+    NvimTreeIndentMarker = { fg = C.baby_blue },
+    NvimTreeWinSeparator = { fg = C.baby_blue, bg = C.background },
     NvimTreeRootFolder = { fg = C.bright_yellow, bold = O.bold },
     NvimTreeSymlink = { fg = C.blue },
     NvimTreeStatuslineNc = { fg = C.bright_orange, bg = C.background },
@@ -482,7 +483,6 @@ M.theme = function(C, O)
     NvimTreeGitDeleted = { fg = C.red },
     NvimTreeSpecialFile = { fg = C.lemon_yellow },
     NvimTreeImageFile = { fg = C.baby_blue },
-    NvimTreeOpenedFile = { fg = C.bright_orange },
     NvimTreeOpenedFolderIcon = { fg = C.aurora },
     NvimTreeFolderArrowOpen = { fg = C.aurora },
     NvimTreeFolderArrowClosed = { fg = C.bright_orange },
