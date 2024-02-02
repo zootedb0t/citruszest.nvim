@@ -94,7 +94,7 @@ M.theme = function(C, O)
     SpecialChar = { link = "Special" }, -- special character in a constant
     Tag = { link = "Special" }, -- you can use CTRL-] on this
     Delimiter = { link = "Special" }, -- character that needs attention
-    Debug = { link = "Special" }, -- debugging statements
+    Debug = { fg = C.orange }, -- debugging statements
 
     Underlined = { underline = true }, -- (preferred) text that stands out, HTML links
     Bold = { bold = true },
