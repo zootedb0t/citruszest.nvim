@@ -135,7 +135,7 @@ lualine.setup {
 | Green          | `#00CC7A` | ![green](https://place-hold.it/32/00CC7A?text=+)         |
 | Yellow         | `#FFD700` | ![yellow](https://place-hold.it/32/F0D50C?text=+)        |
 | Orange         | `#FF7431` | ![orange](https://place-hold.it/32/FF8C00?text=+)        |
-| Blue           | `#00BFFF` | ![blue](https://place-hold.it/32/00BFFF?text=+)        |
+| Blue           | `#00BFFF` | ![blue](https://place-hold.it/32/00BFFF?text=+)          |
 | Cyan           | `#00FFFF` | ![cyan](https://place-hold.it/32/00FFFF?text=+)          |
 | White          | `#BFBFBF` | ![white](https://place-hold.it/32/BFBFBF?text=+)         |
 | Black(Bright)  | `#767C77` | ![bright_black](https://place-hold.it/32/808080?text=+)  |
@@ -143,9 +143,9 @@ lualine.setup {
 | Green(Bright)  | `#1AFFA3` | ![bright_green](https://place-hold.it/32/1AFFA3?text=+)  |
 | Yellow(Bright) | `#FFFF00` | ![bright_yellow](https://place-hold.it/32/FFFF00?text=+) |
 | Orange(Bright) | `#FFAA54` | ![bright_orange](https://place-hold.it/32/FF9633?text=+) |
-| Blue(Bright)   | `#28C9FF` | ![bright_blue](https://place-hold.it/32/33CFFF?text=+) |
+| Blue(Bright)   | `#28C9FF` | ![bright_blue](https://place-hold.it/32/33CFFF?text=+)   |
 | Cyan(Bright)   | `#33FFFF` | ![bright_cyan](https://place-hold.it/32/33FFFF?text=+)   |
-| White(Bright)  | `#F9F9F9` | ![bright_white](https://place-hold.it/32/F9F9F9?text=+)   |
+| White(Bright)  | `#F9F9F9` | ![bright_white](https://place-hold.it/32/F9F9F9?text=+)  |
 
 ## :pray: Acknowledgments
 

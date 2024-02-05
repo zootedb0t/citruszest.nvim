@@ -486,6 +486,7 @@ M.theme = function(C, O)
     NvimTreeOpenedFolderIcon = { fg = C.aurora },
     NvimTreeFolderArrowOpen = { fg = C.aurora },
     NvimTreeFolderArrowClosed = { fg = C.bright_orange },
+    NvimTreeExecFile = { fg = C.bright_white },
 
     -- Alpha
     AlphaShortcut = { fg = C.bright_yellow },
