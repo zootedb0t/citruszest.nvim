@@ -116,9 +116,9 @@ lualine.setup {
 
 ## :fireworks: Integration
 
-- [Kitty](https://github.com/kovidgoyal/kitty) users copy [this](extra/kitty-theme.conf) into their `kitty.conf`.
-- `Xresources` is available [here](extra/xresources).
-- [Foot](https://codeberg.org/dnkl/foot) terminal users can use [this](extra/foot-terminal).
+- [Kitty](https://github.com/kovidgoyal/kitty) users copy [this](extra/citruszest_kitty.conf) into their `kitty.conf`.
+- `Xresources` is available [here](extra/citruszest_xresources).
+- [Foot](https://codeberg.org/dnkl/foot) terminal users can use [this](extra/citruszest_foot).
 - [iterm2](https://iterm2.com/) user can use [this](extra/citruszest.itermcolors).
 - [Alacritty](https://alacritty.org/) user can use [this](extra/citruszest_alacritty.toml).
 
