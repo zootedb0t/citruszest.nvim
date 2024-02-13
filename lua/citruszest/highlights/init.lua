@@ -21,7 +21,7 @@ M.theme = function(C, O)
     FoldColumn = { fg = C.orange, bg = C.background }, -- 'foldcolumn'
     SignColumn = { fg = C.foreground, bg = C.background }, -- column where |signs| are displayed
     SignColumnSB = { fg = C.foreground, bg = C.background }, -- column where |signs| are displayed
-    Substitute = { fg = C.orange, bg = C.background }, -- |:substitute| replacement text highlighting
+    Substitute = { fg = C.black, bg = C.baby_blue }, -- |:substitute| replacement text highlighting
     LineNr = { fg = C.bright_black }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
     CursorLineNr = { fg = C.bright_yellow, bold = O.bold }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line. highlights the number in numberline.
     MatchParen = { bold = O.bold }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
