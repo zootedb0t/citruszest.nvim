@@ -1,7 +1,7 @@
 local colors = {
   black = "#232323",
   red = "#FF5454",
-  green = "#00CC7A",
+  green = "#1AFFA3",
   yellow = "#FFD700",
   orange = "#FF7431",
   blue = "#00BFFF",
@@ -11,24 +11,20 @@ local colors = {
 
 return {
   normal = {
-    a = { bg = colors.orange, fg = colors.black },
-    b = { bg = colors.yellow, fg = colors.black },
-    c = { bg = colors.cyan, fg = colors.black },
+    a = { bg = colors.black, fg = colors.green },
+    b = { bg = colors.black, fg = colors.orange },
+    c = { bg = colors.black, fg = colors.white },
   },
   insert = {
-    a = { bg = colors.green, fg = colors.black },
-    b = { bg = colors.cyan, fg = colors.black },
+    a = { bg = colors.black, fg = colors.blue },
   },
   visual = {
-    a = { bg = colors.yellow, fg = colors.black },
-    b = { bg = colors.cyan, fg = colors.black },
+    a = { bg = colors.black, fg = colors.cyan },
   },
   replace = {
-    a = { bg = colors.yellow, fg = colors.black },
-    b = { bg = colors.cyan, fg = colors.black },
+    a = { bg = colors.black, fg = colors.yellow },
   },
   command = {
-    a = { bg = colors.blue, fg = colors.black },
-    b = { bg = colors.orange, fg = colors.black },
+    a = { bg = colors.black, fg = colors.orange },
   },
 }
