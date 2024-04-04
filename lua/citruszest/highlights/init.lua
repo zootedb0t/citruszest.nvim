@@ -564,6 +564,25 @@ M.theme = function(C, O)
     NavicIconsTypeParameter = { fg = C.blue, bg = C.background },
     NavicText = { fg = C.bright_white, bg = C.background, italic = O.italic },
     NavicSeparator = { fg = C.blue, bg = C.background },
+
+    -- Neo-tree
+    NeoTreeDimText = { fg = C.white },
+    NeoTreeDirectoryIcon = { fg = C.bright_orange },
+    NeoTreeDirectoryName = { fg = C.bright_orange },
+    NeoTreeFileName = { fg = C.bright_white },
+    NeoTreeTitleBar = { fg = C.black, bg = C.blue },
+    NeoTreeGitAdded = { fg = C.green },
+    NeoTreeGitConflict = { fg = C.orange },
+    NeoTreeGitDeleted = { fg = C.red },
+    NeoTreeGitIgnored = { fg = C.bright_white },
+    NeoTreeGitModified = { fg = C.bright_orange },
+    NeoTreeGitUnstaged = { fg = C.aurora },
+    NeoTreeGitUntracked = { fg = C.bright_white },
+    NeoTreeGitStaged = { fg = C.green },
+    NeoTreeHiddenByName = { fg = C.bright_black },
+    NeoTreeIndentMarker = { fg = C.baby_blue },
+    NeoTreeRootName = { fg = C.white },
+    NeoTreeDotfile = { fg = C.bright_orange },
   }
 end
 
