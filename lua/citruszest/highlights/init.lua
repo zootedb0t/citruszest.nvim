@@ -12,7 +12,7 @@ M.theme = function(C, O)
     CursorIM = { fg = C.cursor, bg = C.white }, -- like Cursor, but used when in IME mode |CursorIM|
     CursorColumn = { bg = C.bright_black }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
     CursorLine = { bg = C.cursor }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if forecrust (ctermfg OR guifg) is not set.
-    Directory = { fg = C.bright_yellow }, -- directory names (and other special names in listings)
+    Directory = { fg = C.bright_orange }, -- directory names (and other special names in listings)
     EndOfBuffer = { fg = C.background }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
     ErrorMsg = { fg = C.red }, -- error messages on the command line
     vertsplit = { fg = C.baby_blue }, -- the column separating vertically split windows
@@ -563,7 +563,7 @@ M.theme = function(C, O)
     NavicIconsOperator = { fg = C.cyan, bg = C.background },
     NavicIconsTypeParameter = { fg = C.blue, bg = C.background },
     NavicText = { fg = C.bright_white, bg = C.background, italic = O.italic },
-    NavicSeparator = { fg = C.blue, bg = C.background },
+    NavicSeparator = { fg = C.red, bg = C.background },
 
     -- Neo-tree
     NeoTreeDimText = { fg = C.white },
