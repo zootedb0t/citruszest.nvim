@@ -13,10 +13,12 @@ end
 ---@param a number between 0 and 1
 ---@return string
 local add_alpha = function(hex, bg, a)
-    local r1, g1, b1 = hex:sub(2,3), hex:sub(4,5), hex:sub(6,7)
-    local r2, g2, b2 = bg:sub(2,3), bg:sub(4,5), bg:sub(6,7)
-    return "#"..string.format("%02x%02x%02x",
-        blend(r1, r2, a), blend(g1, g2, a), blend(b1, b2, a))
+  if not bg:match("^#%x%x%x%x%x%x$") then
+      bg = "#121212"
+  end
+  local r1, g1, b1 = hex:sub(2,3), hex:sub(4,5), hex:sub(6,7)
+  local r2, g2, b2 = bg:sub(2,3), bg:sub(4,5), bg:sub(6,7)
+  return "#" .. string.format("%02x%02x%02x", blend(r1, r2, a), blend(g1, g2, a), blend(b1, b2, a))
 end
 
 ---@param C table
