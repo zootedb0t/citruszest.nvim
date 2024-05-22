@@ -36,8 +36,7 @@ M.theme = function(C, O)
     Directory = { fg = C.bright_orange }, -- directory names (and other special names in listings)
     EndOfBuffer = { fg = C.background }, -- filler lines (~) after the end of the buffer.  By default, this is highlighted like |hl-NonText|.
     ErrorMsg = { fg = C.red }, -- error messages on the command line
-    vertsplit = { fg = C.baby_blue }, -- the column separating vertically split windows
-    winseparator = { fg = C.baby_blue },
+    WinSeparator = { fg = C.baby_blue }, -- separating vertical or horizontal split windows
     Folded = { fg = C.orange, bg = C.background }, -- line used for closed folds
     FoldColumn = { fg = C.orange, bg = C.background }, -- 'foldcolumn'
     SignColumn = { fg = C.foreground, bg = C.background }, -- column where |signs| are displayed
