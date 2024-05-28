@@ -185,16 +185,19 @@ M.theme = function(C, O)
     DiagnosticWarn = { bg = C.none, fg = C.bright_yellow }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
     DiagnosticInfo = { bg = C.none, fg = C.blue }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
     DiagnosticHint = { bg = C.none, fg = C.bright_cyan }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
+    DiagnosticOk = { bg = C.none, fg = C.bright_green },
 
     DiagnosticFloatingError = { fg = C.red }, -- Used to color "Error" diagnostic messages in diagnostics float
     DiagnosticFloatingWarn = { fg = C.bright_yellow }, -- Used to color "Warn" diagnostic messages in diagnostics float
     DiagnosticFloatingInfo = { fg = C.blue }, -- Used to color "Info" diagnostic messages in diagnostics float
     DiagnosticFloatingHint = { fg = C.bright_cyan }, -- Used to color "Hint" diagnostic messages in diagnostics float
+    DiagnosticFloatingOk = { fg = C.bright_green },
 
     DiagnosticSignError = { fg = C.red }, -- Used for "Error" signs in sign column
     DiagnosticSignWarn = { fg = C.bright_yellow }, -- Used for "Warn" signs in sign column
     DiagnosticSignInfo = { fg = C.blue }, -- Used for "Info" signs in sign column
     DiagnosticSignHint = { fg = C.bright_blue }, -- Used for "Hint" signs in sign column
+    DiagnosticSignOk = { fg = C.bright_green },
 
     LspDiagnosticsError = { fg = C.red },
     LspDiagnosticsWarning = { fg = C.bright_yellow },
