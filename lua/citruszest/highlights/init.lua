@@ -353,7 +353,6 @@ M.theme = function(C, O)
     ["@tag.delimiter"] = { fg = C.red }, -- Tag delimiter like < > /
 
     -- Language specific:
-
     -- Markdown
     ["@markup.heading.1.markdown"] = { link = "rainbow1" },
     ["@markup.heading.2.markdown"] = { link = "rainbow2" },
@@ -406,6 +405,17 @@ M.theme = function(C, O)
 
     -- Haskell
     ["@operator.haskell"] = { fg = C.bright_yellow },
+
+    -- csv
+    csvCol0 = { fg = C.bright_orange },
+    csvCol1 = { fg = C.bright_green },
+    csvCol2 = { fg = C.bright_yellow },
+    csvCol3 = { fg = C.bright_red },
+    csvCol4 = { fg = C.bright_blue },
+    csvCol5 = { fg = C.bright_cyan },
+    csvCol6 = { fg = C.lemon_yellow },
+    csvCol7 = { fg = C.aurora },
+    csvCol8 = { fg = C.red },
 
     -- QuickFix
     QuickFixLine = { bg = C.cursor, bold = O.bold }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
