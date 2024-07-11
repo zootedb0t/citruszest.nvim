@@ -29,7 +29,7 @@ local colors = {
   lemon_yellow = "#FFF2B3",
   aurora = "#B2F3AC",
   oxley = "#659B75",
-  violet = "#9c4be7",
+  violet = "#af74ee",
 }
 
 return colors
