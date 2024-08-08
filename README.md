@@ -121,6 +121,7 @@ lualine.setup {
 - [Foot](https://codeberg.org/dnkl/foot) terminal users can use [this](extra/citruszest_foot).
 - [iterm2](https://iterm2.com/) user can use [this](extra/citruszest.itermcolors).
 - [Alacritty](https://alacritty.org/) user can use [this](extra/citruszest_alacritty.toml).
+- [Konsole](https://konsole.kde.org/) user put [this](extra/Citruszest.colorscheme) into `~/.local/share/konsole/` and then select the theme on Konsole's profile settings
 
 ## :art: Colors
 
