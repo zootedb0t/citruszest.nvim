@@ -1,0 +1,33 @@
+# save this file to ~/.config/wezterm/colors/citruszest.toml, then add
+# `color_scheme = "citruszest"`
+# to your wezterm.lua
+[colors]
+foreground = "#f9f9f9"
+background = "#121212"
+cursor_fg = "#f9f9f9"
+cursor_bg = "#bfbfbf"
+cursor_border = "#bfbfbf"
+selection_bg = "#404040"
+selection_fg = "#bfbfbf"
+
+ansi = [
+  "#232323",
+  "#ff5454",
+  "#00cc7a",
+  "#ffd700",
+  "#00bfff",
+  "#ff00ff",
+  "#48d1cc",
+  "#bfbfbf",
+]
+
+brights = [
+  "#767c77",
+  "#ff1a75",
+  "#1affa3",
+  "#ffff00",
+  "#28c9ff",
+  "#ff33ff",
+  "#09fff2",
+  "#f9f9f9",
+]
