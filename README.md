@@ -122,6 +122,7 @@ lualine.setup {
 - [iterm2](https://iterm2.com/) user can use [this](extra/citruszest.itermcolors).
 - [Alacritty](https://alacritty.org/) user can use [this](extra/citruszest_alacritty.toml).
 - [Konsole](https://konsole.kde.org/) user put [this](extra/Citruszest.colorscheme) into `~/.local/share/konsole/` and then select the theme on Konsole's profile settings
+- [Wezterm](https://wezfurlong.org/wezterm/index.html) users can use [this](extra/citruszest_wezterm.toml)
 
 ## :art: Colors
 
