@@ -1,5 +1,5 @@
-# place this file in ~/.config/wezterm/colors, then add 
-# `color_scheme = "Rigel"` 
+# save this file to ~/.config/wezterm/colors/citruszest.toml, then add
+# `color_scheme = "citruszest"`
 # to your wezterm.lua
 [colors]
 foreground = "#f9f9f9"
