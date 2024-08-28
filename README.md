@@ -123,6 +123,7 @@ lualine.setup {
 - [Alacritty](https://alacritty.org/) user can use [this](extra/citruszest_alacritty.toml).
 - [Konsole](https://konsole.kde.org/) user put [this](extra/Citruszest.colorscheme) into `~/.local/share/konsole/` and then select the theme on Konsole's profile settings
 - [Wezterm](https://wezfurlong.org/wezterm/index.html) users can use [this](extra/citruszest_wezterm.toml)
+- [Mutt](http://www.mutt.org/)/[Neomutt](https://neomutt.org/) users can add [this](extra/citruszest_mutt) (or the [256 color](extra/citruszest_mutt256) version) to their `[neo]muttrc`
 
 ## :art: Colors
 
