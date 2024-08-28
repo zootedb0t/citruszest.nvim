@@ -1,0 +1,43 @@
+# this is only a best effort attempt to replicate the palette in 256 colors
+
+color attachment color255 color233
+color bold color255 color233
+color error color255 color233
+color hdrdefault color255 color233
+color indicator color255 color238
+color markers color255 color233
+color normal color255 color233
+color quoted color255 color233
+color quoted1 color51 color233
+color quoted2 color255 color233
+color quoted3 color51 color233
+color quoted4 color255 color233
+color quoted5 color51 color233
+color search color233 color255
+color sidebar_divider color255 color233
+color sidebar_new color255 color233
+color signature color51 color233
+color status color233 color255
+color tilde color255 color233
+color tree color255 color233
+color underline color255 color255
+
+color index color51 color233 ~O # old
+color index color33 color233 ~P # from me
+color index color255 color233 ~N # new
+color index color255 color233 ~= # duplicate
+color index color135 color233 ~Q # replied
+color index color220 color233 ~F # flagged
+color index color233 color255 ~D # deleted
+color index color233 color255 ~T # tagged
+
+color header color51 color233 "^Received:"
+color header color51 color233 "^X-Spam-Status:"
+color header color255 color233 "^Subject:"
+color header color220 color233 "^(To:|From:)"
+
+color compose header color255 color233
+color compose security_encrypt color255 color233
+color compose security_sign color255 color233
+color compose security_both color255 color233
+color compose security_none color255 color233

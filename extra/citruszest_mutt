@@ -1,0 +1,44 @@
+# requires TERM=xterm-direct
+set color_directcolor = yes
+
+color attachment #00bfff #121212
+color bold #bfbfbf #121212
+color error #ff5454 #121212
+color hdrdefault #bfbfbf #121212
+color indicator #bfbfbf #363636
+color markers #a1a1a1 #121212
+color normal #bfbfbf #121212
+color quoted #bfbfbf #121212
+color quoted1 #00ffff #121212
+color quoted2 #bfbfbf #121212
+color quoted3 #00ffff #121212
+color quoted4 #bfbfbf #121212
+color quoted5 #00ffff #121212
+color search #121212 #ff7431
+color sidebar_divider #bfbfbf #121212
+color sidebar_new #00cc7a #121212
+color signature #00ffff #121212
+color status #121212 #bfbfbf
+color tilde #a1a1a1 #121212
+color tree #00cc7a #121212
+color underline #bfbfbf #595959
+
+color index #00ffff #121212 ~O # old
+color index #00bfff #121212 ~P # from me
+color index #00cc7a #121212 ~N # new
+color index #ff5454 #121212 ~= # duplicate
+color index #af74ee #121212 ~Q # replied
+color index #ffd700 #121212 ~F # flagged
+color index #121212 #ff5454 ~D # deleted
+color index #121212 #bfbfbf ~T # tagged
+
+color header #00ffff #121212 "^Received:"
+color header #00ffff #121212 "^X-Spam-Status:"
+color header #00cc7a #121212 "^Subject:"
+color header #ffd700 #121212 "^(To:|From:)"
+
+color compose header #bfbfbf #121212
+color compose security_encrypt #af74ee #121212
+color compose security_sign #00bfff #121212
+color compose security_both #00cc7a #121212
+color compose security_none #ff7431 #121212
