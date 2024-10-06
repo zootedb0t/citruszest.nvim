@@ -81,7 +81,7 @@ M.theme = function(C, O)
     WildMenu = { fg = C.foreground, bg = C.background }, -- current match in 'wildmenu' completion
     WinBar = { fg = C.bright_white },
     WinBarNC = { fg = C.bright_black, bg = C.background }, --Window bar of not-current windows.
-    Comment = { fg = C.oxley }, -- just comments
+    Comment = { fg = C.alt_background }, -- just comments
     SpecialComment = { link = "Special" }, -- special things inside a comment
     Constant = { fg = C.orange }, -- (preferred) any constant
     String = { fg = C.aurora }, -- a string constant: "this is a string"
@@ -214,7 +214,7 @@ M.theme = function(C, O)
     LspCodeLens = { fg = C.bright_cyan }, -- virtual text of the codelens
     LspInlayHint = {
       fg = C.oxley,
-      bg = C.background,
+      bg = C.alt_background,
     }, -- virtual text of the inlay hints
     LspInfoBorder = { link = "FloatBorder" }, -- LspInfo border
 

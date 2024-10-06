@@ -2,6 +2,7 @@
 local colors = {
   background = "#121212",
   foreground = "#BFBFBF",
+  alt_background = "#302f2f",
   visual = "#404040",
   cursor = "#383838",
   none = "NONE",
