@@ -95,7 +95,7 @@ M.theme = function(C, O)
     Conditional = { fg = C.bright_cyan }, --  if, then, else, endif, switch, etc.
     Repeat = { fg = C.bright_yellow }, --   for, do, while, etc.
     Label = { fg = C.bright_green }, --    case, default, etc.
-    Operator = { fg = C.bright_yellow }, -- "sizeof", "+", "*", etc.
+    Operator = { fg = C.orange }, -- "sizeof", "+", "*", etc.
     Keyword = { fg = C.lemon_yellow }, --  any other keyword
     Array = { fg = C.blue },
     Exception = { fg = C.blue }, --  try, catch, throw
