@@ -30,6 +30,7 @@ local colors = {
   aurora = "#B2F3AC",
   oxley = "#659B75",
   violet = "#af74ee",
+  very_bright_green = "#d4ffe0",
 }
 
 return colors
