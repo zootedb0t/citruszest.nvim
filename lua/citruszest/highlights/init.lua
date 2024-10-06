@@ -87,6 +87,7 @@ M.theme = function(C, O)
     String = { fg = C.aurora }, -- a string constant: "this is a string"
     Character = { fg = C.yellow }, --  a character constant: 'c', '\n'
     Number = { fg = C.lemon_yellow }, --   a number constant: 234, 0xff
+    Parameter = { fg = C.bright_blue, italic = O.italic },
     Float = { link = "Number" }, --    a floating point constant: 2.3e10
     Boolean = { fg = C.bright_orange }, --  a boolean constant: TRUE, false
     Identifier = { fg = C.bright_yellow, italic = O.italic }, -- (preferred) any variable name
