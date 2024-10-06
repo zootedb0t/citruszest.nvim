@@ -81,7 +81,7 @@ M.theme = function(C, O)
     WildMenu = { fg = C.foreground, bg = C.background }, -- current match in 'wildmenu' completion
     WinBar = { fg = C.bright_white },
     WinBarNC = { fg = C.bright_black, bg = C.background }, --Window bar of not-current windows.
-    Comment = { fg = C.alt_background }, -- just comments
+    Comment = { fg = C.comment }, -- just comments
     SpecialComment = { link = "Special" }, -- special things inside a comment
     Constant = { fg = C.orange }, -- (preferred) any constant
     String = { fg = C.aurora }, -- a string constant: "this is a string"

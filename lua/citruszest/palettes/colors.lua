@@ -6,6 +6,7 @@ local colors = {
   visual = "#404040",
   cursor = "#383838",
   none = "NONE",
+  comment = "#8c8989",
 
   black = "#232323",
   red = "#FF5454",
