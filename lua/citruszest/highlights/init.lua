@@ -213,7 +213,7 @@ M.theme = function(C, O)
     LspDiagnosticsUnderlineHint = { fg = C.bright_cyan, bg = C.background, underline = true }, -- Used to underline "Hint" diagnostics
     LspCodeLens = { fg = C.bright_cyan }, -- virtual text of the codelens
     LspInlayHint = {
-      fg = C.violet,
+      fg = C.oxley,
       bg = C.background,
     }, -- virtual text of the inlay hints
     LspInfoBorder = { link = "FloatBorder" }, -- LspInfo border
