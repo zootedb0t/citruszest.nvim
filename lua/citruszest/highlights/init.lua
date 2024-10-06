@@ -199,6 +199,7 @@ M.theme = function(C, O)
     DiagnosticSignHint = { fg = C.bright_blue }, -- Used for "Hint" signs in sign column
     DiagnosticSignOk = { fg = C.bright_green },
 
+    LspSignatureActiveParameter = { fg = C.cyan },
     LspDiagnosticsError = { fg = C.red },
     LspDiagnosticsWarning = { fg = C.bright_yellow },
     LspDiagnosticsInformation = { fg = C.blue },
