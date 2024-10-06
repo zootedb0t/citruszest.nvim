@@ -226,7 +226,7 @@ M.theme = function(C, O)
     ["@lsp.type.enumMember"] = { link = "@constant" },
     ["@lsp.type.escapeSequence"] = { link = "@string.escape" },
     ["@lsp.type.formatSpecifier"] = { link = "@punctuation.special" },
-    ["@lsp.type.interface"] = { fg = C.flamingo },
+    ["@lsp.type.interface"] = { fg = C.baby_blue },
     ["@lsp.type.keyword"] = { link = "@keyword" },
     ["@lsp.type.namespace"] = { link = "@module" },
     ["@lsp.type.number"] = { link = "@number" },
