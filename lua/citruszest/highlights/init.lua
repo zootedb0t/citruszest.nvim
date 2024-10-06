@@ -299,7 +299,7 @@ M.theme = function(C, O)
     -- Keywords
     ["@keyword"] = { link = "Keyword" }, -- For keywords that don't fall in previous categories.
     ["@keyword.coroutine"] = { fg = C.bright_red },
-    ["@keyword.function"] = { fg = C.bright_red }, -- For keywords used to define a function.
+    ["@keyword.function"] = { fg = C.lemon_yellow }, -- For keywords used to define a function.
     ["@keyword.operator"] = { link = "Operator" }, -- For new keyword operator.
     ["@keyword.return"] = { fg = C.bright_yellow },
     ["@keyword.import"] = { link = "Include" }, -- For includes.
