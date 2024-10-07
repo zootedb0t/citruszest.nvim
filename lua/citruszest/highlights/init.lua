@@ -623,7 +623,7 @@ M.theme = function(C, O)
     NeoTreeGitConflict = { fg = C.red },
     NeoTreeGitDeleted = { fg = C.red },
     NeoTreeGitIgnored = { fg = C.comment },
-    NeoTreeGitModified = { fg = C.bright_green },
+    NeoTreeGitModified = { fg = C.lemon_yellow },
     NeoTreeGitUnstaged = { fg = C.aurora },
     NeoTreeGitUntracked = { fg = C.bright_white },
     NeoTreeGitStaged = { fg = C.green },
