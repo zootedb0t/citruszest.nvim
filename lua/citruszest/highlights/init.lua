@@ -83,7 +83,7 @@ M.theme = function(C, O)
     WinBarNC = { fg = C.bright_black, bg = C.background }, --Window bar of not-current windows.
     Comment = { fg = C.comment }, -- just comments
     SpecialComment = { link = "Special" }, -- special things inside a comment
-    Constant = { fg = C.green }, -- (preferred) any constant
+    Constant = { fg = C.bright_yellow }, -- (preferred) any constant
     String = { fg = C.aurora }, -- a string constant: "this is a string"
     Character = { fg = C.yellow }, --  a character constant: 'c', '\n'
     Number = { fg = C.lemon_yellow }, --   a number constant: 234, 0xff
@@ -265,7 +265,7 @@ M.theme = function(C, O)
     ["@punctuation.bracket"] = { fg = C.orange }, -- For brackets and parenthesis.
     ["@punctuation.special"] = { link = "Special" }, -- For special punctutation that does not fall in the categories before.
 
-    ["@module"] = { fg = C.bright_yellow, italic = O.italic }, -- For identifiers referring to modules and namespaces.
+    ["@module"] = { fg = C.yellow, italic = O.italic }, -- For identifiers referring to modules and namespaces.
     ["@module.builtin"] = { fg = C.bright_blue, italic = O.italic },
     ["@label"] = { fg = C.bright_orange },
     ["@macro"] = { link = "Macro" },
