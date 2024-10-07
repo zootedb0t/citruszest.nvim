@@ -290,7 +290,7 @@ M.theme = function(C, O)
     ["@function"] = { link = "Function" }, -- For function (calls and definitions).
     ["@function.builtin"] = { fg = C.blue }, -- For builtin functions: table.insert in Lua.
     ["@function.call"] = { link = "Function" }, -- function calls
-    ["@function.macro"] = { fg = C.blue }, -- For macro defined functions (calls and definitions): each macro_rules in RusC.
+    ["@function.macro"] = { fg = C.violet }, -- For macro defined functions (calls and definitions): each macro_rules in RusC.
     ["@function.method"] = { link = "Function" }, -- For method calls and definitions.
     ["@function.method.call"] = { link = "Function" }, -- method calls
     ["@constructor"] = { fg = C.bright_yellow }, -- For constructor calls and definitions: = { } in Lua, and Java constructors.
