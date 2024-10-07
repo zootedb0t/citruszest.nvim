@@ -83,7 +83,7 @@ M.theme = function(C, O)
     WinBarNC = { fg = C.bright_black, bg = C.background }, --Window bar of not-current windows.
     Comment = { fg = C.comment }, -- just comments
     SpecialComment = { link = "Special" }, -- special things inside a comment
-    Constant = { fg = C.orange }, -- (preferred) any constant
+    Constant = { fg = C.green }, -- (preferred) any constant
     String = { fg = C.aurora }, -- a string constant: "this is a string"
     Character = { fg = C.yellow }, --  a character constant: 'c', '\n'
     Number = { fg = C.lemon_yellow }, --   a number constant: 234, 0xff
