@@ -101,7 +101,7 @@ M.theme = function(C, O)
     Exception = { fg = C.blue }, --  try, catch, throw
 
     PreProc = { fg = C.bright_green }, -- (preferred) generic Preprocessor
-    Include = { fg = C.blue }, --  preprocessor #include
+    Include = { fg = C.white }, --  preprocessor #include
     Define = { link = "PreProc" }, -- preprocessor #define
     Macro = { fg = C.violet }, -- same as Define
     PreCondit = { link = "PreProc" }, -- preprocessor #if, #else, #endif, etc.
