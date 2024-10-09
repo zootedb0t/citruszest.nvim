@@ -29,6 +29,7 @@ local colors = {
   -- Extra
   baby_blue = "#9ADCFF",
   lemon_yellow = "#FFF2B3",
+  dark_lemon_yellow = "#FAE164",
   aurora = "#B2F3AC",
   oxley = "#659B75",
   violet = "#af74ee",

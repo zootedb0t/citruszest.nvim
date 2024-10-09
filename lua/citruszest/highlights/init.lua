@@ -84,7 +84,7 @@ M.theme = function(C, O)
     Comment = { fg = C.comment }, -- just comments
     SpecialComment = { link = "Special" }, -- special things inside a comment
     Constant = { fg = C.aurora }, -- (preferred) any constant
-    String = { fg = C.aurora }, -- a string constant: "this is a string"
+    String = { fg = C.dark_lemon_yellow }, -- a string constant: "this is a string"
     Character = { fg = C.yellow }, --  a character constant: 'c', '\n'
     Number = { fg = C.lemon_yellow }, --   a number constant: 234, 0xff
     Float = { link = "Number" }, --    a floating point constant: 2.3e10
@@ -108,7 +108,7 @@ M.theme = function(C, O)
 
     StorageClass = { fg = C.yellow }, -- static, register, volatile, etc.
     Structure = { link = "Keyword" }, --  struct, union, enum, etc.
-    Special = { fg = C.bright_orange }, -- (preferred) any special symbol
+    Special = { fg = C.orange }, -- (preferred) any special symbol
     Type = { fg = C.bright_orange }, -- (preferred) int, long, char, etc.
     Typedef = { link = "Type" }, --  A typedef
     SpecialChar = { link = "Special" }, -- special character in a constant
