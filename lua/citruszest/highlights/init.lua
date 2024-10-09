@@ -251,6 +251,9 @@ M.theme = function(C, O)
     ["@lsp.typemod.variable.defaultLibrary"] = { link = "@variable.builtin" },
     ["@lsp.typemod.variable.injected"] = { link = "@variable" },
 
+    -- rust specific
+    ["@lsp.type.decorator.rust"] = { link = "@function.macro" },
+
     -- Treesitter highlights
     ["@comment"] = { link = "Comment" },
     ["@comment.documentation"] = { fg = C.white },
