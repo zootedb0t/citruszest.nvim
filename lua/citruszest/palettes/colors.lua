@@ -25,6 +25,7 @@ local colors = {
   bright_blue = "#28C9FF",
   bright_cyan = "#33ffff",
   bright_white = "#F9F9F9",
+  bright_pink = "#FF5733",
 
   -- Extra
   baby_blue = "#9ADCFF",
