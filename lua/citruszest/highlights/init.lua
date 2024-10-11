@@ -181,8 +181,8 @@ M.theme = function(C, O)
     LspReferenceRead = { bg = C.visual }, -- used for highlighting "read" references
     LspReferenceWrite = { bg = C.visual }, -- used for highlighting "write" references
 
-    DiagnosticError = { bg = C.none, fg = C.bright_red, bold = O.bold }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
-    DiagnosticWarn = { bg = C.none, fg = C.bright_pink }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
+    DiagnosticError = { bg = C.none, fg = C.bright_pink, bold = O.bold }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
+    DiagnosticWarn = { bg = C.none, fg = C.bright_yellow }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
     DiagnosticInfo = { bg = C.none, fg = C.blue }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
     DiagnosticHint = { bg = C.none, fg = C.bright_cyan }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
     DiagnosticOk = { bg = C.none, fg = C.bright_green },
