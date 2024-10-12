@@ -269,7 +269,7 @@ M.theme = function(C, O)
     ["@punctuation.special"] = { link = "Special" }, -- For special punctutation that does not fall in the categories before.
 
     ["@module"] = { fg = C.yellow, italic = O.italic }, -- For identifiers referring to modules and namespaces.
-    ["@module.builtin"] = { fg = C.bright_blue, italic = O.italic },
+    ["@module.builtin"] = { link = "@module" },
     ["@label"] = { fg = C.bright_orange },
     ["@macro"] = { link = "Macro" },
 
@@ -291,7 +291,7 @@ M.theme = function(C, O)
 
     -- Functions
     ["@function"] = { link = "Function" }, -- For function (calls and definitions).
-    ["@function.builtin"] = { fg = C.blue }, -- For builtin functions: table.insert in Lua.
+    ["@function.builtin"] = { link = "Function" }, -- For builtin functions: table.insert in Lua.
     ["@function.call"] = { link = "Function" }, -- function calls
     ["@function.macro"] = { fg = C.violet }, -- For macro defined functions (calls and definitions): each macro_rules in RusC.
     ["@function.method"] = { link = "Function" }, -- For method calls and definitions.
