@@ -336,7 +336,7 @@ M.theme = function(C, O)
     ["@variable.member"] = { fg = C.bright_cyan }, -- For fields
 
     ["@constant"] = { link = "Constant" }, -- For constants
-    ["@constant.builtin"] = { fg = C.red }, -- For constant that are built in the language: nil in Lua.
+    ["@constant.builtin"] = { fg = "Constant" }, -- For constant that are built in the language: nil in Lua.
     ["@constant.macro"] = { link = "Macro" }, -- For constants that are defined by macros: NULL in C.
 
     -- Markup
