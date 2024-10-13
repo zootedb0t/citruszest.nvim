@@ -243,7 +243,7 @@ M.theme = function(C, O)
     ["@lsp.typemod.enumMember.defaultLibrary"] = { link = "@constant.builtin" },
     ["@lsp.typemod.function.defaultLibrary"] = { link = "@function.builtin" },
     ["@lsp.typemod.keyword.async"] = { link = "@keyword.coroutine" },
-    ["@lsp.typemod.macro.defaultLibrary"] = { link = "@function.builtin" },
+    ["@lsp.typemod.macro.defaultLibrary"] = { link = "Macro" },
     ["@lsp.typemod.method.defaultLibrary"] = { link = "@function.builtin" },
     ["@lsp.typemod.operator.injected"] = { link = "@operator" },
     ["@lsp.typemod.string.injected"] = { link = "@string" },
