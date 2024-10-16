@@ -255,6 +255,9 @@ M.theme = function(C, O)
     ["@lsp.type.decorator.rust"] = { link = "@function.macro" },
     ["@lsp.type.const.rust"] = { link = "Constant" },
 
+    -- f# specific
+    ["@lsp.type.module.fsharp"] = { link = "@module" },
+
     -- Treesitter highlights
     ["@comment"] = { link = "Comment" },
     ["@comment.documentation"] = { fg = C.white },
