@@ -257,7 +257,7 @@ M.theme = function(C, O)
 
     -- f# specific
     ["@lsp.type.module.fsharp"] = { link = "@module" },
-    [" @lsp.type.variable.fsharp"] = { link = "@variable" },
+    ["@lsp.type.variable.fsharp"] = { link = "@variable" },
 
     -- Treesitter highlights
     ["@comment"] = { link = "Comment" },
