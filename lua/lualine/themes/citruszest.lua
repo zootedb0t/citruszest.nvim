@@ -11,15 +11,15 @@ local colors = {
 
 return {
   normal = {
-    a = { bg = colors.black, fg = colors.green },
-    b = { bg = colors.black, fg = colors.orange },
+    a = { bg = colors.green, fg = colors.black },
+    b = { bg = colors.orange, fg = colors.black },
     c = { bg = colors.black, fg = colors.white },
   },
   insert = {
-    a = { bg = colors.black, fg = colors.blue },
+    a = { bg = colors.blue, fg = colors.black },
   },
   visual = {
-    a = { bg = colors.black, fg = colors.cyan },
+    a = { bg = colors.cyan, fg = colors.black },
   },
   replace = {
     a = { bg = colors.black, fg = colors.yellow },
