@@ -586,9 +586,9 @@ M.theme = function(C, O)
     FlashPrompt = { link = "NormalFloat" },
 
     -- Lazy
-    LazyH1 = { fg = C.bright_green, bg = C.visual, bold = O.bold },
+    LazyH1 = { fg = C.lime_green, bg = C.visual, bold = O.bold },
     LazyButton = { fg = C.foreground, bg = C.visual, bold = O.bold },
-    LazyButtonActive = { fg = C.bright_green, bg = C.cursor, bold = O.bold },
+    LazyButtonActive = { fg = C.lime_green, bg = C.cursor, bold = O.bold },
     LazySpecial = { fg = C.blue },
 
     -- Navic
