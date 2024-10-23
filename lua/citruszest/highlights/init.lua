@@ -336,8 +336,8 @@ M.theme = function(C, O)
     -- Identifiers
     ["@variable"] = { fg = C.very_bright_green }, -- Any variable name that does not have another highlight.
     ["@variable.builtin"] = { link = "Identifier" }, -- Variable names that are defined by the languages, like this or self.
-    ["@variable.parameter"] = { fg = C.bright_blue, italic = O.italic }, -- For parameters of a function.
-    ["@parameter"] = { fg = C.bright_blue, italic = O.italic }, -- For the variables inside a function that are parameters of the function
+    ["@variable.parameter"] = { fg = C.bright_green, italic = O.italic }, -- For parameters of a function.
+    ["@parameter"] = { fg = C.bright_green, italic = O.italic }, -- For the variables inside a function that are parameters of the function
     ["@variable.member"] = { fg = C.bright_cyan }, -- For fields
 
     ["@constant"] = { link = "Constant" }, -- For constants
