@@ -518,9 +518,9 @@ M.theme = function(C, O)
     TelescopePromptBorder = { fg = C.bright_cyan, bg = C.background },
     TelescopeResultsBorder = { fg = C.bright_cyan, bg = C.background },
     TelescopePreviewBorder = { fg = C.bright_cyan, bg = C.background },
-    TelescopePromptTitle = { fg = C.black, bg = C.bright_green },
-    TelescopeResultsTitle = { fg = C.black, bg = C.bright_green },
-    TelescopePreviewTitle = { fg = C.black, bg = C.bright_green },
+    TelescopePromptTitle = { fg = C.black, bg = C.lime_green },
+    TelescopeResultsTitle = { fg = C.black, bg = C.lime_green },
+    TelescopePreviewTitle = { fg = C.black, bg = C.lime_green },
     TelescopeSelection = { bg = C.visual },
 
     -- NvimTree
@@ -556,8 +556,8 @@ M.theme = function(C, O)
     DashboardFooter = { fg = C.yellow },
 
     -- Dashboard Hyper Theme
-    DashboardProjectTitle = { fg = C.bright_green },
-    DashboardProjectTitleIcon = { fg = C.bright_green },
+    DashboardProjectTitle = { fg = C.lime_green },
+    DashboardProjectTitleIcon = { fg = C.lime_green },
     DashboardProjectIcon = { fg = C.blue },
     DashboardMruTitle = { fg = C.bright_cyan },
     DashboardMruIcon = { fg = C.bright_cyan },
@@ -567,7 +567,7 @@ M.theme = function(C, O)
     --  Dashboard Doom Theme
     DashboardDesc = { fg = C.bright_blue },
     DashboardIcon = { fg = C.bright_blue },
-    DashboardKey = { fg = C.bright_green },
+    DashboardKey = { fg = C.lime_green },
     DashboardShortCut = { fg = C.bright_yellow },
 
     -- Whichkey
