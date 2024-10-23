@@ -90,7 +90,7 @@ M.theme = function(C, O)
     Float = { link = "Number" }, --    a floating point constant: 2.3e10
     Boolean = { fg = C.bright_orange }, --  a boolean constant: TRUE, false
     Identifier = { fg = C.bright_yellow, italic = O.italic }, -- (preferred) any variable name
-    Function = { fg = C.bright_green }, -- function name (also: methods for classes)
+    Function = { fg = C.lime_green }, -- function name (also: methods for classes)
     Statement = { fg = C.blue }, -- (preferred) any statement
     Conditional = { fg = C.bright_cyan }, --  if, then, else, endif, switch, etc.
     Repeat = { fg = C.bright_yellow }, --   for, do, while, etc.
