@@ -8,6 +8,7 @@ local colors = {
   blue = "#00BFFF",
   cyan = "#48D1CC",
   white = "#BFBFBF",
+  violet = "#af74ee",
 }
 
 return {
@@ -20,7 +21,7 @@ return {
     a = { bg = colors.blue, fg = colors.black },
   },
   visual = {
-    a = { bg = colors.cyan, fg = colors.black },
+    a = { bg = colors.violet, fg = colors.black },
   },
   replace = {
     a = { bg = colors.black, fg = colors.yellow },
