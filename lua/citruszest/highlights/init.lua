@@ -174,6 +174,8 @@ M.theme = function(C, O)
 
     IblIndent = { fg = C.alt_background },
     IblScope = { fg = C.oxley },
+    MiniIndentscopeSymbol = { fg = C.oxley },
+    MiniIndentscopePrefix = { style = { "nocombine" } }, -- Make it invisible
     -- Native LSP
 
     -- These groups are for the native LSP client. Some other LSP clients may
