@@ -172,8 +172,8 @@ M.theme = function(C, O)
     rainbow5 = { fg = C.orange },
     rainbow6 = { fg = C.bright_cyan },
 
-    IblIndent = { fg = C.bright_cyan },
-    -- IblScope = { fg = C[scope_color] or C.text },
+    IblIndent = { fg = C.alt_background },
+    IblScope = { fg = C.oxley },
     -- Native LSP
 
     -- These groups are for the native LSP client. Some other LSP clients may
