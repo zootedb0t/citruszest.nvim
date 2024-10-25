@@ -1,39 +1,36 @@
 <h1 align="center">
-citruszest.nvim
+citrusdream.nvim
 
 <a href="https://opensource.org/license/mit/" rel="nofollow"><img alt="LICENSE" src="https://img.shields.io/badge/License-MIT-blue.svg" style="max-width: 100%;"></a>
 <a href="https://www.lua.org/"><img alt="Lua" src="https://img.shields.io/badge/Made_With-Lua-blue.svg?logo=lua" style="max-width:100%"></a>
-[![Luacheck](https://github.com/zootedb0t/citruszest.nvim/actions/workflows/luacheck.yml/badge.svg)](https://github.com/zootedb0t/citruszest.nvim/actions/workflows/luacheck.yml)
 
 </h1>
 
 <p align="center">
 <img alt="color_palette" style="width:90%" src="./misc/citruszest-palette.png">
 
-<b>citruszest.nvim</b> features a combination of bright and juicy colors reminiscent of various citrus fruits. The primary colors include vibrant oranges, zesty yellows, and refreshing greens. These colors are carefully selected to provide a visually stimulating and attention-grabbing experience while coding.
+<b>citrsudream.nvim</b> is a fork of citruszest.nvim.
 
 </p>
 
 ## :fire: Showcase
 
-![Screenshot_2023-12-15-15-40-28](https://github.com/zootedb0t/citruszest.nvim/assets/62596687/844d3114-189e-4720-ad86-0208ddb1e919)
-
-![Screenshot_2023-11-08-09-14-48_1920x1080](https://github.com/zootedb0t/citruszest.nvim/assets/62596687/0ca018ef-2837-43e0-8b33-a8fd2e9d6e0c)
-
-![Screenshot_2023-11-08-09-11-41_1920x1080](https://github.com/zootedb0t/citruszest.nvim/assets/62596687/f8b07699-7d33-4aea-b029-627271400edf)
+TODO
 
 ## :wrench: Installation
 
 > [!IMPORTANT]
+>
 > ### Requirement
-> - ***Treesitter*** > v0.9.2 (Recommended)
-> - Neovim >= v0.9.1
+>
+> - **_Treesitter_** > v0.9.2 (Recommended)
+> - Neovim >= v0.10.0
 
 [lazy.nvim](https://github.com/folke/lazy.nvim)
 
 ```lua
 {
-  "zootedb0t/citruszest.nvim",
+  "benjaminjellis/citrusdream.nvim",
   lazy = false,
   priority = 1000,
 },
@@ -42,13 +39,13 @@ citruszest.nvim
 [packer.nvim](https://github.com/wbthomason/packer.nvim)
 
 ```lua
-use { "zootedb0t/citruszest.nvim" }
+use { "benjaminjellis/citrusdream.nvim", }
 ```
 
 [vim-plug](https://github.com/junegunn/vim-plug)
 
 ```viml
-Plug 'zootedb0t/citruszest.nvim'
+Plug 'benjaminjellis/citrusdream.nvim'
 ```
 
 ## :question: Usage
@@ -58,13 +55,13 @@ Enable `colorscheme` after installation.
 In `init.lua`
 
 ```lua
-vim.cmd("colorscheme citruszest")
+vim.cmd("colorscheme citrsudream")
 ```
 
 In `init.vim`
 
 ```viml
-colorscheme citruszest
+colorscheme citrsudream
 ```
 
 ## :hammer: Configration
@@ -73,7 +70,7 @@ To find `highlight` group of word under cursor. Use `Inspect` command.
 
 ```lua
     -- For using default config leave this empty.
-    require("citruszest").setup({
+    require("citrsudream").setup({
         option = {
             transparent = false, -- Enable/Disable transparency
             bold = false,
@@ -88,14 +85,14 @@ To find `highlight` group of word under cursor. Use `Inspect` command.
     })
 ```
 
-`citruszest` supports [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim/).
+`citrusdream` supports [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim/).
 
 ```lua
 local lualine = require 'lualine'
 
 lualine.setup {
   options = {
-    theme = 'citruszest',
+    theme = 'citrusdream',
   }
 }
 ```
@@ -113,6 +110,7 @@ lualine.setup {
 - [flash.nvim](https://github.com/folke/flash.nvim)
 - [lazy.nvim](https://github.com/folke/lazy.nvim)
 - [dashboard-nvim](https://github.com/nvimdev/dashboard-nvim)
+- [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
 
 ## :fireworks: Integration
 
@@ -152,9 +150,7 @@ lualine.setup {
 
 ## :pray: Acknowledgments
 
-- [SpaceCamp](https://github.com/jaredgorski/SpaceCamp) - For inspiring me write my own colorscheme.
-- [FluoroMachine.nvim](https://github.com/maxmx03/FluoroMachine.nvim) - For the beautiful colorscheme.
-- [catppuccin](https://github.com/catppuccin/nvim) - For describing highlight groups.
+- [citruszest.nvim](https://github.com/zootedb0t/citruszest.nvim) -
 
 <div align="center">
     <h4>
