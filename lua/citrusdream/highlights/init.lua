@@ -646,12 +646,12 @@ M.theme = function(C, O)
 
     -- Noice
     NoiceCmdline = { fg = C.lemon_yellow },
-    NoiceCmdlineIcon = { fg = C.sky },
-    NoiceCmdlineIconSearch = { fg = C.lime_green },
-    NoiceCmdlinePopupBorder = { fg = C.lime_green },
-    NoiceCmdlinePopupBorderSearch = { fg = C.lime_green },
-    NoiceConfirmBorder = { fg = C.lime_green },
-    NoiceMini = { fg = C.subtext0, blend = 0 },
+    NoiceCmdlineIcon = { fg = C.yellow },
+    NoiceCmdlineIconSearch = { fg = C.yellow },
+    NoiceCmdlinePopupBorder = { fg = C.yellow },
+    NoiceCmdlinePopupBorderSearch = { fg = C.yellow },
+    NoiceConfirmBorder = { fg = C.yellow },
+    NoiceMini = { fg = C.yellow, blend = 0 },
     -- NoiceFormatProgressDone = {
     --   bg = O.transparent_background and C.none or U.darken(C.sky, 0.30, C.base),
     --   fg = C.subtext0,
