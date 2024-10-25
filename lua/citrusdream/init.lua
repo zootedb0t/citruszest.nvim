@@ -21,8 +21,9 @@ M.set_highlight = function()
   vim.g.colors_name = "citrusdream"
 
   local user_config = config.extended
-
-  pallet.background = "NONE"
+  if user_config.option.transparent then
+    pallet.background = "NONE"
+  end
 
   -- Override default highlight with user config
   local highlight_groups = vim.tbl_deep_extend(
