@@ -338,7 +338,7 @@ M.theme = function(C, O)
     ["@property"] = { fg = C.bright_cyan }, -- Same as TSField.
 
     -- Identifiers
-    ["@variable"] = { fg = C.very_bright_green }, -- Any variable name that does not have another highlight.
+    ["@variable"] = { fg = C.dark_lemon_yellow }, -- Any variable name that does not have another highlight.
     ["@variable.builtin"] = { link = "Identifier" }, -- Variable names that are defined by the languages, like this or self.
     ["@variable.parameter"] = { fg = C.bright_green, italic = O.italic }, -- For parameters of a function.
     ["@parameter"] = { fg = C.bright_green, italic = O.italic }, -- For the variables inside a function that are parameters of the function
