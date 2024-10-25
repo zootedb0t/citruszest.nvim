@@ -18,11 +18,11 @@ local colors = {
   white = "#BFBFBF",
 
   bright_black = "#767C77",
-  bright_red = "#FF1A75",
+  bright_red = "#FF8A8A",
   bright_green = "#1AFFA3",
-  bright_yellow = "#FFFF00",
+  bright_yellow = "#ffff54",
   bright_orange = "#FFAA54",
-  bright_blue = "#28C9FF",
+  bright_blue = "#69d6fa",
   bright_cyan = "#33ffff",
   bright_white = "#F9F9F9",
 
@@ -33,7 +33,7 @@ local colors = {
   dark_lemon_yellow = "#FAE164",
   aurora = "#B2F3AC",
   oxley = "#659B75",
-  violet = "#af74ee",
+  violet = "#C3B1E1",
   very_bright_green = "#d4ffe0",
 }
 
