@@ -27,6 +27,6 @@ return {
     a = { bg = colors.black, fg = colors.yellow, gui = "bold" },
   },
   command = {
-    a = { bg = colors.orange, fg = colors.black, gui = "bold" },
+    a = { bg = colors.yellow, fg = colors.black, gui = "bold" },
   },
 }

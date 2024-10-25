@@ -643,6 +643,24 @@ M.theme = function(C, O)
     NeoTreeIndentMarker = { fg = C.baby_blue },
     NeoTreeRootName = { fg = C.white },
     NeoTreeDotfile = { fg = C.bright_orange },
+
+    -- Noice
+    NoiceCmdline = { fg = C.lemon_yellow },
+    NoiceCmdlineIcon = { fg = C.sky },
+    NoiceCmdlineIconSearch = { fg = C.lime_green },
+    NoiceCmdlinePopupBorder = { fg = C.lime_green },
+    NoiceCmdlinePopupBorderSearch = { fg = C.lime_green },
+    NoiceConfirmBorder = { fg = C.lime_green },
+    NoiceMini = { fg = C.subtext0, blend = 0 },
+    NoiceFormatProgressDone = {
+      bg = O.transparent_background and C.none or U.darken(C.sky, 0.30, C.base),
+      fg = C.subtext0,
+    },
+    NoiceFormatProgressTodo = {
+      bg = O.transparent_background and C.none
+        or U.vary_color({ latte = U.lighten(C.mantle, 0.70, C.base) }, U.darken(C.surface0, 0.64, C.base)),
+      fg = C.subtext0,
+    },
   }
 end
 
