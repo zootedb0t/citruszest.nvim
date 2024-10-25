@@ -1,4 +1,4 @@
--- Citruszest color palette
+-- Citrusdream color palette
 local colors = {
   background = "#121212",
   foreground = "#BFBFBF",

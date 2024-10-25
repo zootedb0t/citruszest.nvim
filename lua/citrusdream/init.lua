@@ -1,7 +1,7 @@
 local M = {}
 
-local config = require("citruszest.options")
-local pallet = require("citruszest.palettes.colors")
+local config = require("citrusdream.options")
+local pallet = require("citrusdream.palettes.colors")
 
 ---@param opts table?
 M.setup = function(opts)
@@ -18,7 +18,7 @@ M.set_highlight = function()
 
   vim.o.background = "dark"
   vim.o.termguicolors = true
-  vim.g.colors_name = "citruszest"
+  vim.g.colors_name = "citrusdream"
 
   local user_config = config.extended
   if user_config.option.transparent then
@@ -28,7 +28,7 @@ M.set_highlight = function()
   -- Override default highlight with user config
   local highlight_groups = vim.tbl_deep_extend(
     "force",
-    require("citruszest.highlights").theme(pallet, config.extended.option),
+    require("citrusdream.highlights").theme(pallet, config.extended.option),
     user_config.style
   )
 
