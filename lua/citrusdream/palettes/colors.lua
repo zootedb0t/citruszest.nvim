@@ -36,6 +36,7 @@ local colors = {
   violet = "#C3B1E1",
   peach = "#fab387",
   very_bright_green = "#d4ffe0",
+  neon_green = "#0aff58",
 }
 
 return colors
