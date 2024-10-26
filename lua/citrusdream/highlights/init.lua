@@ -487,7 +487,7 @@ M.theme = function(C, O)
     CmpItemKindCopilot = { fg = C.bright_orange },
 
     -- Gitsigns
-    SignAdd = { fg = C.bright_green, bg = C.none },
+    SignAdd = { fg = C.green, bg = C.none },
     SignChange = { fg = C.yellow, bg = C.none },
     SignDelete = { fg = C.red, bg = C.none },
     GitSignsAdd = { fg = C.green, bg = C.none },
