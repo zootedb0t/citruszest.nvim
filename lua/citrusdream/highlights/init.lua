@@ -455,8 +455,8 @@ M.theme = function(C, O)
     CmpItemAbbrDeprecated = { fg = C.foreground, strikethrough = true },
     CmpItemKind = { fg = C.baby_blue },
     CmpItemMenu = { fg = C.white },
-    CmpItemAbbrMatch = { fg = C.bright_green, bold = O.bold },
-    CmpItemAbbrMatchFuzzy = { fg = C.bright_green, bold = O.bold },
+    CmpItemAbbrMatch = { fg = C.yellow, bold = O.bold },
+    CmpItemAbbrMatchFuzzy = { fg = C.yellow, bold = O.bold },
     CmpSel = { fg = C.black, bg = add_alpha(C.baby_blue, C.background, 0.9), bold = O.bold }, -- Visual mode selection
 
     -- kind colors
@@ -474,7 +474,7 @@ M.theme = function(C, O)
     CmpItemKindEnum = { fg = C.aurora },
     CmpItemKindUnit = { fg = C.green },
     CmpItemKindClass = { fg = C.orange },
-    CmpItemKindVariable = { fg = C.blue },
+    CmpItemKindVariable = { fg = C.bright_green },
     CmpItemKindFile = { fg = C.baby_blue },
     CmpItemKindInterface = { fg = C.yellow },
     CmpItemKindColor = { fg = C.red },
@@ -627,7 +627,7 @@ M.theme = function(C, O)
     NavicSeparator = { fg = C.red, bg = C.background },
 
     -- Neo-tree
-    NeoTreeDimText = { fg = C.yellow },
+    NeoTreeDimText = { fg = C.foreground },
     NeoTreeDirectoryIcon = { fg = C.bright_orange },
     NeoTreeDirectoryName = { fg = C.bright_orange },
     NeoTreeFileName = { fg = C.bright_green },
@@ -637,7 +637,7 @@ M.theme = function(C, O)
     NeoTreeGitDeleted = { fg = C.red },
     NeoTreeGitIgnored = { fg = C.comment },
     NeoTreeGitModified = { fg = C.lemon_yellow },
-    NeoTreeGitUnstaged = { fg = C.aurora },
+    NeoTreeGitUnstaged = { fg = C.red },
     NeoTreeGitUntracked = { fg = C.bright_white },
     NeoTreeGitStaged = { fg = C.neon_green },
     NeoTreeHiddenByName = { fg = C.bright_black },
