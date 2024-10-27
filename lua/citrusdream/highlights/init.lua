@@ -48,7 +48,7 @@ M.theme = function(C, O)
     ModeMsg = { fg = C.white }, -- 'showmode' message (e.g., "-- INSERT --")
     MsgSeparator = {}, -- Separator for scrolled messages, `msgsep` flag of 'display'
     MoreMsg = { fg = C.baby_blue }, -- |more-prompt|
-    NonText = { fg = C.bright_cyan }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
+    NonText = { fg = C.baby_blue }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
     Normal = { fg = C.foreground, bg = C.background }, -- normal text
     NormalNC = { fg = C.foreground, bg = C.background }, -- normal text in non-current windows
     NormalSB = { fg = C.foreground }, -- normal text in non-current windows
@@ -92,7 +92,7 @@ M.theme = function(C, O)
     Identifier = { fg = C.bright_yellow, italic = O.italic }, -- (preferred) any variable name
     Function = { fg = C.lime_green }, -- function name (also: methods for classes)
     Statement = { fg = C.blue }, -- (preferred) any statement
-    Conditional = { fg = C.bright_cyan }, --  if, then, else, endif, switch, etc.
+    Conditional = { fg = C.baby_blue }, --  if, then, else, endif, switch, etc.
     Repeat = { fg = C.bright_yellow }, --   for, do, while, etc.
     Label = { fg = C.bright_green }, --    case, default, etc.
     Operator = { fg = C.orange }, -- "sizeof", "+", "*", etc.
@@ -125,7 +125,7 @@ M.theme = function(C, O)
     htmlH1 = { fg = C.blue, bold = O.bold },
     htmlH2 = { fg = C.baby_blue, bold = O.bold },
     mkdCodeDelimiter = { bg = C.background, fg = C.white },
-    mkdCodeStart = { fg = C.bright_cyan, bold = O.bold },
+    mkdCodeStart = { fg = C.baby_blue, bold = O.bold },
     mkdCodeEnd = { fg = C.baby_blue, bold = O.bold },
 
     -- debugging
@@ -143,7 +143,7 @@ M.theme = function(C, O)
     diffOldFile = { fg = C.yellow },
     diffNewFile = { fg = C.orange },
     diffFile = { fg = C.baby_blue },
-    diffLine = { fg = C.bright_cyan },
+    diffLine = { fg = C.baby_blue },
     diffIndexLine = { fg = C.bright_black },
     DiffAdd = { bg = add_alpha(C.green, C.background, 0.20) }, -- diff mode: Added line |diff.txt|
     DiffChange = { bg = add_alpha(C.yellow, C.background, 0.20) }, -- diff mode: Changed line |diff.txt|
@@ -170,7 +170,7 @@ M.theme = function(C, O)
     rainbow3 = { fg = C.lemon_yellow },
     rainbow4 = { fg = C.aurora },
     rainbow5 = { fg = C.orange },
-    rainbow6 = { fg = C.bright_cyan },
+    rainbow6 = { fg = C.baby_blue },
 
     IblIndent = { fg = C.alt_background },
     IblScope = { fg = C.oxley },
@@ -188,13 +188,13 @@ M.theme = function(C, O)
     DiagnosticError = { bg = C.none, fg = C.bright_red, bold = O.bold }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
     DiagnosticWarn = { bg = C.none, fg = C.bright_yellow }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
     DiagnosticInfo = { bg = C.none, fg = C.blue }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
-    DiagnosticHint = { bg = C.none, fg = C.bright_cyan }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
+    DiagnosticHint = { bg = C.none, fg = C.baby_blue }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
     DiagnosticOk = { bg = C.none, fg = C.bright_green },
 
     DiagnosticFloatingError = { fg = C.red }, -- Used to color "Error" diagnostic messages in diagnostics float
     DiagnosticFloatingWarn = { fg = C.bright_yellow }, -- Used to color "Warn" diagnostic messages in diagnostics float
     DiagnosticFloatingInfo = { fg = C.blue }, -- Used to color "Info" diagnostic messages in diagnostics float
-    DiagnosticFloatingHint = { fg = C.bright_cyan }, -- Used to color "Hint" diagnostic messages in diagnostics float
+    DiagnosticFloatingHint = { fg = C.baby_blue }, -- Used to color "Hint" diagnostic messages in diagnostics float
     DiagnosticFloatingOk = { fg = C.bright_green },
 
     DiagnosticSignError = { fg = C.red }, -- Used for "Error" signs in sign column
@@ -207,16 +207,16 @@ M.theme = function(C, O)
     LspDiagnosticsError = { fg = C.red },
     LspDiagnosticsWarning = { fg = C.bright_yellow },
     LspDiagnosticsInformation = { fg = C.blue },
-    LspDiagnosticsHint = { fg = C.bright_cyan },
+    LspDiagnosticsHint = { fg = C.baby_blue },
     LspDiagnosticsVirtualTextError = { fg = C.red, bg = C.background }, -- Used for "Error" diagnostic virtual text
     LspDiagnosticsVirtualTextWarning = { fg = C.bright_yellow, bg = C.background }, -- Used for "Warning" diagnostic virtual text
     LspDiagnosticsVirtualTextInformation = { fg = C.blue, bg = C.background }, -- Used for "Information" diagnostic virtual text
-    LspDiagnosticsVirtualTextHint = { fg = C.bright_cyan, bg = C.background }, -- Used for "Hint" diagnostic virtual text
+    LspDiagnosticsVirtualTextHint = { fg = C.baby_blue, bg = C.background }, -- Used for "Hint" diagnostic virtual text
     LspDiagnosticsUnderlineError = { fg = C.red, bg = C.background, underline = true }, -- Used to underline "Error" diagnostics
     LspDiagnosticsUnderlineWarning = { fg = C.bright_yellow, bg = C.background, underline = true }, -- Used to underline "Warning" diagnostics
     LspDiagnosticsUnderlineInformation = { fg = C.blue, bg = C.background, underline = true }, -- Used to underline "Information" diagnostics
-    LspDiagnosticsUnderlineHint = { fg = C.bright_cyan, bg = C.background, underline = true }, -- Used to underline "Hint" diagnostics
-    LspCodeLens = { fg = C.bright_cyan }, -- virtual text of the codelens
+    LspDiagnosticsUnderlineHint = { fg = C.baby_blue, bg = C.background, underline = true }, -- Used to underline "Hint" diagnostics
+    LspCodeLens = { fg = C.baby_blue }, -- virtual text of the codelens
     LspInlayHint = {
       fg = C.oxley,
       bg = C.alt_background,
@@ -325,7 +325,7 @@ M.theme = function(C, O)
     ["@keyword.debug"] = { link = "Debug" },
 
     -- JS & derivative
-    ["@keyword.export"] = { fg = C.bright_cyan },
+    ["@keyword.export"] = { fg = C.baby_blue },
     ["@lsp.typemod.function.defaultLibrary.javascript"] = { fg = C.bright_green },
 
     -- Types
@@ -342,7 +342,7 @@ M.theme = function(C, O)
     ["@variable.builtin"] = { link = "Identifier" }, -- Variable names that are defined by the languages, like this or self.
     ["@variable.parameter"] = { fg = C.bright_green, italic = O.italic }, -- For parameters of a function.
     ["@parameter"] = { fg = C.bright_green, italic = O.italic }, -- For the variables inside a function that are parameters of the function
-    ["@variable.member"] = { fg = C.bright_cyan }, -- For fields
+    ["@variable.member"] = { fg = C.baby_blue }, -- For fields
 
     ["@constant"] = { link = "Constant" }, -- For constants
     ["@constant.builtin"] = { link = "Constant" }, -- For constant that are built in the language: nil in Lua.
@@ -439,7 +439,7 @@ M.theme = function(C, O)
     csvCol2 = { fg = C.bright_yellow },
     csvCol3 = { fg = C.bright_red },
     csvCol4 = { fg = C.bright_blue },
-    csvCol5 = { fg = C.bright_cyan },
+    csvCol5 = { fg = C.baby_blue },
     csvCol6 = { fg = C.lemon_yellow },
     csvCol7 = { fg = C.aurora },
     csvCol8 = { fg = C.red },
@@ -459,7 +459,7 @@ M.theme = function(C, O)
     CmpSel = { fg = C.black, bg = add_alpha(C.baby_blue, C.background, 0.9), bold = O.bold }, -- Visual mode selection
 
     -- kind colors
-    CmpItemKindSnippet = { fg = C.bright_cyan },
+    CmpItemKindSnippet = { fg = C.baby_blue },
     CmpItemKindKeyword = { fg = C.orange },
     CmpItemKindText = { fg = C.lemon_yellow },
     CmpItemKindMethod = { fg = C.lime_green },
@@ -511,7 +511,7 @@ M.theme = function(C, O)
     RainbowDelimiterOrange = { fg = C.orange },
     RainbowDelimiterGreen = { fg = C.bright_green },
     RainbowDelimiterViolet = { fg = C.violet },
-    RainbowDelimiterCyan = { fg = C.bright_cyan },
+    RainbowDelimiterCyan = { fg = C.baby_blue },
 
     -- Telescope
     TelescopePromptPrefix = { fg = C.bright_yellow, bg = C.background },
@@ -563,8 +563,8 @@ M.theme = function(C, O)
     DashboardProjectTitle = { fg = C.lime_green },
     DashboardProjectTitleIcon = { fg = C.lime_green },
     DashboardProjectIcon = { fg = C.blue },
-    DashboardMruTitle = { fg = C.bright_cyan },
-    DashboardMruIcon = { fg = C.bright_cyan },
+    DashboardMruTitle = { fg = C.baby_blue },
+    DashboardMruIcon = { fg = C.baby_blue },
     DashboardFiles = { fg = C.white },
     DashboardShortCutIcon = { fg = C.yellow },
 
@@ -577,7 +577,7 @@ M.theme = function(C, O)
     -- Whichkey
     WhichKey = { link = "NormalFloat" },
     WhichKeyBorder = { link = "FloatBorder" },
-    WhichKeyGroup = { fg = C.bright_cyan },
+    WhichKeyGroup = { fg = C.baby_blue },
     WhichKeySeparator = { fg = C.bright_red },
     WhichKeyDesc = { fg = C.yellow },
     WhichKeyValue = { fg = C.green },
