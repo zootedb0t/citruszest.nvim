@@ -76,7 +76,7 @@ M.theme = function(C, O)
     Title = { fg = C.bright_green, bold = O.bold }, -- titles for output from ":set all", ":autocmd" etc.
     Visual = { bg = C.visual, bold = O.bold }, -- Visual mode selection
     VisualNOS = { bg = C.bright_black, bold = O.bold }, -- Visual mode selection when vim is "Not Owning the Selection".
-    WarningMsg = { fg = C.bright_red }, -- warning messages
+    WarningMsg = { fg = C.red }, -- warning messages
     Whitespace = { fg = C.white }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
     WildMenu = { fg = C.foreground, bg = C.background }, -- current match in 'wildmenu' completion
     WinBar = { fg = C.bright_white },
@@ -147,7 +147,7 @@ M.theme = function(C, O)
     diffIndexLine = { fg = C.bright_black },
     DiffAdd = { bg = add_alpha(C.green, C.background, 0.20) }, -- diff mode: Added line |diff.txt|
     DiffChange = { bg = add_alpha(C.yellow, C.background, 0.20) }, -- diff mode: Changed line |diff.txt|
-    DiffDelete = { bg = add_alpha(C.bright_red, C.background, 0.20) }, -- diff mode: Deleted line |diff.txt|
+    DiffDelete = { bg = add_alpha(C.red, C.background, 0.20) }, -- diff mode: Deleted line |diff.txt|
     DiffText = { bg = add_alpha(C.yellow, C.background, 0.35) }, -- diff mode: Changed text within a changed line |diff.txt|
 
     -- NeoVim
@@ -185,7 +185,7 @@ M.theme = function(C, O)
     LspReferenceRead = { bg = C.visual }, -- used for highlighting "read" references
     LspReferenceWrite = { bg = C.visual }, -- used for highlighting "write" references
 
-    DiagnosticError = { bg = C.none, fg = C.bright_red, bold = O.bold }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
+    DiagnosticError = { bg = C.none, fg = C.red, bold = O.bold }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
     DiagnosticWarn = { bg = C.none, fg = C.bright_yellow }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
     DiagnosticInfo = { bg = C.none, fg = C.blue }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
     DiagnosticHint = { bg = C.none, fg = C.baby_blue }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
@@ -266,7 +266,7 @@ M.theme = function(C, O)
     -- Treesitter highlights
     ["@comment"] = { link = "Comment" },
     ["@comment.documentation"] = { fg = C.white },
-    ["@comment.error"] = { fg = C.black, bg = C.bright_red },
+    ["@comment.error"] = { fg = C.black, bg = C.red },
     ["@comment.warning"] = { fg = C.black, bg = C.yellow },
     ["@comment.todo"] = { fg = C.black, bg = C.bright_orange },
     ["@comment.note"] = { fg = C.black, bg = C.blue },
@@ -285,7 +285,7 @@ M.theme = function(C, O)
     -- Literals
     ["@string"] = { link = "String" }, -- For strings.
     ["@string.regexp"] = { fg = C.bright_orange }, -- For regexes.
-    ["@string.escape"] = { fg = C.bright_red }, -- For escape characters within a string.
+    ["@string.escape"] = { fg = C.red }, -- For escape characters within a string.
     ["@string.special"] = { link = "Special" }, -- other special strings (e.g. dates)
     ["@string.special.symbol"] = { fg = C.yellow },
     ["@string.special.path"] = { fg = C.aurora },
@@ -437,7 +437,7 @@ M.theme = function(C, O)
     csvCol0 = { fg = C.bright_orange },
     csvCol1 = { fg = C.bright_green },
     csvCol2 = { fg = C.bright_yellow },
-    csvCol3 = { fg = C.bright_red },
+    csvCol3 = { fg = C.red },
     csvCol4 = { fg = C.baby_blue },
     csvCol5 = { fg = C.baby_blue },
     csvCol6 = { fg = C.lemon_yellow },
@@ -505,7 +505,7 @@ M.theme = function(C, O)
     FidgetTitle = { fg = C.baby_blue },
 
     -- Rainbow Delimiter
-    RainbowDelimiterRed = { fg = C.bright_red },
+    RainbowDelimiterRed = { fg = C.red },
     RainbowDelimiterYellow = { fg = C.bright_yellow },
     RainbowDelimiterBlue = { fg = C.blue },
     RainbowDelimiterOrange = { fg = C.orange },
@@ -553,7 +553,7 @@ M.theme = function(C, O)
     AlphaHeader = { fg = C.orange },
     AlphaHeaderLabel = { fg = C.bright_orange },
     AlphaButtons = { fg = C.blue },
-    AlphaFooter = { fg = C.bright_red },
+    AlphaFooter = { fg = C.red },
 
     -- Dashboard
     DashboardHeader = { fg = C.orange },
@@ -578,7 +578,7 @@ M.theme = function(C, O)
     WhichKey = { link = "NormalFloat" },
     WhichKeyBorder = { link = "FloatBorder" },
     WhichKeyGroup = { fg = C.baby_blue },
-    WhichKeySeparator = { fg = C.bright_red },
+    WhichKeySeparator = { fg = C.red },
     WhichKeyDesc = { fg = C.yellow },
     WhichKeyValue = { fg = C.green },
 

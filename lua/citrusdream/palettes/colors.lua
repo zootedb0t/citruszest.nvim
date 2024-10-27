@@ -31,7 +31,6 @@ local colors = {
   white = "#BFBFBF",
 
   bright_black = "#767C77",
-  bright_red = "#FF8A8A",
   bright_white = "#F9F9F9",
 
   baby_blue = "#9ADCFF",
