@@ -200,7 +200,7 @@ M.theme = function(C, O)
     DiagnosticSignError = { fg = C.red }, -- Used for "Error" signs in sign column
     DiagnosticSignWarn = { fg = C.bright_yellow }, -- Used for "Warn" signs in sign column
     DiagnosticSignInfo = { fg = C.blue }, -- Used for "Info" signs in sign column
-    DiagnosticSignHint = { fg = C.bright_blue }, -- Used for "Hint" signs in sign column
+    DiagnosticSignHint = { fg = C.baby_blue }, -- Used for "Hint" signs in sign column
     DiagnosticSignOk = { fg = C.bright_green },
 
     LspSignatureActiveParameter = { fg = C.baby_blue },
@@ -418,7 +418,7 @@ M.theme = function(C, O)
     ["@property.cpp"] = { fg = C.bright_orange },
 
     -- Yaml
-    ["@variable.member.yaml"] = { fg = C.bright_blue }, -- For fields.
+    ["@variable.member.yaml"] = { fg = C.baby_blue }, -- For fields.
 
     -- Ruby
     ["@string.special.symbol.ruby"] = { fg = C.bright_yellow },
@@ -438,7 +438,7 @@ M.theme = function(C, O)
     csvCol1 = { fg = C.bright_green },
     csvCol2 = { fg = C.bright_yellow },
     csvCol3 = { fg = C.bright_red },
-    csvCol4 = { fg = C.bright_blue },
+    csvCol4 = { fg = C.baby_blue },
     csvCol5 = { fg = C.baby_blue },
     csvCol6 = { fg = C.lemon_yellow },
     csvCol7 = { fg = C.aurora },
@@ -569,8 +569,8 @@ M.theme = function(C, O)
     DashboardShortCutIcon = { fg = C.yellow },
 
     --  Dashboard Doom Theme
-    DashboardDesc = { fg = C.bright_blue },
-    DashboardIcon = { fg = C.bright_blue },
+    DashboardDesc = { fg = C.baby_blue },
+    DashboardIcon = { fg = C.baby_blue },
     DashboardKey = { fg = C.lime_green },
     DashboardShortCut = { fg = C.bright_yellow },
 
