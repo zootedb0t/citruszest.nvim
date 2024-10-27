@@ -342,7 +342,7 @@ M.theme = function(C, O)
     ["@variable.builtin"] = { link = "Identifier" }, -- Variable names that are defined by the languages, like this or self.
     ["@variable.parameter"] = { fg = C.bright_green, italic = O.italic }, -- For parameters of a function.
     ["@parameter"] = { fg = C.bright_green, italic = O.italic }, -- For the variables inside a function that are parameters of the function
-    ["@variable.member"] = { fg = C.baby_blue }, -- For fields
+    ["@variable.member"] = { fg = C.peach }, -- For fields
 
     ["@constant"] = { link = "Constant" }, -- For constants
     ["@constant.builtin"] = { link = "Constant" }, -- For constant that are built in the language: nil in Lua.
@@ -630,7 +630,7 @@ M.theme = function(C, O)
     NeoTreeDirectoryIcon = { fg = C.bright_orange },
     NeoTreeDirectoryName = { fg = C.bright_orange },
     NeoTreeFileName = { fg = C.bright_white },
-    NeoTreeTitleBar = { fg = C.black, bg = C.blue },
+    NeoTreeTitleBar = { fg = C.black, bg = C.lime_green },
     NeoTreeGitAdded = { fg = C.green },
     NeoTreeGitConflict = { fg = C.red },
     NeoTreeGitDeleted = { fg = C.red },
