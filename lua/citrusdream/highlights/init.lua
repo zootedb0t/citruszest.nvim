@@ -530,7 +530,7 @@ M.theme = function(C, O)
     -- NvimTree
     NvimTreeFolderName = { fg = C.orange },
     NvimTreeFolderIcon = { fg = C.orange },
-    NvimTreeNormal = { fg = C.bright_green, bg = O.transparent_background and C.none or C.mantle },
+    -- NvimTreeNormal = { fg = C.bright_green, bg = O.transparent_background and C.none or C.mantle },
     NvimTreeOpenedFolderName = { fg = C.bright_orange },
     NvimTreeEmptyFolderName = { fg = C.orange },
     NvimTreeIndentMarker = { fg = C.aurora },
