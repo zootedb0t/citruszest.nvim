@@ -258,6 +258,7 @@ M.theme = function(C, O)
     -- rust specific
     ["@lsp.type.decorator.rust"] = { link = "@function.macro" },
     ["@lsp.type.const.rust"] = { link = "Constant" },
+    ["@lsp.typemod.keyword.crateRoot.rust"] = { link = "@module" },
 
     -- f# specific
     ["@lsp.type.module.fsharp"] = { link = "@module" },
@@ -626,7 +627,7 @@ M.theme = function(C, O)
     NavicSeparator = { fg = C.red, bg = C.background },
 
     -- Neo-tree
-    NeoTreeDimText = { fg = C.white },
+    NeoTreeDimText = { fg = C.yellow },
     NeoTreeDirectoryIcon = { fg = C.bright_orange },
     NeoTreeDirectoryName = { fg = C.bright_orange },
     NeoTreeFileName = { fg = C.bright_green },
