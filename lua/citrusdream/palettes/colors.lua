@@ -28,7 +28,6 @@ local colors = {
 
   black = "#232323",
   red = "#FF5454",
-  blue = "#00BFFF",
   white = "#BFBFBF",
 
   bright_black = "#767C77",

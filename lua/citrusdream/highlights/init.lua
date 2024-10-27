@@ -47,7 +47,7 @@ M.theme = function(C, O)
     MatchParen = { bold = O.bold }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
     ModeMsg = { fg = C.white }, -- 'showmode' message (e.g., "-- INSERT --")
     MsgSeparator = {}, -- Separator for scrolled messages, `msgsep` flag of 'display'
-    MoreMsg = { fg = C.cyan }, -- |more-prompt|
+    MoreMsg = { fg = C.baby_blue }, -- |more-prompt|
     NonText = { fg = C.bright_cyan }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
     Normal = { fg = C.foreground, bg = C.background }, -- normal text
     NormalNC = { fg = C.foreground, bg = C.background }, -- normal text in non-current windows
@@ -59,14 +59,14 @@ M.theme = function(C, O)
     PmenuSel = { fg = C.orange, bg = C.cursor, bold = O.bold }, -- Popup menu: selected item.
     PmenuSbar = { bg = C.white }, -- Popup menu: scrollbar.
     PmenuThumb = { bg = C.orange }, -- Popup menu: Thumb of the scrollbar.
-    Question = { fg = C.cyan }, -- |hit-enter| prompt and yes/no questions
+    Question = { fg = C.baby_blue }, -- |hit-enter| prompt and yes/no questions
     Search = { fg = C.black, bg = C.aurora }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
     IncSearch = { fg = C.black, bg = C.baby_blue }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
     CurSearch = { fg = C.black, bg = C.baby_blue }, -- 'cursearch' highlighting: highlights the current search you're on differently
     SpecialKey = { fg = C.orange }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' textspace. |hl-Whitespace|
     SpellBad = { sp = C.red, undercurl = true }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
     SpellCap = { sp = C.yellow, undercurl = true }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
-    SpellLocal = { sp = C.cyan, undercurl = true }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
+    SpellLocal = { sp = C.baby_blue, undercurl = true }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
     SpellRare = { sp = C.green, undercurl = true }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
     StatusLine = { bg = C.visual, fg = C.foreground }, -- status line of current window
     StatusLineNC = { bg = C.background }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
@@ -123,10 +123,10 @@ M.theme = function(C, O)
     Error = { fg = C.red }, -- (preferred) any erroneous construct
     Todo = { fg = C.black, bg = C.yellow }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
     htmlH1 = { fg = C.blue, bold = O.bold },
-    htmlH2 = { fg = C.cyan, bold = O.bold },
+    htmlH2 = { fg = C.baby_blue, bold = O.bold },
     mkdCodeDelimiter = { bg = C.background, fg = C.white },
     mkdCodeStart = { fg = C.bright_cyan, bold = O.bold },
-    mkdCodeEnd = { fg = C.cyan, bold = O.bold },
+    mkdCodeEnd = { fg = C.baby_blue, bold = O.bold },
 
     -- debugging
     debugPC = { bg = C.background }, -- used for highlighting the current line in terminal-debug
@@ -142,7 +142,7 @@ M.theme = function(C, O)
     diffChanged = { fg = C.bright_yellow },
     diffOldFile = { fg = C.yellow },
     diffNewFile = { fg = C.orange },
-    diffFile = { fg = C.cyan },
+    diffFile = { fg = C.baby_blue },
     diffLine = { fg = C.bright_cyan },
     diffIndexLine = { fg = C.bright_black },
     DiffAdd = { bg = add_alpha(C.green, C.background, 0.20) }, -- diff mode: Added line |diff.txt|
@@ -157,9 +157,9 @@ M.theme = function(C, O)
 
     -- glyphs
     GlyphPalette1 = { fg = C.red },
-    GlyphPalette2 = { fg = C.cyan },
+    GlyphPalette2 = { fg = C.baby_blue },
     GlyphPalette3 = { fg = C.yellow },
-    GlyphPalette4 = { fg = C.cyan },
+    GlyphPalette4 = { fg = C.baby_blue },
     GlyphPalette6 = { fg = C.blue },
     GlyphPalette7 = { fg = C.white },
     GlyphPalette9 = { fg = C.red },
@@ -203,7 +203,7 @@ M.theme = function(C, O)
     DiagnosticSignHint = { fg = C.bright_blue }, -- Used for "Hint" signs in sign column
     DiagnosticSignOk = { fg = C.bright_green },
 
-    LspSignatureActiveParameter = { fg = C.cyan },
+    LspSignatureActiveParameter = { fg = C.baby_blue },
     LspDiagnosticsError = { fg = C.red },
     LspDiagnosticsWarning = { fg = C.bright_yellow },
     LspDiagnosticsInformation = { fg = C.blue },
@@ -358,7 +358,7 @@ M.theme = function(C, O)
     ["@markup.math"] = { fg = C.blue },
     ["@markup.environment"] = { fg = C.bright_orange }, -- Text indicating the type of an environment.
     ["@markup.link"] = { link = "Tag" },
-    ["@markup.link.label"] = { fg = C.cyan, underline = true },
+    ["@markup.link.label"] = { fg = C.baby_blue, underline = true },
     ["@markup.link.url"] = { fg = C.bright_orange, underline = true },
     ["@markup.raw"] = { fg = C.lemon_yellow }, -- used for inline code in markdown and for doc in python.
     ["@markup.raw.block"] = { fg = C.baby_blue }, -- used for inline code in markdown and for doc in python.
@@ -390,7 +390,7 @@ M.theme = function(C, O)
 
     -- Css
     ["@property.css"] = { fg = C.bright_orange },
-    ["@property.id.css"] = { fg = C.cyan },
+    ["@property.id.css"] = { fg = C.baby_blue },
     ["@property.class.css"] = { fg = C.yellow },
     ["@type.css"] = { fg = C.blue },
     ["@type.tag.css"] = { fg = C.bright_orange },
@@ -452,7 +452,7 @@ M.theme = function(C, O)
     -- Cmp
     CmpItemAbbr = { fg = C.bright_white },
     CmpItemAbbrDeprecated = { fg = C.foreground, strikethrough = true },
-    CmpItemKind = { fg = C.cyan },
+    CmpItemKind = { fg = C.baby_blue },
     CmpItemMenu = { fg = C.white },
     CmpItemAbbrMatch = { fg = C.bright_green, bold = O.bold },
     CmpItemAbbrMatchFuzzy = { fg = C.bright_green, bold = O.bold },
@@ -463,7 +463,7 @@ M.theme = function(C, O)
     CmpItemKindKeyword = { fg = C.orange },
     CmpItemKindText = { fg = C.lemon_yellow },
     CmpItemKindMethod = { fg = C.lime_green },
-    CmpItemKindConstructor = { fg = C.cyan },
+    CmpItemKindConstructor = { fg = C.baby_blue },
     CmpItemKindFunction = { fg = C.lime_green },
     CmpItemKindFolder = { fg = C.orange },
     CmpItemKindModule = { fg = C.yellow },
@@ -474,16 +474,16 @@ M.theme = function(C, O)
     CmpItemKindUnit = { fg = C.green },
     CmpItemKindClass = { fg = C.orange },
     CmpItemKindVariable = { fg = C.blue },
-    CmpItemKindFile = { fg = C.cyan },
+    CmpItemKindFile = { fg = C.baby_blue },
     CmpItemKindInterface = { fg = C.yellow },
     CmpItemKindColor = { fg = C.red },
     CmpItemKindReference = { fg = C.red },
     CmpItemKindEnumMember = { fg = C.red },
     CmpItemKindStruct = { fg = C.orange },
     CmpItemKindValue = { fg = C.blue },
-    CmpItemKindEvent = { fg = C.cyan },
-    CmpItemKindOperator = { fg = C.cyan },
-    CmpItemKindTypeParameter = { fg = C.cyan },
+    CmpItemKindEvent = { fg = C.baby_blue },
+    CmpItemKindOperator = { fg = C.baby_blue },
+    CmpItemKindTypeParameter = { fg = C.baby_blue },
     CmpItemKindCopilot = { fg = C.bright_orange },
 
     -- Gitsigns
@@ -551,7 +551,7 @@ M.theme = function(C, O)
     -- Alpha
     AlphaShortcut = { fg = C.bright_yellow },
     AlphaHeader = { fg = C.orange },
-    AlphaHeaderLabel = { fg = C.cyan },
+    AlphaHeaderLabel = { fg = C.bright_orange },
     AlphaButtons = { fg = C.blue },
     AlphaFooter = { fg = C.bright_red },
 
@@ -609,18 +609,18 @@ M.theme = function(C, O)
     NavicIconsInterface = { fg = C.yellow, bg = C.background },
     NavicIconsFunction = { fg = C.blue, bg = C.background },
     NavicIconsVariable = { fg = C.orange, bg = C.background },
-    NavicIconsConstant = { fg = C.cyan, bg = C.background },
+    NavicIconsConstant = { fg = C.baby_blue, bg = C.background },
     NavicIconsString = { fg = C.orange, bg = C.background, italic = O.italic, bold = O.bold },
-    NavicIconsNumber = { fg = C.cyan, bg = C.background },
+    NavicIconsNumber = { fg = C.baby_blue, bg = C.background },
     NavicIconsBoolean = { fg = C.orange, bg = C.background },
-    NavicIconsArray = { fg = C.cyan, bg = C.background },
-    NavicIconsObject = { fg = C.cyan, bg = C.background },
+    NavicIconsArray = { fg = C.baby_blue, bg = C.background },
+    NavicIconsObject = { fg = C.baby_blue, bg = C.background },
     NavicIconsKey = { fg = C.yellow, bg = C.background, italic = O.italic, bold = O.bold },
     NavicIconsNull = { fg = C.orange, bg = C.background },
     NavicIconsEnumMember = { fg = C.blue, bg = C.background },
     NavicIconsStruct = { fg = C.blue, bg = C.background },
     NavicIconsEvent = { fg = C.blue, bg = C.background },
-    NavicIconsOperator = { fg = C.cyan, bg = C.background },
+    NavicIconsOperator = { fg = C.baby_blue, bg = C.background },
     NavicIconsTypeParameter = { fg = C.blue, bg = C.background },
     NavicText = { fg = C.bright_white, bg = C.background, italic = O.italic },
     NavicSeparator = { fg = C.red, bg = C.background },
