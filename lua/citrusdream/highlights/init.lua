@@ -258,6 +258,7 @@ M.theme = function(C, O)
     -- rust specific
     ["@lsp.type.decorator.rust"] = { link = "@function.macro" },
     ["@lsp.type.const.rust"] = { link = "Constant" },
+    ["@lsp.typemod.keyword.crateRoot.rust"] = { link = "@module" },
 
     -- f# specific
     ["@lsp.type.module.fsharp"] = { link = "@module" },
