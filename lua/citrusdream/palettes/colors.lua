@@ -9,7 +9,7 @@ local colors = {
   comment = "#8c8989",
 
   -- Greens
-  green = "#D9F810",
+  green = "#C6DF2A",
   bright_green = "#addbba",
   lime_green = "#9fc131",
   aurora = "#B2F3AC",
