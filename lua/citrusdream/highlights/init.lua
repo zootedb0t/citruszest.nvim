@@ -145,7 +145,7 @@ M.theme = function(C, O)
     diffFile = { fg = C.baby_blue },
     diffLine = { fg = C.baby_blue },
     diffIndexLine = { fg = C.bright_black },
-    DiffAdd = { bg = add_alpha(C.green, C.background, 0.20) }, -- diff mode: Added line |diff.txt|
+    DiffAdd = { bg = add_alpha(C.neon_green, C.background, 0.20) }, -- diff mode: Added line |diff.txt|
     DiffChange = { bg = add_alpha(C.yellow, C.background, 0.20) }, -- diff mode: Changed line |diff.txt|
     DiffDelete = { bg = add_alpha(C.red, C.background, 0.20) }, -- diff mode: Deleted line |diff.txt|
     DiffText = { bg = add_alpha(C.yellow, C.background, 0.35) }, -- diff mode: Changed text within a changed line |diff.txt|
@@ -341,8 +341,8 @@ M.theme = function(C, O)
     -- Identifiers
     ["@variable"] = { fg = C.bright_green }, -- Any variable name that does not have another highlight.
     ["@variable.builtin"] = { link = "Identifier" }, -- Variable names that are defined by the languages, like this or self.
-    ["@variable.parameter"] = { fg = C.bright_green, italic = O.italic }, -- For parameters of a function.
-    ["@parameter"] = { fg = C.bright_green, italic = O.italic }, -- For the variables inside a function that are parameters of the function
+    ["@variable.parameter"] = { link = "@parameter" }, -- For parameters of a function.
+    ["@parameter"] = { fg = C.green, italic = O.italic }, -- For the variables inside a function that are parameters of the function
     ["@variable.member"] = { fg = C.peach }, -- For fields
 
     ["@constant"] = { link = "Constant" }, -- For constants

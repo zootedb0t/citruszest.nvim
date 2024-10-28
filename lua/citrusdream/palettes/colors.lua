@@ -10,10 +10,10 @@ local colors = {
 
   -- Greens
   green = "#D9F810",
+  bright_green = "#addbba",
   lime_green = "#9fc131",
   aurora = "#B2F3AC",
   oxley = "#659B75",
-  bright_green = "#addbba",
   neon_green = "#0aff58",
 
   -- Oranges
