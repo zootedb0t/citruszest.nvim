@@ -47,8 +47,8 @@ M.theme = function(C, O)
     MatchParen = { bold = O.bold }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
     ModeMsg = { fg = C.white }, -- 'showmode' message (e.g., "-- INSERT --")
     MsgSeparator = {}, -- Separator for scrolled messages, `msgsep` flag of 'display'
-    MoreMsg = { fg = C.baby_blue }, -- |more-prompt|
-    NonText = { fg = C.baby_blue }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
+    MoreMsg = { fg = C.cyan }, -- |more-prompt|
+    NonText = { fg = C.bright_cyan }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
     Normal = { fg = C.foreground, bg = C.background }, -- normal text
     NormalNC = { fg = C.foreground, bg = C.background }, -- normal text in non-current windows
     NormalSB = { fg = C.foreground }, -- normal text in non-current windows
@@ -59,14 +59,14 @@ M.theme = function(C, O)
     PmenuSel = { fg = C.orange, bg = C.cursor, bold = O.bold }, -- Popup menu: selected item.
     PmenuSbar = { bg = C.white }, -- Popup menu: scrollbar.
     PmenuThumb = { bg = C.orange }, -- Popup menu: Thumb of the scrollbar.
-    Question = { fg = C.baby_blue }, -- |hit-enter| prompt and yes/no questions
+    Question = { fg = C.cyan }, -- |hit-enter| prompt and yes/no questions
     Search = { fg = C.black, bg = C.aurora }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
     IncSearch = { fg = C.black, bg = C.baby_blue }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
     CurSearch = { fg = C.black, bg = C.baby_blue }, -- 'cursearch' highlighting: highlights the current search you're on differently
     SpecialKey = { fg = C.orange }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' textspace. |hl-Whitespace|
     SpellBad = { sp = C.red, undercurl = true }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
     SpellCap = { sp = C.yellow, undercurl = true }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
-    SpellLocal = { sp = C.baby_blue, undercurl = true }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
+    SpellLocal = { sp = C.cyan, undercurl = true }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
     SpellRare = { sp = C.green, undercurl = true }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
     StatusLine = { bg = C.visual, fg = C.foreground }, -- status line of current window
     StatusLineNC = { bg = C.background }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
@@ -76,7 +76,7 @@ M.theme = function(C, O)
     Title = { fg = C.bright_green, bold = O.bold }, -- titles for output from ":set all", ":autocmd" etc.
     Visual = { bg = C.visual, bold = O.bold }, -- Visual mode selection
     VisualNOS = { bg = C.bright_black, bold = O.bold }, -- Visual mode selection when vim is "Not Owning the Selection".
-    WarningMsg = { fg = C.red }, -- warning messages
+    WarningMsg = { fg = C.bright_red }, -- warning messages
     Whitespace = { fg = C.white }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
     WildMenu = { fg = C.foreground, bg = C.background }, -- current match in 'wildmenu' completion
     WinBar = { fg = C.bright_white },
@@ -92,7 +92,7 @@ M.theme = function(C, O)
     Identifier = { fg = C.bright_yellow, italic = O.italic }, -- (preferred) any variable name
     Function = { fg = C.lime_green }, -- function name (also: methods for classes)
     Statement = { fg = C.blue }, -- (preferred) any statement
-    Conditional = { fg = C.baby_blue }, --  if, then, else, endif, switch, etc.
+    Conditional = { fg = C.bright_cyan }, --  if, then, else, endif, switch, etc.
     Repeat = { fg = C.bright_yellow }, --   for, do, while, etc.
     Label = { fg = C.bright_green }, --    case, default, etc.
     Operator = { fg = C.orange }, -- "sizeof", "+", "*", etc.
@@ -123,10 +123,10 @@ M.theme = function(C, O)
     Error = { fg = C.red }, -- (preferred) any erroneous construct
     Todo = { fg = C.black, bg = C.yellow }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
     htmlH1 = { fg = C.blue, bold = O.bold },
-    htmlH2 = { fg = C.baby_blue, bold = O.bold },
+    htmlH2 = { fg = C.cyan, bold = O.bold },
     mkdCodeDelimiter = { bg = C.background, fg = C.white },
-    mkdCodeStart = { fg = C.baby_blue, bold = O.bold },
-    mkdCodeEnd = { fg = C.baby_blue, bold = O.bold },
+    mkdCodeStart = { fg = C.bright_cyan, bold = O.bold },
+    mkdCodeEnd = { fg = C.cyan, bold = O.bold },
 
     -- debugging
     debugPC = { bg = C.background }, -- used for highlighting the current line in terminal-debug
@@ -142,12 +142,12 @@ M.theme = function(C, O)
     diffChanged = { fg = C.bright_yellow },
     diffOldFile = { fg = C.yellow },
     diffNewFile = { fg = C.orange },
-    diffFile = { fg = C.baby_blue },
-    diffLine = { fg = C.baby_blue },
+    diffFile = { fg = C.cyan },
+    diffLine = { fg = C.bright_cyan },
     diffIndexLine = { fg = C.bright_black },
-    DiffAdd = { bg = add_alpha(C.neon_green, C.background, 0.20) }, -- diff mode: Added line |diff.txt|
+    DiffAdd = { bg = add_alpha(C.green, C.background, 0.20) }, -- diff mode: Added line |diff.txt|
     DiffChange = { bg = add_alpha(C.yellow, C.background, 0.20) }, -- diff mode: Changed line |diff.txt|
-    DiffDelete = { bg = add_alpha(C.red, C.background, 0.20) }, -- diff mode: Deleted line |diff.txt|
+    DiffDelete = { bg = add_alpha(C.bright_red, C.background, 0.20) }, -- diff mode: Deleted line |diff.txt|
     DiffText = { bg = add_alpha(C.yellow, C.background, 0.35) }, -- diff mode: Changed text within a changed line |diff.txt|
 
     -- NeoVim
@@ -157,9 +157,9 @@ M.theme = function(C, O)
 
     -- glyphs
     GlyphPalette1 = { fg = C.red },
-    GlyphPalette2 = { fg = C.baby_blue },
+    GlyphPalette2 = { fg = C.cyan },
     GlyphPalette3 = { fg = C.yellow },
-    GlyphPalette4 = { fg = C.baby_blue },
+    GlyphPalette4 = { fg = C.cyan },
     GlyphPalette6 = { fg = C.blue },
     GlyphPalette7 = { fg = C.white },
     GlyphPalette9 = { fg = C.red },
@@ -170,7 +170,7 @@ M.theme = function(C, O)
     rainbow3 = { fg = C.lemon_yellow },
     rainbow4 = { fg = C.aurora },
     rainbow5 = { fg = C.orange },
-    rainbow6 = { fg = C.baby_blue },
+    rainbow6 = { fg = C.bright_cyan },
 
     IblIndent = { fg = C.alt_background },
     IblScope = { fg = C.oxley },
@@ -185,38 +185,38 @@ M.theme = function(C, O)
     LspReferenceRead = { bg = C.visual }, -- used for highlighting "read" references
     LspReferenceWrite = { bg = C.visual }, -- used for highlighting "write" references
 
-    DiagnosticError = { bg = C.none, fg = C.red, bold = O.bold }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
+    DiagnosticError = { bg = C.none, fg = C.bright_red, bold = O.bold }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
     DiagnosticWarn = { bg = C.none, fg = C.bright_yellow }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
     DiagnosticInfo = { bg = C.none, fg = C.blue }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
-    DiagnosticHint = { bg = C.none, fg = C.baby_blue }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
+    DiagnosticHint = { bg = C.none, fg = C.bright_cyan }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
     DiagnosticOk = { bg = C.none, fg = C.bright_green },
 
     DiagnosticFloatingError = { fg = C.red }, -- Used to color "Error" diagnostic messages in diagnostics float
     DiagnosticFloatingWarn = { fg = C.bright_yellow }, -- Used to color "Warn" diagnostic messages in diagnostics float
     DiagnosticFloatingInfo = { fg = C.blue }, -- Used to color "Info" diagnostic messages in diagnostics float
-    DiagnosticFloatingHint = { fg = C.baby_blue }, -- Used to color "Hint" diagnostic messages in diagnostics float
+    DiagnosticFloatingHint = { fg = C.bright_cyan }, -- Used to color "Hint" diagnostic messages in diagnostics float
     DiagnosticFloatingOk = { fg = C.bright_green },
 
     DiagnosticSignError = { fg = C.red }, -- Used for "Error" signs in sign column
     DiagnosticSignWarn = { fg = C.bright_yellow }, -- Used for "Warn" signs in sign column
     DiagnosticSignInfo = { fg = C.blue }, -- Used for "Info" signs in sign column
-    DiagnosticSignHint = { fg = C.baby_blue }, -- Used for "Hint" signs in sign column
+    DiagnosticSignHint = { fg = C.bright_blue }, -- Used for "Hint" signs in sign column
     DiagnosticSignOk = { fg = C.bright_green },
 
-    LspSignatureActiveParameter = { fg = C.baby_blue },
+    LspSignatureActiveParameter = { fg = C.cyan },
     LspDiagnosticsError = { fg = C.red },
     LspDiagnosticsWarning = { fg = C.bright_yellow },
     LspDiagnosticsInformation = { fg = C.blue },
-    LspDiagnosticsHint = { fg = C.baby_blue },
+    LspDiagnosticsHint = { fg = C.bright_cyan },
     LspDiagnosticsVirtualTextError = { fg = C.red, bg = C.background }, -- Used for "Error" diagnostic virtual text
     LspDiagnosticsVirtualTextWarning = { fg = C.bright_yellow, bg = C.background }, -- Used for "Warning" diagnostic virtual text
     LspDiagnosticsVirtualTextInformation = { fg = C.blue, bg = C.background }, -- Used for "Information" diagnostic virtual text
-    LspDiagnosticsVirtualTextHint = { fg = C.baby_blue, bg = C.background }, -- Used for "Hint" diagnostic virtual text
+    LspDiagnosticsVirtualTextHint = { fg = C.bright_cyan, bg = C.background }, -- Used for "Hint" diagnostic virtual text
     LspDiagnosticsUnderlineError = { fg = C.red, bg = C.background, underline = true }, -- Used to underline "Error" diagnostics
     LspDiagnosticsUnderlineWarning = { fg = C.bright_yellow, bg = C.background, underline = true }, -- Used to underline "Warning" diagnostics
     LspDiagnosticsUnderlineInformation = { fg = C.blue, bg = C.background, underline = true }, -- Used to underline "Information" diagnostics
-    LspDiagnosticsUnderlineHint = { fg = C.baby_blue, bg = C.background, underline = true }, -- Used to underline "Hint" diagnostics
-    LspCodeLens = { fg = C.baby_blue }, -- virtual text of the codelens
+    LspDiagnosticsUnderlineHint = { fg = C.bright_cyan, bg = C.background, underline = true }, -- Used to underline "Hint" diagnostics
+    LspCodeLens = { fg = C.bright_cyan }, -- virtual text of the codelens
     LspInlayHint = {
       fg = C.oxley,
       bg = C.alt_background,
@@ -258,7 +258,6 @@ M.theme = function(C, O)
     -- rust specific
     ["@lsp.type.decorator.rust"] = { link = "@function.macro" },
     ["@lsp.type.const.rust"] = { link = "Constant" },
-    ["@lsp.typemod.keyword.crateRoot.rust"] = { link = "@module" },
 
     -- f# specific
     ["@lsp.type.module.fsharp"] = { link = "@module" },
@@ -267,7 +266,7 @@ M.theme = function(C, O)
     -- Treesitter highlights
     ["@comment"] = { link = "Comment" },
     ["@comment.documentation"] = { fg = C.white },
-    ["@comment.error"] = { fg = C.black, bg = C.red },
+    ["@comment.error"] = { fg = C.black, bg = C.bright_red },
     ["@comment.warning"] = { fg = C.black, bg = C.yellow },
     ["@comment.todo"] = { fg = C.black, bg = C.bright_orange },
     ["@comment.note"] = { fg = C.black, bg = C.blue },
@@ -286,7 +285,7 @@ M.theme = function(C, O)
     -- Literals
     ["@string"] = { link = "String" }, -- For strings.
     ["@string.regexp"] = { fg = C.bright_orange }, -- For regexes.
-    ["@string.escape"] = { fg = C.red }, -- For escape characters within a string.
+    ["@string.escape"] = { fg = C.bright_red }, -- For escape characters within a string.
     ["@string.special"] = { link = "Special" }, -- other special strings (e.g. dates)
     ["@string.special.symbol"] = { fg = C.yellow },
     ["@string.special.path"] = { fg = C.aurora },
@@ -326,7 +325,7 @@ M.theme = function(C, O)
     ["@keyword.debug"] = { link = "Debug" },
 
     -- JS & derivative
-    ["@keyword.export"] = { fg = C.baby_blue },
+    ["@keyword.export"] = { fg = C.bright_cyan },
     ["@lsp.typemod.function.defaultLibrary.javascript"] = { fg = C.bright_green },
 
     -- Types
@@ -336,14 +335,14 @@ M.theme = function(C, O)
     ["@type.qualifier"] = { link = "Constant" }, -- type qualifiers (e.g. `const`)
 
     ["@attribute"] = { link = "Constant" }, -- attribute annotations (e.g. Python decorators)
-    ["@property"] = { fg = C.peach }, -- Same as TSField.
+    ["@property"] = { fg = C.bright_cyan }, -- Same as TSField.
 
     -- Identifiers
-    ["@variable"] = { fg = C.bright_green }, -- Any variable name that does not have another highlight.
+    ["@variable"] = { fg = C.very_bright_green }, -- Any variable name that does not have another highlight.
     ["@variable.builtin"] = { link = "Identifier" }, -- Variable names that are defined by the languages, like this or self.
-    ["@variable.parameter"] = { link = "@parameter" }, -- For parameters of a function.
-    ["@parameter"] = { fg = C.green, italic = O.italic }, -- For the variables inside a function that are parameters of the function
-    ["@variable.member"] = { fg = C.peach }, -- For fields
+    ["@variable.parameter"] = { fg = C.bright_green, italic = O.italic }, -- For parameters of a function.
+    ["@parameter"] = { fg = C.bright_green, italic = O.italic }, -- For the variables inside a function that are parameters of the function
+    ["@variable.member"] = { fg = C.bright_cyan }, -- For fields
 
     ["@constant"] = { link = "Constant" }, -- For constants
     ["@constant.builtin"] = { link = "Constant" }, -- For constant that are built in the language: nil in Lua.
@@ -359,7 +358,7 @@ M.theme = function(C, O)
     ["@markup.math"] = { fg = C.blue },
     ["@markup.environment"] = { fg = C.bright_orange }, -- Text indicating the type of an environment.
     ["@markup.link"] = { link = "Tag" },
-    ["@markup.link.label"] = { fg = C.baby_blue, underline = true },
+    ["@markup.link.label"] = { fg = C.cyan, underline = true },
     ["@markup.link.url"] = { fg = C.bright_orange, underline = true },
     ["@markup.raw"] = { fg = C.lemon_yellow }, -- used for inline code in markdown and for doc in python.
     ["@markup.raw.block"] = { fg = C.baby_blue }, -- used for inline code in markdown and for doc in python.
@@ -391,7 +390,7 @@ M.theme = function(C, O)
 
     -- Css
     ["@property.css"] = { fg = C.bright_orange },
-    ["@property.id.css"] = { fg = C.baby_blue },
+    ["@property.id.css"] = { fg = C.cyan },
     ["@property.class.css"] = { fg = C.yellow },
     ["@type.css"] = { fg = C.blue },
     ["@type.tag.css"] = { fg = C.bright_orange },
@@ -399,7 +398,7 @@ M.theme = function(C, O)
     ["@number.css"] = { fg = C.yellow },
 
     -- Toml
-    ["@property.toml"] = { fg = C.bright_orange }, -- Differentiates between string and properties
+    ["@property.toml"] = { fg = C.cyan }, -- Differentiates between string and properties
 
     -- Json
     ["@label.json"] = { fg = C.bright_green }, -- For labels: label: in C and :label: in Lua.
@@ -419,7 +418,7 @@ M.theme = function(C, O)
     ["@property.cpp"] = { fg = C.bright_orange },
 
     -- Yaml
-    ["@variable.member.yaml"] = { fg = C.baby_blue }, -- For fields.
+    ["@variable.member.yaml"] = { fg = C.bright_blue }, -- For fields.
 
     -- Ruby
     ["@string.special.symbol.ruby"] = { fg = C.bright_yellow },
@@ -438,9 +437,9 @@ M.theme = function(C, O)
     csvCol0 = { fg = C.bright_orange },
     csvCol1 = { fg = C.bright_green },
     csvCol2 = { fg = C.bright_yellow },
-    csvCol3 = { fg = C.red },
-    csvCol4 = { fg = C.baby_blue },
-    csvCol5 = { fg = C.baby_blue },
+    csvCol3 = { fg = C.bright_red },
+    csvCol4 = { fg = C.bright_blue },
+    csvCol5 = { fg = C.bright_cyan },
     csvCol6 = { fg = C.lemon_yellow },
     csvCol7 = { fg = C.aurora },
     csvCol8 = { fg = C.red },
@@ -453,45 +452,45 @@ M.theme = function(C, O)
     -- Cmp
     CmpItemAbbr = { fg = C.bright_white },
     CmpItemAbbrDeprecated = { fg = C.foreground, strikethrough = true },
-    CmpItemKind = { fg = C.baby_blue },
+    CmpItemKind = { fg = C.cyan },
     CmpItemMenu = { fg = C.white },
-    CmpItemAbbrMatch = { fg = C.yellow, bold = O.bold },
-    CmpItemAbbrMatchFuzzy = { fg = C.yellow, bold = O.bold },
+    CmpItemAbbrMatch = { fg = C.bright_green, bold = O.bold },
+    CmpItemAbbrMatchFuzzy = { fg = C.bright_green, bold = O.bold },
     CmpSel = { fg = C.black, bg = add_alpha(C.baby_blue, C.background, 0.9), bold = O.bold }, -- Visual mode selection
 
     -- kind colors
-    CmpItemKindSnippet = { fg = C.baby_blue },
+    CmpItemKindSnippet = { fg = C.bright_cyan },
     CmpItemKindKeyword = { fg = C.orange },
     CmpItemKindText = { fg = C.lemon_yellow },
-    CmpItemKindMethod = { fg = C.lime_green },
-    CmpItemKindConstructor = { fg = C.baby_blue },
-    CmpItemKindFunction = { fg = C.lime_green },
-    CmpItemKindFolder = { fg = C.orange },
-    CmpItemKindModule = { fg = C.yellow },
-    CmpItemKindConstant = { fg = C.aurora },
-    CmpItemKindField = { fg = C.peach },
+    CmpItemKindMethod = { fg = C.cyan },
+    CmpItemKindConstructor = { fg = C.cyan },
+    CmpItemKindFunction = { fg = C.bright_yellow },
+    CmpItemKindFolder = { fg = C.cyan },
+    CmpItemKindModule = { fg = C.bright_orange },
+    CmpItemKindConstant = { fg = C.bright_cyan },
+    CmpItemKindField = { fg = C.green },
     CmpItemKindProperty = { fg = C.green },
-    CmpItemKindEnum = { fg = C.aurora },
+    CmpItemKindEnum = { fg = C.green },
     CmpItemKindUnit = { fg = C.green },
-    CmpItemKindClass = { fg = C.orange },
-    CmpItemKindVariable = { fg = C.bright_green },
-    CmpItemKindFile = { fg = C.baby_blue },
+    CmpItemKindClass = { fg = C.yellow },
+    CmpItemKindVariable = { fg = C.blue },
+    CmpItemKindFile = { fg = C.cyan },
     CmpItemKindInterface = { fg = C.yellow },
     CmpItemKindColor = { fg = C.red },
     CmpItemKindReference = { fg = C.red },
     CmpItemKindEnumMember = { fg = C.red },
-    CmpItemKindStruct = { fg = C.orange },
+    CmpItemKindStruct = { fg = C.cyan },
     CmpItemKindValue = { fg = C.blue },
-    CmpItemKindEvent = { fg = C.baby_blue },
-    CmpItemKindOperator = { fg = C.baby_blue },
-    CmpItemKindTypeParameter = { fg = C.baby_blue },
+    CmpItemKindEvent = { fg = C.cyan },
+    CmpItemKindOperator = { fg = C.cyan },
+    CmpItemKindTypeParameter = { fg = C.cyan },
     CmpItemKindCopilot = { fg = C.bright_orange },
 
     -- Gitsigns
-    SignAdd = { fg = C.neon_green, bg = C.none },
+    SignAdd = { fg = C.bright_green, bg = C.none },
     SignChange = { fg = C.yellow, bg = C.none },
     SignDelete = { fg = C.red, bg = C.none },
-    GitSignsAdd = { fg = C.neon_green, bg = C.none },
+    GitSignsAdd = { fg = C.green, bg = C.none },
     GitSignsChange = { fg = C.yellow, bg = C.none },
     GitSignsDelete = { fg = C.red, bg = C.none },
     GitSignsAddInline = { fg = C.green, bg = C.none },
@@ -506,13 +505,13 @@ M.theme = function(C, O)
     FidgetTitle = { fg = C.baby_blue },
 
     -- Rainbow Delimiter
-    RainbowDelimiterRed = { fg = C.red },
+    RainbowDelimiterRed = { fg = C.bright_red },
     RainbowDelimiterYellow = { fg = C.bright_yellow },
     RainbowDelimiterBlue = { fg = C.blue },
     RainbowDelimiterOrange = { fg = C.orange },
     RainbowDelimiterGreen = { fg = C.bright_green },
     RainbowDelimiterViolet = { fg = C.violet },
-    RainbowDelimiterCyan = { fg = C.baby_blue },
+    RainbowDelimiterCyan = { fg = C.bright_cyan },
 
     -- Telescope
     TelescopePromptPrefix = { fg = C.bright_yellow, bg = C.background },
@@ -540,7 +539,7 @@ M.theme = function(C, O)
     NvimTreeSymlink = { fg = C.blue },
     NvimTreeStatuslineNc = { fg = C.bright_orange, bg = C.background },
     NvimTreeGitDirty = { fg = C.red },
-    NvimTreeGitNew = { fg = C.neon_green },
+    NvimTreeGitNew = { fg = C.cyan },
     NvimTreeGitDeleted = { fg = C.red },
     NvimTreeSpecialFile = { fg = C.lemon_yellow },
     NvimTreeImageFile = { fg = C.baby_blue },
@@ -552,9 +551,9 @@ M.theme = function(C, O)
     -- Alpha
     AlphaShortcut = { fg = C.bright_yellow },
     AlphaHeader = { fg = C.orange },
-    AlphaHeaderLabel = { fg = C.bright_orange },
+    AlphaHeaderLabel = { fg = C.cyan },
     AlphaButtons = { fg = C.blue },
-    AlphaFooter = { fg = C.red },
+    AlphaFooter = { fg = C.bright_red },
 
     -- Dashboard
     DashboardHeader = { fg = C.orange },
@@ -564,22 +563,22 @@ M.theme = function(C, O)
     DashboardProjectTitle = { fg = C.lime_green },
     DashboardProjectTitleIcon = { fg = C.lime_green },
     DashboardProjectIcon = { fg = C.blue },
-    DashboardMruTitle = { fg = C.baby_blue },
-    DashboardMruIcon = { fg = C.baby_blue },
+    DashboardMruTitle = { fg = C.bright_cyan },
+    DashboardMruIcon = { fg = C.bright_cyan },
     DashboardFiles = { fg = C.white },
     DashboardShortCutIcon = { fg = C.yellow },
 
     --  Dashboard Doom Theme
-    DashboardDesc = { fg = C.baby_blue },
-    DashboardIcon = { fg = C.baby_blue },
+    DashboardDesc = { fg = C.bright_blue },
+    DashboardIcon = { fg = C.bright_blue },
     DashboardKey = { fg = C.lime_green },
     DashboardShortCut = { fg = C.bright_yellow },
 
     -- Whichkey
     WhichKey = { link = "NormalFloat" },
     WhichKeyBorder = { link = "FloatBorder" },
-    WhichKeyGroup = { fg = C.baby_blue },
-    WhichKeySeparator = { fg = C.red },
+    WhichKeyGroup = { fg = C.bright_cyan },
+    WhichKeySeparator = { fg = C.bright_red },
     WhichKeyDesc = { fg = C.yellow },
     WhichKeyValue = { fg = C.green },
 
@@ -592,76 +591,58 @@ M.theme = function(C, O)
 
     -- Lazy
     LazyH1 = { fg = C.lime_green, bg = C.visual, bold = O.bold },
-    LazyButton = { fg = C.yellow, bg = C.visual, bold = O.bold },
+    LazyButton = { fg = C.foreground, bg = C.visual, bold = O.bold },
     LazyButtonActive = { fg = C.lime_green, bg = C.cursor, bold = O.bold },
-    LazySpecial = { fg = C.orange },
+    LazySpecial = { fg = C.blue },
 
     -- Navic
-    NavicIconsFile = { fg = C.orange, bg = C.background },
-    NavicIconsModule = { fg = C.orange, bg = C.background },
-    NavicIconsNamespace = { fg = C.orange, bg = C.background },
-    NavicIconsPackage = { fg = C.orange, bg = C.background },
+    NavicIconsFile = { fg = C.blue, bg = C.background },
+    NavicIconsModule = { fg = C.blue, bg = C.background },
+    NavicIconsNamespace = { fg = C.blue, bg = C.background },
+    NavicIconsPackage = { fg = C.blue, bg = C.background },
     NavicIconsClass = { fg = C.yellow, bg = C.background },
-    NavicIconsMethod = { fg = C.orange, bg = C.background },
-    NavicIconsProperty = { fg = C.peach, bg = C.background },
-    NavicIconsField = { fg = C.peach, bg = C.background },
-    NavicIconsConstructor = { fg = C.lime_green, bg = C.background },
-    NavicIconsEnum = { fg = C.aurora, bg = C.background },
-    NavicIconsInterface = { fg = C.baby_blue, bg = C.background },
-    NavicIconsFunction = { fg = C.lime_green, bg = C.background },
+    NavicIconsMethod = { fg = C.blue, bg = C.background },
+    NavicIconsProperty = { fg = C.green, bg = C.background },
+    NavicIconsField = { fg = C.green, bg = C.background },
+    NavicIconsConstructor = { fg = C.blue, bg = C.background },
+    NavicIconsEnum = { fg = C.green, bg = C.background },
+    NavicIconsInterface = { fg = C.yellow, bg = C.background },
+    NavicIconsFunction = { fg = C.blue, bg = C.background },
     NavicIconsVariable = { fg = C.orange, bg = C.background },
-    NavicIconsConstant = { fg = C.baby_blue, bg = C.background },
+    NavicIconsConstant = { fg = C.cyan, bg = C.background },
     NavicIconsString = { fg = C.orange, bg = C.background, italic = O.italic, bold = O.bold },
-    NavicIconsNumber = { fg = C.baby_blue, bg = C.background },
+    NavicIconsNumber = { fg = C.cyan, bg = C.background },
     NavicIconsBoolean = { fg = C.orange, bg = C.background },
-    NavicIconsArray = { fg = C.baby_blue, bg = C.background },
-    NavicIconsObject = { fg = C.baby_blue, bg = C.background },
+    NavicIconsArray = { fg = C.cyan, bg = C.background },
+    NavicIconsObject = { fg = C.cyan, bg = C.background },
     NavicIconsKey = { fg = C.yellow, bg = C.background, italic = O.italic, bold = O.bold },
     NavicIconsNull = { fg = C.orange, bg = C.background },
     NavicIconsEnumMember = { fg = C.blue, bg = C.background },
-    NavicIconsStruct = { fg = C.orange, bg = C.background },
-    NavicIconsEvent = { fg = C.orange, bg = C.background },
-    NavicIconsOperator = { fg = C.baby_blue, bg = C.background },
-    NavicIconsTypeParameter = { fg = C.bright_green, bg = C.background },
+    NavicIconsStruct = { fg = C.blue, bg = C.background },
+    NavicIconsEvent = { fg = C.blue, bg = C.background },
+    NavicIconsOperator = { fg = C.cyan, bg = C.background },
+    NavicIconsTypeParameter = { fg = C.blue, bg = C.background },
     NavicText = { fg = C.bright_white, bg = C.background, italic = O.italic },
     NavicSeparator = { fg = C.red, bg = C.background },
 
     -- Neo-tree
-    NeoTreeDimText = { fg = C.foreground },
+    NeoTreeDimText = { fg = C.white },
     NeoTreeDirectoryIcon = { fg = C.bright_orange },
     NeoTreeDirectoryName = { fg = C.bright_orange },
-    NeoTreeFileName = { fg = C.bright_green },
-    NeoTreeTitleBar = { fg = C.black, bg = C.lime_green },
-    NeoTreeGitAdded = { fg = C.neon_green },
+    NeoTreeFileName = { fg = C.bright_white },
+    NeoTreeTitleBar = { fg = C.black, bg = C.blue },
+    NeoTreeGitAdded = { fg = C.green },
     NeoTreeGitConflict = { fg = C.red },
     NeoTreeGitDeleted = { fg = C.red },
     NeoTreeGitIgnored = { fg = C.comment },
     NeoTreeGitModified = { fg = C.lemon_yellow },
-    NeoTreeGitUnstaged = { fg = C.red },
+    NeoTreeGitUnstaged = { fg = C.aurora },
     NeoTreeGitUntracked = { fg = C.bright_white },
-    NeoTreeGitStaged = { fg = C.neon_green },
+    NeoTreeGitStaged = { fg = C.green },
     NeoTreeHiddenByName = { fg = C.bright_black },
-    NeoTreeIndentMarker = { fg = C.aurora },
-    NeoTreeRootName = { fg = C.bright_orange },
+    NeoTreeIndentMarker = { fg = C.baby_blue },
+    NeoTreeRootName = { fg = C.white },
     NeoTreeDotfile = { fg = C.bright_orange },
-
-    -- Noice
-    NoiceCmdline = { fg = C.lemon_yellow },
-    NoiceCmdlineIcon = { fg = C.yellow },
-    NoiceCmdlineIconSearch = { fg = C.yellow },
-    NoiceCmdlinePopupBorder = { fg = C.yellow },
-    NoiceCmdlinePopupBorderSearch = { fg = C.yellow },
-    NoiceConfirmBorder = { fg = C.yellow },
-    NoiceMini = { fg = C.yellow, blend = 0 },
-    -- NoiceFormatProgressDone = {
-    --   bg = O.transparent_background and C.none or U.darken(C.sky, 0.30, C.base),
-    --   fg = C.subtext0,
-    -- },
-    -- NoiceFormatProgressTodo = {
-    --   bg = O.transparent_background and C.none
-    --     or U.vary_color({ latte = U.lighten(C.mantle, 0.70, C.base) }, U.darken(C.surface0, 0.64, C.base)),
-    --   fg = C.subtext0,
-    -- },
   }
 end
 
