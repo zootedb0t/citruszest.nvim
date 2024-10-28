@@ -461,7 +461,7 @@ M.theme = function(C, O)
 
     -- kind colors
     CmpItemKindSnippet = { fg = C.bright_cyan },
-    CmpItemKindKeyword = { fg = C.orange },
+    CmpItemKindKeyword = { fg = C.lemon_yellow },
     CmpItemKindText = { fg = C.lemon_yellow },
     CmpItemKindMethod = { fg = C.lime_green },
     CmpItemKindConstructor = { fg = C.lime_green },
