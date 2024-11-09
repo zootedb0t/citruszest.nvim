@@ -25,7 +25,7 @@ end
 ---@param O table of option
 ---@return table
 M.theme = function(C, O)
-  local editor = require("mytheme.highlights.editor")(C, O)
+  local editor = require("citrusdream.highlights.editor")(C, O)
   local rest = {
     -- debugging
     debugPC = { bg = C.background }, -- used for highlighting the current line in terminal-debug
