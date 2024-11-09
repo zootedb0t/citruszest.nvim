@@ -29,6 +29,8 @@ M.theme = function(C, O)
   local rust = require("citrusdream.highlights.rust")(C, O)
   local fsharp = require("citrusdream.highlights.fsharp")(C, O)
   local lsp = require("citrusdream.highlights.lsp")(C, O)
+  local semantictokens = require("citrusdream.highlights.semantictokens")(C, O)
+  local ocaml = require("citrusdream.highlights.ocaml")(C, O)
 
   local rest = {
     -- debugging
@@ -462,7 +464,7 @@ M.theme = function(C, O)
     NeoTreeDotfile = { fg = C.bright_orange },
   }
 
-  return vim.tbl_extend("force", editor, rest, rust, fsharp, lsp)
+  return vim.tbl_extend("force", editor, rest, rust, fsharp, lsp, semantictokens)
 end
 
 return M
