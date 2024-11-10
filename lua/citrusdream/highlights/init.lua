@@ -31,34 +31,14 @@ M.theme = function(C, O)
   local lsp = require("citrusdream.highlights.lsp")(C, O)
   local semantictokens = require("citrusdream.highlights.semantictokens")(C, O)
   local ocaml = require("citrusdream.highlights.ocaml")(C, O)
+  local debugging = require("citrusdream.highlights.debugging")(C, O)
+  local diff = require("citrusdream.highlights.diff")(C, O)
+  local treesitter = require("citrusdream.highlights.treesitter")(C, O)
 
   local rest = {
-    -- debugging
-    debugPC = { bg = C.background }, -- used for highlighting the current line in terminal-debug
-    debugBreakpoint = { bg = C.background, fg = C.foreground }, -- used for breakpoint colors in terminal-debug
-
     -- illuminate
     illuminatedWord = { bg = C.black },
     illuminatedCurWord = { bg = C.bright_black },
-
-    -- diff
-    diffAdded = { fg = C.green },
-    diffRemoved = { fg = C.red },
-    diffChanged = { fg = C.bright_yellow },
-    diffOldFile = { fg = C.yellow },
-    diffNewFile = { fg = C.orange },
-    diffFile = { fg = C.cyan },
-    diffLine = { fg = C.bright_cyan },
-    diffIndexLine = { fg = C.bright_black },
-    DiffAdd = { bg = add_alpha(C.green, C.background, 0.20) }, -- diff mode: Added line |diff.txt|
-    DiffChange = { bg = add_alpha(C.yellow, C.background, 0.20) }, -- diff mode: Changed line |diff.txt|
-    DiffDelete = { bg = add_alpha(C.bright_red, C.background, 0.20) }, -- diff mode: Deleted line |diff.txt|
-    DiffText = { bg = add_alpha(C.yellow, C.background, 0.35) }, -- diff mode: Changed text within a changed line |diff.txt|
-
-    -- NeoVim
-    healthError = { fg = C.red },
-    healthSuccess = { fg = C.green },
-    healthWarning = { fg = C.yellow },
 
     -- glyphs
     GlyphPalette1 = { fg = C.red },
@@ -81,176 +61,6 @@ M.theme = function(C, O)
     IblScope = { fg = C.oxley },
     MiniIndentscopeSymbol = { fg = C.oxley },
     -- MiniIndentscopePrefix = { style = { "nocombine" } }, -- Make it invisible
-
-    -- Treesitter highlights
-    ["@comment"] = { link = "Comment" },
-    ["@comment.documentation"] = { fg = C.white },
-    ["@comment.error"] = { fg = C.black, bg = C.bright_red },
-    ["@comment.warning"] = { fg = C.black, bg = C.yellow },
-    ["@comment.todo"] = { fg = C.black, bg = C.bright_orange },
-    ["@comment.note"] = { fg = C.black, bg = C.blue },
-    ["TreesitterContextLineNumber"] = { fg = C.blue, bg = C.cursor },
-
-    -- Punctuation
-    ["@punctuation.delimiter"] = { link = "Delimiter" }, -- For delimiters ie: .
-    ["@punctuation.bracket"] = { fg = C.orange }, -- For brackets and parenthesis.
-    ["@punctuation.special"] = { link = "Special" }, -- For special punctutation that does not fall in the categories before.
-
-    ["@module"] = { fg = C.yellow, italic = O.italic }, -- For identifiers referring to modules and namespaces.
-    ["@module.builtin"] = { link = "@module" },
-    ["@label"] = { fg = C.bright_orange },
-    ["@macro"] = { link = "Macro" },
-
-    -- Literals
-    ["@string"] = { link = "String" }, -- For strings.
-    ["@string.regexp"] = { fg = C.bright_orange }, -- For regexes.
-    ["@string.escape"] = { fg = C.bright_red }, -- For escape characters within a string.
-    ["@string.special"] = { link = "Special" }, -- other special strings (e.g. dates)
-    ["@string.special.symbol"] = { fg = C.yellow },
-    ["@string.special.path"] = { fg = C.aurora },
-    ["string.special.url"] = { fg = C.aurora, underline = true }, -- urls, links and emails
-
-    ["@character"] = { link = "Character" }, -- character literals
-    ["@character.special"] = { link = "SpecialChar" }, -- special characters (e.g. wildcards)
-
-    ["@boolean"] = { link = "Boolean" }, -- For booleans.
-    ["@number"] = { link = "Number" }, -- For all numbers
-    ["@number.float"] = { link = "Float" }, -- For floats.
-
-    -- Functions
-    ["@function"] = { link = "Function" }, -- For function (calls and definitions).
-    ["@function.builtin"] = { link = "Function" }, -- For builtin functions: table.insert in Lua.
-    ["@function.call"] = { link = "Function" }, -- function calls
-    ["@function.macro"] = { fg = C.violet }, -- For macro defined functions (calls and definitions): each macro_rules in RusC.
-    ["@function.method"] = { link = "Function" }, -- For method calls and definitions.
-    ["@function.method.call"] = { link = "Function" }, -- method calls
-    ["@constructor"] = { fg = C.bright_yellow }, -- For constructor calls and definitions: = { } in Lua, and Java constructors.
-    ["@operator"] = { link = "Operator" }, -- For any operator: +, but also -> and * in C.
-
-    -- Keywords
-    ["@keyword"] = { link = "Keyword" }, -- For keywords that don't fall in previous categories.
-    ["@keyword.coroutine"] = { fg = C.lemon_yellow }, -- for key words like `async`
-    ["@keyword.function"] = { fg = C.lemon_yellow }, -- For keywords used to define a function.
-    ["@keyword.operator"] = { link = "Operator" }, -- For new keyword operator.
-    ["@keyword.return"] = { fg = C.bright_yellow },
-    ["@keyword.import"] = { link = "Include" }, -- For includes.
-    ["@keyword.storage"] = { link = "StorageClass" }, -- visibility/life-time/etc. modifiers (e.g. `static`).
-    ["@keyword.repeat"] = { link = "Repeat" }, -- For keywords related to loop.
-    ["@keyword.exception"] = { link = "Exception" }, -- For exception keywords.
-    ["@keyword.conditional"] = { link = "Conditional" }, -- For keywords related to conditional,
-    ["@keyword.conditional.ternary"] = { fg = C.bright_yellow }, -- e.g. ? or :
-    ["@keyword.directive"] = { link = "PreProc" }, -- Various preprocessor directive & shebangs.
-    ["@keyword.directive.define"] = { link = "Define" }, -- Preprocessor definition directive.
-    ["@keyword.debug"] = { link = "Debug" },
-
-    -- JS & derivative
-    ["@keyword.export"] = { fg = C.bright_cyan },
-    ["@lsp.typemod.function.defaultLibrary.javascript"] = { fg = C.bright_green },
-
-    -- Types
-    ["@type"] = { link = "Type" }, -- For types.
-    ["@type.builtin"] = { link = "@type", italic = O.italic }, -- For builtin types.
-    ["@type.definition"] = { link = "@type" }, -- type definitions (e.g. `typedef` in C)
-    ["@type.qualifier"] = { link = "Constant" }, -- type qualifiers (e.g. `const`)
-
-    ["@attribute"] = { link = "Constant" }, -- attribute annotations (e.g. Python decorators)
-    ["@property"] = { fg = C.bright_cyan }, -- Same as TSField.
-
-    -- Identifiers
-    ["@variable"] = { fg = C.very_bright_green }, -- Any variable name that does not have another highlight.
-    ["@variable.builtin"] = { link = "Identifier" }, -- Variable names that are defined by the languages, like this or self.
-    ["@variable.parameter"] = { fg = C.bright_green, italic = O.italic }, -- For parameters of a function.
-    ["@parameter"] = { fg = C.bright_green, italic = O.italic }, -- For the variables inside a function that are parameters of the function
-    ["@variable.member"] = { fg = C.bright_cyan }, -- For fields
-
-    ["@constant"] = { link = "Constant" }, -- For constants
-    ["@constant.builtin"] = { link = "Constant" }, -- For constant that are built in the language: nil in Lua.
-    ["@constant.macro"] = { link = "Macro" }, -- For constants that are defined by macros: NULL in C.
-
-    -- Markup
-    ["@markup"] = { fg = C.bright_white }, -- For strings considerated text in a markup language.
-    ["@markup.strong"] = { fg = C.white, bold = true },
-    ["@markup.italic"] = { fg = C.white, italic = O.italic },
-    ["@markup.strikethrough"] = { fg = C.white, strikethrough = true },
-    ["@markup.underline"] = { link = "Underline" },
-    ["@markup.heading"] = { fg = C.blue, bold = O.bold }, -- titles like: # Example.
-    ["@markup.math"] = { fg = C.blue },
-    ["@markup.environment"] = { fg = C.bright_orange }, -- Text indicating the type of an environment.
-    ["@markup.link"] = { link = "Tag" },
-    ["@markup.link.label"] = { fg = C.cyan, underline = true },
-    ["@markup.link.url"] = { fg = C.bright_orange, underline = true },
-    ["@markup.raw"] = { fg = C.lemon_yellow }, -- used for inline code in markdown and for doc in python.
-    ["@markup.raw.block"] = { fg = C.baby_blue }, -- used for inline code in markdown and for doc in python.
-    ["@markup.list"] = { link = "Special" },
-    ["@markup.list.checked"] = { fg = C.green },
-    ["@markup.list.unchecked"] = { fg = C.white },
-
-    -- Diff
-    ["@diff.plus"] = { link = "diffAdded" },
-    ["@diff.minus"] = { link = "diffRemoved" },
-    ["@diff.delta"] = { link = "diffChanged" },
-
-    -- Misc
-    ["@error"] = { link = "Error" },
-
-    -- Tags
-    ["@tag"] = { fg = C.blue }, -- Tags like html tag names.
-    ["@tag.attribute"] = { fg = C.yellow, italic = O.italic }, -- Tags like html tag names.
-    ["@tag.delimiter"] = { fg = C.red }, -- Tag delimiter like < > /
-
-    -- Language specific:
-    -- Markdown
-    ["@markup.heading.1.markdown"] = { link = "rainbow1" },
-    ["@markup.heading.2.markdown"] = { link = "rainbow2" },
-    ["@markup.heading.3.markdown"] = { link = "rainbow3" },
-    ["@markup.heading.4.markdown"] = { link = "rainbow4" },
-    ["@markup.heading.5.markdown"] = { link = "rainbow5" },
-    ["@markup.heading.6.markdown"] = { link = "rainbow6" },
-
-    -- Css
-    ["@property.css"] = { fg = C.bright_orange },
-    ["@property.id.css"] = { fg = C.cyan },
-    ["@property.class.css"] = { fg = C.yellow },
-    ["@type.css"] = { fg = C.blue },
-    ["@type.tag.css"] = { fg = C.bright_orange },
-    ["@string.plain.css"] = { fg = C.yellow },
-    ["@number.css"] = { fg = C.yellow },
-
-    -- Toml
-    ["@property.toml"] = { fg = C.cyan }, -- Differentiates between string and properties
-
-    -- Json
-    ["@label.json"] = { fg = C.bright_green }, -- For labels: label: in C and :label: in Lua.
-
-    -- Lua
-    ["@constructor.lua"] = { fg = C.orange }, -- For constructor calls and definitions: = { } in Lua, and Java constructors.
-    ["@lsp.typemod.function.defaultLibrary.lua"] = { fg = C.blue },
-
-    -- Typescript
-    ["@constructor.typescript"] = { fg = C.bright_green },
-
-    -- TSX (Typescript React)
-    ["@constructor.tsx"] = { fg = C.bright_green },
-    ["@tag.attribute.tsx"] = { fg = C.bright_yellow, italic = O.italic },
-
-    -- Cpp
-    ["@property.cpp"] = { fg = C.bright_orange },
-
-    -- Yaml
-    ["@variable.member.yaml"] = { fg = C.bright_blue }, -- For fields.
-
-    -- Ruby
-    ["@string.special.symbol.ruby"] = { fg = C.bright_yellow },
-
-    -- Php
-    ["@function.method.php"] = { link = "Function" },
-    ["@function.method.call.php"] = { link = "Function" },
-
-    -- Python
-    ["@string.documentation.python"] = { fg = C.baby_blue },
-
-    -- Haskell
-    ["@operator.haskell"] = { fg = C.bright_yellow },
 
     -- csv
     csvCol0 = { fg = C.bright_orange },
@@ -464,7 +274,7 @@ M.theme = function(C, O)
     NeoTreeDotfile = { fg = C.bright_orange },
   }
 
-  return vim.tbl_extend("force", editor, rest, rust, fsharp, lsp, semantictokens)
+  return vim.tbl_extend("force", editor, rest, rust, fsharp, lsp, semantictokens, ocaml, debugging, diff, treesitter)
 end
 
 return M
