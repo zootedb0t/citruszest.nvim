@@ -1,3 +1,11 @@
+---@param c string r g b of highlight
+---@param bg string r g b of background
+---@param a number between 0 and 1
+---@return number
+local blend = function(c, bg, a)
+  return math.floor(a * tonumber("0x" .. c) + (1 - a) * tonumber("0x" .. bg))
+end
+
 ---@param hex string hex with 3 channels, ex: #00ff00
 ---@param bg string hex with 3 channels, ex: #000000
 ---@param a number between 0 and 1
