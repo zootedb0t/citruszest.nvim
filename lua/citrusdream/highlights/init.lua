@@ -464,7 +464,7 @@ M.theme = function(C, O)
     NeoTreeDotfile = { fg = C.bright_orange },
   }
 
-  return vim.tbl_extend("force", editor, rest, rust, fsharp, lsp, semantictokens, ocaml)
+  return vim.tbl_extend("force", editor, rest, rust, fsharp, lsp, semantictokens)
 end
 
 return M
