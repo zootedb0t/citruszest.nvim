@@ -34,6 +34,7 @@ M.theme = function(C, O)
   local snacks = require("citrusdream.highlights.snacks")(C, O)
 
   local rest = {
+    Title = { fg = C.orange, style = { "bold" } },
     -- debugging
     debugPC = { bg = C.background }, -- used for highlighting the current line in terminal-debug
     debugBreakpoint = { bg = C.background, fg = C.foreground }, -- used for breakpoint colors in terminal-debug
