@@ -1,14 +1,32 @@
 name: Luacheck
+
 on:
   push:
-    branches: ["main"]
+    branches:
+      - "main"
+    paths-ignore:
+      - '**/*.md' # Ignore Markdown documentation files
+      - 'docs/**' # Ignore changes in the docs/ directory
   pull_request:
-  
+    paths-ignore:
+      - '**/*.md' # Ignore Markdown documentation files
+      - 'docs/**' # Ignore changes in the docs/ directory
+
 jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+
+      # Use caching to avoid downloading dependencies multiple times
+      - name: Setup Cache
+        uses: actions/cache@v3
+        with:
+          path: ~/.luarocks
+          key: ${{ runner.os }}-luarocks-${{ hashFiles('**/*.lua') }}
+          restore-keys: |
+            ${{ runner.os }}-luarocks-
+
       - name: Luacheck linter
         uses: lunarmodules/luacheck@v1
