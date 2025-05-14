@@ -68,7 +68,7 @@ M.theme = function(C, O)
     SpellCap = { sp = C.yellow, undercurl = true }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
     SpellLocal = { sp = C.cyan, undercurl = true }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
     SpellRare = { sp = C.green, undercurl = true }, -- Word that is recognized by the spellchecker as one that is hardly ever used.  |spell| Combined with the highlighting used otherwise.
-    StatusLine = { bg = C.visual, fg = C.foreground }, -- status line of current window
+    StatusLine = { bg = C.background, fg = C.foreground }, -- status line of current window
     StatusLineNC = { bg = C.background }, -- status lines of not-current windows Note: if this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
     TabLine = { fg = C.white, bg = C.visual }, -- tab pages line, not active tab page label
     TabLineFill = {}, -- tab pages line, where there are no labels
@@ -100,7 +100,7 @@ M.theme = function(C, O)
     Array = { fg = C.blue },
     Exception = { fg = C.blue }, --  try, catch, throw
 
-    PreProc = { fg = C.bright_green }, -- (preferred) generic Preprocessor
+    PreProc = { fg = C.yellow }, -- (preferred) generic Preprocessor
     Include = { fg = C.blue }, --  preprocessor #include
     Define = { link = "PreProc" }, -- preprocessor #define
     Macro = { fg = C.blue }, -- same as Define
@@ -239,7 +239,7 @@ M.theme = function(C, O)
 
     -- Treesitter highlights
     ["@comment"] = { link = "Comment" },
-    ["@comment.documentation"] = { fg = C.white },
+    ["@comment.documentation"] = { fg = C.baby_blue },
     ["@comment.error"] = { fg = C.black, bg = C.bright_red },
     ["@comment.warning"] = { fg = C.black, bg = C.yellow },
     ["@comment.todo"] = { fg = C.black, bg = C.bright_orange },
