@@ -180,6 +180,7 @@ M.theme = function(C, O)
     LspReferenceText = { bg = C.visual }, -- used for highlighting "text" references
     LspReferenceRead = { bg = C.visual }, -- used for highlighting "read" references
     LspReferenceWrite = { bg = C.visual }, -- used for highlighting "write" references
+    LspSignatureActiveParameter = { bg = C.visual, fg = C.lemon_yellow },
 
     DiagnosticError = { bg = C.none, fg = C.red, bold = O.bold }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
     DiagnosticWarn = { bg = C.none, fg = C.bright_yellow }, -- Used as the mantle highlight group. Other Diagnostic highlights link to this by default
