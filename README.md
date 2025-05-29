@@ -4,6 +4,9 @@ citruszest.nvim
 <a href="https://opensource.org/license/mit/" rel="nofollow"><img alt="LICENSE" src="https://img.shields.io/badge/License-MIT-blue.svg" style="max-width: 100%;"></a>
 <a href="https://www.lua.org/"><img alt="Lua" src="https://img.shields.io/badge/Made_With-Lua-blue.svg?logo=lua" style="max-width:100%"></a>
 [![Luacheck](https://github.com/zootedb0t/citruszest.nvim/actions/workflows/luacheck.yml/badge.svg)](https://github.com/zootedb0t/citruszest.nvim/actions/workflows/luacheck.yml)
+<a href="https://dotfyle.com/plugins/zootedb0t/citruszest.nvim">
+  <img src="https://dotfyle.com/plugins/zootedb0t/citruszest.nvim/shield" />
+</a>
 
 </h1>
 
