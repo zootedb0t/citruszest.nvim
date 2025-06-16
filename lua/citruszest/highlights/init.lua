@@ -58,7 +58,7 @@ M.theme = function(C, O)
     Pmenu = { fg = C.bright_white, bg = C.background }, -- Popup menu: normal item.
     PmenuSel = { fg = C.orange, bg = C.cursor, bold = O.bold }, -- Popup menu: selected item.
     PmenuSbar = { bg = C.white }, -- Popup menu: scrollbar.
-    PmenuThumb = { bg = C.orange }, -- Popup menu: Thumb of the scrollbar.
+    PmenuThumb = { bg = C.white }, -- Popup menu: Thumb of the scrollbar.
     Question = { fg = C.cyan }, -- |hit-enter| prompt and yes/no questions
     Search = { fg = C.black, bg = C.aurora }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
     IncSearch = { fg = C.black, bg = C.baby_blue }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
@@ -316,7 +316,7 @@ M.theme = function(C, O)
     ["@variable"] = { fg = C.bright_white }, -- Any variable name that does not have another highlight.
     ["@variable.builtin"] = { link = "Identifier" }, -- Variable names that are defined by the languages, like this or self.
     ["@variable.parameter"] = { fg = C.bright_blue, italic = O.italic }, -- For parameters of a function.
-    ["@variable.member"] = { fg = C.bright_cyan }, -- For fields
+    ["@variable.member"] = { fg = C.bright_orange }, -- For fields
 
     ["@constant"] = { link = "Constant" }, -- For constants
     ["@constant.builtin"] = { fg = C.red }, -- For constant that are built in the language: nil in Lua.
@@ -617,6 +617,12 @@ M.theme = function(C, O)
     NeoTreeIndentMarker = { fg = C.baby_blue },
     NeoTreeRootName = { fg = C.white },
     NeoTreeDotfile = { fg = C.bright_orange },
+
+    -- Blink.cmp
+    BlinkCmpMenuBorder = { link = "FloatBorder" },
+    BlinkCmpLabelMatch = { fg = C.bright_orange },
+    BlinkCmpKind = { fg = C.bright_cyan },
+    BlinkCmpMenuSelection = { fg = C.black, bg = add_alpha(C.baby_blue, C.background, 0.9), bold = O.bold },
   }
 end
 
