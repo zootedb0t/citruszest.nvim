@@ -127,6 +127,8 @@ M.theme = function(C, O)
     mkdCodeDelimiter = { bg = C.background, fg = C.white },
     mkdCodeStart = { fg = C.bright_cyan, bold = O.bold },
     mkdCodeEnd = { fg = C.cyan, bold = O.bold },
+    OkMsg = { fg = C.green },
+    StdoutMsg = { fg = C.white },
 
     -- debugging
     debugPC = { bg = C.background }, -- used for highlighting the current line in terminal-debug
